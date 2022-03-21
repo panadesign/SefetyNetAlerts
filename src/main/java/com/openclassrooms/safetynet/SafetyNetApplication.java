@@ -13,8 +13,6 @@ public class SafetyNetApplication {
 		SpringApplication.run(SafetyNetApplication.class, args);
 		ParseJSON parseJSON = new ParseJSON();
 		parseJSON.readPersons();
-		parseJSON.readFireStation();
-		parseJSON.readMedicalrecords();
 
 	}
 
