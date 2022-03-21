@@ -1,15 +1,15 @@
 package com.openclassrooms.safetynet.model;
 
-public class FireStations {
+public class FireStation {
 
 	private int id;
 	private int station;
 	private String address;
 
-	public FireStations() {
+	public FireStation() {
 	}
 
-	public FireStations(int id, int station, String address) {
+	public FireStation(int id, int station, String address) {
 		this.id = id;
 		this.station = station;
 		this.address = address;

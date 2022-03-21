@@ -3,17 +3,17 @@ package com.openclassrooms.safetynet.model;
 import java.util.Date;
 import java.util.List;
 
-public class MedicalRecords {
+public class MedicalRecord {
 
 	private String firstName;
 	private String lastName;
 	private Date birthdate;
 	private List medications;
 
-	public MedicalRecords() {
+	public MedicalRecord() {
 	}
 
-	public MedicalRecords(String firstName, String lastName, Date birthdate, List medications) {
+	public MedicalRecord(String firstName, String lastName, Date birthdate, List medications) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthdate = birthdate;

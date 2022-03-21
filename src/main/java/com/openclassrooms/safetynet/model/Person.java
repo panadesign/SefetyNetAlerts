@@ -1,8 +1,7 @@
 package com.openclassrooms.safetynet.model;
 
-public class Persons {
+public class Person {
 
-	private int id;
 	private String lastName;
 	private String firstName;
 	private String address;
@@ -11,11 +10,10 @@ public class Persons {
 	private String phone;
 	private String email;
 
-	public Persons() {
+	public Person() {
 	}
 
-	public Persons(int id, String lastName, String firstName, String address, String city, int zip, String phone, String email) {
-		this.id = id;
+	public Person(String lastName, String firstName, String address, String city, int zip, String phone, String email) {
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.address = address;
@@ -23,14 +21,6 @@ public class Persons {
 		this.zip = zip;
 		this.phone = phone;
 		this.email = email;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getLastName() {
