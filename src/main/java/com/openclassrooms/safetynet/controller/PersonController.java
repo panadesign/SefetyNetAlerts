@@ -2,23 +2,18 @@ package com.openclassrooms.safetynet.controller;
 
 import com.openclassrooms.safetynet.ParseJSON;
 import com.openclassrooms.safetynet.model.Person;
-import org.json.simple.parser.ParseException;
+import com.openclassrooms.safetynet.model.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
 
 @RestController
 public class PersonController {
 
-	@Autowired
-	ParseJSON parseJSON;
-	CommunityEmailController communityEmailController;
+	Data data;
 
 	@PostMapping("/person")
-	public Person addPerson() {
-		Person persons = new Person("Charpentier", "Jeremy", " 4 ter rue gambetta", "Vigneux", 91270, "0673249045", "charpentier.jeremy@gmail.com");
-		return persons;
+	public void addPerson(Person person) {
 	}
 
 	@PutMapping("/person")

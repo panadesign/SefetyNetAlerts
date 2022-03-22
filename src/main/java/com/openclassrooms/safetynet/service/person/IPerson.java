@@ -1,12 +1,11 @@
 package com.openclassrooms.safetynet.service.person;
 
-import org.json.simple.parser.ParseException;
-
-import java.io.IOException;
+import com.openclassrooms.safetynet.model.Person;
 
 public interface IPerson {
-	public void addPerson();
+	public void addPerson(Person person);
 	public void updatePerson();
 	public void deletePerson();
+	public void allMailByCity();
 
 }
