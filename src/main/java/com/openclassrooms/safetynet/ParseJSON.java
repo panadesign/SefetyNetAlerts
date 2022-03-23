@@ -2,17 +2,20 @@ package com.openclassrooms.safetynet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.safetynet.model.Data;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
 
-
+@Component
 public class ParseJSON {
 	private Data data;
 
-	public void DataStorage() throws IOException {
+	public ParseJSON() throws IOException {
 		ObjectMapper objectMapper = new ObjectMapper();
-		data = objectMapper.readValue(new File("data.json"), Data.class);
+		File file = new ClassPathResource("data.json").getFile();
+		this.data = objectMapper.readValue(file, Data.class);
 	}
 
 	public Data getData() {

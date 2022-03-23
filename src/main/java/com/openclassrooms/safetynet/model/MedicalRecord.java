@@ -7,13 +7,23 @@ public class MedicalRecord {
 
 	private String firstName;
 	private String lastName;
-	private Date birthdate;
+	private String birthdate;
 	private List medications;
+
+	public List getAllergies() {
+		return allergies;
+	}
+
+	public void setAllergies(List allergies) {
+		this.allergies = allergies;
+	}
+
+	private List allergies;
 
 	public MedicalRecord() {
 	}
 
-	public MedicalRecord(String firstName, String lastName, Date birthdate, List medications) {
+	public MedicalRecord(String firstName, String lastName, String birthdate, List medications) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthdate = birthdate;
@@ -36,11 +46,11 @@ public class MedicalRecord {
 		this.lastName = lastName;
 	}
 
-	public Date getBirthdate() {
+	public String getBirthdate() {
 		return birthdate;
 	}
 
-	public void setBirthdate(Date birthdate) {
+	public void setBirthdate(String birthdate) {
 		this.birthdate = birthdate;
 	}
 
