@@ -1,7 +1,8 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.ParseJSON;
-import com.openclassrooms.safetynet.repository.Data;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.openclassrooms.safetynet.DataStorage;
+import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.firestation.IFirestation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ import java.util.List;
 public class FirestationController {
 
 	@Autowired
-	ParseJSON parseJSON;
+	DataStorage dataStorage;
 	@Autowired
 	IFirestation iFirestation;
 
@@ -33,7 +34,7 @@ public class FirestationController {
 
 	@GetMapping("/firestation")
 
-	public List<String> getPeopleByFirestationNumber(@RequestParam int station) {
+	public List<Person> getPeopleByFirestationNumber(@RequestParam int station) {
 		return iFirestation.getPeopleByFirestationNumber(station);
 
 	}

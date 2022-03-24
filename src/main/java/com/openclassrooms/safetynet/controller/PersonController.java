@@ -1,7 +1,7 @@
 package com.openclassrooms.safetynet.controller;
 
 import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.repository.Data;
+import com.openclassrooms.safetynet.model.Data;
 import org.springframework.web.bind.annotation.*;
 
 

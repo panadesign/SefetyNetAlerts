@@ -1,6 +1,6 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.ParseJSON;
+import com.openclassrooms.safetynet.DataStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AlertController {
 
 	@Autowired
-	ParseJSON parseJSON;
+	DataStorage dataStorage;
 
 
 }

@@ -1,16 +1,26 @@
 package com.openclassrooms.safetynet.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Person {
 
 	private String lastName;
 	private String firstName;
 	private String address;
 	private String city;
-	private int zip;
+	private Integer zip;
 	private String phone;
 	private String email;
 
 	public Person() {
+	}
+
+	public Person(String lastName, String firstName, String address, String phone) {
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.address = address;
+		this.phone = phone;
 	}
 
 	public Person(String lastName, String firstName, String address, String city, int zip, String phone, String email) {
@@ -55,11 +65,11 @@ public class Person {
 		this.city = city;
 	}
 
-	public int getZip() {
+	public Integer getZip() {
 		return zip;
 	}
 
-	public void setZip(int zip) {
+	public void setZip(Integer zip) {
 		this.zip = zip;
 	}
 

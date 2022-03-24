@@ -1,8 +1,6 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.ParseJSON;
-import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.repository.Data;
+import com.openclassrooms.safetynet.DataStorage;
 import com.openclassrooms.safetynet.service.person.IPerson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +13,7 @@ import java.util.Set;
 public class CommunityEmailController {
 
 	@Autowired
-	ParseJSON parseJSON;
+	DataStorage dataStorage;
 	@Autowired
 	IPerson iPerson;
 
