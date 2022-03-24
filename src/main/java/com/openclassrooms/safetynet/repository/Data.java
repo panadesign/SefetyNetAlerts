@@ -1,5 +1,8 @@
-package com.openclassrooms.safetynet.model;
+package com.openclassrooms.safetynet.repository;
 
+import com.openclassrooms.safetynet.model.FireStation;
+import com.openclassrooms.safetynet.model.MedicalRecord;
+import com.openclassrooms.safetynet.model.Person;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

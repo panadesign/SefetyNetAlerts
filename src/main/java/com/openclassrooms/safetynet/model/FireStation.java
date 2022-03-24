@@ -2,7 +2,6 @@ package com.openclassrooms.safetynet.model;
 
 public class FireStation {
 
-	private int id;
 	private int station;
 	private String address;
 
@@ -10,17 +9,9 @@ public class FireStation {
 	}
 
 	public FireStation(int id, int station, String address) {
-		this.id = id;
+
 		this.station = station;
 		this.address = address;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public int getStation() {

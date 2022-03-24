@@ -1,7 +1,7 @@
 package com.openclassrooms.safetynet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.openclassrooms.safetynet.model.Data;
+import com.openclassrooms.safetynet.repository.Data;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 

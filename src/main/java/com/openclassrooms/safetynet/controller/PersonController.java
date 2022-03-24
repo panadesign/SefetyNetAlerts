@@ -1,9 +1,7 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.ParseJSON;
 import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.model.Data;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.openclassrooms.safetynet.repository.Data;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -25,7 +23,5 @@ public class PersonController {
 	public String deletePerson() {
 		return "supprimer une personne";
 	}
-
-
 
 }
