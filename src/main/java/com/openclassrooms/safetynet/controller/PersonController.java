@@ -1,27 +1,39 @@
 package com.openclassrooms.safetynet.controller;
 
+import com.openclassrooms.safetynet.DataStorage;
 import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.model.Data;
+import com.openclassrooms.safetynet.service.person.IPerson;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 @RestController
 public class PersonController {
 
-	Data data;
+	@Autowired
+	DataStorage dataStorage;
+	@Autowired
+	IPerson iPerson;
 
 	@PostMapping("/person")
-	public void addPerson(Person person) {
+	public Person addPerson(Person person) {
+		return iPerson.addPerson(person);
 	}
 
 	@PutMapping("/person")
-	public String updatePerson() {
-		return "mise à jour une personne";
+	public Person updatePerson(@RequestParam String firstName, String lastName) {
+		return iPerson.updatePerson(firstName, lastName);
 	}
 
-	@DeleteMapping("/person")
-	public String deletePerson() {
-		return "supprimer une personne";
+	/*@DeleteMapping("/person")
+	public Person deletePerson(Person person, String firstName, String lastName) {
+		return iPerson.deletePerson(person);
+	}*/
+
+	@GetMapping("/personInfo")
+	public List<Person> getAllPersons(@RequestParam String firstName, String lastName) {
+		return iPerson.getAllPersons(firstName, lastName);
 	}
 
 }
