@@ -20,7 +20,7 @@ public class CommunityEmailController {
 	IPerson iPerson;
 
 	@GetMapping("/communityEmail")
-	public Set<Person> getAllMailsByCity(@RequestParam String city) {
+	public Set<String> getAllMailsByCity(@RequestParam String city) {
 		return iPerson.getAllMailsByCity(city);
 	}
 }

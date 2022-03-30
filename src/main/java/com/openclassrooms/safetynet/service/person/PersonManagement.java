@@ -18,12 +18,6 @@ public class PersonManagement implements IPerson {
 				.add(person);
 	}
 
-	public void updatePerson() {
-	}
-
-	public void deletePerson() {
-	}
-
 	public Set<String> getAllMailsByCity(String city) {
 		return dataStorage.getData().getPersons()
 				.stream()
@@ -31,6 +25,5 @@ public class PersonManagement implements IPerson {
 				.map(Person::getEmail)
 				.collect(Collectors.toSet());
 	}
-
-
+	
 }
