@@ -1,6 +1,5 @@
 package com.openclassrooms.safetynet.model;
 
-import java.util.Date;
 import java.util.List;
 
 public class MedicalRecord {
@@ -9,7 +8,13 @@ public class MedicalRecord {
 	private String lastName;
 	private String birthdate;
 	private List medications;
-
+	private List allergies;
+	
+	public MedicalRecord(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	
 	public List getAllergies() {
 		return allergies;
 	}
@@ -17,9 +22,7 @@ public class MedicalRecord {
 	public void setAllergies(List allergies) {
 		this.allergies = allergies;
 	}
-
-	private List allergies;
-
+	
 	public MedicalRecord() {
 	}
 
