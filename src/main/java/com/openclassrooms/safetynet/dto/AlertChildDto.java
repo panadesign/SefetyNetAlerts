@@ -1,8 +1,6 @@
 package com.openclassrooms.safetynet.dto;
 
-import javax.xml.soap.SAAJResult;
-
-public class AlertChildDTO {
+public class AlertChildDto {
 	private String firstName;
 	private String lastName;
 	private String phoneNumber;

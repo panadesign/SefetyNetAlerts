@@ -7,26 +7,26 @@ public class MedicalRecord {
 	private String firstName;
 	private String lastName;
 	private String birthdate;
-	private List medications;
-	private List allergies;
+	private List<String> medications;
+	private List<String> allergies;
 	
 	public MedicalRecord(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
 	
-	public List getAllergies() {
+	public List<String> getAllergies() {
 		return allergies;
 	}
 
-	public void setAllergies(List allergies) {
+	public void setAllergies(List<String> allergies) {
 		this.allergies = allergies;
 	}
 	
 	public MedicalRecord() {
 	}
 
-	public MedicalRecord(String firstName, String lastName, String birthdate, List medications) {
+	public MedicalRecord(String firstName, String lastName, String birthdate, List<String> medications) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthdate = birthdate;
@@ -57,11 +57,11 @@ public class MedicalRecord {
 		this.birthdate = birthdate;
 	}
 
-	public List getMedications() {
+	public List<String> getMedications() {
 		return medications;
 	}
 
-	public void setMedications(List medications) {
+	public void setMedications(List<String> medications) {
 		this.medications = medications;
 	}
 }

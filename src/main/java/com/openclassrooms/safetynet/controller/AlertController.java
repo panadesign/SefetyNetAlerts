@@ -24,7 +24,7 @@ public class AlertController {
 	IPerson iPerson;
 	
 	@GetMapping("/fire")
-	public List<Person> getPeoplesByAddressAndFirestationNumber(@RequestParam String address){
+	public List<FireDto> getPeoplesByAddressAndFirestationNumber(@RequestParam String address){
 		return iFirestation.getPeoplesByAddressAndFirestationNumber(address);
 	}
 

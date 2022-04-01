@@ -12,5 +12,5 @@ public interface IFirestation {
 	public void deleteFirestation();
 	public List<Person> getPeopleByFirestationNumber(int station);
 	public Set<String> getPhoneNumberByFirestationNumber(int station);
-	public List<Person> getPeoplesByAddressAndFirestationNumber(String address);
+	public List<FireDto> getPeoplesByAddressAndFirestationNumber(String address);
 }

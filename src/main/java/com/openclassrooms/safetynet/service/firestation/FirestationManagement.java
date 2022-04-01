@@ -58,7 +58,7 @@ public class FirestationManagement implements IFirestation {
 				.collect(Collectors.toSet());
 	}
 	
-	public List<Person> getPeoplesByAddressAndFirestationNumber(String address) {
+	public List<FireDto> getPeoplesByAddressAndFirestationNumber(String address) {
 		
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
@@ -70,10 +70,10 @@ public class FirestationManagement implements IFirestation {
 			List<FireDto> aggregate =
 					medicalRecords.stream()
 							.filter(medicalRecord -> medicalRecord.getFirstName().equals(person.getFirstName())
-									&& medicalRecord.getLastName().equals(person.getLastName()))
+									&& medicalRecord.getLastName().equals(person.getLastName()) && person.getAddress().equals(address))
 							.map(medicalRecord -> {
 								try {
-									return new FireDto(person, medicalRecord, (FireStation) fireStations);
+									return new FireDto(person, medicalRecord);
 								} catch (Exception e) {
 									e.printStackTrace();
 								}
@@ -81,7 +81,7 @@ public class FirestationManagement implements IFirestation {
 							})
 							.collect(Collectors.toList());
 			
-			fireDto.add(aggregate);
+			fireDto.addAll(aggregate);
 			
 		}
 		return fireDto;

@@ -11,11 +11,11 @@ public class FireDto {
 	private String firstName;
 	private String lastName;
 	private String birthdate;
-	private List medications;
-	private List allergies;
+	private List<String> medications;
+	private List<String> allergies;
 	private int station;
 	
-	public FireDto(Person person, MedicalRecord medicalRecord, FireStation fireStation) throws Exception {
+	public FireDto(Person person, MedicalRecord medicalRecord) throws Exception {
 		if (person.getFirstName() != medicalRecord.getFirstName() || person.getLastName() != medicalRecord.getLastName()) {
 			throw new Exception("First name or last name are not good");
 		}
@@ -25,7 +25,6 @@ public class FireDto {
 		this.birthdate = medicalRecord.getBirthdate();
 		this.medications = medicalRecord.getMedications();
 		this.allergies = medicalRecord.getAllergies();
-		this.station = fireStation.getStation();
 	}
 	
 }

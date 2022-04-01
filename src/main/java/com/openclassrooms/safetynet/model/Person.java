@@ -9,7 +9,6 @@ public class Person {
 
 	private String firstName;
 	private String lastName;
-	private String age;
 	private String address;
 	private String city;
 	private Integer zip;
@@ -55,14 +54,6 @@ public class Person {
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
-	}
-	
-	public String getAge() {
-		return age;
-	}
-	
-	public void setAge(String age) {
-		this.age = age;
 	}
 	
 	public String getAddress() {
