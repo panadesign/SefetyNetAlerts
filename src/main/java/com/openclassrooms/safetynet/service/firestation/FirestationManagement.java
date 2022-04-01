@@ -84,7 +84,7 @@ public class FirestationManagement implements IFirestation {
 			fireDto.add(aggregate);
 			
 		}
-		return persons;
+		return fireDto;
 	}
 	
 }
