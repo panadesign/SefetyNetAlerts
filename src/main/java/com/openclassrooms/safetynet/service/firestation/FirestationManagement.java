@@ -4,9 +4,9 @@ import com.openclassrooms.safetynet.DataStorage;
 import com.openclassrooms.safetynet.dto.FireDto;
 import com.openclassrooms.safetynet.model.FireStation;
 import com.openclassrooms.safetynet.model.MedicalRecord;
+import com.openclassrooms.safetynet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.openclassrooms.safetynet.model.Person;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,21 +68,18 @@ public class FirestationManagement implements IFirestation {
 		
 		for (Person person : persons) {
 			List<FireDto> aggregate =
-					medicalRecords.stream()
-							.filter(medicalRecord -> medicalRecord.getFirstName().equals(person.getFirstName())
-									&& medicalRecord.getLastName().equals(person.getLastName()) && person.getAddress().equals(address))
-							.map(medicalRecord -> {
+					fireStations.stream()
+							.filter(fireStation -> fireStation.getAddress().equals(person.getAddress()) && person.getAddress().equals(address))
+							.map(fireStation -> {
 								try {
-									return new FireDto(person, medicalRecord);
+									return new FireDto(person, fireStation);
 								} catch (Exception e) {
 									e.printStackTrace();
 								}
 								return null;
 							})
 							.collect(Collectors.toList());
-			
 			fireDto.addAll(aggregate);
-			
 		}
 		return fireDto;
 	}
