@@ -1,6 +1,7 @@
 package com.openclassrooms.safetynet.controller;
 
 import com.openclassrooms.safetynet.DataStorage;
+import com.openclassrooms.safetynet.dto.FirestationDto;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.firestation.IFirestation;
 import com.openclassrooms.safetynet.service.person.IPerson;
@@ -36,8 +37,8 @@ public class FirestationController {
 
 	@GetMapping("/firestation")
 
-	public List<Person> getPeopleByFirestationNumber(@RequestParam int station) {
-		return iFirestation.getPeopleByFirestationNumber(station);
+	public List<FirestationDto> getPeopleByFirestationNumber(@RequestParam int stationNumber) {
+		return iFirestation.getPeopleByFirestationNumber(stationNumber);
 
 	}
 

@@ -1,7 +1,5 @@
 package com.openclassrooms.safetynet.service;
 
-import com.openclassrooms.safetynet.DataStorage;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -12,10 +10,10 @@ import java.time.format.DateTimeFormatter;
 public class GlobalService {
 	
 	public int ageCalculation(String birthdate) {
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-		LocalDate birthdate1 = LocalDate.parse(birthdate, dtf);
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+		LocalDate birthDate = LocalDate.parse(birthdate, format);
 		LocalDate today = LocalDate.now();
-		return Period.between(birthdate1, today).getYears();
+		return Period.between(birthDate, today).getYears();
 	}
-	
+
 }

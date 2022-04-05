@@ -1,6 +1,7 @@
 package com.openclassrooms.safetynet.service.firestation;
 
 import com.openclassrooms.safetynet.dto.FireDto;
+import com.openclassrooms.safetynet.dto.FirestationDto;
 import com.openclassrooms.safetynet.model.Person;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public interface IFirestation {
 	public void addFirestation();
 	public void updateFirestation();
 	public void deleteFirestation();
-	public List<Person> getPeopleByFirestationNumber(int station);
-	public Set<String> getPhoneNumberByFirestationNumber(int station);
-	public List<FireDto> getPeoplesByAddressAndFirestationNumber(String address);
+	public List<FirestationDto> getPeopleByFirestationNumber(int stationNumber);
+	public Set<String> getPhoneNumbersByFirestationNumber(int station);
+	public List<FireDto> getPeoplesByAddress(String address);
 }

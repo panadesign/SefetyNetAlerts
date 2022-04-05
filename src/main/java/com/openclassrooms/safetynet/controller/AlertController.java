@@ -24,13 +24,13 @@ public class AlertController {
 	IPerson iPerson;
 	
 	@GetMapping("/fire")
-	public List<FireDto> getPeoplesByAddressAndFirestationNumber(@RequestParam String address){
-		return iFirestation.getPeoplesByAddressAndFirestationNumber(address);
+	public List<FireDto> getPeoplesByAddress(@RequestParam String address){
+		return iFirestation.getPeoplesByAddress(address);
 	}
 
 	@GetMapping("/phoneAlert")
-	public Set<String> getPhoneNumberByFirestationNumber (@RequestParam int station) {
-		return iFirestation.getPhoneNumberByFirestationNumber(station);
+	public Set<String> getPhoneNumbersByFirestationNumber (@RequestParam int station) {
+		return iFirestation.getPhoneNumbersByFirestationNumber(station);
 
 	}
 	

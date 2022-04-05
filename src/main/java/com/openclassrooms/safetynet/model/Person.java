@@ -14,15 +14,17 @@ public class Person {
 	private Integer zip;
 	private String phone;
 	private String email;
+	private int age;
 
 	public Person() {
 	}
 
-	public Person(String lastName, String firstName, String address, String phone) {
+	public Person(String lastName, String firstName, String address, String phone, int age) {
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.address = address;
 		this.phone = phone;
+		this.age = age;
 	}
 	public Person(String firstName, String lastName, String email) {
 		this.firstName = firstName;
@@ -94,6 +96,14 @@ public class Person {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 }
