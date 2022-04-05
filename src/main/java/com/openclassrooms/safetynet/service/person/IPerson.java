@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.service.person;
 
+import com.openclassrooms.safetynet.dto.AlertChildDto;
 import com.openclassrooms.safetynet.dto.PersonInfoDto;
 import com.openclassrooms.safetynet.model.Person;
 
@@ -11,4 +12,5 @@ public interface IPerson {
 	public void addPerson(Person person);
 	public Set<String> getAllMailsByCity(String city);
 	public List<PersonInfoDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName);
+	public List<AlertChildDto> getChildByAddress(String address);
 }

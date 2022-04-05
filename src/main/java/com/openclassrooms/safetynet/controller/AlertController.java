@@ -1,6 +1,7 @@
 package com.openclassrooms.safetynet.controller;
 
 import com.openclassrooms.safetynet.DataStorage;
+import com.openclassrooms.safetynet.dto.AlertChildDto;
 import com.openclassrooms.safetynet.dto.FireDto;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.firestation.IFirestation;
@@ -32,6 +33,11 @@ public class AlertController {
 	public Set<String> getPhoneNumbersByFirestationNumber (@RequestParam int station) {
 		return iFirestation.getPhoneNumbersByFirestationNumber(station);
 
+	}
+
+	@GetMapping("/childAlert")
+	public List<AlertChildDto> getChildByAddress (@RequestParam String address) {
+		return iPerson.getChildByAddress(address);
 	}
 	
 }
