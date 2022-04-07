@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class PersonManagement implements IPerson {
 	@Autowired
 	private DataStorage dataStorage;
-
+	@Autowired
 	GlobalService globalService;
 
 	public void addPerson(Person person) {
@@ -73,7 +73,7 @@ public class PersonManagement implements IPerson {
 			List<AlertChildDto> getAllPersonsByAddress =
 					persons
 							.stream()
-							.filter(person -> person.getFirstName().equals(medicalRecord.getFirstName()) && person.getLastName().equals(medicalRecord.getLastName()))
+							.filter(person -> person.getFirstName().equals(medicalRecord.getFirstName()) && person.getLastName().equals(medicalRecord.getLastName()) && person.getAddress().equals(address))
 							.map(person -> {
 								try {
 									return new AlertChildDto(person, medicalRecord);

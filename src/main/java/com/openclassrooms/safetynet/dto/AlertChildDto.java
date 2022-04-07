@@ -8,6 +8,7 @@ public class AlertChildDto {
 	private String lastName;
 	private String phone;
 	private int age;
+	private String status;
 
 	public AlertChildDto(Person person, MedicalRecord medicalRecord) throws Exception {
 		if(!person.getFirstName().equals(medicalRecord.getFirstName())|| !person.getLastName().equals(medicalRecord.getLastName())) {
@@ -18,6 +19,7 @@ public class AlertChildDto {
 		this.lastName = person.getLastName();
 		this.phone = person.getPhone();
 		this.age = person.getAge();
+		this.status = person.getStatus;
 	}
 
 	public String getFirstName() {
@@ -50,5 +52,13 @@ public class AlertChildDto {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 }

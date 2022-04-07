@@ -15,6 +15,7 @@ public class Person {
 	private String phone;
 	private String email;
 	private int age;
+	public String getStatus;
 
 	public Person() {
 	}
@@ -106,4 +107,11 @@ public class Person {
 		this.age = age;
 	}
 
+	public String getGetStatus() {
+		return getStatus;
+	}
+
+	public void setGetStatus(String getStatus) {
+		this.getStatus = getStatus;
+	}
 }
