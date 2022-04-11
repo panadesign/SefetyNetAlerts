@@ -2,7 +2,7 @@ package com.openclassrooms.safetynet.service.medicalRecords;
 
 import com.openclassrooms.safetynet.model.MedicalRecord;
 
-public class MedicalRecordsManagement  implements IMedicalRecords{
+public class MedicalRecordsManagerImpl implements MedicalRecordsManager {
 
 	MedicalRecord medicalRecords;
 	public void addMedicalRecords() {

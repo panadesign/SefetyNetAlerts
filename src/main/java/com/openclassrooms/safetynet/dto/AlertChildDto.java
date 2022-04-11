@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.dto;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
 
@@ -7,19 +8,14 @@ public class AlertChildDto {
 	private String firstName;
 	private String lastName;
 	private String phone;
-	private int age;
-	private String status;
+	private Integer age;
 
-	public AlertChildDto(Person person, MedicalRecord medicalRecord) throws Exception {
-		if(!person.getFirstName().equals(medicalRecord.getFirstName())|| !person.getLastName().equals(medicalRecord.getLastName())) {
-			throw new Exception("Error");
-		}
+	public AlertChildDto(Person person, MedicalRecord medicalRecord) {
 
 		this.firstName = person.getFirstName();
 		this.lastName = person.getLastName();
 		this.phone = person.getPhone();
-		this.age = person.getAge();
-		this.status = person.getStatus;
+		this.age=medicalRecord.getAge();
 	}
 
 	public String getFirstName() {
@@ -45,20 +41,10 @@ public class AlertChildDto {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
-	public int getAge() {
+	
+	@JsonGetter("age")
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
 }

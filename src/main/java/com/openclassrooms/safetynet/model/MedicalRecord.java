@@ -1,67 +1,65 @@
 package com.openclassrooms.safetynet.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class MedicalRecord {
-
+	
+	public Id getId() {
+		return  new Id(firstName, lastName);
+	}
+	
+	@Getter
+	@Setter
 	private String firstName;
+	
+	@Getter
+	@Setter
 	private String lastName;
-	private String birthdate;
+	
+	@Getter
+	private LocalDate birthdate;
+	
+	@Getter
+	@Setter
 	private List<String> medications;
+	
+	@Getter
+	@Setter
 	private List<String> allergies;
 	
-	public MedicalRecord(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-	
-	public List<String> getAllergies() {
-		return allergies;
-	}
-
-	public void setAllergies(List<String> allergies) {
-		this.allergies = allergies;
-	}
-	
-	public MedicalRecord() {
-	}
+	public MedicalRecord(){};
 
 	public MedicalRecord(String firstName, String lastName, String birthdate, List<String> medications) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.birthdate = birthdate;
+		this.birthdate = parseStringToLocalDate(birthdate);
 		this.medications = medications;
 	}
-
-	public String getFirstName() {
-		return firstName;
+	
+	public void setBirthdate(String birthdate){
+		this.birthdate = parseStringToLocalDate(birthdate);
 	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	
+	private LocalDate parseStringToLocalDate(String birthdate) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+		return LocalDate.parse(birthdate, formatter);
 	}
-
-	public String getLastName() {
-		return lastName;
+	
+	public Integer getAge() {
+		return Period.between(birthdate, LocalDate.now()).getYears();
 	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	
+	public boolean isMinor() {
+		if(getAge() <= 18) {
+			return true;
+		}
+		return false;
 	}
-
-	public String getBirthdate() {
-		return birthdate;
-	}
-
-	public void setBirthdate(String birthdate) {
-		this.birthdate = birthdate;
-	}
-
-	public List<String> getMedications() {
-		return medications;
-	}
-
-	public void setMedications(List<String> medications) {
-		this.medications = medications;
-	}
+	
 }

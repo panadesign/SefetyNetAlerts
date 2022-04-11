@@ -1,7 +1,9 @@
 package com.openclassrooms.safetynet.dto;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -10,58 +12,47 @@ public class PersonInfoDto {
 	private String firstName;
 	private String lastName;
 	private String email;
-	
+	private Integer age;
 	private List<String> medications;
 	private List<String> allergies;
 	
-	public PersonInfoDto(Person person, MedicalRecord medicalRecord) throws Exception {
-		if(!person.getFirstName().equals(medicalRecord.getFirstName()) || !person.getLastName().equals(medicalRecord.getLastName())){
-			throw new Exception("Les informations saisies sont erronées");
-		}
+	public PersonInfoDto(Person person, MedicalRecord medicalRecord) {
+		
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();
 		this.email= person.getEmail();
+		this.age=medicalRecord.getAge();
 		this.medications=medicalRecord.getMedications();
 		this.allergies=medicalRecord.getAllergies();
 	}
 	
+	@JsonGetter("firstName")
 	public String getFirstName() {
 		return firstName;
 	}
 	
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
+	@JsonGetter("lastName")
 	public String getLastName() {
 		return lastName;
 	}
 	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
+	@JsonGetter("email")
 	public String getEmail() {
 		return email;
 	}
 	
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public List getMedications() {
+	@JsonGetter("medications")
+	public List<String> getMedications() {
 		return medications;
 	}
 	
-	public void setMedications(List medications) {
-		this.medications = medications;
-	}
-	
-	public List getAllergies() {
+	@JsonGetter("allergies")
+	public List<String> getAllergies() {
 		return allergies;
 	}
 	
-	public void setAllergies(List allergies) {
-		this.allergies = allergies;
+	@JsonGetter("age")
+	public Integer getAge() {
+		return age;
 	}
 }

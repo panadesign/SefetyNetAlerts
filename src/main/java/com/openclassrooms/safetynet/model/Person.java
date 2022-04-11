@@ -14,8 +14,6 @@ public class Person {
 	private Integer zip;
 	private String phone;
 	private String email;
-	private int age;
-	public String getStatus;
 
 	public Person() {
 	}
@@ -25,7 +23,6 @@ public class Person {
 		this.firstName = firstName;
 		this.address = address;
 		this.phone = phone;
-		this.age = age;
 	}
 	public Person(String firstName, String lastName, String email) {
 		this.firstName = firstName;
@@ -41,7 +38,10 @@ public class Person {
 	public Person(String phone) {
 		this.phone = phone;
 	}
-
+	
+	public Id getId() {
+		return  new Id(firstName, lastName);
+	}
 
 	public String getLastName() {
 		return lastName;
@@ -98,20 +98,5 @@ public class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public String getGetStatus() {
-		return getStatus;
-	}
-
-	public void setGetStatus(String getStatus) {
-		this.getStatus = getStatus;
-	}
+	
 }

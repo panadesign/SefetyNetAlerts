@@ -1,7 +1,7 @@
 package com.openclassrooms.safetynet.controller;
 
 import com.openclassrooms.safetynet.DataStorage;
-import com.openclassrooms.safetynet.service.person.IPerson;
+import com.openclassrooms.safetynet.service.person.PersonManager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ class CommunityEmailControllerTest {
 	@MockBean
 	private DataStorage dataStorage;
 	@MockBean
-	private IPerson iPerson;
+	private PersonManager iPerson;
 
 	@Test
 	void getAllMailsByCityTest() throws Exception {
