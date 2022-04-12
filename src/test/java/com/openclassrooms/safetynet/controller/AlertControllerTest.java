@@ -21,9 +21,9 @@ class AlertControllerTest {
 	@MockBean
 	private DataStorage dataStorage;
 	@MockBean
-	private PersonManager iPerson;
+	private PersonManager personManager;
 	@MockBean
-	private FirestationManager firestation;
+	private FirestationManager firestationManager;
 
 
 	@Test

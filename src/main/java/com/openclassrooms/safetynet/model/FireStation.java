@@ -8,7 +8,7 @@ public class FireStation {
 	public FireStation() {
 	}
 
-	public FireStation(int id, int station, String address) {
+	public FireStation(int station, String address) {
 
 		this.station = station;
 		this.address = address;

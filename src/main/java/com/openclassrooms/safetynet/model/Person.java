@@ -38,7 +38,7 @@ public class Person {
 	public Person(String phone) {
 		this.phone = phone;
 	}
-	
+
 	public Id getId() {
 		return  new Id(firstName, lastName);
 	}

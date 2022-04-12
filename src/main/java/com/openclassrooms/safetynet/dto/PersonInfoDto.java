@@ -3,7 +3,6 @@ package com.openclassrooms.safetynet.dto;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
