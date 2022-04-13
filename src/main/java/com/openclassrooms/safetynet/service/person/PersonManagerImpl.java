@@ -5,7 +5,6 @@ import com.openclassrooms.safetynet.dto.AlertChildDto;
 import com.openclassrooms.safetynet.dto.FloodDto;
 import com.openclassrooms.safetynet.dto.PersonInfoDto;
 import com.openclassrooms.safetynet.model.FireStation;
-import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,6 @@ public class PersonManagerImpl implements PersonManager {
 				.collect(Collectors.toSet());
 	}
 
-	//http://localhost:8080/personInfo?firstName=<firstName>&lastName=<lastName>
 	public List<PersonInfoDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName) {
 
 		List<Person> persons = dataStorage.getData().getPersons();
@@ -57,28 +55,27 @@ public class PersonManagerImpl implements PersonManager {
 		return personInfoDto;
 	}
 
-	//http://localhost:8080/childAlert?address=<address>
-	public List<AlertChildDto> getChildByAddress(String address) {
+	public Map<String, List<AlertChildDto>> getChildByAddress(String address) {
 
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 
-		List<AlertChildDto> alertChildDto = new ArrayList<>();
+		Map<String, List<AlertChildDto>> getChildWithFamily = new HashMap<>();
 
 		for(MedicalRecord medicalRecord : medicalRecords) {
-			List<AlertChildDto> getAllPersonsByAddress =
+			List<AlertChildDto> getChildByAddress =
 					persons
 							.stream()
 							.filter(person -> person.getId().equals(medicalRecord.getId()))
 							.filter(person -> person.getAddress().equals(address))
 							.map(person -> new AlertChildDto(person, medicalRecord))
+							.filter(mr -> mr.isMinor(mr.getAge()))
 							.collect(Collectors.toList());
 
-
-			alertChildDto.addAll(getAllPersonsByAddress);
+			getChildWithFamily.put("Child", getChildByAddress);
 		}
 
-		return alertChildDto;
+		return getChildWithFamily;
 	}
 
 	public Map<String, List<FloodDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {

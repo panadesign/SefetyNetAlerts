@@ -55,11 +55,4 @@ public class MedicalRecord {
 		return Period.between(birthdate, LocalDate.now()).getYears();
 	}
 	
-	public boolean isMinor() {
-		if(getAge() <= 18) {
-			return true;
-		}
-		return false;
-	}
-	
 }

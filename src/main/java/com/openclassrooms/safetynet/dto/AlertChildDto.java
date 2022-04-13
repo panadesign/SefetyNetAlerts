@@ -47,4 +47,8 @@ public class AlertChildDto {
 		return age;
 	}
 
+	public boolean isMinor(Integer age) {
+		return age <= 18;
+	}
+
 }

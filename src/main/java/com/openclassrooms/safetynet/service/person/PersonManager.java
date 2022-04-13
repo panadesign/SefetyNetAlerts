@@ -12,6 +12,6 @@ public interface PersonManager {
 	void addPerson(com.openclassrooms.safetynet.model.Person person);
 	Set<String> getAllMailsByCity(String city);
 	List<PersonInfoDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName);
-	List<AlertChildDto> getChildByAddress(String address);
+	Map<String, List<AlertChildDto>> getChildByAddress(String address);
 	Map<String, List<FloodDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations);
 }
