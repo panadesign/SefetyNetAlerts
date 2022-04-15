@@ -33,6 +33,7 @@ public class FirestationManagerImpl implements FirestationManager {
 		
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<FireStation> fireStations = dataStorage.getData().getFirestations();
+		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
 		List<FirestationDto> firestationDto = new ArrayList<>();
 		
@@ -50,6 +51,7 @@ public class FirestationManagerImpl implements FirestationManager {
 						.map(person -> {
 							try {
 								return new FirestationDto(person);
+								
 							} catch (Exception e) {
 								e.printStackTrace();
 							}
@@ -57,6 +59,7 @@ public class FirestationManagerImpl implements FirestationManager {
 						})
 						.collect(Collectors.toList());
 		firestationDto.addAll(getPersonsByFirestationsAddresses);
+		
 		return firestationDto;
 	}
 	

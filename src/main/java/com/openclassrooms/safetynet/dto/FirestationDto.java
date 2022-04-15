@@ -9,7 +9,7 @@ public class FirestationDto {
 	private String address;
 	private String phone;
 
-	public FirestationDto (Person person) throws Exception {
+	public FirestationDto(Person person) throws Exception {
 
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();

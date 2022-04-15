@@ -35,7 +35,7 @@ public class AlertController {
 	}
 
 	@GetMapping("/childAlert")
-	public Map<String, List<AlertChildDto>> getChildByAddress(@RequestParam String address) {
+	public List<AlertChildDto> getChildByAddress(@RequestParam String address) {
 		return personManager.getChildByAddress(address);
 	}
 

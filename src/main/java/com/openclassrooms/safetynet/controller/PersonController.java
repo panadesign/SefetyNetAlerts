@@ -1,12 +1,10 @@
 package com.openclassrooms.safetynet.controller;
 
 import com.openclassrooms.safetynet.dto.PersonInfoDto;
+import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,16 +12,22 @@ import java.util.List;
 public class PersonController {
 	
 	@Autowired
-	private PersonManager iPerson;
+	private PersonManager personManager;
 	
 	@PostMapping("/person")
-	public void addPerson(com.openclassrooms.safetynet.model.Person person) {
-		iPerson.addPerson(person);
+	public void addPerson(Person person) {
+		personManager.addPerson(person);
 	}
+	
+	@PutMapping("/person")
+	public void updatePerson(@RequestParam String firstName, @RequestParam String lastName) {
+		personManager.updatePerson(firstName, lastName);
+	}
+	
 	
 	@GetMapping("/personInfo")
 	public List<PersonInfoDto> getPersonsWithMedicalrecords(@RequestParam String firstName, @RequestParam String lastName) {
-		return iPerson.getPersonsByAddressWithMedicalrecords(firstName, lastName);
+		return personManager.getPersonsByAddressWithMedicalrecords(firstName, lastName);
 	}
 	
 }
