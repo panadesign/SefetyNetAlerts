@@ -1,8 +1,8 @@
 package com.openclassrooms.safetynet.service.firestation;
 
 import com.openclassrooms.safetynet.DataStorage;
-import com.openclassrooms.safetynet.dto.FireDto;
-import com.openclassrooms.safetynet.dto.FirestationDto;
+import com.openclassrooms.safetynet.dto.getPersonsByAddressDto;
+import com.openclassrooms.safetynet.dto.getPersonsByStationDto;
 import com.openclassrooms.safetynet.model.FireStation;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
@@ -29,13 +29,13 @@ public class FirestationManagerImpl implements FirestationManager {
 	public void deleteFirestation() {
 	}
 	
-	public List<FirestationDto> getPeopleByFirestationNumber(int stationNumber) {
+	public List<getPersonsByStationDto> getPeopleByFirestationNumber(int stationNumber) {
 		
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<FireStation> fireStations = dataStorage.getData().getFirestations();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
-		List<FirestationDto> firestationDto = new ArrayList<>();
+		List<getPersonsByStationDto> firestationDto = new ArrayList<>();
 		
 		List<String> getAddressesByStationNumber =
 				fireStations
@@ -44,13 +44,13 @@ public class FirestationManagerImpl implements FirestationManager {
 						.map(FireStation::getAddress)
 						.collect(Collectors.toList());
 		
-		List<FirestationDto> getPersonsByFirestationsAddresses =
+		List<getPersonsByStationDto> getPersonsByFirestationsAddresses =
 				persons
 						.stream()
 						.filter(person -> getAddressesByStationNumber.contains(person.getAddress()))
 						.map(person -> {
 							try {
-								return new FirestationDto(person);
+								return new getPersonsByStationDto(person);
 								
 							} catch (Exception e) {
 								e.printStackTrace();
@@ -83,7 +83,7 @@ public class FirestationManagerImpl implements FirestationManager {
 				.collect(Collectors.toSet());
 	}
 	
-	public List<FireDto> getPeoplesByAddress(String address) {
+	public List<getPersonsByAddressDto> getPeoplesByAddress(String address) {
 		
 		List<Person> persons =
 				dataStorage
@@ -103,15 +103,15 @@ public class FirestationManagerImpl implements FirestationManager {
 						.filter(fireStation -> fireStation.getAddress().equals(address))
 						.collect(Collectors.toList());
 		
-		List<FireDto> fireDto = new ArrayList<>();
+		List<getPersonsByAddressDto> fireDto = new ArrayList<>();
 		
 		for (Person person : persons) {
-			List<FireDto> aggregate =
+			List<getPersonsByAddressDto> aggregate =
 					fireStations
 							.stream()
 							.map(fireStation -> {
 								try {
-									return new FireDto(person, fireStation, medicalRecords.stream()
+									return new getPersonsByAddressDto(person, fireStation, medicalRecords.stream()
 											.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 											.findFirst().orElse(null));
 								} catch (Exception e) {

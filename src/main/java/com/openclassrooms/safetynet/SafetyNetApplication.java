@@ -7,7 +7,7 @@ import org.tinylog.Logger;
 @SpringBootApplication
 public class SafetyNetApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SafetyNetApplication.class, args);Logger.info("Hello World!");
+		SpringApplication.run(SafetyNetApplication.class, args);
 	}
 
 

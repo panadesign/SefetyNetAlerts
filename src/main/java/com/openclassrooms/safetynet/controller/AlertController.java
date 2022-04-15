@@ -25,7 +25,7 @@ public class AlertController {
 	private PersonManager personManager;
 
 	@GetMapping("/fire")
-	public List<FireDto> getPeoplesByAddress(@RequestParam String address) {
+	public List<getPersonsByAddressDto> getPeoplesByAddress(@RequestParam String address) {
 		return firestationManager.getPeoplesByAddress(address);
 	}
 
@@ -35,12 +35,12 @@ public class AlertController {
 	}
 
 	@GetMapping("/childAlert")
-	public List<AlertChildDto> getChildByAddress(@RequestParam String address) {
+	public List<getChildByAddressDto> getChildByAddress(@RequestParam String address) {
 		return personManager.getChildByAddress(address);
 	}
 
 	@GetMapping("/flood/stations/")
-	public Map<String, List<FloodDto>> getPersonsByAddressStationForFloodAlert(@RequestParam List<Integer> stations) {
+	public Map<String, List<getFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(@RequestParam List<Integer> stations) {
 		return personManager.getPersonsByAddressStationForFloodAlert(stations);
 	}
 

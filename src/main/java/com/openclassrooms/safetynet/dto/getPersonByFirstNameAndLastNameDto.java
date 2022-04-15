@@ -7,7 +7,7 @@ import com.openclassrooms.safetynet.model.Person;
 
 import java.util.List;
 
-public class PersonInfoDto {
+public class getPersonByFirstNameAndLastNameDto {
 	
 	private String firstName;
 	private String lastName;
@@ -20,7 +20,7 @@ public class PersonInfoDto {
 	private List<String> medications;
 	private List<String> allergies;
 	
-	public PersonInfoDto(Person person, MedicalRecord medicalRecord) {
+	public getPersonByFirstNameAndLastNameDto(Person person, MedicalRecord medicalRecord) {
 		
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();
@@ -30,7 +30,7 @@ public class PersonInfoDto {
 		this.allergies=medicalRecord.getAllergies();
 	}
 	
-	public PersonInfoDto(Person person) {
+	public getPersonByFirstNameAndLastNameDto(Person person) {
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();
 		this.email= person.getEmail();

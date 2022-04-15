@@ -7,7 +7,7 @@ import com.openclassrooms.safetynet.model.MedicalRecord;
 
 import java.util.List;
 
-public class FireDto {
+public class getPersonsByAddressDto {
 	
 	private String firstName;
 	private String lastName;
@@ -16,7 +16,7 @@ public class FireDto {
 	private List<String> allergies;
 	private int station;
 	
-	public FireDto(Person person, FireStation fireStation) throws Exception {
+	public getPersonsByAddressDto(Person person, FireStation fireStation) throws Exception {
 		if (!person.getAddress().equals(fireStation.getAddress())) {
 			throw new Exception("Address not found");
 		}
@@ -26,7 +26,7 @@ public class FireDto {
 		this.station = fireStation.getStation();
 	}
 	
-	public FireDto(Person person, FireStation fireStation, MedicalRecord medicalRecord) {
+	public getPersonsByAddressDto(Person person, FireStation fireStation, MedicalRecord medicalRecord) {
 		this.firstName = person.getFirstName();
 		this.lastName = person.getLastName();
 		this.station = fireStation.getStation();

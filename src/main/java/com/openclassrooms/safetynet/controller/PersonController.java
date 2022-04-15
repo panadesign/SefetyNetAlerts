@@ -1,6 +1,6 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.dto.PersonInfoDto;
+import com.openclassrooms.safetynet.dto.getPersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class PersonController {
 	
 	
 	@GetMapping("/personInfo")
-	public List<PersonInfoDto> getPersonsWithMedicalrecords(@RequestParam String firstName, @RequestParam String lastName) {
+	public List<getPersonByFirstNameAndLastNameDto> getPersonsWithMedicalrecords(@RequestParam String firstName, @RequestParam String lastName) {
 		return personManager.getPersonsByAddressWithMedicalrecords(firstName, lastName);
 	}
 	

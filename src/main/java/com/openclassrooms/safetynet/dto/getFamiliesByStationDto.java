@@ -3,11 +3,10 @@ package com.openclassrooms.safetynet.dto;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.model.FireStation;
 
 import java.util.List;
 
-public class FloodDto {
+public class getFamiliesByStationDto {
 	private String lastName;
 	private String firstName;
 	private String phone;
@@ -16,7 +15,7 @@ public class FloodDto {
 	private List<String> allergies;
 
 
-	public FloodDto(Person person, MedicalRecord medicalRecord) {
+	public getFamiliesByStationDto(Person person, MedicalRecord medicalRecord) {
 		this.lastName = person.getLastName();
 		this.firstName = person.getFirstName();
 		this.phone = person.getPhone();

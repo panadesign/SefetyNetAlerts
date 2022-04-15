@@ -1,9 +1,9 @@
 package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.DataStorage;
-import com.openclassrooms.safetynet.dto.AlertChildDto;
-import com.openclassrooms.safetynet.dto.FloodDto;
-import com.openclassrooms.safetynet.dto.PersonInfoDto;
+import com.openclassrooms.safetynet.dto.getChildByAddressDto;
+import com.openclassrooms.safetynet.dto.getFamiliesByStationDto;
+import com.openclassrooms.safetynet.dto.getPersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.model.FireStation;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
@@ -27,10 +27,10 @@ public class PersonManagerImpl implements PersonManager {
 	public void updatePerson(String firstName, String lastName) {
 		List<Person> personList = dataStorage.getData().getPersons();
 		for(Person person: personList){
-			List<PersonInfoDto> personList1 =
+			List<getPersonByFirstNameAndLastNameDto> personList1 =
 					personList.stream()
 							.filter(person1 -> person.getFirstName().equals(firstName) && person.getLastName().equals(lastName))
-							.map(person1 -> new PersonInfoDto(person))
+							.map(person1 -> new getPersonByFirstNameAndLastNameDto(person))
 							.collect(Collectors.toList());
 		}
 		
@@ -46,19 +46,19 @@ public class PersonManagerImpl implements PersonManager {
 				.collect(Collectors.toSet());
 	}
 	
-	public List<PersonInfoDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName) {
+	public List<getPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName) {
 		
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
-		List<PersonInfoDto> personInfoDto = new ArrayList<>();
+		List<getPersonByFirstNameAndLastNameDto> personInfoDto = new ArrayList<>();
 		
 		for (Person person : persons) {
-			List<PersonInfoDto> aggregate =
+			List<getPersonByFirstNameAndLastNameDto> aggregate =
 					medicalRecords.stream()
 							.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 							.filter(m -> m.getLastName().equals(lastName))
-							.map(medicalRecord -> new PersonInfoDto(person, medicalRecord))
+							.map(medicalRecord -> new getPersonByFirstNameAndLastNameDto(person, medicalRecord))
 							.collect(Collectors.toList());
 			
 			personInfoDto.addAll(aggregate);
@@ -67,20 +67,20 @@ public class PersonManagerImpl implements PersonManager {
 		return personInfoDto;
 	}
 	
-	public List<AlertChildDto> getChildByAddress(String address) {
+	public List<getChildByAddressDto> getChildByAddress(String address) {
 		
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
-		List<AlertChildDto> getChildWithFamily = new ArrayList<>();
+		List<getChildByAddressDto> getChildWithFamily = new ArrayList<>();
 		
 		for (MedicalRecord medicalRecord : medicalRecords) {
-			List<AlertChildDto> getChildByAddress =
+			List<getChildByAddressDto> getChildByAddress =
 					persons
 							.stream()
 							.filter(person -> person.getId().equals(medicalRecord.getId()))
 							.filter(person -> person.getAddress().equals(address))
-							.map(person -> new AlertChildDto(person, medicalRecord))
+							.map(person -> new getChildByAddressDto(person, medicalRecord))
 							.filter(mr -> mr.isMinor(mr.getAge()))
 							.collect(Collectors.toList());
 			
@@ -90,13 +90,13 @@ public class PersonManagerImpl implements PersonManager {
 		return getChildWithFamily;
 	}
 	
-	public Map<String, List<FloodDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
+	public Map<String, List<getFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<FireStation> fireStations = dataStorage.getData().getFirestations();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
 		List<String> allAddressesByStationNumber = new ArrayList<>();
-		Map<String, List<FloodDto>> allPersons = new HashMap<>();
+		Map<String, List<getFamiliesByStationDto>> allPersons = new HashMap<>();
 		
 		for (Integer fireStationNumber : stations) {
 			List<String> getAllAddressesByStationNumber =
@@ -109,11 +109,11 @@ public class PersonManagerImpl implements PersonManager {
 		}
 		
 		for (String addresses : allAddressesByStationNumber) {
-			List<FloodDto> getAllPersonsIdWithThisAddress =
+			List<getFamiliesByStationDto> getAllPersonsIdWithThisAddress =
 					persons
 							.stream()
 							.filter(person -> person.getAddress().equals(addresses))
-							.map(person -> new FloodDto(person,
+							.map(person -> new getFamiliesByStationDto(person,
 									Objects.requireNonNull(medicalRecords
 											.stream()
 											.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))

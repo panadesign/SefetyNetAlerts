@@ -1,8 +1,8 @@
 package com.openclassrooms.safetynet.service.person;
 
-import com.openclassrooms.safetynet.dto.AlertChildDto;
-import com.openclassrooms.safetynet.dto.FloodDto;
-import com.openclassrooms.safetynet.dto.PersonInfoDto;
+import com.openclassrooms.safetynet.dto.getChildByAddressDto;
+import com.openclassrooms.safetynet.dto.getFamiliesByStationDto;
+import com.openclassrooms.safetynet.dto.getPersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.model.Person;
 
 import java.util.List;
@@ -13,7 +13,7 @@ public interface PersonManager {
 	void addPerson(Person person);
 	void updatePerson(String lastName, String firstName);
 	Set<String> getAllMailsByCity(String city);
-	List<PersonInfoDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName);
-	List<AlertChildDto> getChildByAddress(String address);
-	Map<String, List<FloodDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations);
+	List<getPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName);
+	List<getChildByAddressDto> getChildByAddress(String address);
+	Map<String, List<getFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations);
 }

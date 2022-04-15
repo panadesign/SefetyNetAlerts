@@ -12,10 +12,10 @@ import java.util.Set;
 public class CommunityEmailController {
 	
 	@Autowired
-	private PersonManager iPerson;
+	private PersonManager personManager;
 
 	@GetMapping("/communityEmail")
 	public Set<String> getAllMailsByCity(@RequestParam String city) {
-		return iPerson.getAllMailsByCity(city);
+		return personManager.getAllMailsByCity(city);
 	}
 }
