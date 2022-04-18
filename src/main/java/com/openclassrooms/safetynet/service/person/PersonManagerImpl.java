@@ -1,7 +1,7 @@
 package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.DataStorage;
-import com.openclassrooms.safetynet.dto.getChildByAddressDto;
+import com.openclassrooms.safetynet.dto.getChildrenByAddressDto;
 import com.openclassrooms.safetynet.dto.getFamiliesByStationDto;
 import com.openclassrooms.safetynet.dto.getPersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.model.FireStation;
@@ -67,24 +67,24 @@ public class PersonManagerImpl implements PersonManager {
 		return personInfoDto;
 	}
 	
-	public List<getChildByAddressDto> getChildByAddress(String address) {
+	public Set<getChildrenByAddressDto> getChildrenByAddress(String address) {
 		
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
-		List<getChildByAddressDto> getChildWithFamily = new ArrayList<>();
+		Set<getChildrenByAddressDto> getChildWithFamily = new HashSet<>();
 		
 		for (MedicalRecord medicalRecord : medicalRecords) {
-			List<getChildByAddressDto> getChildByAddress =
+			List<getChildrenByAddressDto> getChildrenByAddress =
 					persons
 							.stream()
 							.filter(person -> person.getId().equals(medicalRecord.getId()))
 							.filter(person -> person.getAddress().equals(address))
-							.map(person -> new getChildByAddressDto(person, medicalRecord))
-							.filter(mr -> mr.isMinor(mr.getAge()))
+							.map(person -> new getChildrenByAddressDto(person, medicalRecord))
+							.filter(mr -> mr.isMinor())
 							.collect(Collectors.toList());
 			
-			getChildWithFamily.addAll(getChildByAddress);
+			getChildWithFamily.addAll(getChildrenByAddress);
 		}
 		
 		return getChildWithFamily;

@@ -5,6 +5,8 @@ import com.openclassrooms.safetynet.dto.*;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,32 +18,32 @@ import java.util.Set;
 
 @RestController
 public class AlertController {
-
+	
 	@Autowired
 	private DataStorage dataStorage;
 	@Autowired
 	private FirestationManager firestationManager;
 	@Autowired
 	private PersonManager personManager;
-
+	
 	@GetMapping("/fire")
-	public List<getPersonsByAddressDto> getPeoplesByAddress(@RequestParam String address) {
-		return firestationManager.getPeoplesByAddress(address);
+	ResponseEntity<List<getPersonsByAddressDto>> getPeoplesByAddress(@RequestParam String address) {
+		return new ResponseEntity<>(firestationManager.getPeoplesByAddress(address), HttpStatus.OK);
 	}
-
+	
 	@GetMapping("/phoneAlert")
-	public Set<String> getPhoneNumbersByFirestationNumber(@RequestParam int firestation) {
-		return firestationManager.getPhoneNumbersByFirestationNumber(firestation);
+	ResponseEntity<Set<String>> getPhoneNumbersByFirestationNumber(@RequestParam int firestation) {
+		return new ResponseEntity<>(firestationManager.getPhoneNumbersByFirestationNumber(firestation), HttpStatus.OK);
 	}
-
+	
 	@GetMapping("/childAlert")
-	public List<getChildByAddressDto> getChildByAddress(@RequestParam String address) {
-		return personManager.getChildByAddress(address);
+	ResponseEntity<Set<getChildrenByAddressDto>> getChildByAddress(@RequestParam String address) {
+		return new ResponseEntity<>(personManager.getChildrenByAddress(address), HttpStatus.OK);
 	}
-
+	
 	@GetMapping("/flood/stations/")
-	public Map<String, List<getFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(@RequestParam List<Integer> stations) {
-		return personManager.getPersonsByAddressStationForFloodAlert(stations);
+	ResponseEntity<Map<String, List<getFamiliesByStationDto>>> getPersonsByAddressStationForFloodAlert(@RequestParam List<Integer> stations) {
+		return new ResponseEntity<>(personManager.getPersonsByAddressStationForFloodAlert(stations), HttpStatus.OK);
 	}
-
+	
 }

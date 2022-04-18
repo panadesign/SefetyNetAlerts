@@ -21,7 +21,7 @@ class CommunityEmailControllerTest {
 	@MockBean
 	private DataStorage dataStorage;
 	@MockBean
-	private PersonManager iPerson;
+	private PersonManager personManager;
 
 	@Test
 	void getAllMailsByCityTest() throws Exception {

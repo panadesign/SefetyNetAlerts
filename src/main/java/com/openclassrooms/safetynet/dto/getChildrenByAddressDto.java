@@ -4,50 +4,41 @@ import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
 
-public class getChildByAddressDto {
+public class getChildrenByAddressDto {
 	private String firstName;
 	private String lastName;
 	private String phone;
 	private Integer age;
 
-	public getChildByAddressDto(Person person, MedicalRecord medicalRecord) {
-
+	public getChildrenByAddressDto(Person person, MedicalRecord medicalRecord) {
 		this.firstName = person.getFirstName();
 		this.lastName = person.getLastName();
 		this.phone = person.getPhone();
 		this.age=medicalRecord.getAge();
 	}
-
+	
+	@JsonGetter("firstName")
 	public String getFirstName() {
 		return firstName;
 	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
+	
+	@JsonGetter("lastName")
 	public String getLastName() {
 		return lastName;
 	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
+	
+	@JsonGetter("phone")
 	public String getPhone() {
 		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
 	}
 	
 	@JsonGetter("age")
 	public Integer getAge() {
 		return age;
 	}
-
-	public boolean isMinor(Integer age) {
+	
+	@JsonGetter("isMinor")
+	public boolean isMinor() {
 		return age <= 18;
 	}
 

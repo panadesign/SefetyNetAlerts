@@ -1,9 +1,7 @@
 package com.openclassrooms.safetynet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.openclassrooms.safetynet.model.Data;
-import com.openclassrooms.safetynet.model.FireStation;
-import com.openclassrooms.safetynet.model.Person;
+import com.openclassrooms.safetynet.model.*;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
@@ -25,6 +23,18 @@ public class DataStorage {
 	
 	public Data getData() {
 		return data;
+	}
+	
+	public List<Person> getPersons() {
+		return data.getPersons();
+	}
+	
+	public List<Person> getPersonById(Id id) {
+		return data.getPersons()
+				.stream()
+				.filter(person -> person.getId().equals(id))
+				.map(person -> new Person())
+				.collect(Collectors.toList());
 	}
 	
 	public List<Person> getPersonsByAddress(String address) {
@@ -59,5 +69,37 @@ public class DataStorage {
 			getPersonsByStationNumber.addAll(aggregate);
 		}
 		return getPersonsByStationNumber;
+	}
+	
+	public List<FireStation> getFireStations() {
+		return data.getFirestations();
+	}
+	
+	public List<FireStation> getFirestationsByNumber(Integer station) {
+		return data.getFirestations()
+				.stream()
+				.filter(fireStation -> fireStation.getStation() == station)
+				.map(fireStation -> new FireStation())
+				.collect(Collectors.toList());
+	}
+	
+	public List<FireStation> getFirestationsByAddress(String address) {
+		return data.getFirestations()
+				.stream()
+				.filter(fireStation -> fireStation.getAddress().equals(address))
+				.map(fireStation -> new FireStation())
+				.collect(Collectors.toList());
+	}
+	
+	public List<MedicalRecord> getMedicalRecord() {
+		return data.getMedicalrecords();
+	}
+	
+	public List<MedicalRecord> getMedicalRecordById(Id id) {
+		return data.getMedicalrecords()
+				.stream()
+				.filter(medicalRecord -> medicalRecord.getId().equals(id))
+				.map(medicalRecord -> new MedicalRecord())
+				.collect(Collectors.toList());
 	}
 }

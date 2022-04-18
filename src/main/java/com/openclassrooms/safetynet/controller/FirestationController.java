@@ -5,6 +5,8 @@ import com.openclassrooms.safetynet.dto.getPersonsByStationDto;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,7 +17,7 @@ public class FirestationController {
 	@Autowired
 	private DataStorage dataStorage;
 	@Autowired
-	private FirestationManager firestation;
+	private FirestationManager firestationManager;
 	@Autowired
 	private PersonManager personManager;
 
@@ -36,8 +38,8 @@ public class FirestationController {
 
 	@GetMapping("/firestation")
 
-	public List<getPersonsByStationDto> getPeopleByFirestationNumber(@RequestParam int stationNumber) {
-		return firestation.getPeopleByFirestationNumber(stationNumber);
+	ResponseEntity<List<getPersonsByStationDto>> getPeopleByFirestationNumber(@RequestParam int stationNumber) {
+		return new ResponseEntity<>(firestationManager.getPeopleByFirestationNumber(stationNumber), HttpStatus.OK);
 
 	}
 

@@ -1,8 +1,16 @@
 package com.openclassrooms.safetynet.model;
 
-public class FireStation {
+import lombok.Getter;
+import lombok.Setter;
 
+public class FireStation {
+	
+	@Getter
+	@Setter
 	private int station;
+	
+	@Getter
+	@Setter
 	private String address;
 
 	public FireStation() {
@@ -13,20 +21,5 @@ public class FireStation {
 		this.station = station;
 		this.address = address;
 	}
-
-	public int getStation() {
-		return station;
-	}
-
-	public void setStation(int station) {
-		this.station = station;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
+	
 }

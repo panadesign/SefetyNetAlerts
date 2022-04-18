@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.dto;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.Person;
 
 public class getPersonsByStationDto {
@@ -9,44 +10,32 @@ public class getPersonsByStationDto {
 	private String address;
 	private String phone;
 
-	public getPersonsByStationDto(Person person) throws Exception {
+	public getPersonsByStationDto(Person person) {
 
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();
 		this.address = person.getAddress();
 		this.phone = person.getPhone();
 	}
-
+	
+	@JsonGetter("firstName")
 	public String getFirstName() {
 		return firstName;
 	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
+	
+	@JsonGetter("lastName")
 	public String getLastName() {
 		return lastName;
 	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
+	
+	@JsonGetter("address")
 	public String getAddress() {
 		return address;
 	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
+	
+	@JsonGetter("phone")
 	public String getPhone() {
 		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
 	}
 
 }

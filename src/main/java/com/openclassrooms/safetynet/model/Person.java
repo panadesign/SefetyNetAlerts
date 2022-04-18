@@ -1,17 +1,37 @@
 package com.openclassrooms.safetynet.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Getter;
+import lombok.Setter;
 
-
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Person {
-
+	
+	@Getter
+	@Setter
 	private String firstName;
+	
+	@Getter
+	@Setter
 	private String lastName;
+	
+	@Getter
+	@Setter
 	private String address;
+	
+	@Getter
+	@Setter
 	private String city;
+	
+	@Getter
+	@Setter
 	private Integer zip;
+	
+	@Getter
+	@Setter
 	private String phone;
+	
+	@Getter
+	@Setter
 	private String email;
 
 	public Person() {
@@ -34,68 +54,14 @@ public class Person {
 		this.lastName = lastName;
 	}
 
+	
+	
 	public Person(String phone) {
 		this.phone = phone;
 	}
 
 	public Id getId() {
 		return  new Id(firstName, lastName);
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public Integer getZip() {
-		return zip;
-	}
-
-	public void setZip(Integer zip) {
-		this.zip = zip;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 	
 }

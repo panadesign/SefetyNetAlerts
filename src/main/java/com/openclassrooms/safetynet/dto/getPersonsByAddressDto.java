@@ -18,7 +18,7 @@ public class getPersonsByAddressDto {
 	
 	public getPersonsByAddressDto(Person person, FireStation fireStation) throws Exception {
 		if (!person.getAddress().equals(fireStation.getAddress())) {
-			throw new Exception("Address not found");
+			throw new Exception("Addresses are not equals");
 		}
 		
 		this.firstName = person.getFirstName();
@@ -34,45 +34,29 @@ public class getPersonsByAddressDto {
 		this.medications = medicalRecord.getMedications();
 		this.allergies = medicalRecord.getAllergies();
 	}
-	
+	@JsonGetter("firstName")
 	public String getFirstName() {
 		return firstName;
 	}
 	
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	
+	@JsonGetter("lastName")
 	public String getLastName() {
 		return lastName;
 	}
 	
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
+	@JsonGetter("medications")
 	public List<String> getMedications() {
 		return medications;
 	}
 	
-	public void setMedications(List<String> medications) {
-		this.medications = medications;
-	}
-	
+	@JsonGetter("allergies")
 	public List<String> getAllergies() {
 		return allergies;
 	}
 	
-	public void setAllergies(List<String> allergies) {
-		this.allergies = allergies;
-	}
-	
+	@JsonGetter("station")
 	public int getStation() {
 		return station;
-	}
-	
-	public void setStation(int station) {
-		this.station = station;
 	}
 	
 	@JsonGetter("age")

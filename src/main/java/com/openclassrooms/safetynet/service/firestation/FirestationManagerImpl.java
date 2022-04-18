@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class FirestationManagerImpl implements FirestationManager {
 	
 	@Autowired
-	DataStorage dataStorage;
+	private DataStorage dataStorage;
 	
 	public void addFirestation() {
 	}
