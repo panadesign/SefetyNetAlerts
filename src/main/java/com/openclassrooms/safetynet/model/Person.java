@@ -60,6 +60,9 @@ public class Person {
 		this.phone = phone;
 	}
 
+	public Person(Person person) {
+	}
+
 	public Id getId() {
 		return  new Id(firstName, lastName);
 	}

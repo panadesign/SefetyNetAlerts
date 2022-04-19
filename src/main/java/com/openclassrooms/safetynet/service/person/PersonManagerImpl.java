@@ -15,60 +15,60 @@ import java.util.stream.Collectors;
 
 @Component
 public class PersonManagerImpl implements PersonManager {
-	
+
 	@Autowired
 	private DataStorage dataStorage;
-	
+
 	public void addPerson(Person person) {
-		dataStorage.getData().getPersons()
+		dataStorage.getPersons()
 				.add(person);
 	}
-	
+
 	public void updatePerson(String firstName, String lastName) {
 		List<Person> personList = dataStorage.getData().getPersons();
-		for(Person person: personList){
-			List<getPersonByFirstNameAndLastNameDto> personList1 =
+
+		for(Person person : personList) {
+			List<getPersonByFirstNameAndLastNameDto> getPersonByFirstNameAndLastNameDto =
 					personList.stream()
 							.filter(person1 -> person.getFirstName().equals(firstName) && person.getLastName().equals(lastName))
 							.map(person1 -> new getPersonByFirstNameAndLastNameDto(person))
 							.collect(Collectors.toList());
 		}
-		
+
 	}
-	
+
 	public Set<String> getAllMailsByCity(String city) {
 		return dataStorage
-				.getData()
 				.getPersons()
 				.stream()
 				.filter(p -> p.getCity().equals(city))
 				.map(Person::getEmail)
 				.collect(Collectors.toSet());
 	}
-	
+
 	public List<getPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName) {
-		
+
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
-		
+
 		List<getPersonByFirstNameAndLastNameDto> personInfoDto = new ArrayList<>();
-		
-		for (Person person : persons) {
+
+		for(Person person : persons) {
 			List<getPersonByFirstNameAndLastNameDto> aggregate =
 					medicalRecords.stream()
 							.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 							.filter(m -> m.getLastName().equals(lastName))
 							.map(medicalRecord -> new getPersonByFirstNameAndLastNameDto(person, medicalRecord))
 							.collect(Collectors.toList());
-			
+
 			personInfoDto.addAll(aggregate);
 		}
-		
+
 		return personInfoDto;
 	}
-	
+
 	public Set<getChildrenByAddressDto> getChildrenByAddress(String address) {
-		
+
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
@@ -81,7 +81,7 @@ public class PersonManagerImpl implements PersonManager {
 							.filter(person -> person.getId().equals(medicalRecord.getId()))
 							.filter(person -> person.getAddress().equals(address))
 							.map(person -> new getChildrenByAddressDto(person, medicalRecord))
-							.filter(mr -> mr.isMinor())
+							.filter(getChildrenByAddressDto::isMinor)
 							.collect(Collectors.toList());
 			
 			getChildWithFamily.addAll(getChildrenByAddress);
@@ -89,16 +89,16 @@ public class PersonManagerImpl implements PersonManager {
 		
 		return getChildWithFamily;
 	}
-	
+
 	public Map<String, List<getFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<FireStation> fireStations = dataStorage.getData().getFirestations();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
-		
+
 		List<String> allAddressesByStationNumber = new ArrayList<>();
 		Map<String, List<getFamiliesByStationDto>> allPersons = new HashMap<>();
-		
-		for (Integer fireStationNumber : stations) {
+
+		for(Integer fireStationNumber : stations) {
 			List<String> getAllAddressesByStationNumber =
 					fireStations
 							.stream()
@@ -107,8 +107,8 @@ public class PersonManagerImpl implements PersonManager {
 							.collect(Collectors.toList());
 			allAddressesByStationNumber.addAll(getAllAddressesByStationNumber);
 		}
-		
-		for (String addresses : allAddressesByStationNumber) {
+
+		for(String addresses : allAddressesByStationNumber) {
 			List<getFamiliesByStationDto> getAllPersonsIdWithThisAddress =
 					persons
 							.stream()
@@ -122,8 +122,8 @@ public class PersonManagerImpl implements PersonManager {
 							.collect(Collectors.toList());
 			allPersons.put(addresses, getAllPersonsIdWithThisAddress);
 		}
-		
+
 		return allPersons;
-		
+
 	}
 }

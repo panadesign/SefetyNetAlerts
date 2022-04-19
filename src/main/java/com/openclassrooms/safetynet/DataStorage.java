@@ -29,7 +29,7 @@ public class DataStorage {
 		return data.getPersons();
 	}
 	
-	public List<Person> getPersonById(Id id) {
+	public List<Person> getPersonsById(Id id) {
 		return data.getPersons()
 				.stream()
 				.filter(person -> person.getId().equals(id))
@@ -50,14 +50,14 @@ public class DataStorage {
 		List<FireStation> fireStations = getData().getFirestations();
 		List<Person> getPersonsByStationNumber = new ArrayList<>();
 		
-		List<FireStation> getFirestationByStationNumber =
+		List<FireStation> getFirestationsByStationNumber =
 				fireStations
 						.stream()
 						.filter(fireStation -> fireStation.getStation() == station)
 						.map(fireStation -> new FireStation())
 						.collect(Collectors.toList());
 		
-		for (FireStation fireStation : getFirestationByStationNumber) {
+		for (FireStation fireStation : getFirestationsByStationNumber) {
 			List<Person> aggregate = allPersons
 					.stream()
 					.filter(person -> person.getAddress().equals(fireStation.getAddress()))

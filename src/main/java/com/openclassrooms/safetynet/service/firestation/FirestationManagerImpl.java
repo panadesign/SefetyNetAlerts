@@ -16,34 +16,34 @@ import java.util.stream.Collectors;
 
 @Component
 public class FirestationManagerImpl implements FirestationManager {
-	
+
 	@Autowired
 	private DataStorage dataStorage;
-	
+
 	public void addFirestation() {
 	}
-	
+
 	public void updateFirestation() {
 	}
-	
+
 	public void deleteFirestation() {
 	}
-	
+
 	public List<getPersonsByStationDto> getPeopleByFirestationNumber(int stationNumber) {
-		
-		List<Person> persons = dataStorage.getData().getPersons();
+
+		List<Person> persons = dataStorage.getPersons();
 		List<FireStation> fireStations = dataStorage.getData().getFirestations();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
-		
+
 		List<getPersonsByStationDto> firestationDto = new ArrayList<>();
-		
+
 		List<String> getAddressesByStationNumber =
 				fireStations
 						.stream()
 						.filter(p -> p.getStation() == (stationNumber))
 						.map(FireStation::getAddress)
 						.collect(Collectors.toList());
-		
+
 		List<getPersonsByStationDto> getPersonsByFirestationsAddresses =
 				persons
 						.stream()
@@ -51,20 +51,20 @@ public class FirestationManagerImpl implements FirestationManager {
 						.map(person -> {
 							try {
 								return new getPersonsByStationDto(person);
-								
-							} catch (Exception e) {
+
+							} catch(Exception e) {
 								e.printStackTrace();
 							}
 							return null;
 						})
 						.collect(Collectors.toList());
 		firestationDto.addAll(getPersonsByFirestationsAddresses);
-		
+
 		return firestationDto;
 	}
-	
+
 	public Set<String> getPhoneNumbersByFirestationNumber(int station) {
-		
+
 		List<String> firestationAddress =
 				dataStorage
 						.getData()
@@ -73,28 +73,26 @@ public class FirestationManagerImpl implements FirestationManager {
 						.filter(p -> p.getStation() == (station))
 						.map(FireStation::getAddress)
 						.collect(Collectors.toList());
-		
+
 		return dataStorage
-				.getData()
 				.getPersons()
 				.stream()
 				.filter(p -> firestationAddress.contains(p.getAddress()))
 				.map(Person::getPhone)
 				.collect(Collectors.toSet());
 	}
-	
+
 	public List<getPersonsByAddressDto> getPeoplesByAddress(String address) {
-		
+
 		List<Person> persons = dataStorage.getPersonsByAddress(address);
-				/*dataStorage
-						.getData()
-						.getPersons()
-						.stream()
-						.filter(person -> person.getAddress().equals(address))
-						.collect(Collectors.toList());
-				*/
+		dataStorage
+				.getPersons()
+				.stream()
+				.filter(person -> person.getAddress().equals(address))
+				.collect(Collectors.toList());
+
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
-		
+
 		List<FireStation> fireStations =
 				dataStorage
 						.getData()
@@ -102,10 +100,10 @@ public class FirestationManagerImpl implements FirestationManager {
 						.stream()
 						.filter(fireStation -> fireStation.getAddress().equals(address))
 						.collect(Collectors.toList());
-		
+
 		List<getPersonsByAddressDto> fireDto = new ArrayList<>();
-		
-		for (Person person : persons) {
+
+		for(Person person : persons) {
 			List<getPersonsByAddressDto> aggregate =
 					fireStations
 							.stream()
@@ -114,17 +112,17 @@ public class FirestationManagerImpl implements FirestationManager {
 									return new getPersonsByAddressDto(person, fireStation, medicalRecords.stream()
 											.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 											.findFirst().orElse(null));
-								} catch (Exception e) {
+								} catch(Exception e) {
 									e.printStackTrace();
 								}
 								return null;
 							})
 							.collect(Collectors.toList());
-			
+
 			fireDto.addAll(aggregate);
 		}
-		
+
 		return fireDto;
 	}
-	
+
 }
