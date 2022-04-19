@@ -85,14 +85,14 @@ public class FirestationManagerImpl implements FirestationManager {
 	
 	public List<getPersonsByAddressDto> getPeoplesByAddress(String address) {
 		
-		List<Person> persons =
-				dataStorage
+		List<Person> persons = dataStorage.getPersonsByAddress(address);
+				/*dataStorage
 						.getData()
 						.getPersons()
 						.stream()
 						.filter(person -> person.getAddress().equals(address))
 						.collect(Collectors.toList());
-		
+				*/
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
 		List<FireStation> fireStations =

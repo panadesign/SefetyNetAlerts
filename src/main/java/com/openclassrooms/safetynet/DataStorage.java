@@ -38,9 +38,7 @@ public class DataStorage {
 	}
 	
 	public List<Person> getPersonsByAddress(String address) {
-		List<Person> allPersons = getData().getPersons();
-		
-		return allPersons
+		return getData().getPersons()
 				.stream()
 				.filter(person -> person.getAddress().equals(address))
 				.map(person -> new Person())
@@ -75,11 +73,11 @@ public class DataStorage {
 		return data.getFirestations();
 	}
 	
-	public List<FireStation> getFirestationsByNumber(Integer station) {
+	public List<String> getFirestationsByNumber(Integer station) {
 		return data.getFirestations()
 				.stream()
 				.filter(fireStation -> fireStation.getStation() == station)
-				.map(fireStation -> new FireStation())
+				.map(fireStation -> fireStation.getAddress())
 				.collect(Collectors.toList());
 	}
 	
