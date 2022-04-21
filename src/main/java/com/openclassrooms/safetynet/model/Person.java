@@ -1,17 +1,21 @@
 package com.openclassrooms.safetynet.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 public class Person {
 	
 	@Getter
 	@Setter
+	@NonNull
 	private String firstName;
 	
 	@Getter
 	@Setter
+	@NonNull
 	private String lastName;
 	
 	@Getter
@@ -60,7 +64,8 @@ public class Person {
 
 	public Person(Person person) {
 	}
-
+	
+	@JsonIgnore
 	public Id getId() {
 		return  new Id(firstName, lastName);
 	}

@@ -17,13 +17,21 @@ public class PersonController {
 	private PersonManager personManager;
 	
 	@PostMapping("/person")
-	public void addPerson(Person person) {
+	public ResponseEntity<Void> addPerson(@RequestBody Person person) {
 		personManager.addPerson(person);
+		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/person")
-	public void updatePerson(@RequestParam String firstName, @RequestParam String lastName) {
-		personManager.updatePerson(firstName, lastName);
+	public ResponseEntity<Void> updatePerson(@RequestBody Person person) {
+		personManager.updatePerson(person);
+		return new ResponseEntity<Void>(HttpStatus.CREATED);
+	}
+	
+	@DeleteMapping("/person")
+	public ResponseEntity<Void> deletePerson(@RequestBody Person person) {
+		personManager.updatePerson(person);
+		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/personInfo")

@@ -1,7 +1,9 @@
 package com.openclassrooms.safetynet.service.medicalRecords;
 
+import com.openclassrooms.safetynet.model.MedicalRecord;
+
 public interface MedicalRecordsManager {
-	public void addMedicalRecords();
-	public void updateMedicalRecords();
-	public void deleteMedicalRecords();
+	void addMedicalRecord(MedicalRecord medicalRecord);
+	void updateMedicalRecords();
+	void deleteMedicalRecords();
 }

@@ -1,26 +1,24 @@
 package com.openclassrooms.safetynet.controller;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
+import com.openclassrooms.safetynet.model.MedicalRecord;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MedicalRecordController {
-
+	
+	@Autowired
+	private MedicalRecordsManager medicalRecordsManager;
+	
 	@PostMapping("/medicalRecord")
-	public String addMedicalRecord() {
-		return "ajouter un dossier médical";
-	}
-
-	@PutMapping("/medicalRecord")
-	public String updateMedicalRecord() {
-		return "mise à jour du dossier médical";
-	}
-
-	@DeleteMapping("/medicalRecord")
-	public String deleteMedicalRecord() {
-		return "supprimer le dossier médical";
+	public ResponseEntity<Void> addMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
+		medicalRecordsManager.addMedicalRecord(medicalRecord);
+		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
 
 }

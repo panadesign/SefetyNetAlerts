@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +11,7 @@ import java.util.List;
 
 public class MedicalRecord {
 	
+	@JsonIgnore
 	public Id getId() {
 		return  new Id(firstName, lastName);
 	}
@@ -50,7 +52,7 @@ public class MedicalRecord {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 		return LocalDate.parse(birthdate, formatter);
 	}
-	
+	@JsonIgnore
 	public Integer getAge() {
 		return Period.between(birthdate, LocalDate.now()).getYears();
 	}
