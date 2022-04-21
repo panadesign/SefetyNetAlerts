@@ -10,7 +10,7 @@ public interface FirestationManager {
 	public void addFirestation();
 	public void updateFirestation();
 	public void deleteFirestation();
-	public List<getPersonsByStationDto> getPeopleByFirestationNumber(int stationNumber);
+	public List<getPersonsByStationDto> getPersonsByStation(int stationNumber);
 	public Set<String> getPhoneNumbersByFirestationNumber(int station);
 	public List<getPersonsByAddressDto> getPeoplesByAddress(String address);
 }

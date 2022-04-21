@@ -1,6 +1,6 @@
 package com.openclassrooms.safetynet.service.person;
 
-import com.openclassrooms.safetynet.DataStorage;
+import com.openclassrooms.safetynet.service.DataStorage;
 import com.openclassrooms.safetynet.dto.getChildrenByAddressDto;
 import com.openclassrooms.safetynet.dto.getFamiliesByStationDto;
 import com.openclassrooms.safetynet.dto.getPersonByFirstNameAndLastNameDto;
@@ -20,7 +20,9 @@ public class PersonManagerImpl implements PersonManager {
 	private DataStorage dataStorage;
 
 	public void addPerson(Person person) {
-		dataStorage.getPersons()
+		dataStorage
+				.getData()
+				.getPersons()
 				.add(person);
 	}
 
@@ -40,7 +42,6 @@ public class PersonManagerImpl implements PersonManager {
 	public Set<String> getAllMailsByCity(String city) {
 		return dataStorage
 				.getPersons()
-				.stream()
 				.filter(p -> p.getCity().equals(city))
 				.map(Person::getEmail)
 				.collect(Collectors.toSet());
@@ -49,13 +50,11 @@ public class PersonManagerImpl implements PersonManager {
 	public List<getPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName) {
 
 		List<Person> persons = dataStorage.getData().getPersons();
-		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
-
 		List<getPersonByFirstNameAndLastNameDto> personInfoDto = new ArrayList<>();
 
 		for(Person person : persons) {
 			List<getPersonByFirstNameAndLastNameDto> aggregate =
-					medicalRecords.stream()
+					dataStorage.getMedicalRecord()
 							.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 							.filter(m -> m.getLastName().equals(lastName))
 							.map(medicalRecord -> new getPersonByFirstNameAndLastNameDto(person, medicalRecord))
@@ -69,15 +68,13 @@ public class PersonManagerImpl implements PersonManager {
 
 	public Set<getChildrenByAddressDto> getChildrenByAddress(String address) {
 
-		List<Person> persons = dataStorage.getData().getPersons();
 		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
 		
 		Set<getChildrenByAddressDto> getChildWithFamily = new HashSet<>();
 		
 		for (MedicalRecord medicalRecord : medicalRecords) {
 			List<getChildrenByAddressDto> getChildrenByAddress =
-					persons
-							.stream()
+					dataStorage.getPersons()
 							.filter(person -> person.getId().equals(medicalRecord.getId()))
 							.filter(person -> person.getAddress().equals(address))
 							.map(person -> new getChildrenByAddressDto(person, medicalRecord))
@@ -85,6 +82,18 @@ public class PersonManagerImpl implements PersonManager {
 							.collect(Collectors.toList());
 			
 			getChildWithFamily.addAll(getChildrenByAddress);
+		}
+		
+		for (MedicalRecord medicalRecord : medicalRecords) {
+			List<getChildrenByAddressDto> getAdultByAddress =
+					dataStorage.getPersons()
+							.filter(person -> person.getId().equals(medicalRecord.getId()))
+							.filter(person -> person.getAddress().equals(address))
+							.map(person -> new getChildrenByAddressDto(person, medicalRecord))
+							.filter(person -> !person.isMinor())
+							.collect(Collectors.toList());
+			
+			getChildWithFamily.addAll(getAdultByAddress);
 		}
 		
 		return getChildWithFamily;

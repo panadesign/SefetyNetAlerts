@@ -1,6 +1,6 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.DataStorage;
+import com.openclassrooms.safetynet.service.DataStorage;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 
 import org.junit.jupiter.api.Test;

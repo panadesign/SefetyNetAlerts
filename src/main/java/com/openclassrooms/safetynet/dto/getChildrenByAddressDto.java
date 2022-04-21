@@ -4,11 +4,17 @@ import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.MedicalRecord;
 import com.openclassrooms.safetynet.model.Person;
 
+import java.util.List;
+
 public class getChildrenByAddressDto {
 	private String firstName;
 	private String lastName;
 	private String phone;
 	private Integer age;
+	
+
+	
+	private List<Person> adults;
 
 	public getChildrenByAddressDto(Person person, MedicalRecord medicalRecord) {
 		this.firstName = person.getFirstName();
@@ -41,5 +47,8 @@ public class getChildrenByAddressDto {
 	public boolean isMinor() {
 		return age <= 18;
 	}
-
+	
+	public List<Person> getAdults() {
+		return adults;
+	}
 }

@@ -1,6 +1,6 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.DataStorage;
+import com.openclassrooms.safetynet.service.DataStorage;
 import com.openclassrooms.safetynet.dto.getPersonsByStationDto;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
@@ -38,8 +38,8 @@ public class FirestationController {
 
 	@GetMapping("/firestation")
 
-	ResponseEntity<List<getPersonsByStationDto>> getPeopleByFirestationNumber(@RequestParam int stationNumber) {
-		return new ResponseEntity<>(firestationManager.getPeopleByFirestationNumber(stationNumber), HttpStatus.OK);
+	ResponseEntity<List<getPersonsByStationDto>> getPersonsByStation(@RequestParam int stationNumber) {
+		return new ResponseEntity<>(firestationManager.getPersonsByStation(stationNumber), HttpStatus.OK);
 
 	}
 

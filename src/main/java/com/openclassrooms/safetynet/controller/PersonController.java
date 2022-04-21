@@ -26,7 +26,6 @@ public class PersonController {
 		personManager.updatePerson(firstName, lastName);
 	}
 	
-	
 	@GetMapping("/personInfo")
 	ResponseEntity<List<getPersonByFirstNameAndLastNameDto>> getPersonsWithMedicalrecords(@RequestParam String firstName, @RequestParam String lastName) {
 		return new ResponseEntity<>(personManager.getPersonsByAddressWithMedicalrecords(firstName, lastName), HttpStatus.OK);
