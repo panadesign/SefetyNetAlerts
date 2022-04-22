@@ -23,12 +23,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 		
 		Optional<Medicalrecord> optionalMedicalrecord =
 				dataStorage
-						.getData()
-						.getMedicalrecords()
-						.stream()
-						.filter(m -> medicalrecord.getLastName().equals(medicalrecord.getLastName()) && medicalrecord.getFirstName().equals(medicalrecord.getFirstName()))
-						.map(m -> new Medicalrecord(medicalrecord))
-						.findFirst();
+						.getMedicalRecordById(medicalrecord.getId());
 		
 		if (optionalMedicalrecord.isPresent()) {
 			throw new RuntimeException("This medical record exist already");
@@ -45,11 +40,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 		
 		Optional<Medicalrecord> optionalMedicalRecord =
 				dataStorage
-						.getMedicalRecord()
-						.filter(m -> m.getFirstName().equals(medicalRecord.getFirstName()) && m.getLastName().equals(medicalRecord.getLastName()))
-						.findFirst();
-		
-		
+						.getMedicalRecordById(medicalRecord.getId());
 		
 		if (optionalMedicalRecord.isPresent()) {
 			int indexOfMedicalRecord = dataStorage.getData().getMedicalrecords().indexOf(optionalMedicalRecord.get());
@@ -69,11 +60,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 		
 		Optional<Medicalrecord> optionalMedicalRecord =
 				dataStorage
-						.getMedicalRecord()
-						.filter(m -> m.getFirstName().equals(medicalRecord.getFirstName()) && m.getLastName().equals(medicalRecord.getLastName()))
-						.findFirst();
-		
-		
+						.getMedicalRecordById(medicalRecord.getId());
 		
 		if (optionalMedicalRecord.isPresent()) {
 			int indexOfMedicalRecord = dataStorage.getData().getMedicalrecords().indexOf(optionalMedicalRecord.get());

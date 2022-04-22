@@ -29,9 +29,7 @@ public class PersonManagerImpl implements PersonManager {
 		
 		Optional<Person> optionalPerson =
 				dataStorage
-						.getPersons()
-						.filter(p -> person.getLastName().equals(p.getLastName()) && person.getFirstName().equals(p.getFirstName()))
-						.findFirst();
+						.getPersonById(person.getId());
 		
 		if (optionalPerson.isPresent()) {
 			throw new RuntimeException("This person exist already");
@@ -49,9 +47,7 @@ public class PersonManagerImpl implements PersonManager {
 		
 		Optional<Person> optionalPerson =
 				dataStorage
-						.getPersons()
-						.filter(p -> p.getFirstName().equals(person.getFirstName()) && p.getLastName().equals(person.getLastName()))
-						.findFirst();
+						.getPersonById(person.getId());
 		
 		if (optionalPerson.isPresent()) {
 			
@@ -72,9 +68,9 @@ public class PersonManagerImpl implements PersonManager {
 		
 		Logger.debug("Delete a person" + person);
 		
-		Optional<Person> optionalPerson = dataStorage.getPersons()
-				.filter(p -> p.getFirstName().equals(person.getFirstName()) && p.getLastName().equals(person.getLastName()))
-				.findFirst();
+		Optional<Person> optionalPerson =
+				dataStorage
+						.getPersonById(person.getId());
 		
 		if (optionalPerson.isPresent()) {
 			
