@@ -1,13 +1,11 @@
 package com.openclassrooms.safetynet.model;
 
-import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 public class Data {
 	private List<Person> persons;
-	private List<FireStation> firestations;
-	private List<MedicalRecord> medicalrecords;
+	private List<Firestation> firestations;
+	private List<Medicalrecord> medicalrecords;
 
 	public List<Person> getPersons() {
 		return persons;
@@ -17,19 +15,19 @@ public class Data {
 		this.persons = persons;
 	}
 
-	public List<FireStation> getFirestations() {
+	public List<Firestation> getFirestations() {
 		return firestations;
 	}
 
-	public void setFirestations(List<FireStation> firestations) {
+	public void setFirestations(List<Firestation> firestations) {
 		this.firestations = firestations;
 	}
 
-	public List<MedicalRecord> getMedicalrecords() {
+	public List<Medicalrecord> getMedicalrecords() {
 		return medicalrecords;
 	}
 
-	public void setMedicalrecords(List<MedicalRecord> medicalrecords) {
+	public void setMedicalrecords(List<Medicalrecord> medicalrecords) {
 		this.medicalrecords = medicalrecords;
 	}
 }

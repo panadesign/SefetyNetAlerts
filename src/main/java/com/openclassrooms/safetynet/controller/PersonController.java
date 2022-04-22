@@ -1,6 +1,6 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.dto.getPersonByFirstNameAndLastNameDto;
+import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,17 +25,17 @@ public class PersonController {
 	@PutMapping("/person")
 	public ResponseEntity<Void> updatePerson(@RequestBody Person person) {
 		personManager.updatePerson(person);
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/person")
 	public ResponseEntity<Void> deletePerson(@RequestBody Person person) {
 		personManager.updatePerson(person);
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
 	@GetMapping("/personInfo")
-	ResponseEntity<List<getPersonByFirstNameAndLastNameDto>> getPersonsWithMedicalrecords(@RequestParam String firstName, @RequestParam String lastName) {
+	ResponseEntity<List<GetPersonByFirstNameAndLastNameDto>> getPersonsWithMedicalrecords(@RequestParam String firstName, @RequestParam String lastName) {
 		return new ResponseEntity<>(personManager.getPersonsByAddressWithMedicalrecords(firstName, lastName), HttpStatus.OK);
 	}
 	

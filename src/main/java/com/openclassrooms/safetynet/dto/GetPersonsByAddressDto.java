@@ -1,13 +1,13 @@
 package com.openclassrooms.safetynet.dto;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
-import com.openclassrooms.safetynet.model.FireStation;
+import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.model.MedicalRecord;
+import com.openclassrooms.safetynet.model.Medicalrecord;
 
 import java.util.List;
 
-public class getPersonsByAddressDto {
+public class GetPersonsByAddressDto {
 	
 	private String firstName;
 	private String lastName;
@@ -16,7 +16,7 @@ public class getPersonsByAddressDto {
 	private List<String> allergies;
 	private int station;
 	
-	public getPersonsByAddressDto(Person person, FireStation fireStation) throws Exception {
+	public GetPersonsByAddressDto(Person person, Firestation fireStation) throws Exception {
 		if (!person.getAddress().equals(fireStation.getAddress())) {
 			throw new Exception("Addresses are not equals");
 		}
@@ -26,7 +26,7 @@ public class getPersonsByAddressDto {
 		this.station = fireStation.getStation();
 	}
 	
-	public getPersonsByAddressDto(Person person, FireStation fireStation, MedicalRecord medicalRecord) {
+	public GetPersonsByAddressDto(Person person, Firestation fireStation, Medicalrecord medicalRecord) {
 		this.firstName = person.getFirstName();
 		this.lastName = person.getLastName();
 		this.station = fireStation.getStation();

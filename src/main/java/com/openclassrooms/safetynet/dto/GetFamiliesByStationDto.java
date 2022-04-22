@@ -1,12 +1,12 @@
 package com.openclassrooms.safetynet.dto;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
-import com.openclassrooms.safetynet.model.MedicalRecord;
+import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 
 import java.util.List;
 
-public class getFamiliesByStationDto {
+public class GetFamiliesByStationDto {
 	private String lastName;
 	private String firstName;
 	private String phone;
@@ -15,7 +15,7 @@ public class getFamiliesByStationDto {
 	private List<String> allergies;
 
 
-	public getFamiliesByStationDto(Person person, MedicalRecord medicalRecord) {
+	public GetFamiliesByStationDto(Person person, Medicalrecord medicalRecord) {
 		this.lastName = person.getLastName();
 		this.firstName = person.getFirstName();
 		this.phone = person.getPhone();

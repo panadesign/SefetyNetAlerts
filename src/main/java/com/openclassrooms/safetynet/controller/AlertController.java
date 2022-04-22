@@ -26,8 +26,8 @@ public class AlertController {
 	private PersonManager personManager;
 	
 	@GetMapping("/fire")
-	ResponseEntity<List<getPersonsByAddressDto>> getPeoplesByAddress(@RequestParam String address) {
-		return new ResponseEntity<>(firestationManager.getPeoplesByAddress(address), HttpStatus.OK);
+	ResponseEntity<List<GetPersonsByAddressDto>> getPersonsByAddress(@RequestParam String address) {
+		return new ResponseEntity<>(firestationManager.getPersonsByAddress(address), HttpStatus.OK);
 	}
 	
 	@GetMapping("/phoneAlert")
@@ -36,12 +36,12 @@ public class AlertController {
 	}
 	
 	@GetMapping("/childAlert")
-	ResponseEntity<Set<getChildrenByAddressDto>> getChildByAddress(@RequestParam String address) {
+	ResponseEntity<Set<GetChildrenByAddressDto>> getChildByAddress(@RequestParam String address) {
 		return new ResponseEntity<>(personManager.getChildrenByAddress(address), HttpStatus.OK);
 	}
 	
 	@GetMapping("/flood/stations/")
-	ResponseEntity<Map<String, List<getFamiliesByStationDto>>> getPersonsByAddressStationForFloodAlert(@RequestParam List<Integer> stations) {
+	ResponseEntity<Map<String, List<GetFamiliesByStationDto>>> getPersonsByAddressStationForFloodAlert(@RequestParam List<Integer> stations) {
 		return new ResponseEntity<>(personManager.getPersonsByAddressStationForFloodAlert(stations), HttpStatus.OK);
 	}
 	

@@ -1,7 +1,8 @@
-package com.openclassrooms.safetynet.service;
+package com.openclassrooms.safetynet.service.person;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.safetynet.model.*;
+import com.openclassrooms.safetynet.service.person.DataStorage;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Component
-public class DataStorage {
+public class DataStorageImpl implements DataStorage {
+
 	private final Data data;
 	
 	public DataStorage() throws IOException {

@@ -2,6 +2,7 @@ package com.openclassrooms.safetynet.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 import java.time.LocalDate;
@@ -9,7 +10,9 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class MedicalRecord {
+public class Medicalrecord {
+	
+	public Medicalrecord(Medicalrecord medicalRecord) {}
 	
 	@JsonIgnore
 	public Id getId() {
@@ -18,10 +21,12 @@ public class MedicalRecord {
 	
 	@Getter
 	@Setter
+	@NonNull
 	private String firstName;
 	
 	@Getter
 	@Setter
+	@NonNull
 	private String lastName;
 	
 	@Getter
@@ -35,23 +40,25 @@ public class MedicalRecord {
 	@Setter
 	private List<String> allergies;
 	
-	public MedicalRecord(){};
+	public Medicalrecord(){};
 
-	public MedicalRecord(String firstName, String lastName, String birthdate, List<String> medications) {
+	public Medicalrecord(String firstName, String lastName, String birthdate, List<String> medications) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthdate = parseStringToLocalDate(birthdate);
 		this.medications = medications;
 	}
-	
+
 	public void setBirthdate(String birthdate){
 		this.birthdate = parseStringToLocalDate(birthdate);
 	}
+	
 	
 	private LocalDate parseStringToLocalDate(String birthdate) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 		return LocalDate.parse(birthdate, formatter);
 	}
+	
 	@JsonIgnore
 	public Integer getAge() {
 		return Period.between(birthdate, LocalDate.now()).getYears();

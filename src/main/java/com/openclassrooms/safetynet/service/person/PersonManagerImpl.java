@@ -1,11 +1,11 @@
 package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.service.DataStorage;
-import com.openclassrooms.safetynet.dto.getChildrenByAddressDto;
-import com.openclassrooms.safetynet.dto.getFamiliesByStationDto;
-import com.openclassrooms.safetynet.dto.getPersonByFirstNameAndLastNameDto;
-import com.openclassrooms.safetynet.model.FireStation;
-import com.openclassrooms.safetynet.model.MedicalRecord;
+import com.openclassrooms.safetynet.dto.GetChildrenByAddressDto;
+import com.openclassrooms.safetynet.dto.GetFamiliesByStationDto;
+import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
+import com.openclassrooms.safetynet.model.Firestation;
+import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,7 +17,8 @@ import java.util.stream.Collectors;
 @Component
 public class PersonManagerImpl implements PersonManager {
 	
-	private final DataStorage dataStorage;
+	@Autowired
+	private DataStorage dataStorage;
 	
 	@Autowired
 	public PersonManagerImpl(DataStorage dataStorage) {this.dataStorage = dataStorage;}
@@ -26,9 +27,11 @@ public class PersonManagerImpl implements PersonManager {
 		
 		Logger.debug("Add a person" + person);
 		
-		Optional<Person> optionalPerson = dataStorage.getPersons()
-				.filter(p -> person.getLastName().equals(p.getLastName()) && person.getFirstName().equals(p.getFirstName()))
-				.findFirst();
+		Optional<Person> optionalPerson =
+				dataStorage
+						.getPersons()
+						.filter(p -> person.getLastName().equals(p.getLastName()) && person.getFirstName().equals(p.getFirstName()))
+						.findFirst();
 		
 		if (optionalPerson.isPresent()) {
 			throw new RuntimeException("This person exist already");
@@ -44,13 +47,13 @@ public class PersonManagerImpl implements PersonManager {
 		
 		Logger.debug("Update a person" + person);
 		
-		Optional<Person> optionalPerson = dataStorage.getPersons()
-				.filter(p -> p.getFirstName().equals(person.getFirstName()) && p.getLastName().equals(person.getLastName()))
-				.findFirst();
+		Optional<Person> optionalPerson =
+				dataStorage
+						.getPersons()
+						.filter(p -> p.getFirstName().equals(person.getFirstName()) && p.getLastName().equals(person.getLastName()))
+						.findFirst();
 		
 		if (optionalPerson.isPresent()) {
-			//recuperer son emplacement
-			//remplacer la person par la person modifiée
 			
 			int indexOfPerson = dataStorage.getData().getPersons().indexOf(optionalPerson.get());
 			
@@ -74,8 +77,6 @@ public class PersonManagerImpl implements PersonManager {
 				.findFirst();
 		
 		if (optionalPerson.isPresent()) {
-			//recuperer son emplacement
-			//remplacer la person par la person modifiée
 			
 			int indexOfPerson = dataStorage.getData().getPersons().indexOf(optionalPerson);
 			dataStorage
@@ -98,18 +99,18 @@ public class PersonManagerImpl implements PersonManager {
 				.collect(Collectors.toSet());
 	}
 	
-	public List<getPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName) {
+	public List<GetPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName) {
 		Logger.debug("Get all persons by address" + firstName + " " + lastName);
 		
 		List<Person> persons = dataStorage.getData().getPersons();
-		List<getPersonByFirstNameAndLastNameDto> personInfoDto = new ArrayList<>();
+		List<GetPersonByFirstNameAndLastNameDto> personInfoDto = new ArrayList<>();
 		
 		for (Person person : persons) {
-			List<getPersonByFirstNameAndLastNameDto> aggregate =
+			List<GetPersonByFirstNameAndLastNameDto> aggregate =
 					dataStorage.getMedicalRecord()
-							.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
+							.filter(medicalrecord -> medicalrecord.getId().equals(person.getId()))
 							.filter(m -> m.getLastName().equals(lastName))
-							.map(medicalRecord -> new getPersonByFirstNameAndLastNameDto(person, medicalRecord))
+							.map(medicalrecord -> new GetPersonByFirstNameAndLastNameDto(person, medicalrecord))
 							.collect(Collectors.toList());
 			
 			personInfoDto.addAll(aggregate);
@@ -118,31 +119,31 @@ public class PersonManagerImpl implements PersonManager {
 		return personInfoDto;
 	}
 	
-	public Set<getChildrenByAddressDto> getChildrenByAddress(String address) {
+	public Set<GetChildrenByAddressDto> getChildrenByAddress(String address) {
 		Logger.debug("Get children by address" + address);
 		
-		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
+		List<Medicalrecord> medicalrecords = dataStorage.getData().getMedicalrecords();
 		
-		Set<getChildrenByAddressDto> getChildWithFamily = new HashSet<>();
+		Set<GetChildrenByAddressDto> getChildWithFamily = new HashSet<>();
 		
-		for (MedicalRecord medicalRecord : medicalRecords) {
-			List<getChildrenByAddressDto> getChildrenByAddress =
+		for (Medicalrecord medicalRecord : medicalrecords) {
+			List<GetChildrenByAddressDto> getChildrenByAddress =
 					dataStorage.getPersons()
 							.filter(person -> person.getId().equals(medicalRecord.getId()))
 							.filter(person -> person.getAddress().equals(address))
-							.map(person -> new getChildrenByAddressDto(person, medicalRecord))
-							.filter(getChildrenByAddressDto::isMinor)
+							.map(person -> new GetChildrenByAddressDto(person, medicalRecord))
+							.filter(GetChildrenByAddressDto::isMinor)
 							.collect(Collectors.toList());
 			
 			getChildWithFamily.addAll(getChildrenByAddress);
 		}
 		
-		for (MedicalRecord medicalRecord : medicalRecords) {
-			List<getChildrenByAddressDto> getAdultByAddress =
+		for (Medicalrecord medicalRecord : medicalrecords) {
+			List<GetChildrenByAddressDto> getAdultByAddress =
 					dataStorage.getPersons()
 							.filter(person -> person.getId().equals(medicalRecord.getId()))
 							.filter(person -> person.getAddress().equals(address))
-							.map(person -> new getChildrenByAddressDto(person, medicalRecord))
+							.map(person -> new GetChildrenByAddressDto(person, medicalRecord))
 							.filter(person -> !person.isMinor())
 							.collect(Collectors.toList());
 			
@@ -152,37 +153,36 @@ public class PersonManagerImpl implements PersonManager {
 		return getChildWithFamily;
 	}
 	
-	public Map<String, List<getFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
+	public Map<String, List<GetFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
 		Logger.debug("Get all persons by address" + stations);
 		
 		List<Person> persons = dataStorage.getData().getPersons();
-		List<FireStation> fireStations = dataStorage.getData().getFirestations();
-		List<MedicalRecord> medicalRecords = dataStorage.getData().getMedicalrecords();
+		List<Medicalrecord> medicalrecords = dataStorage.getData().getMedicalrecords();
 		
 		List<String> allAddressesByStationNumber = new ArrayList<>();
-		Map<String, List<getFamiliesByStationDto>> allPersons = new HashMap<>();
+		Map<String, List<GetFamiliesByStationDto>> allPersons = new HashMap<>();
 		
-		for (Integer fireStationNumber : stations) {
+		for (Integer firestationNumber : stations) {
 			List<String> getAllAddressesByStationNumber =
-					fireStations
-							.stream()
-							.filter(fireStation -> fireStation.getStation() == fireStationNumber)
-							.map(FireStation::getAddress)
+					dataStorage
+							.getFireStations()
+							.filter(firestation -> firestation.getStation() == firestationNumber)
+							.map(Firestation::getAddress)
 							.collect(Collectors.toList());
 			allAddressesByStationNumber.addAll(getAllAddressesByStationNumber);
 		}
 		
 		for (String addresses : allAddressesByStationNumber) {
-			List<getFamiliesByStationDto> getAllPersonsIdWithThisAddress =
-					persons
-							.stream()
+			List<GetFamiliesByStationDto> getAllPersonsIdWithThisAddress =
+					dataStorage
+							.getPersons()
 							.filter(person -> person.getAddress().equals(addresses))
-							.map(person -> new getFamiliesByStationDto(person,
-									Objects.requireNonNull(medicalRecords
+							.map(person -> new GetFamiliesByStationDto(person,
+									medicalrecords
 											.stream()
 											.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 											.findFirst().orElse(null))
-							))
+							)
 							.collect(Collectors.toList());
 			allPersons.put(addresses, getAllPersonsIdWithThisAddress);
 		}
