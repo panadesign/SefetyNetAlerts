@@ -13,7 +13,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Component
+/*@Component
 public class DataStorageImpl implements DataStorage {
 
 	private final Data data;
@@ -78,3 +78,4 @@ public class DataStorageImpl implements DataStorage {
 				.findFirst();
 	}
 }
+*/

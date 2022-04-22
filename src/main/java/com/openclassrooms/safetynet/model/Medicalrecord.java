@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NonNull;
@@ -29,7 +30,6 @@ public class Medicalrecord {
 	@NonNull
 	private String lastName;
 	
-	@Getter
 	private LocalDate birthdate;
 	
 	@Getter
@@ -48,7 +48,11 @@ public class Medicalrecord {
 		this.birthdate = parseStringToLocalDate(birthdate);
 		this.medications = medications;
 	}
-
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
+	public LocalDate getBirthdate() {
+		return birthdate;
+	}
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
 	public void setBirthdate(String birthdate){
 		this.birthdate = parseStringToLocalDate(birthdate);
 	}
