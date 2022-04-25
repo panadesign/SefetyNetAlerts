@@ -36,7 +36,7 @@ public class AlertController {
 	}
 	
 	@GetMapping("/childAlert")
-	ResponseEntity<Set<GetChildrenByAddressDto>> getChildByAddress(@RequestParam String address) {
+	ResponseEntity<GetChildListAndFamilyListDto> getChildByAddress(@RequestParam String address) {
 		return new ResponseEntity<>(personManager.getChildrenByAddress(address), HttpStatus.OK);
 	}
 	

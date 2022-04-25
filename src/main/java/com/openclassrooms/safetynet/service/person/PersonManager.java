@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.service.person;
 
+import com.openclassrooms.safetynet.dto.GetChildListAndFamilyListDto;
 import com.openclassrooms.safetynet.dto.GetChildrenByAddressDto;
 import com.openclassrooms.safetynet.dto.GetFamiliesByStationDto;
 import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
@@ -15,6 +16,6 @@ public interface PersonManager {
 	void deletePerson(Person person);
 	Set<String> getAllMailsByCity(String city);
 	List<GetPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName);
-	Set<GetChildrenByAddressDto> getChildrenByAddress(String address);
+	GetChildListAndFamilyListDto getChildrenByAddress(String address);
 	Map<String, List<GetFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations);
 }

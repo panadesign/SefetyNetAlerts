@@ -1,12 +1,10 @@
 package com.openclassrooms.safetynet.service.person;
 
-import com.openclassrooms.safetynet.service.DataStorage;
-import com.openclassrooms.safetynet.dto.GetChildrenByAddressDto;
-import com.openclassrooms.safetynet.dto.GetFamiliesByStationDto;
-import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
+import com.openclassrooms.safetynet.dto.*;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
+import com.openclassrooms.safetynet.service.DataStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tinylog.Logger;
@@ -25,7 +23,7 @@ public class PersonManagerImpl implements PersonManager {
 	
 	public void addPerson(Person person) {
 		
-		Logger.debug("Add a person" + person);
+		Logger.debug("Add a person: " + person);
 		
 		Optional<Person> optionalPerson =
 				dataStorage
@@ -43,7 +41,7 @@ public class PersonManagerImpl implements PersonManager {
 	
 	public void updatePerson(Person person) {
 		
-		Logger.debug("Update a person" + person);
+		Logger.debug("Update a person: " + person);
 		
 		Optional<Person> optionalPerson =
 				dataStorage
@@ -66,7 +64,7 @@ public class PersonManagerImpl implements PersonManager {
 	
 	public void deletePerson(Person person) {
 		
-		Logger.debug("Delete a person" + person);
+		Logger.debug("Delete a person: " + person);
 		
 		Optional<Person> optionalPerson =
 				dataStorage
@@ -83,11 +81,10 @@ public class PersonManagerImpl implements PersonManager {
 		} else {
 			throw new RuntimeException("This person doesn't exist");
 		}
-		
 	}
 	
 	public Set<String> getAllMailsByCity(String city) {
-		Logger.debug("Get all mails by the city" + city);
+		Logger.debug("Get all mails by the city: " + city);
 		return dataStorage
 				.getPersons()
 				.filter(p -> p.getCity().equals(city))
@@ -96,7 +93,7 @@ public class PersonManagerImpl implements PersonManager {
 	}
 	
 	public List<GetPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName) {
-		Logger.debug("Get all persons by address" + firstName + " " + lastName);
+		Logger.debug("Get all persons by address: " + firstName + " " + lastName);
 		
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<GetPersonByFirstNameAndLastNameDto> personInfoDto = new ArrayList<>();
@@ -115,44 +112,9 @@ public class PersonManagerImpl implements PersonManager {
 		return personInfoDto;
 	}
 	
-	public Set<GetChildrenByAddressDto> getChildrenByAddress(String address) {
-		Logger.debug("Get children by address" + address);
-		
-		List<Medicalrecord> medicalrecords = dataStorage.getData().getMedicalrecords();
-		
-		Set<GetChildrenByAddressDto> getChildWithFamily = new HashSet<>();
-		
-		for (Medicalrecord medicalRecord : medicalrecords) {
-			List<GetChildrenByAddressDto> getChildrenByAddress =
-					dataStorage.getPersons()
-							.filter(person -> person.getId().equals(medicalRecord.getId()))
-							.filter(person -> person.getAddress().equals(address))
-							.map(person -> new GetChildrenByAddressDto(person, medicalRecord))
-							.filter(GetChildrenByAddressDto::isMinor)
-							.collect(Collectors.toList());
-			
-			getChildWithFamily.addAll(getChildrenByAddress);
-		}
-		
-		for (Medicalrecord medicalRecord : medicalrecords) {
-			List<GetChildrenByAddressDto> getAdultByAddress =
-					dataStorage.getPersons()
-							.filter(person -> person.getId().equals(medicalRecord.getId()))
-							.filter(person -> person.getAddress().equals(address))
-							.map(person -> new GetChildrenByAddressDto(person, medicalRecord))
-							.filter(person -> !person.isMinor())
-							.collect(Collectors.toList());
-			
-			getChildWithFamily.addAll(getAdultByAddress);
-		}
-		
-		return getChildWithFamily;
-	}
-	
 	public Map<String, List<GetFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
-		Logger.debug("Get all persons by address" + stations);
+		Logger.debug("Get all persons by address: " + stations);
 		
-		List<Person> persons = dataStorage.getData().getPersons();
 		List<Medicalrecord> medicalrecords = dataStorage.getData().getMedicalrecords();
 		
 		List<String> allAddressesByStationNumber = new ArrayList<>();
@@ -185,5 +147,47 @@ public class PersonManagerImpl implements PersonManager {
 		
 		return allPersons;
 		
+	}
+	
+	public GetChildListAndFamilyListDto getChildrenByAddress(String address) {
+		Logger.debug("Get children by address: " + address);
+		
+		List<Medicalrecord> medicalrecords = dataStorage.getData().getMedicalrecords();
+		
+		List<GetChildrenByAddressDto> getChild = new ArrayList<>();
+		List<GetAdultsByAddressDto> getAdults = new ArrayList<>();
+		GetChildListAndFamilyListDto getChildListAndFamilyListDto = new GetChildListAndFamilyListDto(getChild, getAdults);
+		
+		for (Medicalrecord medicalRecord : medicalrecords) {
+			List<GetChildrenByAddressDto> getChildrenByAddress =
+					dataStorage
+							.getPersons()
+							.filter(person -> person.getId().equals(medicalRecord.getId()))
+							.filter(person -> person.getAddress().equals(address))
+							.map(person -> new GetChildrenByAddressDto(person, medicalRecord))
+							.filter(GetChildrenByAddressDto::isMinor)
+							.collect(Collectors.toList());
+			
+			
+			getChild.addAll(getChildrenByAddress);
+		}
+		for (Medicalrecord medicalrecord : medicalrecords) {
+			if (getChild.size() > 0) {
+				List<GetAdultsByAddressDto> getAdultByAddress =
+						dataStorage
+								.getPersons()
+								.filter(person -> person.getId().equals(medicalrecord.getId()))
+								.filter(person -> person.getAddress().equals(address))
+								.map(person -> new GetAdultsByAddressDto(person, medicalrecord))
+								.filter(GetAdultsByAddressDto::iSMajor)
+								.collect(Collectors.toList());
+				
+				getAdults.addAll(getAdultByAddress);
+			}
+		}
+		
+		getChildListAndFamilyListDto.setGetChildrenByAddressDto(getChild);
+		getChildListAndFamilyListDto.setGetAdultsByAddressDto(getAdults);
+		return getChildListAndFamilyListDto;
 	}
 }
