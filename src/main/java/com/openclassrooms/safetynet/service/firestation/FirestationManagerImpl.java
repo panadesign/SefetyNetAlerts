@@ -97,9 +97,8 @@ public class FirestationManagerImpl implements FirestationManager {
 		
 		Logger.debug("Get persons by firestation number" + stationNumber);
 		
-		Stream<Person> persons = dataStorage.getPersons();
-		
 		List<GetPersonsByStationDto> firestationDto = new ArrayList<>();
+		List<Medicalrecord> medicalrecord = new ArrayList<>();
 		
 		List<String> getFirestationAddressesByStationNumber =
 				dataStorage
@@ -107,7 +106,8 @@ public class FirestationManagerImpl implements FirestationManager {
 						.map(Firestation::getAddress)
 						.collect(Collectors.toList());
 		
-		return persons
+		return dataStorage
+				.getPersons()
 				.filter(person -> getFirestationAddressesByStationNumber.contains(person.getAddress()))
 				.map(person -> {
 					try {
@@ -119,6 +119,12 @@ public class FirestationManagerImpl implements FirestationManager {
 					return null;
 				})
 				.collect(Collectors.toList());
+		
+		
+		//pour chaque personne calculer l'age
+		//int adultNumbers  = 0;
+		//int childNumbers = =0;
+		
 		
 	}
 	
