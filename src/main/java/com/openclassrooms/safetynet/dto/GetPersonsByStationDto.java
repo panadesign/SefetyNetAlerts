@@ -1,6 +1,9 @@
 package com.openclassrooms.safetynet.dto;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.openclassrooms.safetynet.model.Id;
+import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 
 public class GetPersonsByStationDto {
@@ -9,6 +12,7 @@ public class GetPersonsByStationDto {
 	private String lastName;
 	private String address;
 	private String phone;
+	private Id id;
 
 	public GetPersonsByStationDto(Person person) {
 
@@ -16,6 +20,7 @@ public class GetPersonsByStationDto {
 		this.lastName=person.getLastName();
 		this.address = person.getAddress();
 		this.phone = person.getPhone();
+		this.id = person.getId();
 	}
 	
 	@JsonGetter("firstName")
@@ -38,4 +43,9 @@ public class GetPersonsByStationDto {
 		return phone;
 	}
 
+	@JsonIgnore
+	@JsonGetter("id")
+	public Id getId() {
+		return id;
+	}
 }
