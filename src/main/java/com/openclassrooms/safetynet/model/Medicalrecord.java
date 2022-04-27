@@ -14,7 +14,7 @@ import java.util.List;
 public class Medicalrecord {
 	
 	public Medicalrecord(Medicalrecord medicalRecord) {}
-	
+
 	@JsonIgnore
 	public Id getId() {
 		return  new Id(firstName, lastName);
@@ -41,6 +41,19 @@ public class Medicalrecord {
 	private List<String> allergies;
 	
 	public Medicalrecord(){};
+
+	public Medicalrecord(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	public Medicalrecord(String firstName, String lastName, String birthdate, List<String> medications, List<String> allergies) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthdate = parseStringToLocalDate(birthdate);
+		this.medications = medications;
+		this.allergies = allergies;
+	}
 
 	public Medicalrecord(String firstName, String lastName, String birthdate, List<String> medications) {
 		this.firstName = firstName;

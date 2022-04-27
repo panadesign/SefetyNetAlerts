@@ -54,7 +54,7 @@ public class PersonManagerImpl implements PersonManager {
 			dataStorage
 					.getData()
 					.getPersons()
-					.set(indexOfPerson, new Person(person));
+					.set(indexOfPerson, person);
 			
 		} else {
 			throw new RuntimeException("This person doesn't exist");

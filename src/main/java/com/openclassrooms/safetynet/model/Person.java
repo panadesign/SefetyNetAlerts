@@ -41,6 +41,15 @@ public class Person {
 	public Person() {
 	}
 
+	public Person(String lastName, String firstName, String address, String city, Integer zip, String phone, String email) {
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.address = address;
+		this.city = city;
+		this.zip = zip;
+		this.phone = phone;
+		this.email = email;
+	}
 	public Person(String lastName, String firstName, String address, String phone, int age) {
 		this.lastName = lastName;
 		this.firstName = firstName;
@@ -69,5 +78,6 @@ public class Person {
 	public Id getId() {
 		return  new Id(firstName, lastName);
 	}
-	
+
+
 }
