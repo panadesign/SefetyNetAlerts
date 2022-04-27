@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 @Component
 public class DataStorage {
-	private final Data data;
+	private Data data;
 
 	public DataStorage() throws IOException {
 		ObjectMapper objectMapper = new ObjectMapper();

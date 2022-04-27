@@ -1,6 +1,5 @@
 package com.openclassrooms.safetynet.service.medicalRecords;
 
-import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.service.DataStorage;
 import org.junit.jupiter.api.*;

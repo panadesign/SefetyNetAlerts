@@ -75,5 +75,5 @@ public class DataStorage {
 				.filter(medicalRecord -> medicalRecord.getId().equals(id))
 				.findFirst();
 	}
-	
+
 }

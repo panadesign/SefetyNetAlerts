@@ -1,21 +1,20 @@
 package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.model.Id;
-import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.DataStorage;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest()
@@ -36,12 +35,12 @@ class PersonManagerImplTest {
 	void addPerson() {
 
 		//GIVEN
-		person = new Person("Jeremy", "Charpentier", "33rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
+		person = new Person("Jeremy", "Charpentier", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
 
 		//WHEN
 		personManager.addPerson(person);
 
-		Boolean personCreated =
+		boolean personCreated =
 				dataStorage
 						.getData()
 						.getPersons()
@@ -52,25 +51,27 @@ class PersonManagerImplTest {
 
 	}
 
-	@Test
-	@Order(3)
+	/*@Test
 	void updatePerson() {
+		person = new Person("Jacob", "Boyd");
 
-		//GIVEN
-		person = new Person("John", "Boyd", "test@mail.com");
 
-		//WHEN
-		personManager.updatePerson(person);
+	}*/
 
-		Boolean personUpdated =
+	@Test
+	void deletePerson() {
+
+
+		personManager.deletePerson(new Person("Jacob", "Boyd"));
+
+		boolean personDeleted =
 				dataStorage
 						.getData()
 						.getPersons()
-						.contains(person);
+						.stream()
+						.noneMatch(p -> p.getFirstName().equals("Jacob")) && person.getLastName().equals("Boyd");
 
-		//THEN
-		assertTrue(personUpdated);
-
+		assertTrue(personDeleted);
 	}
 
 	@Test
@@ -89,7 +90,7 @@ class PersonManagerImplTest {
 	}
 
 	@Test
-	void getAllMailsByCityFail() {
+	void getAllMailsByCityWithoutCity() {
 		//GIVEN
 		String city = "";
 		String emailExpected = "aly@imail.com";
@@ -102,4 +103,16 @@ class PersonManagerImplTest {
 		//THEN
 		assertFalse(mailExpectedInList);
 	}
+
+	@Test
+	void getPersons() {
+		List<Person> allPersons = dataStorage
+				.getPersons()
+				.collect(Collectors.toList());
+
+		assertNotNull(allPersons);
+	}
+
+
+
 }
