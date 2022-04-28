@@ -1,7 +1,7 @@
 package com.openclassrooms.safetynet.controller;
 
 import com.openclassrooms.safetynet.model.Firestation;
-import com.openclassrooms.safetynet.service.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
@@ -16,7 +16,7 @@ import java.util.List;
 public class FirestationController {
 	
 	@Autowired
-	private DataStorage dataStorage;
+	private DataStorageImpl dataStorage;
 	@Autowired
 	private FirestationManager firestationManager;
 	@Autowired

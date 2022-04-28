@@ -4,7 +4,8 @@ import com.openclassrooms.safetynet.dto.*;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.service.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tinylog.Logger;
@@ -19,7 +20,7 @@ public class PersonManagerImpl implements PersonManager {
 	private DataStorage dataStorage;
 	
 	@Autowired
-	public PersonManagerImpl(DataStorage dataStorage) {this.dataStorage = dataStorage;}
+	public PersonManagerImpl(DataStorageImpl dataStorage) {this.dataStorage = dataStorage;}
 	
 	public void addPerson(Person person) {
 		

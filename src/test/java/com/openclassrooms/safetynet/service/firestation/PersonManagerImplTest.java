@@ -1,11 +1,8 @@
 package com.openclassrooms.safetynet.service.firestation;
 
 import com.openclassrooms.safetynet.model.Firestation;
-import com.openclassrooms.safetynet.service.DataStorage;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
+import com.openclassrooms.safetynet.model.Person;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,97 +19,80 @@ class PersonManagerImplTest {
 	DataStorage dataStorage;
 
 	@Autowired
-	FirestationManagerImpl firestationManagerImpl;
+	FirestationManager firestationManager;
 
 	@Test
-	@Order(1)
 	void addFirestation() {
 
 		//GIVEN
 		Firestation newFirestation = new Firestation(9, "32 Rue Dupont");
 
 		//WHEN
-		firestationManagerImpl.addFirestation(newFirestation);
-
-		Boolean firestationCreated =
-				dataStorage
-						.getData()
-						.getFirestations()
-						.contains(newFirestation);
+		firestationManager.addFirestation(newFirestation);
 
 		//THEN
-		assertTrue(firestationCreated);
+		assertTrue(dataStorage
+				.getData()
+				.getFirestations()
+				.contains(newFirestation));
 
 	}
 
 	@Test
 	void addFirestationException() {
 		Firestation newFirestation = new Firestation(4, "489 Manchester St");
-		assertThrows(RuntimeException.class, () -> firestationManagerImpl.addFirestation(newFirestation));
+		assertThrows(RuntimeException.class, () -> firestationManager.addFirestation(newFirestation));
 	}
 
 	@Test
-	@Order(2)
 	void updateFirestation() {
 		Firestation firestationToUpdate = new Firestation(2, "489 Manchester St");
 
-		firestationManagerImpl.updateFirestation(firestationToUpdate);
+		firestationManager.updateFirestation(firestationToUpdate);
 
-		boolean firestationUpdated =
-				dataStorage
-						.getData()
-						.getFirestations()
-						.stream()
-						.filter(f -> f.getStation() == 2)
-						.anyMatch(f -> f.getAddress().equals("489 Manchester St"));
-
-		assertTrue(firestationUpdated);
+		assertTrue(dataStorage
+				.getData()
+				.getFirestations()
+				.stream()
+				.filter(f -> f.getStation() == 2)
+				.anyMatch(f -> f.getAddress().equals("489 Manchester St")));
 
 	}
 
 	@Test
 	void updateFirestationException() {
 		Firestation firestationToUpdate = new Firestation(2, "test");
-		assertThrows(RuntimeException.class, () -> firestationManagerImpl.updateFirestation(firestationToUpdate));
+		assertThrows(RuntimeException.class, () -> firestationManager.updateFirestation(firestationToUpdate));
 	}
 
 	@Test
-	@Order(3)
 	void deleteFirestation() {
 		Firestation firestationToDelete = new Firestation(4, "489 Manchester St");
 
-		firestationManagerImpl.deleteFirestation(firestationToDelete);
+		firestationManager.deleteFirestation(firestationToDelete);
 
-		boolean firestationDeleted =
-				dataStorage
-						.getData()
-						.getFirestations()
-						.stream()
-						.filter(f -> f.getStation() == 4)
-						.noneMatch(f -> f.getAddress().equals("489 Manchester St"));
-
-		assertTrue(firestationDeleted);
+		assertTrue(dataStorage
+				.getData()
+				.getFirestations()
+				.stream()
+				.filter(f -> f.getStation() == 4)
+				.noneMatch(f -> f.getAddress().equals("489 Manchester St")));
 
 	}
 
 	@Test
 	void deleteFirestationException() {
 		Firestation firestationToDelete = new Firestation(1, "test");
-		assertThrows(RuntimeException.class, () -> firestationManagerImpl.deleteFirestation(firestationToDelete));
+		assertThrows(RuntimeException.class, () -> firestationManager.deleteFirestation(firestationToDelete));
 	}
 
 	@Test
 	void getPhoneNumbersByFirestationNumber() {
 		String phoneExpected = "841-874-7784";
-		boolean phone = firestationManagerImpl.getPhoneNumbersByFirestationNumber(1)
-				.contains(phoneExpected);
 
-		assertTrue(phone);
-
-	}
-
-	@Test
-	void getPersonsByAddress() {
+		assertTrue(firestationManager.getPhoneNumbersByFirestationNumber(1)
+				.contains(phoneExpected));
 
 	}
+
 }

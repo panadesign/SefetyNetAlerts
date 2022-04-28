@@ -1,7 +1,6 @@
 package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.dto.GetChildListAndFamilyListDto;
-import com.openclassrooms.safetynet.dto.GetChildrenByAddressDto;
 import com.openclassrooms.safetynet.dto.GetFamiliesByStationDto;
 import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.model.Person;

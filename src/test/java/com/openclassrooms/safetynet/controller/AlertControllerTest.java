@@ -1,6 +1,6 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.service.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ class AlertControllerTest {
 	private MockMvc mockMvc;
 
 	@MockBean
-	private DataStorage dataStorage;
+	private DataStorageImpl dataStorage;
 	@MockBean
 	private PersonManager personManager;
 	@MockBean

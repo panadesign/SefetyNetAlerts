@@ -5,7 +5,8 @@ import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.service.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tinylog.Logger;
@@ -23,7 +24,7 @@ public class FirestationManagerImpl implements FirestationManager {
 	private DataStorage dataStorage;
 
 	@Autowired
-	public FirestationManagerImpl(DataStorage dataStorage) {
+	public FirestationManagerImpl(DataStorageImpl dataStorage) {
 		this.dataStorage = dataStorage;
 	}
 
@@ -60,7 +61,6 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		if(optionalFirestation.isPresent()) {
 			int indexOfFirestation = dataStorage.getData().getFirestations().indexOf(optionalFirestation.get());
-
 			dataStorage
 					.getData()
 					.getFirestations()
@@ -82,7 +82,6 @@ public class FirestationManagerImpl implements FirestationManager {
 						.findFirst();
 
 		if(optionalFirestation.isPresent()) {
-
 			dataStorage
 					.getData()
 					.getFirestations()
@@ -92,7 +91,6 @@ public class FirestationManagerImpl implements FirestationManager {
 		}
 
 	}
-
 
 	public Set<String> getPhoneNumbersByFirestationNumber(int station) {
 
@@ -148,6 +146,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		return getPersonsByAddressDto;
 	}
+
 	public List<GetPersonsByStationDto> getPersonsByStation(int stationNumber) {
 
 		Logger.debug("Get persons by firestation number: " + stationNumber);
@@ -171,7 +170,6 @@ public class FirestationManagerImpl implements FirestationManager {
 					return null;
 				})
 				.collect(Collectors.toList());
-
 	}
 
 }

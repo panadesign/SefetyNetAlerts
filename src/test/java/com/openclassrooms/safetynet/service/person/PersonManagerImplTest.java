@@ -1,8 +1,7 @@
 package com.openclassrooms.safetynet.service.person;
 
-import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Person;
-import com.openclassrooms.safetynet.service.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +24,11 @@ class PersonManagerImplTest {
 	DataStorage dataStorage;
 
 	@Autowired
-	PersonManagerImpl personManager;
+	PersonManager personManager;
 
 	Person person;
 
 	@Test
-	@Order(1)
 	void addPerson() {
 
 		//GIVEN
@@ -65,19 +63,15 @@ class PersonManagerImplTest {
 	}
 
 	@Test
-	@Order(2)
 	void updatePerson() {
 		personManager.updatePerson(new Person("Jacob", "Boyd", "testMail"));
 
-		boolean personUpdated =
-				dataStorage
-						.getData()
-						.getPersons()
-						.stream()
-						.filter(p -> p.getFirstName().equals("Jacob") && p.getLastName().equals("Boyd"))
-						.anyMatch(p -> p.getEmail().equals("testMail"));
-
-		assertTrue(personUpdated);
+		assertTrue(dataStorage
+				.getData()
+				.getPersons()
+				.stream()
+				.filter(p -> p.getFirstName().equals("Jacob") && p.getLastName().equals("Boyd"))
+				.anyMatch(p -> p.getEmail().equals("testMail")));
 
 	}
 
@@ -90,19 +84,15 @@ class PersonManagerImplTest {
 	}
 
 	@Test
-	@Order(3)
 	void deletePerson() {
 
 		personManager.deletePerson(new Person("Jacob", "Boyd"));
 
-		boolean personDeleted =
-				dataStorage
-						.getData()
-						.getPersons()
-						.stream()
-						.noneMatch(p -> p.getFirstName().equals("Jacob") && person.getLastName().equals("Boyd"));
-
-		assertTrue(personDeleted);
+		assertTrue(dataStorage
+				.getData()
+				.getPersons()
+				.stream()
+				.noneMatch(p -> p.getFirstName().equals("Jacob") && person.getLastName().equals("Boyd")));
 	}
 
 	@Test
@@ -122,10 +112,8 @@ class PersonManagerImplTest {
 		//WHEN
 		Set<String> getAllMailByCity = personManager.getAllMailsByCity(city);
 
-		boolean mailExpectedInList = getAllMailByCity.contains(emailExpected);
-
 		//THEN
-		assertTrue(mailExpectedInList);
+		assertTrue(getAllMailByCity.contains(emailExpected));
 	}
 
 	@Test
@@ -137,10 +125,8 @@ class PersonManagerImplTest {
 		//WHEN
 		Set<String> getAllMailByCity = personManager.getAllMailsByCity(city);
 
-		boolean mailExpectedInList = getAllMailByCity.contains(emailExpected);
-
 		//THEN
-		assertFalse(mailExpectedInList);
+		assertFalse(getAllMailByCity.contains(emailExpected));
 	}
 
 	@Test

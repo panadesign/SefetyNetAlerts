@@ -1,8 +1,7 @@
 package com.openclassrooms.safetynet.service.medicalRecords;
 
-import com.openclassrooms.safetynet.dto.MedicalrecordDto;
 import com.openclassrooms.safetynet.model.Medicalrecord;
-import com.openclassrooms.safetynet.service.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tinylog.Logger;
@@ -12,10 +11,10 @@ import java.util.Optional;
 @Component
 public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 	
-	private DataStorage dataStorage;
+	private DataStorageImpl dataStorage;
 	
 	@Autowired
-	public MedicalrecordsManagerImpl(DataStorage dataStorage) {this.dataStorage = dataStorage;}
+	public MedicalrecordsManagerImpl(DataStorageImpl dataStorage) {this.dataStorage = dataStorage;}
 	
 	public void addMedicalRecord(Medicalrecord medicalrecord) {
 		
