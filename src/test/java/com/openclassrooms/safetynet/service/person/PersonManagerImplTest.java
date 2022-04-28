@@ -13,8 +13,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest()
@@ -51,16 +50,48 @@ class PersonManagerImplTest {
 
 	}
 
-	/*@Test
-	void updatePerson() {
-		person = new Person("Jacob", "Boyd");
+	@Test
+	void addPersonException() {
 
+		//GIVEN
+		person = new Person("John", "Boyd", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
 
-	}*/
+		//WHEN
+		personManager.addPerson(person);
+
+		//THEN
+		assertThrows(RuntimeException.class, () -> personManager.addPerson(person));
+
+	}
 
 	@Test
-	void deletePerson() {
+	@Order(2)
+	void updatePerson() {
+		personManager.updatePerson(new Person("Jacob", "Boyd", "testMail"));
 
+		boolean personUpdated =
+				dataStorage
+						.getData()
+						.getPersons()
+						.stream()
+						.filter(p -> p.getFirstName().equals("Jacob") && p.getLastName().equals("Boyd"))
+						.anyMatch(p -> p.getEmail().equals("testMail"));
+
+		assertTrue(personUpdated);
+
+	}
+
+	@Test
+	void updatePersonException() {
+
+		person = new Person("Jeremy", "Boyd", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
+		assertThrows(RuntimeException.class, () -> personManager.updatePerson(person));
+
+	}
+
+	@Test
+	@Order(3)
+	void deletePerson() {
 
 		personManager.deletePerson(new Person("Jacob", "Boyd"));
 
@@ -69,9 +100,17 @@ class PersonManagerImplTest {
 						.getData()
 						.getPersons()
 						.stream()
-						.noneMatch(p -> p.getFirstName().equals("Jacob")) && person.getLastName().equals("Boyd");
+						.noneMatch(p -> p.getFirstName().equals("Jacob") && person.getLastName().equals("Boyd"));
 
 		assertTrue(personDeleted);
+	}
+
+	@Test
+	void deletePersonException() {
+
+		person = new Person("Jeremy", "Boyd", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
+		assertThrows(RuntimeException.class, () -> personManager.deletePerson(person));
+
 	}
 
 	@Test
@@ -112,7 +151,6 @@ class PersonManagerImplTest {
 
 		assertNotNull(allPersons);
 	}
-
 
 
 }

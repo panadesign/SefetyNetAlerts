@@ -61,23 +61,22 @@ public class PersonManagerImpl implements PersonManager {
 		}
 		
 	}
-	
+
 	public void deletePerson(Person person) {
-		
+
 		Logger.debug("Delete a person: " + person);
-		
+
 		Optional<Person> optionalPerson =
 				dataStorage
 						.getPersonById(person.getId());
-		
+
 		if (optionalPerson.isPresent()) {
-			
-			int indexOfPerson = dataStorage.getData().getPersons().indexOf(optionalPerson);
+
 			dataStorage
 					.getData()
 					.getPersons()
-					.remove(indexOfPerson);
-			
+					.remove(optionalPerson.get());
+
 		} else {
 			throw new RuntimeException("This person doesn't exist");
 		}

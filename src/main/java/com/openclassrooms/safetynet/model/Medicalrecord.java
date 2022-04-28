@@ -15,6 +15,7 @@ public class Medicalrecord {
 	
 	public Medicalrecord(Medicalrecord medicalRecord) {}
 
+
 	@JsonIgnore
 	public Id getId() {
 		return  new Id(firstName, lastName);
@@ -45,6 +46,12 @@ public class Medicalrecord {
 	public Medicalrecord(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+
+	public Medicalrecord(String firstName, String lastName, String birthdate) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthdate = parseStringToLocalDate(birthdate);;
 	}
 
 	public Medicalrecord(String firstName, String lastName, String birthdate, List<String> medications, List<String> allergies) {

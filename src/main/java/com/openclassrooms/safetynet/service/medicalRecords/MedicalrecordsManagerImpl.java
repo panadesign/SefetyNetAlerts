@@ -48,7 +48,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 			dataStorage
 					.getData()
 					.getMedicalrecords()
-					.set(indexOfMedicalRecord, new Medicalrecord(medicalRecord));
+					.set(indexOfMedicalRecord, medicalRecord);
 			
 		} else {
 			throw new RuntimeException("This medical record doesn't exist");

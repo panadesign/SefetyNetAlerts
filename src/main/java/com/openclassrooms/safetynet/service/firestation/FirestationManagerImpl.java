@@ -64,7 +64,7 @@ public class FirestationManagerImpl implements FirestationManager {
 			dataStorage
 					.getData()
 					.getFirestations()
-					.set(indexOfFirestation, new Firestation(firestation));
+					.set(indexOfFirestation, firestation);
 		} else {
 			throw new RuntimeException("Firestation who serve this address doesn't exist");
 		}
@@ -82,12 +82,11 @@ public class FirestationManagerImpl implements FirestationManager {
 						.findFirst();
 
 		if(optionalFirestation.isPresent()) {
-			int indexOfFirestation = dataStorage.getData().getFirestations().indexOf(optionalFirestation.get());
 
 			dataStorage
 					.getData()
 					.getFirestations()
-					.remove(indexOfFirestation);
+					.remove(optionalFirestation.get());
 		} else {
 			throw new RuntimeException("Firestation who serve this address doesn't exist");
 		}

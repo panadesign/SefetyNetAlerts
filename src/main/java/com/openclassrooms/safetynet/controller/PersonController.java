@@ -30,7 +30,7 @@ public class PersonController {
 	
 	@DeleteMapping("/person")
 	public ResponseEntity<Void> deletePerson(@RequestBody Person person) {
-		personManager.updatePerson(person);
+		personManager.deletePerson(person);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	

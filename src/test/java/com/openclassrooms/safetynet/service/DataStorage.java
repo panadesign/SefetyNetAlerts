@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -17,8 +18,9 @@ public class DataStorage {
 	private Data data;
 
 	public DataStorage() throws IOException {
+
 		ObjectMapper objectMapper = new ObjectMapper();
-		File file = new ClassPathResource("dataTest.json").getFile();
+		File file = new ClassPathResource("data.json").getFile();
 		this.data = objectMapper.readValue(file, Data.class);
 	}
 
@@ -47,7 +49,7 @@ public class DataStorage {
 						.map(fireStation -> fireStation.getAddress())
 						.collect(Collectors.toList());
 
-		return 	getPersons()
+		return getPersons()
 				.filter(person -> getFirestationsByStationNumber.contains(person.getAddress()))
 				.collect(Collectors.toList());
 	}
