@@ -1,7 +1,6 @@
 package com.openclassrooms.safetynet.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
@@ -79,5 +78,8 @@ public class Person {
 		return  new Id(firstName, lastName);
 	}
 
-
+	@Override
+	public boolean equals(Object o) {
+		return super.equals(o);
+	}
 }

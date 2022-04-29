@@ -1,14 +1,18 @@
 package com.openclassrooms.safetynet.service.person;
 
+import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
+import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -131,12 +135,31 @@ class PersonManagerImplTest {
 
 	@Test
 	void getPersons() {
-		List<Person> allPersons = dataStorage
-				.getPersons()
-				.collect(Collectors.toList());
+		List<Person> allPersons =
+				dataStorage
+						.getPersons()
+						.collect(Collectors.toList());
 
 		assertNotNull(allPersons);
 	}
 
+	/*@Test
+	void getPersonsByAddress() {
 
+		String address = "1509 Culver St";
+		Person personExpected = new Person("John", "Boyd");
+
+		List<Person> personByAddress =
+				dataStorage
+						.getData()
+						.getPersons()
+						.stream()
+						.filter(p -> p.getAddress().equals(address))
+						.collect(Collectors.toList());
+
+		assertTrue(personByAddress.contains(personExpected));
+
+
+	}
+*/
 }
