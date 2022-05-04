@@ -1,6 +1,8 @@
 package com.openclassrooms.safetynet.service.person;
 
+import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
+import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
@@ -11,9 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
@@ -21,7 +21,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest()
 @RunWith(SpringRunner.class)
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class PersonManagerImplTest {
 
 	@Autowired
@@ -143,23 +142,26 @@ class PersonManagerImplTest {
 		assertNotNull(allPersons);
 	}
 
-	/*@Test
-	void getPersonsByAddress() {
+	@Test
+	void getPersonsByFirstNameAndLastName() {
+		//GIVEN
+		Person person = new Person("John", "Boyd");
+		int numberOfPersonsExpected = 6;
 
-		String address = "1509 Culver St";
-		Person personExpected = new Person("John", "Boyd");
+		List<GetPersonByFirstNameAndLastNameDto> persons = personManager.getPersonsByFirstNameAndLastName("John", "Boyd");
 
-		List<Person> personByAddress =
-				dataStorage
-						.getData()
-						.getPersons()
-						.stream()
-						.filter(p -> p.getAddress().equals(address))
-						.collect(Collectors.toList());
-
-		assertTrue(personByAddress.contains(personExpected));
-
+		assertEquals(numberOfPersonsExpected, persons.size());
 
 	}
-*/
+
+	@Test
+	void getPersonsByAddressStationForFloodAlert() {
+		List<Integer> firestationsNumber = new ArrayList<>();
+		firestationsNumber.add(1);
+		firestationsNumber.add(3);
+
+		assertEquals(12, personManager.getPersonsByAddressStationForFloodAlert(firestationsNumber).size());
+
+	}
+
 }

@@ -14,7 +14,7 @@ public interface PersonManager {
 	void updatePerson(Person person);
 	void deletePerson(Person person);
 	Set<String> getAllMailsByCity(String city);
-	List<GetPersonByFirstNameAndLastNameDto> getPersonsByAddressWithMedicalrecords(String firstName, String lastName);
+	List<GetPersonByFirstNameAndLastNameDto> getPersonsByFirstNameAndLastName(String firstName, String lastName);
 	GetChildListAndFamilyListDto getChildrenByAddress(String address);
 	Map<String, List<GetFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations);
 }

@@ -4,38 +4,46 @@ import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Person;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.xml.ws.soap.Addressing;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
+@SpringBootTest()
+@RunWith(SpringRunner.class)
 class DataStorageImplTest {
 	@Mock
 	private Data mockData;
 
-	DataStorage dataStorage = new DataStorageImpl();
+	@InjectMocks
+	private DataStorageImpl dataStorage;
+
+
 
 	DataStorageImplTest() throws IOException {
 	}
 
 	/*@Test
-	void getPersons() {
-		List<Person> person = new ArrayList<>();
-		person.add(new Person("John", "Boyd"));
+	void getPerson() {
+		List<Person> persons = new ArrayList<>();
+		Person person = new Person("John", "Boyd");
+		persons.add(person);
 
-		when(mockData.getPersons()).thenReturn(person);
-		Stream<Person> personList = dataStorage.getPersons();
+		when(mockData.getPersons()).thenReturn(persons);
+		List<Person> result = dataStorage.getPersons().collect(Collectors.toList());
 
-		assertEquals(person.stream(), personList);
+		assertEquals(1, result.size());
 	}*/
 
 	@Test
@@ -45,6 +53,8 @@ class DataStorageImplTest {
 
 	@Test
 	void getPersonsByAddress() {
+
+
 	}
 
 	@Test
