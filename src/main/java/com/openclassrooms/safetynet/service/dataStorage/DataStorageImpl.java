@@ -44,7 +44,7 @@ public class DataStorageImpl implements DataStorage {
 	public List<Person> getPersonsByStation(Integer station) {
 		List<String> getFirestationsByStationNumber =
 				getFirestationsByNumber(station)
-						.map(fireStation -> fireStation.getAddress())
+						.map(firestation -> firestation.getAddress())
 						.collect(Collectors.toList());
 		
 		return 	getPersons()
@@ -52,18 +52,18 @@ public class DataStorageImpl implements DataStorage {
 				.collect(Collectors.toList());
 	}
 	
-	public Stream<Firestation> getFireStations() {
+	public Stream<Firestation> getFirestations() {
 		return data.getFirestations().stream();
 	}
 	
 	public Stream<Firestation> getFirestationsByNumber(Integer station) {
-		return getFireStations()
-				.filter(fireStation -> fireStation.getStation() == station);
+		return getFirestations()
+				.filter(firestation -> firestation.getStation() == station);
 	}
 	
 	public Stream<Firestation> getFirestationsByAddress(String address) {
-		return getFireStations()
-				.filter(fireStation -> fireStation.getAddress().equals(address));
+		return getFirestations()
+				.filter(firestation -> firestation.getAddress().equals(address));
 	}
 	
 	public Stream<Medicalrecord> getMedicalRecord() {
@@ -72,7 +72,7 @@ public class DataStorageImpl implements DataStorage {
 	
 	public Optional<Medicalrecord> getMedicalRecordById(Id id) {
 		return getMedicalRecord()
-				.filter(medicalRecord -> medicalRecord.getId().equals(id))
+				.filter(medicalrecord -> medicalrecord.getId().equals(id))
 				.findFirst();
 	}
 

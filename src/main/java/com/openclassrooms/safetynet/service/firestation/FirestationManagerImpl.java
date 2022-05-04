@@ -3,14 +3,12 @@ package com.openclassrooms.safetynet.service.firestation;
 import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
 import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
 import com.openclassrooms.safetynet.model.Firestation;
-import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
 import com.openclassrooms.safetynet.type.NumberOfAdultsAndChildren;
-import io.swagger.v3.oas.models.security.SecurityScheme;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -44,7 +42,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		Optional<Firestation> optionalFirestation =
 				dataStorage
-						.getFireStations()
+						.getFirestations()
 						.filter(f -> f.getAddress().equals(firestation.getAddress()))
 						.findFirst();
 
@@ -67,7 +65,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		Optional<Firestation> optionalFirestation =
 				dataStorage
-						.getFireStations()
+						.getFirestations()
 						.filter(f -> f.getAddress().equals(firestation.getAddress()))
 						.findFirst();
 
@@ -91,7 +89,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		Optional<Firestation> optionalFirestation =
 				dataStorage
-						.getFireStations()
+						.getFirestations()
 						.filter(f -> f.getAddress().equals(firestation.getAddress()))
 						.findFirst();
 
@@ -208,8 +206,6 @@ public class FirestationManagerImpl implements FirestationManager {
 			}
 		}
 
-		NumberOfAdultsAndChildren numberOfAdultsAndChildren = new NumberOfAdultsAndChildren(childrenNumber, adultsNumber);
-
-		return numberOfAdultsAndChildren;
+		return new NumberOfAdultsAndChildren(childrenNumber, adultsNumber);
 	}
 }

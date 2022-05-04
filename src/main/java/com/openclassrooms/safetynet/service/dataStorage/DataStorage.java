@@ -13,7 +13,7 @@ public interface DataStorage {
 	public Optional<Person> getPersonById(Id id);
 	public Stream<Person> getPersonsByAddress(String address);
 	public List<Person> getPersonsByStation(Integer station);
-	public Stream<Firestation> getFireStations();
+	public Stream<Firestation> getFirestations();
 	public Stream<Firestation> getFirestationsByNumber(Integer station);
 	public Stream<Firestation> getFirestationsByAddress(String address);
 	public Stream<Medicalrecord> getMedicalRecord();

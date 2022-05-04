@@ -1,14 +1,10 @@
 package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
-import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
-import com.openclassrooms.safetynet.model.Firestation;
-import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -21,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest()
 @RunWith(SpringRunner.class)
-class PersonManagerImplTest {
+class PersonManagerImplITest {
 
 	@Autowired
 	DataStorage dataStorage;
@@ -154,7 +150,7 @@ class PersonManagerImplTest {
 
 	}
 
-	@Test
+	/*@Test
 	void getPersonsByAddressStationForFloodAlert() {
 		List<Integer> firestationsNumber = new ArrayList<>();
 		firestationsNumber.add(1);
@@ -162,6 +158,6 @@ class PersonManagerImplTest {
 
 		assertEquals(12, personManager.getPersonsByAddressStationForFloodAlert(firestationsNumber).size());
 
-	}
+	}*/
 
 }

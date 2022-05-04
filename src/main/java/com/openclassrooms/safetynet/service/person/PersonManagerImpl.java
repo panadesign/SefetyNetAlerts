@@ -136,7 +136,7 @@ public class PersonManagerImpl implements PersonManager {
 		for(Integer firestationNumber : stations) {
 			List<String> getAllAddressesByStationNumber =
 					dataStorage
-							.getFireStations()
+							.getFirestations()
 							.filter(firestation -> firestation.getStation() == firestationNumber)
 							.map(Firestation::getAddress)
 							.collect(Collectors.toList());
@@ -181,9 +181,10 @@ public class PersonManagerImpl implements PersonManager {
 							.filter(GetChildrenByAddressDto::isMinor)
 							.collect(Collectors.toList());
 
-
 			getChild.addAll(getChildrenByAddress);
+			logger.info("Child by address");
 		}
+
 		for(Medicalrecord medicalrecord : medicalrecords) {
 			if(getChild.size() > 0) {
 				List<GetAdultsByAddressDto> getAdultByAddress =
@@ -196,11 +197,13 @@ public class PersonManagerImpl implements PersonManager {
 								.collect(Collectors.toList());
 
 				getAdults.addAll(getAdultByAddress);
+				logger.info("Adult by address");
 			}
 		}
 
 		getChildListAndFamilyListDto.setGetChildrenByAddressDto(getChild);
 		getChildListAndFamilyListDto.setGetAdultsByAddressDto(getAdults);
+		logger.info("List of child by address and adult by address");
 		return getChildListAndFamilyListDto;
 	}
 }

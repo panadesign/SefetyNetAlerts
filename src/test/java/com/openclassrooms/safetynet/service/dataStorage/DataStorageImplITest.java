@@ -1,7 +1,6 @@
 package com.openclassrooms.safetynet.service.dataStorage;
 
 import com.openclassrooms.safetynet.model.Data;
-import com.openclassrooms.safetynet.model.Person;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
@@ -12,17 +11,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest()
 @RunWith(SpringRunner.class)
-class DataStorageImplTest {
+class DataStorageImplITest {
 	@Mock
 	private Data mockData;
 
@@ -31,7 +26,7 @@ class DataStorageImplTest {
 
 
 
-	DataStorageImplTest() throws IOException {
+	DataStorageImplITest() throws IOException {
 	}
 
 	/*@Test
