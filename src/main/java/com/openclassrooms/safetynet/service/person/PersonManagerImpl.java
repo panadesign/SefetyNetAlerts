@@ -21,7 +21,7 @@ public class PersonManagerImpl implements PersonManager {
 	private DataStorage dataStorage;
 
 	@Autowired
-	public PersonManagerImpl(DataStorageImpl dataStorage) {
+	public PersonManagerImpl(DataStorage dataStorage) {
 		this.dataStorage = dataStorage;
 	}
 

@@ -32,7 +32,7 @@ public class FirestationManagerImpl implements FirestationManager {
 	Logger logger = LoggerFactory.getLogger(FirestationManagerImpl.class);
 
 	@Autowired
-	public FirestationManagerImpl(DataStorageImpl dataStorage) {
+	public FirestationManagerImpl(DataStorage dataStorage) {
 		this.dataStorage = dataStorage;
 	}
 
