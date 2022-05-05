@@ -2,6 +2,7 @@ package com.openclassrooms.safetynet.service.medicalRecords;
 
 import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +14,13 @@ import java.util.Optional;
 @Component
 public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 
-	private DataStorageImpl dataStorage;
+	@Autowired
+	private DataStorage dataStorage;
 
 	Logger logger = LoggerFactory.getLogger(MedicalrecordsManagerImpl.class);
 
 	@Autowired
-	public MedicalrecordsManagerImpl(DataStorageImpl dataStorage) {
+	public MedicalrecordsManagerImpl(DataStorage dataStorage) {
 		this.dataStorage = dataStorage;
 	}
 

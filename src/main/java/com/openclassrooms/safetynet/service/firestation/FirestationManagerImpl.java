@@ -75,7 +75,7 @@ public class FirestationManagerImpl implements FirestationManager {
 					.getData()
 					.getFirestations()
 					.set(indexOfFirestation, firestation);
-			logger.info("Firestation has benn updated");
+			logger.info("Firestation has been updated");
 		} else {
 			logger.error("Error updating a firestation");
 			throw new RuntimeException("Firestation who serve this address doesn't exist");
