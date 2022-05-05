@@ -1,11 +1,12 @@
 package com.openclassrooms.safetynet.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Data {
-	private List<Person> persons;
-	private List<Firestation> firestations;
-	private List<Medicalrecord> medicalrecords;
+	private List<Person> persons = new ArrayList<>();
+	private List<Firestation> firestations = new ArrayList<>();
+	private List<Medicalrecord> medicalrecords = new ArrayList<>();
 
 	public List<Person> getPersons() {
 		return persons;

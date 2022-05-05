@@ -6,9 +6,8 @@ import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
-import com.openclassrooms.safetynet.type.NumberOfAdultsAndChildren;
+import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -189,7 +188,7 @@ public class FirestationManagerImpl implements FirestationManager {
 		return getPersonsByStationDto;
 	}
 
-	public NumberOfAdultsAndChildren getNumbersOfChildrenAndAdultsByStation(int station) {
+	public NumberOfAdultsAndChildrenDto getNumbersOfChildrenAndAdultsByStation(int station) {
 
 		int adultsNumber = 0;
 		int childrenNumber = 0;
@@ -206,6 +205,6 @@ public class FirestationManagerImpl implements FirestationManager {
 			}
 		}
 
-		return new NumberOfAdultsAndChildren(childrenNumber, adultsNumber);
+		return new NumberOfAdultsAndChildrenDto(childrenNumber, adultsNumber);
 	}
 }

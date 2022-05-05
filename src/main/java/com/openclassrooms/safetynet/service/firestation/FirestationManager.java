@@ -3,7 +3,7 @@ package com.openclassrooms.safetynet.service.firestation;
 import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
 import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
 import com.openclassrooms.safetynet.model.Firestation;
-import com.openclassrooms.safetynet.type.NumberOfAdultsAndChildren;
+import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 
 import java.util.List;
 import java.util.Set;
@@ -15,5 +15,5 @@ public interface FirestationManager {
 	List<GetPersonsByStationDto> getPersonsByStation(int stationNumber);
 	Set<String> getPhoneNumbersByFirestationNumber(int station);
 	List<GetPersonsByAddressDto> getPersonsByAddress(String address);
-	NumberOfAdultsAndChildren getNumbersOfChildrenAndAdultsByStation(int station);
+	NumberOfAdultsAndChildrenDto getNumbersOfChildrenAndAdultsByStation(int station);
 }

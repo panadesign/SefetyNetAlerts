@@ -7,7 +7,7 @@ import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
-import com.openclassrooms.safetynet.type.NumberOfAdultsAndChildren;
+import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -48,9 +48,9 @@ public class FirestationController {
 	ResponseEntity<GetPersonsByStationAndAdultsNumberAndChildrenNumberDto> getPersonsByStationAndAdultsNumberAndChildrenNumberDto(@RequestParam int stationNumber) {
 
 		List<GetPersonsByStationDto> personsByStation = firestationManager.getPersonsByStation(stationNumber);
-		NumberOfAdultsAndChildren numberOfAdultsAndChildren = firestationManager.getNumbersOfChildrenAndAdultsByStation(stationNumber);
+		NumberOfAdultsAndChildrenDto numberOfAdultsAndChildrenDto = firestationManager.getNumbersOfChildrenAndAdultsByStation(stationNumber);
 
-		GetPersonsByStationAndAdultsNumberAndChildrenNumberDto result = new GetPersonsByStationAndAdultsNumberAndChildrenNumberDto(personsByStation, numberOfAdultsAndChildren.getNumberAdults(), numberOfAdultsAndChildren.getNumberChildren());
+		GetPersonsByStationAndAdultsNumberAndChildrenNumberDto result = new GetPersonsByStationAndAdultsNumberAndChildrenNumberDto(personsByStation, numberOfAdultsAndChildrenDto.getNumberAdults(), numberOfAdultsAndChildrenDto.getNumberChildren());
 
 		return new ResponseEntity<>(result, HttpStatus.OK);
 		
