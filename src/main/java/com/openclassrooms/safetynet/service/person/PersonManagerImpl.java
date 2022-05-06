@@ -6,6 +6,7 @@ import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
+import lombok.extern.log4j.Log4j2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Component
+@Log4j2
 public class PersonManagerImpl implements PersonManager {
 
 	@Autowired
@@ -25,18 +27,16 @@ public class PersonManagerImpl implements PersonManager {
 		this.dataStorage = dataStorage;
 	}
 
-	private static final Logger logger = LoggerFactory.getLogger(PersonManagerImpl.class);
-
 	public void addPerson(Person person) {
 
-		logger.debug("Add a person: " + person.getLastName() + " " + person.getFirstName());
+		log.debug("Add a person: " + person.getLastName() + " " + person.getFirstName());
 
 		Optional<Person> optionalPerson =
 				dataStorage
 						.getPersonById(person.getId());
 
 		if(optionalPerson.isPresent()) {
-			logger.error("Impossible to create this person, this person exist already");
+			log.error("Impossible to create this person, this person exist already");
 			throw new RuntimeException("This person exist already");
 		}
 
@@ -44,12 +44,12 @@ public class PersonManagerImpl implements PersonManager {
 				.getData()
 				.getPersons()
 				.add(person);
-		logger.info("person has been added");
+		log.info("person has been added");
 	}
 
 	public void updatePerson(Person person) {
 
-		logger.debug("Update a person: " + person.getLastName() + " " + person.getFirstName());
+		log.debug("Update a person: " + person.getLastName() + " " + person.getFirstName());
 
 		Optional<Person> optionalPerson =
 				dataStorage
@@ -63,10 +63,10 @@ public class PersonManagerImpl implements PersonManager {
 					.getData()
 					.getPersons()
 					.set(indexOfPerson, person);
-			logger.info("person has been updated");
+			log.info("person has been updated");
 
 		} else {
-			logger.error("Impossible to update this person, this person doesn't exist");
+			log.error("Impossible to update this person, this person doesn't exist");
 			throw new RuntimeException("This person doesn't exist");
 
 		}
@@ -75,7 +75,7 @@ public class PersonManagerImpl implements PersonManager {
 
 	public void deletePerson(Person person) {
 
-		logger.debug("Delete a person: " + person.getLastName() + " " + person.getFirstName());
+		log.debug("Delete a person: " + person.getLastName() + " " + person.getFirstName());
 
 		Optional<Person> optionalPerson =
 				dataStorage
@@ -88,16 +88,16 @@ public class PersonManagerImpl implements PersonManager {
 					.getPersons()
 					.remove(optionalPerson.get());
 
-			logger.info("person has been removed");
+			log.info("person has been removed");
 
 		} else {
-			logger.error("Impossible to delete this person, this person doesn't exist");
+			log.error("Impossible to delete this person, this person doesn't exist");
 			throw new RuntimeException("This person doesn't exist");
 		}
 	}
 
 	public Set<String> getAllMailsByCity(String city) {
-		logger.debug("Get all mails by the city: " + city);
+		log.debug("Get all mails by the city: " + city);
 		return dataStorage
 				.getPersons()
 				.filter(p -> p.getCity().equals(city))
@@ -106,7 +106,7 @@ public class PersonManagerImpl implements PersonManager {
 	}
 
 	public List<GetPersonByFirstNameAndLastNameDto> getPersonsByFirstNameAndLastName(String firstName, String lastName) {
-		logger.debug("Get all persons by address: " + firstName + " " + lastName);
+		log.debug("Get all persons by address: " + firstName + " " + lastName);
 
 		List<Person> persons = dataStorage.getData().getPersons();
 		List<GetPersonByFirstNameAndLastNameDto> personInfoDto = new ArrayList<>();
@@ -126,7 +126,7 @@ public class PersonManagerImpl implements PersonManager {
 	}
 
 	public Map<String, List<GetFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
-		logger.debug("Get all persons by address: " + stations);
+		log.debug("Get all persons by address: " + stations);
 
 		List<Medicalrecord> medicalrecords = dataStorage.getData().getMedicalrecords();
 
@@ -163,7 +163,7 @@ public class PersonManagerImpl implements PersonManager {
 	}
 
 	public GetChildListAndFamilyListDto getChildrenByAddress(String address) {
-		logger.debug("Get children by address: " + address);
+		log.debug("Get children by address: " + address);
 
 		List<Medicalrecord> medicalrecords = dataStorage.getData().getMedicalrecords();
 
@@ -182,7 +182,7 @@ public class PersonManagerImpl implements PersonManager {
 							.collect(Collectors.toList());
 
 			getChild.addAll(getChildrenByAddress);
-			logger.info("Child by address");
+			log.info("Child by address");
 		}
 
 		for(Medicalrecord medicalrecord : medicalrecords) {
@@ -197,13 +197,13 @@ public class PersonManagerImpl implements PersonManager {
 								.collect(Collectors.toList());
 
 				getAdults.addAll(getAdultByAddress);
-				logger.info("Adult by address");
+				log.info("Adult by address");
 			}
 		}
 
 		getChildListAndFamilyListDto.setGetChildrenByAddressDto(getChild);
 		getChildListAndFamilyListDto.setGetAdultsByAddressDto(getAdults);
-		logger.info("List of child by address and adult by address");
+		log.info("List of child by address and adult by address");
 		return getChildListAndFamilyListDto;
 	}
 }

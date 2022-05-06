@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest()
 @RunWith(SpringRunner.class)
-class PersonManagerImplITest {
+class PersonManagerImplIntegrationTest {
 
 	@Autowired
 	DataStorage dataStorage;

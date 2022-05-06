@@ -3,13 +3,10 @@ package com.openclassrooms.safetynet.service.firestation;
 import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.ArrayList;
@@ -19,7 +16,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-class FirestationManagerImplTest {
+class FirestationManagerImplUnitTest {
 
 	@Mock
 	DataStorage mockDataStorage;

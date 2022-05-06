@@ -3,7 +3,7 @@ package com.openclassrooms.safetynet.service.medicalRecords;
 import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
+import lombok.extern.log4j.Log4j2;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,12 +12,11 @@ import org.slf4j.Logger;
 import java.util.Optional;
 
 @Component
+@Log4j2
 public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 
 	@Autowired
 	private DataStorage dataStorage;
-
-	Logger logger = LoggerFactory.getLogger(MedicalrecordsManagerImpl.class);
 
 	@Autowired
 	public MedicalrecordsManagerImpl(DataStorage dataStorage) {
@@ -26,7 +25,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 
 	public void addMedicalRecord(Medicalrecord medicalrecord) {
 
-		logger.debug("Add a medical record" + medicalrecord);
+		log.info("Add a medical record" + medicalrecord);
 
 		Optional<Medicalrecord> optionalMedicalrecord =
 				dataStorage
@@ -43,7 +42,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 	}
 
 	public void updateMedicalRecord(Medicalrecord medicalRecord) {
-		logger.debug("Update a medical record" + medicalRecord);
+		log.info("Update a medical record" + medicalRecord);
 
 		Optional<Medicalrecord> optionalMedicalRecord =
 				dataStorage
@@ -63,7 +62,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 	}
 
 	public void deleteMedicalRecord(Medicalrecord medicalRecord) {
-		logger.debug("Delete a medical record" + medicalRecord);
+		log.info("Delete a medical record" + medicalRecord);
 
 		Optional<Medicalrecord> optionalMedicalRecord =
 				dataStorage

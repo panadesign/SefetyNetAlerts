@@ -11,18 +11,17 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-class DataStorageImplITest {
+class DataStorageImplIntegrationTest {
 	@Mock
 	private Data mockData;
 
 	DataStorage dataStorage;
 
-	DataStorageImplITest() throws IOException {
+	DataStorageImplIntegrationTest() throws IOException {
 	}
 
 	@Test

@@ -1,0 +1,15 @@
+2022-05-06 16:42:09.678 [main] SafetyNetApplication - Starting SafetyNetApplication using Java 1.8.0_312 on jeremy-System-Product-Name with PID 16379 (/home/jeremy/git/SafetyNetAlerts/target/classes started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+2022-05-06 16:42:09.686 [main] SafetyNetApplication - Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-06 16:42:09.687 [main] SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-06 16:42:12.433 [main] SafetyNetApplication - Started SafetyNetApplication in 3.116 seconds (JVM running for 4.038)
+2022-05-06 16:46:46.545 [main] SafetyNetApplication - Starting SafetyNetApplication using Java 1.8.0_312 on jeremy-System-Product-Name with PID 16633 (/home/jeremy/git/SafetyNetAlerts/target/classes started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+2022-05-06 16:46:46.553 [main] SafetyNetApplication - Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-06 16:46:46.554 [main] SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2022-05-06 16:46:49.182 [main] SafetyNetApplication - Started SafetyNetApplication in 3.001 seconds (JVM running for 3.899)
+2022-05-06 16:47:42.234 [http-nio-8080-exec-4] PersonController - Add a new person
+2022-05-06 16:47:42.235 [http-nio-8080-exec-4] PersonManagerImpl - Add a person: string string
+2022-05-06 16:47:42.236 [http-nio-8080-exec-4] PersonManagerImpl - person has been added
+[INFO ] 2022-05-06 16:51:02.645 [main] SafetyNetApplication - Starting SafetyNetApplication using Java 1.8.0_312 on jeremy-System-Product-Name with PID 16964 (/home/jeremy/git/SafetyNetAlerts/target/classes started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-06 16:51:02.653 [main] SafetyNetApplication - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-06 16:51:02.654 [main] SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-06 16:51:05.283 [main] SafetyNetApplication - Started SafetyNetApplication in 2.997 seconds (JVM running for 3.89)

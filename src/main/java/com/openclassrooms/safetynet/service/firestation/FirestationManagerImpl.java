@@ -8,6 +8,7 @@ import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
 import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
+import lombok.extern.log4j.Log4j2;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,6 +22,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Component
+@Log4j2
 public class FirestationManagerImpl implements FirestationManager {
 
 	@Autowired
@@ -28,7 +30,6 @@ public class FirestationManagerImpl implements FirestationManager {
 
 	@Autowired
 	private MedicalrecordsManager medicalrecordsManager;
-	Logger logger = LoggerFactory.getLogger(FirestationManagerImpl.class);
 
 	@Autowired
 	public FirestationManagerImpl(DataStorage dataStorage) {
@@ -37,7 +38,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 	public void addFirestation(Firestation firestation) {
 
-		logger.debug("Add a firestation: " + firestation);
+		log.debug("Add a firestation: " + firestation);
 
 		Optional<Firestation> optionalFirestation =
 				dataStorage
@@ -46,7 +47,7 @@ public class FirestationManagerImpl implements FirestationManager {
 						.findFirst();
 
 		if(optionalFirestation.isPresent()) {
-			logger.error("Error creating a new firestation");
+			log.error("Error creating a new firestation");
 			throw new RuntimeException("Firestation serve already this address");
 		}
 
@@ -54,13 +55,13 @@ public class FirestationManagerImpl implements FirestationManager {
 				.getData()
 				.getFirestations()
 				.add(firestation);
-		logger.info("Firestation has benn created");
+		log.info("Firestation has benn created");
 
 	}
 
 	public void updateFirestation(Firestation firestation) {
 
-		logger.debug("Update a firestation: " + firestation);
+		log.debug("Update a firestation: " + firestation);
 
 		Optional<Firestation> optionalFirestation =
 				dataStorage
@@ -74,9 +75,9 @@ public class FirestationManagerImpl implements FirestationManager {
 					.getData()
 					.getFirestations()
 					.set(indexOfFirestation, firestation);
-			logger.info("Firestation has been updated");
+			log.info("Firestation has been updated");
 		} else {
-			logger.error("Error updating a firestation");
+			log.error("Error updating a firestation");
 			throw new RuntimeException("Firestation who serve this address doesn't exist");
 		}
 
@@ -84,7 +85,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 	public void deleteFirestation(Firestation firestation) {
 
-		logger.debug("Delete a firestation: " + firestation);
+		log.debug("Delete a firestation: " + firestation);
 
 		Optional<Firestation> optionalFirestation =
 				dataStorage
@@ -97,9 +98,9 @@ public class FirestationManagerImpl implements FirestationManager {
 					.getData()
 					.getFirestations()
 					.remove(optionalFirestation.get());
-			logger.info("Firestation has benn removed");
+			log.info("Firestation has benn removed");
 		} else {
-			logger.error("Error deleting a firestation");
+			log.error("Error deleting a firestation");
 			throw new RuntimeException("Firestation who serve this address doesn't exist");
 		}
 
@@ -107,14 +108,14 @@ public class FirestationManagerImpl implements FirestationManager {
 
 	public Set<String> getPhoneNumbersByFirestationNumber(int station) {
 
-		logger.debug("Get phone by firestation number" + station);
+		log.debug("Get phone by firestation number" + station);
 
 		List<String> firestationAddress =
 				dataStorage
 						.getFirestationsByNumber(station)
 						.map(Firestation::getAddress)
 						.collect(Collectors.toList());
-		logger.info("Phone number by firestation number has been recovered");
+		log.info("Phone number by firestation number has been recovered");
 		return dataStorage
 				.getPersons()
 				.filter(p -> firestationAddress.contains(p.getAddress()))
@@ -124,7 +125,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 	public List<GetPersonsByAddressDto> getPersonsByAddress(String address) {
 
-		logger.debug("Get persons by address" + address);
+		log.debug("Get persons by address" + address);
 
 		List<Person> persons = dataStorage.getPersonsByAddress(address).collect(Collectors.toList());
 
@@ -162,7 +163,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 	public List<GetPersonsByStationDto> getPersonsByStation(int stationNumber) {
 
-		logger.debug("Get persons by firestation number: " + stationNumber);
+		log.debug("Get persons by firestation number: " + stationNumber);
 
 		List<String> getFirestationAddressByStationNumber =
 				dataStorage
