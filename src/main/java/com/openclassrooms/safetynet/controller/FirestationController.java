@@ -2,12 +2,12 @@ package com.openclassrooms.safetynet.controller;
 
 
 import com.openclassrooms.safetynet.dto.GetPersonsByStationAndAdultsNumberAndChildrenNumberDto;
+import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
+import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
-import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
-import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

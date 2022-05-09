@@ -136,7 +136,7 @@ public class FirestationManagerImpl implements FirestationManager {
 						.getFirestationsByAddress(address)
 						.collect(Collectors.toList());
 
-		List<GetPersonsByAddressDto> getPersonsByAddressDto = new ArrayList<>();
+		List<GetPersonsByAddressDto> personsByAddressDto = new ArrayList<>();
 
 		for(Person person : persons) {
 			List<GetPersonsByAddressDto> aggregate =
@@ -155,38 +155,34 @@ public class FirestationManagerImpl implements FirestationManager {
 							})
 							.collect(Collectors.toList());
 
-			getPersonsByAddressDto.addAll(aggregate);
+			personsByAddressDto.addAll(aggregate);
 		}
 
-		return getPersonsByAddressDto;
+		return personsByAddressDto;
 	}
 
 	public List<GetPersonsByStationDto> getPersonsByStation(int stationNumber) {
 
 		log.debug("Get persons by firestation number: " + stationNumber);
 
-		List<String> getFirestationAddressByStationNumber =
+		List<String> firestationAddressByStationNumber =
 				dataStorage
 						.getFirestationsByNumber(stationNumber)
 						.map(Firestation::getAddress)
 						.collect(Collectors.toList());
 
-		List<GetPersonsByStationDto> getPersonsByStationDto =
+		List<GetPersonsByStationDto> personsByStationDto =
 				dataStorage
 						.getPersons()
-						.filter(person -> getFirestationAddressByStationNumber.contains(person.getAddress()))
+						.filter(person -> firestationAddressByStationNumber.contains(person.getAddress()))
 						.map(person -> {
-							try {
+
 								return new GetPersonsByStationDto(person);
 
-							} catch(Exception e) {
-								e.printStackTrace();
-							}
-							return null;
 						})
 						.collect(Collectors.toList());
 
-		return getPersonsByStationDto;
+		return personsByStationDto;
 	}
 
 	public NumberOfAdultsAndChildrenDto getNumbersOfChildrenAndAdultsByStation(int station) {

@@ -141,23 +141,17 @@ class PersonManagerImplIntegrationTest {
 	@Test
 	void getPersonsByFirstNameAndLastName() {
 		//GIVEN
-		Person person = new Person("John", "Boyd");
 		int numberOfPersonsExpected = 6;
-
-		List<GetPersonByFirstNameAndLastNameDto> persons = personManager.getPersonsByFirstNameAndLastName("John", "Boyd");
-
+		Person personExpected = new Person("John", "Boyd");
+		//WHEN
+		List<GetPersonByFirstNameAndLastNameDto> persons = personManager.getPersonsByFirstNameAndLastName(personExpected.getFirstName(), personExpected.getLastName());
+		//THEN
 		assertEquals(numberOfPersonsExpected, persons.size());
-
 	}
 
-	/*@Test
+	@Test
 	void getPersonsByAddressStationForFloodAlert() {
-		List<Integer> firestationsNumber = new ArrayList<>();
-		firestationsNumber.add(1);
-		firestationsNumber.add(3);
 
-		assertEquals(12, personManager.getPersonsByAddressStationForFloodAlert(firestationsNumber).size());
-
-	}*/
+	}
 
 }

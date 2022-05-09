@@ -1,6 +1,7 @@
 package com.openclassrooms.safetynet.service.firestation;
 
 import com.openclassrooms.safetynet.model.Firestation;
+import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -96,5 +100,38 @@ class FirestationManagerImplIntegrationTest {
 				.contains(phoneExpected));
 
 	}
+
+	@Test
+	void getPersonsByStation() {
+		List<Person> personList = new ArrayList<>();
+		personList.add(new Person("lastName1", "firstName1", "address1", "villeTest1", 1111, "11111", "testMail1"));
+		personList.add(new Person("lastName2", "firstName2", "address1", "villeTest2", 2222, "22222", "testMail2"));
+		personList.add(new Person("lastName3", "firstName3", "address1", "villeTest3", 3333, "33333", "testMail3"));
+
+		Firestation firestation = new Firestation(1, "address1");
+
+		firestationManager.getPersonsByStation(firestation.getStation());
+
+		assertEquals("address1", personList.get(1).getAddress());
+		assertEquals("firstName1", personList.get(0).getFirstName());
+	}
+
+
+	@Test
+	void getPersonsByAddress() {
+		List<Person> personList = new ArrayList<>();
+		personList.add(new Person("lastName1", "firstName1", "address1", "villeTest1", 1111, "11111", "testMail1"));
+		personList.add(new Person("lastName2", "firstName2", "address1", "villeTest2", 2222, "22222", "testMail2"));
+		personList.add(new Person("lastName3", "firstName3", "address1", "villeTest3", 3333, "33333", "testMail3"));
+
+		Firestation firestation = new Firestation(1, "address1");
+
+		firestationManager.getPersonsByAddress(firestation.getAddress());
+
+		assertEquals("address1", personList.get(1).getAddress());
+		assertEquals("firstName1", personList.get(0).getFirstName());
+	}
+
+
 
 }
