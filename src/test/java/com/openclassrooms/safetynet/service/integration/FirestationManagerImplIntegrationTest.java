@@ -1,8 +1,10 @@
-package com.openclassrooms.safetynet.service.firestation;
+package com.openclassrooms.safetynet.service.integration;
 
+import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
 
@@ -103,33 +106,17 @@ class FirestationManagerImplIntegrationTest {
 
 	@Test
 	void getPersonsByStation() {
-		List<Person> personList = new ArrayList<>();
-		personList.add(new Person("lastName1", "firstName1", "address1", "villeTest1", 1111, "11111", "testMail1"));
-		personList.add(new Person("lastName2", "firstName2", "address1", "villeTest2", 2222, "22222", "testMail2"));
-		personList.add(new Person("lastName3", "firstName3", "address1", "villeTest3", 3333, "33333", "testMail3"));
 
-		Firestation firestation = new Firestation(1, "address1");
-
-		firestationManager.getPersonsByStation(firestation.getStation());
-
-		assertEquals("address1", personList.get(1).getAddress());
-		assertEquals("firstName1", personList.get(0).getFirstName());
 	}
 
 
 	@Test
 	void getPersonsByAddress() {
-		List<Person> personList = new ArrayList<>();
-		personList.add(new Person("lastName1", "firstName1", "address1", "villeTest1", 1111, "11111", "testMail1"));
-		personList.add(new Person("lastName2", "firstName2", "address1", "villeTest2", 2222, "22222", "testMail2"));
-		personList.add(new Person("lastName3", "firstName3", "address1", "villeTest3", 3333, "33333", "testMail3"));
+	/*	Firestation firestation = new Firestation(1, "644 Gershwin Cir");
 
-		Firestation firestation = new Firestation(1, "address1");
+		List<GetPersonsByAddressDto> addressResult = firestationManager.getPersonsByAddress(firestation.getAddress());
 
-		firestationManager.getPersonsByAddress(firestation.getAddress());
-
-		assertEquals("address1", personList.get(1).getAddress());
-		assertEquals("firstName1", personList.get(0).getFirstName());
+		assertTrue(addressResult.stream().map(p->p.getAddress()).collect(Collectors.toList()).contains("644 Gershwin Cir"));*/
 	}
 
 

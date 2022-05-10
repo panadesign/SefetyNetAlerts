@@ -3,6 +3,7 @@ package com.openclassrooms.safetynet.dto;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
+import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
@@ -59,6 +60,17 @@ public class GetPersonByFirstNameAndLastNameDto {
 	@JsonGetter("age")
 	public Integer getAge() {
 		return age;
+	}
+
+	@Override
+	public boolean equals(Object obj){
+
+		if(obj == null) return false;
+		if(obj instanceof GetPersonByFirstNameAndLastNameDto && this == obj) return true;
+
+		GetPersonByFirstNameAndLastNameDto getPersonByFirstNameAndLastNameDto = (GetPersonByFirstNameAndLastNameDto)obj;
+
+		return firstName.equals(getPersonByFirstNameAndLastNameDto.getFirstName()) && lastName.equals(getPersonByFirstNameAndLastNameDto.getLastName());
 	}
 	
 }

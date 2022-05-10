@@ -126,11 +126,8 @@
                         <phase>integration-test</phase>
                         <configuration>
                             <excludes>
-                                <exclude>none</exclude>
+                                <exclude>**/*IntegrationTest.java</exclude>
                             </excludes>
-                            <includes>
-                                <include>**/*IT.java</include>
-                            </includes>
                         </configuration>
                     </execution>
                 </executions>
@@ -190,6 +187,7 @@
                         <exclude>com/openclassrooms/safetynet/dto/*</exclude>
                         <exclude>com/openclassrooms/safetynet/model/*</exclude>
                         <exclude>com/openclassrooms/safetynet/SafetyNetApplication.class</exclude>
+                        <exclude>src/test/java/com/openclassrooms/safetynet/service/integration/*</exclude>
                     </excludes>
                 </configuration>
             </plugin>

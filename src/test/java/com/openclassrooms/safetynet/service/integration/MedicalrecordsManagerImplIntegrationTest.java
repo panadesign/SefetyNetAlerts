@@ -1,7 +1,8 @@
-package com.openclassrooms.safetynet.service.medicalRecords;
+package com.openclassrooms.safetynet.service.integration;
 
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

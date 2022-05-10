@@ -1,10 +1,13 @@
 package com.openclassrooms.safetynet.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
+@EqualsAndHashCode
 public class Person {
 	
 	@Getter
@@ -19,22 +22,27 @@ public class Person {
 	
 	@Getter
 	@Setter
+	@EqualsAndHashCode.Exclude
 	private String address;
 	
 	@Getter
 	@Setter
+	@EqualsAndHashCode.Exclude
 	private String city;
 	
 	@Getter
 	@Setter
+	@EqualsAndHashCode.Exclude
 	private Integer zip;
 	
 	@Getter
 	@Setter
+	@EqualsAndHashCode.Exclude
 	private String phone;
 	
 	@Getter
 	@Setter
+	@EqualsAndHashCode.Exclude
 	private String email;
 
 	public Person() {
@@ -79,7 +87,14 @@ public class Person {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		return super.equals(o);
+	public boolean equals(Object obj){
+
+		if(obj == null) return false;
+		if(obj instanceof Person && this == obj) return true;
+
+		Person person = (Person) obj;
+
+		return firstName.equals(person.getFirstName()) && lastName.equals(person.getLastName());
 	}
+
 }

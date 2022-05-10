@@ -1,14 +1,18 @@
-package com.openclassrooms.safetynet.service.person;
+package com.openclassrooms.safetynet.service.integration;
 
 import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
+import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
+import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -16,7 +20,6 @@ import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest()
-@RunWith(SpringRunner.class)
 class PersonManagerImplIntegrationTest {
 
 	@Autowired
@@ -27,11 +30,16 @@ class PersonManagerImplIntegrationTest {
 
 	Person person;
 
+	@BeforeEach
+	void setUp() throws IOException {
+		DataStorage dataStorage1 = new DataStorageImpl();
+	}
+
 	@Test
-	void addPerson() {
+	void addPerson() throws IOException {
 
 		//GIVEN
-		person = new Person("Jeremy", "Charpentier", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
+		person = new Person("test", "Test", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
 
 		//WHEN
 		personManager.addPerson(person);
@@ -83,15 +91,15 @@ class PersonManagerImplIntegrationTest {
 	}
 
 	@Test
-	void deletePerson() {
-
-		personManager.deletePerson(new Person("Jacob", "Boyd"));
+	void deletePerson() throws IOException {
+		personManager.addPerson(new Person("1", "1"));
+		personManager.deletePerson(new Person("1", "1"));
 
 		assertTrue(dataStorage
 				.getData()
 				.getPersons()
 				.stream()
-				.noneMatch(p -> p.getFirstName().equals("Jacob") && person.getLastName().equals("Boyd")));
+				.noneMatch(p -> p.getFirstName().equals("1") && person.getLastName().equals("1")));
 	}
 
 	@Test
@@ -107,12 +115,14 @@ class PersonManagerImplIntegrationTest {
 		//GIVEN
 		String city = "Culver";
 		String emailExpected = "aly@imail.com";
+		int numberOfEmailExpected = 15;
 
 		//WHEN
 		Set<String> getAllMailByCity = personManager.getAllMailsByCity(city);
 
 		//THEN
-		assertTrue(getAllMailByCity.contains(emailExpected));
+		Assertions.assertTrue(getAllMailByCity.contains(emailExpected));
+		Assertions.assertEquals(numberOfEmailExpected, getAllMailByCity.size());
 	}
 
 	@Test
@@ -125,28 +135,35 @@ class PersonManagerImplIntegrationTest {
 		Set<String> getAllMailByCity = personManager.getAllMailsByCity(city);
 
 		//THEN
+		assertTrue(getAllMailByCity.isEmpty());
 		assertFalse(getAllMailByCity.contains(emailExpected));
 	}
 
 	@Test
 	void getPersons() {
+		Person personExpected = new Person("John", "Boyd");
 		List<Person> allPersons =
 				dataStorage
 						.getPersons()
 						.collect(Collectors.toList());
 
-		assertNotNull(allPersons);
+		Assertions.assertNotNull(allPersons);
+		Assertions.assertFalse(allPersons.isEmpty());
+		Assertions.assertTrue(allPersons.contains(personExpected));
 	}
 
 	@Test
-	void getPersonsByFirstNameAndLastName() {
+	void getPersonsByFirstNameAndLastName() throws IOException {
+
 		//GIVEN
+		GetPersonByFirstNameAndLastNameDto personExpected = new GetPersonByFirstNameAndLastNameDto(new Person("John", "Boyd"));
+
 		int numberOfPersonsExpected = 6;
-		Person personExpected = new Person("John", "Boyd");
 		//WHEN
 		List<GetPersonByFirstNameAndLastNameDto> persons = personManager.getPersonsByFirstNameAndLastName(personExpected.getFirstName(), personExpected.getLastName());
 		//THEN
-		assertEquals(numberOfPersonsExpected, persons.size());
+//		Assertions.assertEquals(numberOfPersonsExpected, persons.size());
+		Assertions.assertTrue(persons.contains(personExpected));
 	}
 
 	@Test

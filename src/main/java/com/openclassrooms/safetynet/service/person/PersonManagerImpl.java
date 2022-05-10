@@ -5,10 +5,7 @@ import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import lombok.extern.log4j.Log4j2;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -97,10 +94,10 @@ public class PersonManagerImpl implements PersonManager {
 	}
 
 	public Set<String> getAllMailsByCity(String city) {
-		log.debug("Get all mails by the city: " + city);
+		log.debug("Get all mails in: " + city);
 		return dataStorage
 				.getPersons()
-				.filter(p -> p.getCity().equals(city))
+				.filter(p -> city.equals(p.getCity()))
 				.map(Person::getEmail)
 				.collect(Collectors.toSet());
 	}
@@ -115,7 +112,7 @@ public class PersonManagerImpl implements PersonManager {
 			List<GetPersonByFirstNameAndLastNameDto> aggregate =
 					dataStorage.getMedicalRecord()
 							.filter(medicalrecord -> medicalrecord.getId().equals(person.getId()))
-							.filter(m -> m.getLastName().equals(lastName))
+							.filter(m -> lastName.equals(m.getLastName()))
 							.map(medicalrecord -> new GetPersonByFirstNameAndLastNameDto(person, medicalrecord))
 							.collect(Collectors.toList());
 
