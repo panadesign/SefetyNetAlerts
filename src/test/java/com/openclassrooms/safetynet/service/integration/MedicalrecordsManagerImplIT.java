@@ -19,7 +19,7 @@ import static org.junit.Assert.assertTrue;
 @SpringBootTest()
 @RunWith(SpringRunner.class)
 @TestMethodOrder(OrderAnnotation.class)
-class MedicalrecordsManagerImplIntegrationTest {
+class MedicalrecordsManagerImplIT {
 
 	@Autowired
 	private DataStorage dataStorage;
@@ -42,8 +42,7 @@ class MedicalrecordsManagerImplIntegrationTest {
 
 		//THEN
 		assertTrue(dataStorage
-				.getData()
-				.getMedicalrecords()
+				.getMedicalRecord()
 				.contains(medicalrecord));
 
 	}
@@ -61,8 +60,7 @@ class MedicalrecordsManagerImplIntegrationTest {
 		medicalrecordsManager.updateMedicalRecord(medicalrecord);
 
 		assertTrue(dataStorage
-				.getData()
-				.getMedicalrecords()
+				.getMedicalRecord()
 				.stream()
 				.anyMatch(p -> p.getFirstName().equals("John") && p.getLastName().equals("Boyd")));
 	}
@@ -80,8 +78,7 @@ class MedicalrecordsManagerImplIntegrationTest {
 		medicalrecordsManager.deleteMedicalRecord(medicalrecord);
 
 		assertTrue(dataStorage
-				.getData()
-				.getMedicalrecords()
+				.getMedicalRecord()
 				.stream()
 				.noneMatch(p -> p.getFirstName().equals("Jacob") && p.getLastName().equals("Boyd")));
 	}

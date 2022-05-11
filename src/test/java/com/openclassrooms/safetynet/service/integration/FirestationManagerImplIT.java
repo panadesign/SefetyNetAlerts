@@ -1,8 +1,6 @@
 package com.openclassrooms.safetynet.service.integration;
 
-import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
 import com.openclassrooms.safetynet.model.Firestation;
-import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
@@ -12,15 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import static org.junit.Assert.*;
 
 @SpringBootTest()
 @RunWith(SpringRunner.class)
-class FirestationManagerImplIntegrationTest {
+class FirestationManagerImplIT {
 
 	@Autowired
 	DataStorage dataStorage;
@@ -41,7 +35,6 @@ class FirestationManagerImplIntegrationTest {
 
 		//THEN
 		assertTrue(dataStorage
-				.getData()
 				.getFirestations()
 				.contains(newFirestation));
 
@@ -60,7 +53,6 @@ class FirestationManagerImplIntegrationTest {
 		firestationManager.updateFirestation(firestationToUpdate);
 
 		assertTrue(dataStorage
-				.getData()
 				.getFirestations()
 				.stream()
 				.filter(f -> f.getStation() == 2)
@@ -81,7 +73,6 @@ class FirestationManagerImplIntegrationTest {
 		firestationManager.deleteFirestation(firestationToDelete);
 
 		assertTrue(dataStorage
-				.getData()
 				.getFirestations()
 				.stream()
 				.filter(f -> f.getStation() == 4)

@@ -43,8 +43,8 @@ class MedicalrecordsManagerImplUnitTest {
 		Medicalrecord medicalrecordToAdd = new Medicalrecord("firstNameTest", "lastNameTest");
 
 		//WHEN
-		when(mockDataStorage.getMedicalRecord()).thenReturn(Stream.empty());
-		when(mockDataStorage.getData()).thenReturn(datas);
+		when(mockDataStorage.getMedicalRecord()).thenReturn(new ArrayList<>());
+		
 
 		//THEN
 		medicalrecordsManager.addMedicalRecord(medicalrecordToAdd);
@@ -70,8 +70,7 @@ class MedicalrecordsManagerImplUnitTest {
 		datas.getMedicalrecords().add(medicalrecordExisting);
 
 		//WHEN
-		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords().stream());
-		when(mockDataStorage.getData()).thenReturn(datas);
+		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords());
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(Optional.of(medicalrecordExisting));
 
 		//THEN
@@ -98,8 +97,7 @@ class MedicalrecordsManagerImplUnitTest {
 		medicalrecordUpdate.setBirthdate("03/03/1983");
 
 		//WHEN
-		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords().stream());
-		when(mockDataStorage.getData()).thenReturn(datas);
+		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords());
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(Optional.of(existingMedicalrecord));
 
 
@@ -127,8 +125,7 @@ class MedicalrecordsManagerImplUnitTest {
 		Assertions.assertEquals(1, datas.getMedicalrecords().size());
 
 		//WHEN
-		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords().stream());
-		when(mockDataStorage.getData()).thenReturn(datas);
+		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords());
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(Optional.of(existingMedicalRecord));
 
 
@@ -152,7 +149,6 @@ class MedicalrecordsManagerImplUnitTest {
 		datas.getMedicalrecords().add(medicalrecordExisting);
 
 		//WHEN
-		when(mockDataStorage.getData()).thenReturn(datas);
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(Optional.of(medicalrecordExisting));
 
 		medicalrecordsManager.getMedicalRecordByPersonId(medicalrecordExisting.getId());

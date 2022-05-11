@@ -36,8 +36,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 		}
 
 		dataStorage
-				.getData()
-				.getMedicalrecords()
+				.getMedicalRecord()
 				.add(medicalrecord);
 	}
 
@@ -49,11 +48,10 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 						.getMedicalRecordById(medicalRecord.getId());
 
 		if(optionalMedicalRecord.isPresent()) {
-			int indexOfMedicalRecord = dataStorage.getData().getMedicalrecords().indexOf(optionalMedicalRecord.get());
+			int indexOfMedicalRecord = dataStorage.getMedicalRecord().indexOf(optionalMedicalRecord.get());
 
 			dataStorage
-					.getData()
-					.getMedicalrecords()
+					.getMedicalRecord()
 					.set(indexOfMedicalRecord, medicalRecord);
 
 		} else {
@@ -69,11 +67,10 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 						.getMedicalRecordById(medicalRecord.getId());
 
 		if(optionalMedicalRecord.isPresent()) {
-			int indexOfMedicalRecord = dataStorage.getData().getMedicalrecords().indexOf(optionalMedicalRecord.get());
+			int indexOfMedicalRecord = dataStorage.getMedicalRecord().indexOf(optionalMedicalRecord.get());
 
 			dataStorage
-					.getData()
-					.getMedicalrecords()
+					.getMedicalRecord()
 					.remove(indexOfMedicalRecord);
 
 		} else {
@@ -83,8 +80,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 
 	public Optional<Medicalrecord> getMedicalRecordByPersonId(Id id) {
 		return dataStorage
-				.getData()
-				.getMedicalrecords()
+				.getMedicalRecord()
 				.stream()
 				.filter(m -> m.getId().equals(id))
 				.findFirst();

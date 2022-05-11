@@ -17,13 +17,13 @@ import java.util.List;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-class DataStorageImplIntegrationTest {
+class DataStorageImplIT {
 	@Mock
 	private Data mockData;
 
 	DataStorage dataStorage = new DataStorageImpl();
 
-	DataStorageImplIntegrationTest() throws IOException {
+	DataStorageImplIT() throws IOException {
 	}
 
 	@Test

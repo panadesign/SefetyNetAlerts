@@ -30,10 +30,9 @@ class FirestationManagerImplUnitTest {
 
 	@Test
 	void addFirestationTest() {
-		when(mockDataStorage.getFirestations()).thenReturn(Stream.empty());
+		when(mockDataStorage.getFirestations()).thenReturn(new ArrayList<>());
 
 		Data datas = new Data();
-		when(mockDataStorage.getData()).thenReturn(datas);
 
 		datas.setFirestations(new ArrayList<>());
 		firestationManager.addFirestation(new Firestation(5, "test"));
@@ -46,7 +45,7 @@ class FirestationManagerImplUnitTest {
 		Data datas = new Data();
 
 		when(mockDataStorage.getFirestations()).thenReturn(Stream.of(new Firestation(1, "address")));
-		when(mockDataStorage.getData()).thenReturn(datas);
+		
 
 		datas.setFirestations(new ArrayList<>());
 		firestationManager.updateFirestation(new Firestation(1, "address"));

@@ -1,16 +1,13 @@
 package com.openclassrooms.safetynet.service.integration;
 
 import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
-import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import org.junit.jupiter.api.*;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
 import java.util.*;
@@ -20,7 +17,7 @@ import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest()
-class PersonManagerImplIntegrationTest {
+class PersonManagerImplIT {
 
 	@Autowired
 	DataStorage dataStorage;
@@ -46,7 +43,6 @@ class PersonManagerImplIntegrationTest {
 
 		boolean personCreated =
 				dataStorage
-						.getData()
 						.getPersons()
 						.contains(person);
 
@@ -74,7 +70,6 @@ class PersonManagerImplIntegrationTest {
 		personManager.updatePerson(new Person("Jacob", "Boyd", "testMail"));
 
 		assertTrue(dataStorage
-				.getData()
 				.getPersons()
 				.stream()
 				.filter(p -> p.getFirstName().equals("Jacob") && p.getLastName().equals("Boyd"))
@@ -96,7 +91,6 @@ class PersonManagerImplIntegrationTest {
 		personManager.deletePerson(new Person("1", "1"));
 
 		assertTrue(dataStorage
-				.getData()
 				.getPersons()
 				.stream()
 				.noneMatch(p -> p.getFirstName().equals("1") && person.getLastName().equals("1")));
@@ -144,8 +138,7 @@ class PersonManagerImplIntegrationTest {
 		Person personExpected = new Person("John", "Boyd");
 		List<Person> allPersons =
 				dataStorage
-						.getPersons()
-						.collect(Collectors.toList());
+						.getPersons();
 
 		Assertions.assertNotNull(allPersons);
 		Assertions.assertFalse(allPersons.isEmpty());
@@ -158,11 +151,11 @@ class PersonManagerImplIntegrationTest {
 		//GIVEN
 		GetPersonByFirstNameAndLastNameDto personExpected = new GetPersonByFirstNameAndLastNameDto(new Person("John", "Boyd"));
 
-		int numberOfPersonsExpected = 6;
+		//int numberOfPersonsExpected = 6;
 		//WHEN
 		List<GetPersonByFirstNameAndLastNameDto> persons = personManager.getPersonsByFirstNameAndLastName(personExpected.getFirstName(), personExpected.getLastName());
 		//THEN
-//		Assertions.assertEquals(numberOfPersonsExpected, persons.size());
+		//Assertions.assertEquals(numberOfPersonsExpected, persons.size());
 		Assertions.assertTrue(persons.contains(personExpected));
 	}
 

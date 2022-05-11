@@ -7,16 +7,25 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 public interface DataStorage {
-
-	public Data getData();
-	public Stream<Person> getPersons();
+	
+	public List<Person> getPersons();
+	
 	public Optional<Person> getPersonById(Id id);
-	public Stream<Person> getPersonsByAddress(String address);
+	
+	public List<Person> getPersonsByAddress(String address);
+	
 	public List<Person> getPersonsByStation(Integer station);
-	public Stream<Firestation> getFirestations();
-	public Stream<Firestation> getFirestationsByNumber(Integer station);
-	public Stream<Firestation> getFirestationsByAddress(String address);
-	public Stream<Medicalrecord> getMedicalRecord();
+	
+	public List<Firestation> getFirestations();
+	
+	public List<Firestation> getFirestationsByNumber(Integer station);
+	
+	public List<Firestation> getFirestationsByAddress(String address);
+	
+	public List<Medicalrecord> getMedicalRecord();
+	
 	public Optional<Medicalrecord> getMedicalRecordById(Id id);
-
+	
+	public Data getData();
+	
 }

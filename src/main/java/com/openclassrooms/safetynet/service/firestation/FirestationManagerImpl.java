@@ -43,6 +43,7 @@ public class FirestationManagerImpl implements FirestationManager {
 		Optional<Firestation> optionalFirestation =
 				dataStorage
 						.getFirestations()
+						.stream()
 						.filter(f -> f.getAddress().equals(firestation.getAddress()))
 						.findFirst();
 
@@ -52,7 +53,6 @@ public class FirestationManagerImpl implements FirestationManager {
 		}
 
 		dataStorage
-				.getData()
 				.getFirestations()
 				.add(firestation);
 		log.info("Firestation has benn created");
@@ -66,13 +66,13 @@ public class FirestationManagerImpl implements FirestationManager {
 		Optional<Firestation> optionalFirestation =
 				dataStorage
 						.getFirestations()
+						.stream()
 						.filter(f -> f.getAddress().equals(firestation.getAddress()))
 						.findFirst();
 
 		if(optionalFirestation.isPresent()) {
-			int indexOfFirestation = dataStorage.getData().getFirestations().indexOf(optionalFirestation.get());
+			int indexOfFirestation = dataStorage.getFirestations().indexOf(optionalFirestation.get());
 			dataStorage
-					.getData()
 					.getFirestations()
 					.set(indexOfFirestation, firestation);
 			log.info("Firestation has been updated");
@@ -90,12 +90,12 @@ public class FirestationManagerImpl implements FirestationManager {
 		Optional<Firestation> optionalFirestation =
 				dataStorage
 						.getFirestations()
+						.stream()
 						.filter(f -> f.getAddress().equals(firestation.getAddress()))
 						.findFirst();
 
 		if(optionalFirestation.isPresent()) {
 			dataStorage
-					.getData()
 					.getFirestations()
 					.remove(optionalFirestation.get());
 			log.info("Firestation has benn removed");
@@ -113,11 +113,13 @@ public class FirestationManagerImpl implements FirestationManager {
 		List<String> firestationAddress =
 				dataStorage
 						.getFirestationsByNumber(station)
+						.stream()
 						.map(Firestation::getAddress)
 						.collect(Collectors.toList());
 		log.info("Phone number by firestation number has been recovered");
 		return dataStorage
 				.getPersons()
+				.stream()
 				.filter(p -> firestationAddress.contains(p.getAddress()))
 				.map(Person::getPhone)
 				.collect(Collectors.toSet());
@@ -127,14 +129,13 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		log.debug("Get persons by address" + address);
 
-		List<Person> persons = dataStorage.getPersonsByAddress(address).collect(Collectors.toList());
+		List<Person> persons = dataStorage.getPersonsByAddress(address);
 
-		List<Medicalrecord> medicalrecords = dataStorage.getData().getMedicalrecords();
+		List<Medicalrecord> medicalrecords = dataStorage.getMedicalRecord();
 
 		List<Firestation> fireStations =
 				dataStorage
-						.getFirestationsByAddress(address)
-						.collect(Collectors.toList());
+						.getFirestationsByAddress(address);
 
 		List<GetPersonsByAddressDto> personsByAddressDto = new ArrayList<>();
 
@@ -168,12 +169,14 @@ public class FirestationManagerImpl implements FirestationManager {
 		List<String> firestationAddressByStationNumber =
 				dataStorage
 						.getFirestationsByNumber(stationNumber)
+						.stream()
 						.map(Firestation::getAddress)
 						.collect(Collectors.toList());
 
 		List<GetPersonsByStationDto> personsByStationDto =
 				dataStorage
 						.getPersons()
+						.stream()
 						.filter(person -> firestationAddressByStationNumber.contains(person.getAddress()))
 						.map(person -> {
 

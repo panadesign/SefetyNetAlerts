@@ -22,56 +22,66 @@ public class DataStorageImpl implements DataStorage {
 		this.data = objectMapper.readValue(file, Data.class);
 	}
 	
+	public List<Person> getPersons() {
+		return data.getPersons();
+	}
+	
 	public Data getData() {
 		return data;
 	}
 	
-	public Stream<Person> getPersons() {
-		return data.getPersons().stream();
-	}
-	
 	public Optional<Person> getPersonById(Id id) {
 		return getPersons()
+				.stream()
 				.filter(person -> person.getId().equals(id))
 				.findFirst();
 	}
 
-	public Stream<Person> getPersonsByAddress(String address) {
+	public List<Person> getPersonsByAddress(String address) {
 		return getPersons()
-				.filter(person -> person.getAddress().equals(address));
+				.stream()
+				.filter(person -> person.getAddress().equals(address))
+				.collect(Collectors.toList());
 	}
 	
 	public List<Person> getPersonsByStation(Integer station) {
 		List<String> getFirestationsByStationNumber =
 				getFirestationsByNumber(station)
+						.stream()
 						.map(firestation -> firestation.getAddress())
 						.collect(Collectors.toList());
 		
 		return 	getPersons()
+				.stream()
 				.filter(person -> getFirestationsByStationNumber.contains(person.getAddress()))
 				.collect(Collectors.toList());
 	}
 	
-	public Stream<Firestation> getFirestations() {
-		return data.getFirestations().stream();
+	public List<Firestation> getFirestations() {
+		return data.getFirestations();
 	}
 	
-	public Stream<Firestation> getFirestationsByNumber(Integer station) {
+	public List<Firestation> getFirestationsByNumber(Integer station) {
 		return getFirestations()
-				.filter(firestation -> firestation.getStation() == station);
+				.stream()
+				.filter(firestation -> firestation.getStation() == station)
+				.collect(Collectors.toList());
 	}
 	
-	public Stream<Firestation> getFirestationsByAddress(String address) {
+	public List<Firestation> getFirestationsByAddress(String address) {
 		return getFirestations()
-				.filter(firestation -> firestation.getAddress().equals(address));
+				.stream()
+				.filter(firestation -> firestation.getAddress().equals(address))
+				.collect(Collectors.toList());
 	}
 	
-	public Stream<Medicalrecord> getMedicalRecord() {
-		return data.getMedicalrecords().stream();
+	public List<Medicalrecord> getMedicalRecord() {
+		return data.getMedicalrecords();
 	}
 	
 	public Optional<Medicalrecord> getMedicalRecordById(Id id) {
 		return getMedicalRecord()
+				.stream()
 				.filter(medicalrecord -> medicalrecord.getId().equals(id))
 				.findFirst();
 	}
