@@ -42,7 +42,7 @@ class MedicalrecordsManagerImplIT {
 
 		//THEN
 		assertTrue(dataStorage
-				.getMedicalRecord()
+				.getMedicalrecords()
 				.contains(medicalrecord));
 
 	}
@@ -60,7 +60,7 @@ class MedicalrecordsManagerImplIT {
 		medicalrecordsManager.updateMedicalRecord(medicalrecord);
 
 		assertTrue(dataStorage
-				.getMedicalRecord()
+				.getMedicalrecords()
 				.stream()
 				.anyMatch(p -> p.getFirstName().equals("John") && p.getLastName().equals("Boyd")));
 	}
@@ -78,7 +78,7 @@ class MedicalrecordsManagerImplIT {
 		medicalrecordsManager.deleteMedicalRecord(medicalrecord);
 
 		assertTrue(dataStorage
-				.getMedicalRecord()
+				.getMedicalrecords()
 				.stream()
 				.noneMatch(p -> p.getFirstName().equals("Jacob") && p.getLastName().equals("Boyd")));
 	}

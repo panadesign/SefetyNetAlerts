@@ -4,7 +4,6 @@ import com.openclassrooms.safetynet.model.*;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 public interface DataStorage {
 	
@@ -22,7 +21,7 @@ public interface DataStorage {
 	
 	public List<Firestation> getFirestationsByAddress(String address);
 	
-	public List<Medicalrecord> getMedicalRecord();
+	public List<Medicalrecord> getMedicalrecords();
 	
 	public Optional<Medicalrecord> getMedicalRecordById(Id id);
 	

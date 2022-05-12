@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(controllers = CommunityEmailController.class)
-class CommunityEmailControllerTest {
+class CommunityEmailControllerUnitTest {
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -25,7 +25,7 @@ class CommunityEmailControllerTest {
 
 	@Test
 	void getAllMailsByCityTest() throws Exception {
-		mockMvc.perform(get("/communityEmail?city=<>"))
+		mockMvc.perform(get("/communityEmail?city=Culver"))
 				.andExpect(status().isOk());
 	}
 }

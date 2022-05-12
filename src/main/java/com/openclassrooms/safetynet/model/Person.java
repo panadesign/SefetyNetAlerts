@@ -1,7 +1,6 @@
 package com.openclassrooms.safetynet.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;

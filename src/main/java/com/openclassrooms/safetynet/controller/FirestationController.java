@@ -1,8 +1,8 @@
 package com.openclassrooms.safetynet.controller;
 
 
-import com.openclassrooms.safetynet.dto.GetPersonsByStationAndAdultsNumberAndChildrenNumberDto;
-import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
+import com.openclassrooms.safetynet.dto.PersonsByStationAndAdultsNumberAndChildrenNumberDto;
+import com.openclassrooms.safetynet.dto.PersonsByStationDto;
 import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
@@ -45,12 +45,12 @@ public class FirestationController {
 	}
 	
 	@GetMapping("/firestation")
-	ResponseEntity<GetPersonsByStationAndAdultsNumberAndChildrenNumberDto> getPersonsByStationAndAdultsNumberAndChildrenNumberDto(@RequestParam int stationNumber) {
+	ResponseEntity<PersonsByStationAndAdultsNumberAndChildrenNumberDto> getPersonsByStationAndAdultsNumberAndChildrenNumberDto(@RequestParam int stationNumber) {
 
-		List<GetPersonsByStationDto> personsByStation = firestationManager.getPersonsByStation(stationNumber);
+		List<PersonsByStationDto> personsByStation = firestationManager.getPersonsByStation(stationNumber);
 		NumberOfAdultsAndChildrenDto numberOfAdultsAndChildrenDto = firestationManager.getNumbersOfChildrenAndAdultsByStation(stationNumber);
 
-		GetPersonsByStationAndAdultsNumberAndChildrenNumberDto result = new GetPersonsByStationAndAdultsNumberAndChildrenNumberDto(personsByStation, numberOfAdultsAndChildrenDto.getNumberAdults(), numberOfAdultsAndChildrenDto.getNumberChildren());
+		PersonsByStationAndAdultsNumberAndChildrenNumberDto result = new PersonsByStationAndAdultsNumberAndChildrenNumberDto(personsByStation, numberOfAdultsAndChildrenDto.getNumberAdults(), numberOfAdultsAndChildrenDto.getNumberChildren());
 
 		return new ResponseEntity<>(result, HttpStatus.OK);
 		

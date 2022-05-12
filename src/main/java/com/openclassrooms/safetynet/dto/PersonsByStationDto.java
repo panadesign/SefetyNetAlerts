@@ -3,10 +3,9 @@ package com.openclassrooms.safetynet.dto;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.openclassrooms.safetynet.model.Id;
-import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 
-public class GetPersonsByStationDto {
+public class PersonsByStationDto {
 
 	private String firstName;
 	private String lastName;
@@ -14,7 +13,7 @@ public class GetPersonsByStationDto {
 	private String phone;
 	private Id id;
 
-	public GetPersonsByStationDto(Person person) {
+	public PersonsByStationDto(Person person) {
 
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();

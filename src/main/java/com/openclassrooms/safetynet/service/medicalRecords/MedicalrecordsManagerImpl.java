@@ -4,10 +4,8 @@ import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import lombok.extern.log4j.Log4j2;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.slf4j.Logger;
 
 import java.util.Optional;
 
@@ -36,7 +34,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 		}
 
 		dataStorage
-				.getMedicalRecord()
+				.getMedicalrecords()
 				.add(medicalrecord);
 	}
 
@@ -48,10 +46,10 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 						.getMedicalRecordById(medicalRecord.getId());
 
 		if(optionalMedicalRecord.isPresent()) {
-			int indexOfMedicalRecord = dataStorage.getMedicalRecord().indexOf(optionalMedicalRecord.get());
+			int indexOfMedicalRecord = dataStorage.getMedicalrecords().indexOf(optionalMedicalRecord.get());
 
 			dataStorage
-					.getMedicalRecord()
+					.getMedicalrecords()
 					.set(indexOfMedicalRecord, medicalRecord);
 
 		} else {
@@ -67,10 +65,10 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 						.getMedicalRecordById(medicalRecord.getId());
 
 		if(optionalMedicalRecord.isPresent()) {
-			int indexOfMedicalRecord = dataStorage.getMedicalRecord().indexOf(optionalMedicalRecord.get());
+			int indexOfMedicalRecord = dataStorage.getMedicalrecords().indexOf(optionalMedicalRecord.get());
 
 			dataStorage
-					.getMedicalRecord()
+					.getMedicalrecords()
 					.remove(indexOfMedicalRecord);
 
 		} else {
@@ -80,7 +78,7 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 
 	public Optional<Medicalrecord> getMedicalRecordByPersonId(Id id) {
 		return dataStorage
-				.getMedicalRecord()
+				.getMedicalrecords()
 				.stream()
 				.filter(m -> m.getId().equals(id))
 				.findFirst();

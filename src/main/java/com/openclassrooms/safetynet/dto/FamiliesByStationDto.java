@@ -6,7 +6,7 @@ import com.openclassrooms.safetynet.model.Person;
 
 import java.util.List;
 
-public class GetFamiliesByStationDto {
+public class FamiliesByStationDto {
 	private String lastName;
 	private String firstName;
 	private String phone;
@@ -15,7 +15,7 @@ public class GetFamiliesByStationDto {
 	private List<String> allergies;
 
 
-	public GetFamiliesByStationDto(Person person, Medicalrecord medicalRecord) {
+	public FamiliesByStationDto(Person person, Medicalrecord medicalRecord) {
 		this.lastName = person.getLastName();
 		this.firstName = person.getFirstName();
 		this.phone = person.getPhone();

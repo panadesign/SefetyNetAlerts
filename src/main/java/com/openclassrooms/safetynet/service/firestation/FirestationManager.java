@@ -1,7 +1,7 @@
 package com.openclassrooms.safetynet.service.firestation;
 
-import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
-import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
+import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
+import com.openclassrooms.safetynet.dto.PersonsByStationDto;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 
@@ -12,8 +12,8 @@ public interface FirestationManager {
 	void addFirestation(Firestation firestation);
 	void updateFirestation(Firestation firestation);
 	void deleteFirestation(Firestation firestation);
-	List<GetPersonsByStationDto> getPersonsByStation(int stationNumber);
+	List<PersonsByStationDto> getPersonsByStation(int stationNumber);
 	Set<String> getPhoneNumbersByFirestationNumber(int station);
-	List<GetPersonsByAddressDto> getPersonsByAddress(String address);
+	List<PersonsByAddressDto> getPersonsByAddress(String address);
 	NumberOfAdultsAndChildrenDto getNumbersOfChildrenAndAdultsByStation(int station);
 }

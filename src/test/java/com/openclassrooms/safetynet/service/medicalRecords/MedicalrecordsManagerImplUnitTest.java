@@ -3,9 +3,7 @@ package com.openclassrooms.safetynet.service.medicalRecords;
 import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
-import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,9 +11,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.ArrayList;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
@@ -42,13 +38,14 @@ class MedicalrecordsManagerImplUnitTest {
 		Assertions.assertNotNull(datas.getMedicalrecords());
 		Medicalrecord medicalrecordToAdd = new Medicalrecord("firstNameTest", "lastNameTest");
 
-		//WHEN
-		when(mockDataStorage.getMedicalRecord()).thenReturn(new ArrayList<>());
-		
 
-		//THEN
+		//WHEN
+		when(mockDataStorage.getData()).thenReturn(datas);
+		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 		medicalrecordsManager.addMedicalRecord(medicalrecordToAdd);
 
+
+		//THEN
 		Assertions.assertFalse(datas.getMedicalrecords().isEmpty());
 		Assertions.assertNotNull(datas.getMedicalrecords());
 		Assertions.assertEquals(1, datas.getMedicalrecords().size());
@@ -70,7 +67,7 @@ class MedicalrecordsManagerImplUnitTest {
 		datas.getMedicalrecords().add(medicalrecordExisting);
 
 		//WHEN
-		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords());
+		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(Optional.of(medicalrecordExisting));
 
 		//THEN
@@ -84,7 +81,7 @@ class MedicalrecordsManagerImplUnitTest {
 	}
 
 	@Test
-	void updateMedicalRecord() {
+	void updateMedicalrecord() {
 		//GIVEN
 		Data datas = new Data();
 		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
@@ -97,7 +94,7 @@ class MedicalrecordsManagerImplUnitTest {
 		medicalrecordUpdate.setBirthdate("03/03/1983");
 
 		//WHEN
-		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords());
+		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(Optional.of(existingMedicalrecord));
 
 
@@ -114,6 +111,22 @@ class MedicalrecordsManagerImplUnitTest {
 	}
 
 	@Test
+	void updateMedicalrecordPersonNotExisting() {
+		Data datas = new Data();
+		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
+		Assertions.assertNotNull(datas.getMedicalrecords());
+
+		Medicalrecord medicalrecordUpdate = new Medicalrecord("firstNametest", "lastNameTest");
+		medicalrecordUpdate.setBirthdate("03/03/1983");
+
+		//WHEN
+		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
+
+
+		Assertions.assertThrows(RuntimeException.class, () -> medicalrecordsManager.updateMedicalRecord(medicalrecordUpdate));
+	}
+
+	@Test
 	void deleteMedicalRecord() {
 		//GIVEN
 		Data datas = new Data();
@@ -125,7 +138,7 @@ class MedicalrecordsManagerImplUnitTest {
 		Assertions.assertEquals(1, datas.getMedicalrecords().size());
 
 		//WHEN
-		when(mockDataStorage.getMedicalRecord()).thenReturn(datas.getMedicalrecords());
+		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(Optional.of(existingMedicalRecord));
 
 
@@ -139,6 +152,23 @@ class MedicalrecordsManagerImplUnitTest {
 	}
 
 	@Test
+	void deleteMedicalRecordNotExisting() {
+		//GIVEN
+		Data datas = new Data();
+		Assertions.assertNotNull(datas.getMedicalrecords());
+		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
+
+		//WHEN
+		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
+
+		//THEN
+		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest1", "lastNameTest1");
+
+		Assertions.assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord(medicalrecordToDelete));
+
+	}
+
+	@Test
 	void getMedicalRecordByPersonId() {
 		//GIVEN
 		Data datas = new Data();
@@ -149,11 +179,11 @@ class MedicalrecordsManagerImplUnitTest {
 		datas.getMedicalrecords().add(medicalrecordExisting);
 
 		//WHEN
-		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(Optional.of(medicalrecordExisting));
+		when(mockDataStorage.getData()).thenReturn(datas);
+		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 
 		medicalrecordsManager.getMedicalRecordByPersonId(medicalrecordExisting.getId());
 		Optional medicalRecordID = medicalrecordsManager.getMedicalRecordByPersonId(new Id("firstNameTest", "lastNameTest"));
-
 
 		//THEN
 		Assertions.assertNotNull(datas.getMedicalrecords());

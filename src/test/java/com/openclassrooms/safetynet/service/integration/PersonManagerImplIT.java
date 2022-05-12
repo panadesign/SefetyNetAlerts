@@ -1,6 +1,6 @@
 package com.openclassrooms.safetynet.service.integration;
 
-import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
+import com.openclassrooms.safetynet.dto.PersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -149,11 +148,11 @@ class PersonManagerImplIT {
 	void getPersonsByFirstNameAndLastName() throws IOException {
 
 		//GIVEN
-		GetPersonByFirstNameAndLastNameDto personExpected = new GetPersonByFirstNameAndLastNameDto(new Person("John", "Boyd"));
+		PersonByFirstNameAndLastNameDto personExpected = new PersonByFirstNameAndLastNameDto(new Person("John", "Boyd"));
 
 		//int numberOfPersonsExpected = 6;
 		//WHEN
-		List<GetPersonByFirstNameAndLastNameDto> persons = personManager.getPersonsByFirstNameAndLastName(personExpected.getFirstName(), personExpected.getLastName());
+		List<PersonByFirstNameAndLastNameDto> persons = personManager.getPersonsByFirstNameAndLastName(personExpected.getFirstName(), personExpected.getLastName());
 		//THEN
 		//Assertions.assertEquals(numberOfPersonsExpected, persons.size());
 		Assertions.assertTrue(persons.contains(personExpected));

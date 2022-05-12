@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Component
 public class DataStorageImpl implements DataStorage {
@@ -21,15 +20,14 @@ public class DataStorageImpl implements DataStorage {
 		File file = new ClassPathResource("data.json").getFile();
 		this.data = objectMapper.readValue(file, Data.class);
 	}
-	
-	public List<Person> getPersons() {
-		return data.getPersons();
-	}
-	
 	public Data getData() {
 		return data;
 	}
-	
+
+	public List<Person> getPersons() {
+		return data.getPersons();
+	}
+
 	public Optional<Person> getPersonById(Id id) {
 		return getPersons()
 				.stream()
@@ -75,12 +73,12 @@ public class DataStorageImpl implements DataStorage {
 				.collect(Collectors.toList());
 	}
 	
-	public List<Medicalrecord> getMedicalRecord() {
+	public List<Medicalrecord> getMedicalrecords() {
 		return data.getMedicalrecords();
 	}
 	
 	public Optional<Medicalrecord> getMedicalRecordById(Id id) {
-		return getMedicalRecord()
+		return getMedicalrecords()
 				.stream()
 				.filter(medicalrecord -> medicalrecord.getId().equals(id))
 				.findFirst();

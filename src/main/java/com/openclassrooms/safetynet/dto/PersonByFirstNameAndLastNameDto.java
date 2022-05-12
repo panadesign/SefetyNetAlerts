@@ -3,11 +3,10 @@ package com.openclassrooms.safetynet.dto;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
-import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
-public class GetPersonByFirstNameAndLastNameDto {
+public class PersonByFirstNameAndLastNameDto {
 	
 	private String firstName;
 	private String lastName;
@@ -16,7 +15,7 @@ public class GetPersonByFirstNameAndLastNameDto {
 	private List<String> medications;
 	private List<String> allergies;
 	
-	public GetPersonByFirstNameAndLastNameDto(Person person, Medicalrecord medicalRecord) {
+	public PersonByFirstNameAndLastNameDto(Person person, Medicalrecord medicalRecord) {
 		
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();
@@ -26,7 +25,7 @@ public class GetPersonByFirstNameAndLastNameDto {
 		this.allergies=medicalRecord.getAllergies();
 	}
 	
-	public GetPersonByFirstNameAndLastNameDto(Person person) {
+	public PersonByFirstNameAndLastNameDto(Person person) {
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();
 		this.email= person.getEmail();
@@ -66,11 +65,11 @@ public class GetPersonByFirstNameAndLastNameDto {
 	public boolean equals(Object obj){
 
 		if(obj == null) return false;
-		if(obj instanceof GetPersonByFirstNameAndLastNameDto && this == obj) return true;
+		if(obj instanceof PersonByFirstNameAndLastNameDto && this == obj) return true;
 
-		GetPersonByFirstNameAndLastNameDto getPersonByFirstNameAndLastNameDto = (GetPersonByFirstNameAndLastNameDto)obj;
+		PersonByFirstNameAndLastNameDto personByFirstNameAndLastNameDto = (PersonByFirstNameAndLastNameDto)obj;
 
-		return firstName.equals(getPersonByFirstNameAndLastNameDto.getFirstName()) && lastName.equals(getPersonByFirstNameAndLastNameDto.getLastName());
+		return firstName.equals(personByFirstNameAndLastNameDto.getFirstName()) && lastName.equals(personByFirstNameAndLastNameDto.getLastName());
 	}
 	
 }

@@ -1,7 +1,7 @@
 package com.openclassrooms.safetynet.service.firestation;
 
-import com.openclassrooms.safetynet.dto.GetPersonsByAddressDto;
-import com.openclassrooms.safetynet.dto.GetPersonsByStationDto;
+import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
+import com.openclassrooms.safetynet.dto.PersonsByStationDto;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
@@ -9,10 +9,8 @@ import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
 import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import lombok.extern.log4j.Log4j2;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.slf4j.Logger;
 
 
 import java.util.ArrayList;
@@ -125,27 +123,27 @@ public class FirestationManagerImpl implements FirestationManager {
 				.collect(Collectors.toSet());
 	}
 
-	public List<GetPersonsByAddressDto> getPersonsByAddress(String address) {
+	public List<PersonsByAddressDto> getPersonsByAddress(String address) {
 
 		log.debug("Get persons by address" + address);
 
 		List<Person> persons = dataStorage.getPersonsByAddress(address);
 
-		List<Medicalrecord> medicalrecords = dataStorage.getMedicalRecord();
+		List<Medicalrecord> medicalrecords = dataStorage.getMedicalrecords();
 
 		List<Firestation> fireStations =
 				dataStorage
 						.getFirestationsByAddress(address);
 
-		List<GetPersonsByAddressDto> personsByAddressDto = new ArrayList<>();
+		List<PersonsByAddressDto> personsByAddressDto = new ArrayList<>();
 
 		for(Person person : persons) {
-			List<GetPersonsByAddressDto> aggregate =
+			List<PersonsByAddressDto> aggregate =
 					fireStations
 							.stream()
 							.map(fireStation -> {
 								try {
-									return new GetPersonsByAddressDto(person, fireStation, medicalrecords
+									return new PersonsByAddressDto(person, fireStation, medicalrecords
 											.stream()
 											.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 											.findFirst().orElse(null));
@@ -162,7 +160,7 @@ public class FirestationManagerImpl implements FirestationManager {
 		return personsByAddressDto;
 	}
 
-	public List<GetPersonsByStationDto> getPersonsByStation(int stationNumber) {
+	public List<PersonsByStationDto> getPersonsByStation(int stationNumber) {
 
 		log.debug("Get persons by firestation number: " + stationNumber);
 
@@ -173,14 +171,14 @@ public class FirestationManagerImpl implements FirestationManager {
 						.map(Firestation::getAddress)
 						.collect(Collectors.toList());
 
-		List<GetPersonsByStationDto> personsByStationDto =
+		List<PersonsByStationDto> personsByStationDto =
 				dataStorage
 						.getPersons()
 						.stream()
 						.filter(person -> firestationAddressByStationNumber.contains(person.getAddress()))
 						.map(person -> {
 
-								return new GetPersonsByStationDto(person);
+								return new PersonsByStationDto(person);
 
 						})
 						.collect(Collectors.toList());
@@ -193,7 +191,7 @@ public class FirestationManagerImpl implements FirestationManager {
 		int adultsNumber = 0;
 		int childrenNumber = 0;
 
-		for(GetPersonsByStationDto person : getPersonsByStation(station)) {
+		for(PersonsByStationDto person : getPersonsByStation(station)) {
 
 			Optional<Medicalrecord> medicalrecord = medicalrecordsManager.getMedicalRecordByPersonId(person.getId());
 

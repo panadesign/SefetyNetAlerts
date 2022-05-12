@@ -5,17 +5,26 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 
-public class GetChildrenByAddressDto {
+public class AdultsByAddressDto {
+	
 	private String firstName;
 	private String lastName;
+	private String address;
+	private String city;
+	private Integer zip;
 	private String phone;
+	private String email;
 	private Integer age;
-
-	public GetChildrenByAddressDto(Person person, Medicalrecord medicalRecord) {
+	
+	public AdultsByAddressDto(Person person, Medicalrecord medicalrecord) {
 		this.firstName = person.getFirstName();
 		this.lastName = person.getLastName();
+		this.address = person.getAddress();
+		this.city = person.getCity();
+		this.zip = person.getZip();
 		this.phone = person.getPhone();
-		this.age=medicalRecord.getAge();
+		this.email = person.getEmail();
+		this.age=medicalrecord.getAge();
 	}
 	
 	@JsonGetter("firstName")
@@ -28,20 +37,41 @@ public class GetChildrenByAddressDto {
 		return lastName;
 	}
 	
+	@JsonGetter("address")
+	public String getAddress() {
+		return address;
+	}
+	
+	@JsonGetter("city")
+	public String getCity() {
+		return city;
+	}
+	
+	@JsonGetter("zip")
+	public Integer getZip() {
+		return zip;
+	}
+	
 	@JsonGetter("phone")
 	public String getPhone() {
 		return phone;
 	}
 	
+	@JsonGetter("email")
+	public String getEmail() {
+		return email;
+	}
+	
 	@JsonGetter("age")
+	@JsonIgnore
 	public Integer getAge() {
 		return age;
 	}
 	
 	@JsonGetter("isMinor")
 	@JsonIgnore
-	public boolean isMinor() {
-		return age <= 18;
+	public boolean iSMajor() {
+		return age > 18;
 	}
 	
 }

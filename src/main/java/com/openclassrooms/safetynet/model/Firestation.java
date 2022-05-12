@@ -24,6 +24,15 @@ public class Firestation {
 		this.station = station;
 		this.address = address;
 	}
-	
-	public Firestation(Firestation firestation) {}
+
+	@Override
+	public boolean equals(Object obj){
+
+		if(obj == null) return false;
+		if(obj instanceof Firestation && this == obj) return true;
+
+		Firestation firestation = (Firestation) obj;
+
+		return station == (firestation.getStation()) && address.equals(firestation.getAddress());
+	}
 }

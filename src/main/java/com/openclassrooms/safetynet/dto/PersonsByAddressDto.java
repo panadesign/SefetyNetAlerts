@@ -8,7 +8,7 @@ import com.openclassrooms.safetynet.model.Medicalrecord;
 
 import java.util.List;
 
-public class GetPersonsByAddressDto {
+public class PersonsByAddressDto {
 	
 	private String firstName;
 	private String lastName;
@@ -19,7 +19,7 @@ public class GetPersonsByAddressDto {
 	private List<String> allergies;
 	private int station;
 	
-	public GetPersonsByAddressDto(Person person, Firestation fireStation) throws Exception {
+	public PersonsByAddressDto(Person person, Firestation fireStation) throws Exception {
 		if (!person.getAddress().equals(fireStation.getAddress())) {
 			throw new Exception("Addresses are not equals");
 		}
@@ -29,7 +29,7 @@ public class GetPersonsByAddressDto {
 		this.station = fireStation.getStation();
 	}
 	
-	public GetPersonsByAddressDto(Person person, Firestation fireStation, Medicalrecord medicalRecord) {
+	public PersonsByAddressDto(Person person, Firestation fireStation, Medicalrecord medicalRecord) {
 		this.firstName = person.getFirstName();
 		this.lastName = person.getLastName();
 		this.address = person.getAddress();

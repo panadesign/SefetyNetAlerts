@@ -2,22 +2,22 @@ package com.openclassrooms.safetynet.dto;
 
 import java.util.List;
 
-public class GetPersonsByStationAndAdultsNumberAndChildrenNumberDto {
-	private List<GetPersonsByStationDto> personsByStation;
+public class PersonsByStationAndAdultsNumberAndChildrenNumberDto {
+	private List<PersonsByStationDto> personsByStation;
 	private int numberOfAdult;
 	private int numberOfChildren;
 
-	public GetPersonsByStationAndAdultsNumberAndChildrenNumberDto(List<GetPersonsByStationDto>personsByStation, int numberOfAdult, int numberOfChildren) {
+	public PersonsByStationAndAdultsNumberAndChildrenNumberDto(List<PersonsByStationDto>personsByStation, int numberOfAdult, int numberOfChildren) {
 		this.personsByStation = personsByStation;
 		this.numberOfAdult = numberOfAdult;
 		this.numberOfChildren = numberOfChildren;
 	}
 
-	public List<GetPersonsByStationDto> getPersonsByStation() {
+	public List<PersonsByStationDto> getPersonsByStation() {
 		return personsByStation;
 	}
 
-	public void setPersonsByStation(List<GetPersonsByStationDto> personsByStation) {
+	public void setPersonsByStation(List<PersonsByStationDto> personsByStation) {
 		this.personsByStation = personsByStation;
 	}
 

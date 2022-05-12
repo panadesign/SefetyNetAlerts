@@ -1,9 +1,8 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.dto.GetPersonByFirstNameAndLastNameDto;
+import com.openclassrooms.safetynet.dto.PersonByFirstNameAndLastNameDto;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.person.PersonManager;
-import com.openclassrooms.safetynet.service.person.PersonManagerImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +42,7 @@ public class PersonController {
 	}
 	
 	@GetMapping("/personInfo")
-	ResponseEntity<List<GetPersonByFirstNameAndLastNameDto>> getPersonsByFirstNameAndLastName(@RequestParam String firstName, @RequestParam String lastName) {
+	ResponseEntity<List<PersonByFirstNameAndLastNameDto>> getPersonsByFirstNameAndLastName(@RequestParam String firstName, @RequestParam String lastName) {
 		return new ResponseEntity<>(personManager.getPersonsByFirstNameAndLastName(firstName, lastName), HttpStatus.OK);
 	}
 	

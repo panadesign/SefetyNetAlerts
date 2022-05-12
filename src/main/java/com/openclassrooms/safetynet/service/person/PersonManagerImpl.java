@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Component
 @Log4j2
@@ -101,29 +100,30 @@ public class PersonManagerImpl implements PersonManager {
 				.collect(Collectors.toSet());
 	}
 	
-	public List<GetPersonByFirstNameAndLastNameDto> getPersonsByFirstNameAndLastName(String firstName, String lastName) {
+	public List<PersonByFirstNameAndLastNameDto> getPersonsByFirstNameAndLastName(String firstName, String lastName) {
 		log.debug("Get all persons by address: " + firstName + " " + lastName);
-		
+
 		return dataStorage.getPersons()
 				.stream()
-				.map(person -> dataStorage.getMedicalRecord()
-						.stream()
-						.filter(medicalrecord -> medicalrecord.getId().equals(person.getId()))
-						.filter(m -> lastName.equals(m.getLastName()))
-						.map(medicalrecord -> new GetPersonByFirstNameAndLastNameDto(person, medicalrecord))
-						.collect(Collectors.toList()))
-				.flatMap(Collection::stream)
+				.filter(p -> lastName.equals(p.getLastName()))
+				.map(person -> {
+					return 	dataStorage.getMedicalrecords()
+							.stream()
+							.filter(medicalrecord -> medicalrecord.getId().equals(person.getId()))
+							.map(medicalrecord -> new PersonByFirstNameAndLastNameDto(person, medicalrecord))
+							.findFirst().orElse(null);
+				})
 				.collect(Collectors.toList());
-	
+
 	}
 	
-	public Map<String, List<GetFamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
+	public Map<String, List<FamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
 		log.debug("Get all persons by address: " + stations);
 		
-		List<Medicalrecord> medicalrecords = dataStorage.getMedicalRecord();
+		List<Medicalrecord> medicalrecords = dataStorage.getMedicalrecords();
 		
 		List<String> allAddressesByStationNumber = new ArrayList<>();
-		Map<String, List<GetFamiliesByStationDto>> allPersons = new HashMap<>();
+		Map<String, List<FamiliesByStationDto>> allPersons = new HashMap<>();
 		
 		for (Integer firestationNumber : stations) {
 			List<String> getAllAddressesByStationNumber =
@@ -136,44 +136,45 @@ public class PersonManagerImpl implements PersonManager {
 			allAddressesByStationNumber.addAll(getAllAddressesByStationNumber);
 		}
 		
-		for (String addresses : allAddressesByStationNumber) {
-			List<GetFamiliesByStationDto> getAllPersonsIdWithThisAddress =
+		for (String address : allAddressesByStationNumber) {
+			System.out.println(address);
+			List<FamiliesByStationDto> getAllPersonsWithThisAddress =
 					dataStorage
 							.getPersons()
 							.stream()
-							.filter(person -> person.getAddress().equals(addresses))
-							.map(person -> new GetFamiliesByStationDto(person,
+							.filter(person -> person.getAddress().equals(address))
+							.map(person -> new FamiliesByStationDto(person,
 									medicalrecords
 											.stream()
 											.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 											.findFirst().orElse(null))
 							)
 							.collect(Collectors.toList());
-			allPersons.put(addresses, getAllPersonsIdWithThisAddress);
+			allPersons.put(address, getAllPersonsWithThisAddress);
 		}
 		
 		return allPersons;
 		
 	}
 	
-	public GetChildListAndFamilyListDto getChildrenByAddress(String address) {
+	public ChildListAndFamilyListDto getChildrenByAddress(String address) {
 		log.debug("Get children by address: " + address);
 		
-		List<Medicalrecord> medicalrecords = dataStorage.getMedicalRecord();
+		List<Medicalrecord> medicalrecords = dataStorage.getMedicalrecords();
 		
-		List<GetChildrenByAddressDto> getChild = new ArrayList<>();
-		List<GetAdultsByAddressDto> getAdults = new ArrayList<>();
-		GetChildListAndFamilyListDto getChildListAndFamilyListDto = new GetChildListAndFamilyListDto(getChild, getAdults);
+		List<ChildrenByAddressDto> getChild = new ArrayList<>();
+		List<AdultsByAddressDto> getAdults = new ArrayList<>();
+		ChildListAndFamilyListDto childListAndFamilyListDto = new ChildListAndFamilyListDto(getChild, getAdults);
 		
 		for (Medicalrecord medicalRecord : medicalrecords) {
-			List<GetChildrenByAddressDto> getChildrenByAddress =
+			List<ChildrenByAddressDto> getChildrenByAddress =
 					dataStorage
 							.getPersons()
 							.stream()
 							.filter(person -> person.getId().equals(medicalRecord.getId()))
 							.filter(person -> person.getAddress().equals(address))
-							.map(person -> new GetChildrenByAddressDto(person, medicalRecord))
-							.filter(GetChildrenByAddressDto::isMinor)
+							.map(person -> new ChildrenByAddressDto(person, medicalRecord))
+							.filter(ChildrenByAddressDto::isMinor)
 							.collect(Collectors.toList());
 			
 			getChild.addAll(getChildrenByAddress);
@@ -182,14 +183,14 @@ public class PersonManagerImpl implements PersonManager {
 		
 		for (Medicalrecord medicalrecord : medicalrecords) {
 			if (getChild.size() > 0) {
-				List<GetAdultsByAddressDto> getAdultByAddress =
+				List<AdultsByAddressDto> getAdultByAddress =
 						dataStorage
 								.getPersons()
 								.stream()
 								.filter(person -> person.getId().equals(medicalrecord.getId()))
 								.filter(person -> person.getAddress().equals(address))
-								.map(person -> new GetAdultsByAddressDto(person, medicalrecord))
-								.filter(GetAdultsByAddressDto::iSMajor)
+								.map(person -> new AdultsByAddressDto(person, medicalrecord))
+								.filter(AdultsByAddressDto::iSMajor)
 								.collect(Collectors.toList());
 				
 				getAdults.addAll(getAdultByAddress);
@@ -197,9 +198,9 @@ public class PersonManagerImpl implements PersonManager {
 			}
 		}
 		
-		getChildListAndFamilyListDto.setGetChildrenByAddressDto(getChild);
-		getChildListAndFamilyListDto.setGetAdultsByAddressDto(getAdults);
+		childListAndFamilyListDto.setGetChildrenByAddressDto(getChild);
+		childListAndFamilyListDto.setGetAdultsByAddressDto(getAdults);
 		log.info("List of child by address and adult by address");
-		return getChildListAndFamilyListDto;
+		return childListAndFamilyListDto;
 	}
 }
