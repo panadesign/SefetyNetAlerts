@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest()
-class PersonManagerImplIT {
+class PersonIT {
 
 	@Autowired
 	DataStorage dataStorage;
@@ -119,22 +119,19 @@ class PersonManagerImplIT {
 	}
 
 	@Test
-	void getAllMailsByCityWithoutCity() {
+	void shouldReturnAnEmptyList() {
 		//GIVEN
 		String city = "";
-		String emailExpected = "aly@imail.com";
-
 		//WHEN
 		Set<String> getAllMailByCity = personManager.getAllMailsByCity(city);
 
 		//THEN
-		assertTrue(getAllMailByCity.isEmpty());
-		assertFalse(getAllMailByCity.contains(emailExpected));
+		Assertions.assertTrue(getAllMailByCity.isEmpty());
 	}
 
 	@Test
-	void getPersons() {
-		Person personExpected = new Person("John", "Boyd");
+	void shouldReturnAnExistingPerson() {
+		Person personExpected = new Person("Jeremy", "Charpentier");
 		List<Person> allPersons =
 				dataStorage
 						.getPersons();

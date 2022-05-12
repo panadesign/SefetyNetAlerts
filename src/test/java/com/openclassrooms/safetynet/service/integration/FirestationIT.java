@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 @SpringBootTest()
 @RunWith(SpringRunner.class)
-class FirestationManagerImplIT {
+class FirestationIT {
 
 	@Autowired
 	DataStorage dataStorage;

@@ -18,7 +18,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-class MedicalrecordsManagerImplUnitTest {
+class MedicalrecordsManagerTest {
 
 	MedicalrecordsManager medicalrecordsManager;
 

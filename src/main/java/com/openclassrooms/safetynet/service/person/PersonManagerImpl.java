@@ -1,10 +1,12 @@
 package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.dto.*;
+import com.openclassrooms.safetynet.exception.BadRequestException;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,81 +17,81 @@ import java.util.stream.Collectors;
 @Component
 @Log4j2
 public class PersonManagerImpl implements PersonManager {
-	
+
 	@Autowired
 	private DataStorage dataStorage;
-	
+
 	@Autowired
 	public PersonManagerImpl(DataStorage dataStorage) {
 		this.dataStorage = dataStorage;
 	}
-	
+
 	public void addPerson(Person person) {
-		
+
 		log.debug("Add a person: " + person.getLastName() + " " + person.getFirstName());
-		
+
 		Optional<Person> optionalPerson =
 				dataStorage
 						.getPersonById(person.getId());
-		
-		if (optionalPerson.isPresent()) {
+
+		if(optionalPerson.isPresent()) {
 			log.error("Impossible to create this person, this person exist already");
-			throw new RuntimeException("This person exist already");
+			throw new BadRequestException("This person exist already");
 		}
-		
+
 		dataStorage
 				.getPersons()
 				.add(person);
 		log.info("person has been added");
 	}
-	
+
 	public void updatePerson(Person person) {
-		
+
 		log.debug("Update a person: " + person.getLastName() + " " + person.getFirstName());
-		
+
 		Optional<Person> optionalPerson =
 				dataStorage
 						.getPersonById(person.getId());
-		
-		if (optionalPerson.isPresent()) {
-			
+
+		if(optionalPerson.isPresent()) {
+
 			int indexOfPerson = dataStorage.getPersons().indexOf(optionalPerson.get());
-			
+
 			dataStorage
 					.getPersons()
 					.set(indexOfPerson, person);
 			log.info("person has been updated");
-			
+
 		} else {
 			log.error("Impossible to update this person, this person doesn't exist");
-			throw new RuntimeException("This person doesn't exist");
-			
+			throw new BadRequestException("This person doesn't exist");
+
 		}
-		
+
 	}
-	
+
 	public void deletePerson(Person person) {
-		
+
 		log.debug("Delete a person: " + person.getLastName() + " " + person.getFirstName());
-		
+
 		Optional<Person> optionalPerson =
 				dataStorage
 						.getPersonById(person.getId());
-		
-		if (optionalPerson.isPresent()) {
-			
+
+		if(optionalPerson.isPresent()) {
+
 			dataStorage
 					.getPersons()
 					.remove(optionalPerson.get());
-			
+
 			log.info("person has been removed");
-			
+
 		} else {
 			log.error("Impossible to delete this person, this person doesn't exist");
-			throw new RuntimeException("This person doesn't exist");
+			throw new BadRequestException("This person doesn't exist");
 		}
 	}
-	
+
 	public Set<String> getAllMailsByCity(String city) {
 		log.debug("Get all mails in: " + city);
 		return dataStorage
@@ -99,7 +101,8 @@ public class PersonManagerImpl implements PersonManager {
 				.map(Person::getEmail)
 				.collect(Collectors.toSet());
 	}
-	
+
+
 	public List<PersonByFirstNameAndLastNameDto> getPersonsByFirstNameAndLastName(String firstName, String lastName) {
 		log.debug("Get all persons by address: " + firstName + " " + lastName);
 
@@ -107,7 +110,7 @@ public class PersonManagerImpl implements PersonManager {
 				.stream()
 				.filter(p -> lastName.equals(p.getLastName()))
 				.map(person -> {
-					return 	dataStorage.getMedicalrecords()
+					return dataStorage.getMedicalrecords()
 							.stream()
 							.filter(medicalrecord -> medicalrecord.getId().equals(person.getId()))
 							.map(medicalrecord -> new PersonByFirstNameAndLastNameDto(person, medicalrecord))
@@ -116,16 +119,16 @@ public class PersonManagerImpl implements PersonManager {
 				.collect(Collectors.toList());
 
 	}
-	
+
 	public Map<String, List<FamiliesByStationDto>> getPersonsByAddressStationForFloodAlert(List<Integer> stations) {
 		log.debug("Get all persons by address: " + stations);
-		
+
 		List<Medicalrecord> medicalrecords = dataStorage.getMedicalrecords();
-		
+
 		List<String> allAddressesByStationNumber = new ArrayList<>();
 		Map<String, List<FamiliesByStationDto>> allPersons = new HashMap<>();
-		
-		for (Integer firestationNumber : stations) {
+
+		for(Integer firestationNumber : stations) {
 			List<String> getAllAddressesByStationNumber =
 					dataStorage
 							.getFirestations()
@@ -135,38 +138,40 @@ public class PersonManagerImpl implements PersonManager {
 							.collect(Collectors.toList());
 			allAddressesByStationNumber.addAll(getAllAddressesByStationNumber);
 		}
-		
-		for (String address : allAddressesByStationNumber) {
-			System.out.println(address);
+
+		for(String address : allAddressesByStationNumber) {
 			List<FamiliesByStationDto> getAllPersonsWithThisAddress =
 					dataStorage
 							.getPersons()
 							.stream()
 							.filter(person -> person.getAddress().equals(address))
-							.map(person -> new FamiliesByStationDto(person,
-									medicalrecords
-											.stream()
-											.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
-											.findFirst().orElse(null))
+							.map(person -> {
+										Medicalrecord m = medicalrecords
+												.stream()
+												.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
+												.findFirst()
+												.orElseThrow(() -> new BadRequestException(""));
+										return new FamiliesByStationDto(person, m);
+									}
 							)
 							.collect(Collectors.toList());
 			allPersons.put(address, getAllPersonsWithThisAddress);
 		}
-		
+
 		return allPersons;
-		
+
 	}
-	
+
 	public ChildListAndFamilyListDto getChildrenByAddress(String address) {
 		log.debug("Get children by address: " + address);
-		
+
 		List<Medicalrecord> medicalrecords = dataStorage.getMedicalrecords();
-		
+
 		List<ChildrenByAddressDto> getChild = new ArrayList<>();
 		List<AdultsByAddressDto> getAdults = new ArrayList<>();
 		ChildListAndFamilyListDto childListAndFamilyListDto = new ChildListAndFamilyListDto(getChild, getAdults);
-		
-		for (Medicalrecord medicalRecord : medicalrecords) {
+
+		for(Medicalrecord medicalRecord : medicalrecords) {
 			List<ChildrenByAddressDto> getChildrenByAddress =
 					dataStorage
 							.getPersons()
@@ -176,13 +181,13 @@ public class PersonManagerImpl implements PersonManager {
 							.map(person -> new ChildrenByAddressDto(person, medicalRecord))
 							.filter(ChildrenByAddressDto::isMinor)
 							.collect(Collectors.toList());
-			
+
 			getChild.addAll(getChildrenByAddress);
 			log.info("Child by address");
 		}
-		
-		for (Medicalrecord medicalrecord : medicalrecords) {
-			if (getChild.size() > 0) {
+
+		for(Medicalrecord medicalrecord : medicalrecords) {
+			if(getChild.size() > 0) {
 				List<AdultsByAddressDto> getAdultByAddress =
 						dataStorage
 								.getPersons()
@@ -192,12 +197,12 @@ public class PersonManagerImpl implements PersonManager {
 								.map(person -> new AdultsByAddressDto(person, medicalrecord))
 								.filter(AdultsByAddressDto::iSMajor)
 								.collect(Collectors.toList());
-				
+
 				getAdults.addAll(getAdultByAddress);
 				log.info("Adult by address");
 			}
 		}
-		
+
 		childListAndFamilyListDto.setGetChildrenByAddressDto(getChild);
 		childListAndFamilyListDto.setGetAdultsByAddressDto(getAdults);
 		log.info("List of child by address and adult by address");

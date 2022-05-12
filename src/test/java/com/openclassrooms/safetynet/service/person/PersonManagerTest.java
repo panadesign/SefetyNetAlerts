@@ -1,6 +1,8 @@
 package com.openclassrooms.safetynet.service.person;
 
+import com.openclassrooms.safetynet.dto.ChildListAndFamilyListDto;
 import com.openclassrooms.safetynet.dto.PersonByFirstNameAndLastNameDto;
+import com.openclassrooms.safetynet.exception.BadRequestException;
 import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
@@ -22,8 +24,7 @@ import java.util.Set;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest
-class PersonManagerImplUnitTest {
+class PersonManagerTest {
 
 	@Mock
 	DataStorage mockDataStorage;
@@ -69,7 +70,7 @@ class PersonManagerImplUnitTest {
 
 		//THEN
 		Person personToAdd = new Person("firstName", "lastName");
-		Assertions.assertThrows(RuntimeException.class, () -> personManager.addPerson(personToAdd));
+		Assertions.assertThrows(BadRequestException.class, () -> personManager.addPerson(personToAdd));
 	}
 
 	@Test
@@ -106,19 +107,17 @@ class PersonManagerImplUnitTest {
 		//GIVEN
 		Data datas = new Data();
 		Assertions.assertNotNull(datas.getPersons());
+		Assertions.assertTrue(datas.getPersons().isEmpty());
 
-		Person existingPerson = new Person("firstName", "lastName", "test");
+		Person personToUpdate = new Person("blab", "bloub", "testEmail");
 
-		Person personToUpdate = new Person("blab", "bloub");
-		personToUpdate.setEmail("fds");
 		//WHEN
 		when(mockDataStorage.getPersons()).thenReturn(datas.getPersons());
-		when(mockDataStorage.getPersonById(any())).thenReturn(Optional.of(personToUpdate));
-
+		when(mockDataStorage.getPersonById(any())).thenReturn(Optional.empty());
 
 		//THEN
 		Assertions.assertNotNull(datas.getPersons());
-		Assertions.assertThrows(RuntimeException.class, () -> personManager.updatePerson(personToUpdate));
+		Assertions.assertThrows(BadRequestException.class, () -> personManager.updatePerson(personToUpdate));
 
 	}
 
@@ -152,16 +151,13 @@ class PersonManagerImplUnitTest {
 		Assertions.assertNotNull(datas.getPersons());
 		Assertions.assertTrue(datas.getPersons().isEmpty());
 
-
 		//WHEN
 		when(mockDataStorage.getPersons()).thenReturn(datas.getPersons());
-
-
 		Person personToDelete = new Person("test1", "test2");
 
 		//THEN
 		Assertions.assertNotNull(datas.getPersons());
-		Assertions.assertThrows(RuntimeException.class, () -> personManager.deletePerson(personToDelete));
+		Assertions.assertThrows(BadRequestException.class, () -> personManager.deletePerson(personToDelete));
 	}
 
 	@Test
@@ -183,20 +179,19 @@ class PersonManagerImplUnitTest {
 	void getPersonsByFirstNameAndLastName() {
 		//GIVEN
 		Data data = new Data();
-		List<Person> persons = new ArrayList<>();
-		persons.add(new Person("John", "Boyd", "testMail"));
-		persons.add(new Person("Jacob", "Boyd", "testMail"));
-		persons.add(new Person("test", "test", "mail"));
 
-		List<Medicalrecord> medicalrecords = new ArrayList<>();
-		medicalrecords.add(new Medicalrecord("John", "Boyd", "02/02/2000"));
-		medicalrecords.add(new Medicalrecord("Jacob", "Boyd", "02/02/1983"));
-		medicalrecords.add(new Medicalrecord("test", "test", "02/02/2000"));
+		data.getPersons().add(new Person("John", "Boyd", "testMail"));
+		data.getPersons().add(new Person("Jacob", "Boyd", "testMail"));
+		data.getPersons().add(new Person("test", "test", "mail"));
+
+		data.getMedicalrecords().add(new Medicalrecord("John", "Boyd", "02/02/2000"));
+		data.getMedicalrecords().add(new Medicalrecord("Jacob", "Boyd", "02/02/1983"));
+		data.getMedicalrecords().add(new Medicalrecord("test", "test", "02/02/2000"));
 
 		//WHEN
 		when(mockDataStorage.getData()).thenReturn(data);
-		when(mockDataStorage.getPersons()).thenReturn(persons);
-		when(mockDataStorage.getMedicalrecords()).thenReturn(medicalrecords);
+		when(mockDataStorage.getPersons()).thenReturn(data.getPersons());
+		when(mockDataStorage.getMedicalrecords()).thenReturn(data.getMedicalrecords());
 
 		List<PersonByFirstNameAndLastNameDto> personByFirstNameAndLastNameDto = personManager.getPersonsByFirstNameAndLastName("John", "Boyd");
 
@@ -206,33 +201,31 @@ class PersonManagerImplUnitTest {
 		Assertions.assertEquals("Jacob", personByFirstNameAndLastNameDto.get(1).getFirstName());
 	}
 
+
 	@Test
 	void getPersonsByAddressStationForFloodAlert() {
 		Data data = new Data();
-		List<Person> persons = new ArrayList<>();
-		persons.add(new Person("firstName1", "lastName1", "address1", "1234"));
-		persons.add(new Person("firstName2", "lastName2", "address2", "1234"));
-		persons.add(new Person("firstName3", "lastName3", "address3", "1234"));
-		persons.add(new Person("firstName4", "lastName4", "address4", "1234"));
-		persons.add(new Person("firstName5", "lastName5", "address5", "1234"));
-		persons.add(new Person("firstName6", "lastName6", "address6", "1234"));
 
-		List<Medicalrecord> medicalrecords = new ArrayList<>();
-		medicalrecords.add(new Medicalrecord("firstName1", "lastName1", "02/02/2000"));
-		medicalrecords.add(new Medicalrecord("firstName2", "lastName2", "02/02/2000"));
-		medicalrecords.add(new Medicalrecord("firstName3", "lastName3", "02/02/2000"));
-		medicalrecords.add(new Medicalrecord("firstName4", "lastName4", "02/02/2000"));
-		medicalrecords.add(new Medicalrecord("firstName5", "lastName5", "02/02/2000"));
-		medicalrecords.add(new Medicalrecord("firstName6", "lastName6", "02/02/2000"));
+		data.getPersons().add(new Person("firstName1", "lastName1", "address1", "1234"));
+		data.getPersons().add(new Person("firstName2", "lastName2", "address2", "1234"));
+		data.getPersons().add(new Person("firstName3", "lastName3", "address3", "1234"));
+		data.getPersons().add(new Person("firstName4", "lastName4", "address4", "1234"));
+		data.getPersons().add(new Person("firstName5", "lastName5", "address5", "1234"));
+		data.getPersons().add(new Person("firstName6", "lastName6", "address6", "1234"));
 
+		data.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/2000"));
+		data.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/2000"));
+		data.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/2000"));
+		data.getMedicalrecords().add(new Medicalrecord("firstName4", "lastName4", "02/02/2000"));
+		data.getMedicalrecords().add(new Medicalrecord("firstName5", "lastName5", "02/02/2000"));
+		data.getMedicalrecords().add(new Medicalrecord("firstName6", "lastName6", "02/02/2000"));
 
-		List<Firestation> firestations = new ArrayList<>();
-		firestations.add(new Firestation(1, "address1"));
-		firestations.add(new Firestation(1, "address2"));
-		firestations.add(new Firestation(1, "address3"));
-		firestations.add(new Firestation(2, "address4"));
-		firestations.add(new Firestation(3, "address5"));
-		firestations.add(new Firestation(3, "address6"));
+		data.getFirestations().add(new Firestation(1, "address1"));
+		data.getFirestations().add(new Firestation(1, "address2"));
+		data.getFirestations().add(new Firestation(1, "address3"));
+		data.getFirestations().add(new Firestation(2, "address4"));
+		data.getFirestations().add(new Firestation(3, "address5"));
+		data.getFirestations().add(new Firestation(3, "address6"));
 
 		List<Integer> stations = new ArrayList<>();
 		stations.add(1);
@@ -240,15 +233,47 @@ class PersonManagerImplUnitTest {
 
 		//WHEN
 		when(mockDataStorage.getData()).thenReturn(data);
-		when(mockDataStorage.getPersons()).thenReturn(persons);
-		when(mockDataStorage.getMedicalrecords()).thenReturn(medicalrecords);
-		when(mockDataStorage.getFirestations()).thenReturn(firestations);
-
+		when(mockDataStorage.getPersons()).thenReturn(data.getPersons());
+		when(mockDataStorage.getMedicalrecords()).thenReturn(data.getMedicalrecords());
+		when(mockDataStorage.getFirestations()).thenReturn(data.getFirestations());
 
 		Assertions.assertEquals(5, personManager.getPersonsByAddressStationForFloodAlert(stations).size());
 	}
 
+
 	@Test
 	void getChildrenByAddress() {
+		//GIVEN
+		Data data = new Data();
+
+		data.getPersons().add(new Person("adult1", "adult1", "address1", "123"));
+		data.getPersons().add(new Person("children1", "children1", "address1", "123"));
+		data.getPersons().add(new Person("children4", "children4", "address1", "123"));
+		data.getPersons().add(new Person("children5", "children5", "address1", "123"));
+		data.getPersons().add(new Person("children6", "children6", "address1", "123"));
+
+		data.getPersons().add(new Person("adult2", "adult2", "address2", "123"));
+		data.getPersons().add(new Person("children2", "children2", "address2", "123"));
+		data.getPersons().add(new Person("children3", "childre3", "address2", "123"));
+
+		data.getMedicalrecords().add(new Medicalrecord("adult1", "adult1", "02/02/1983"));
+		data.getMedicalrecords().add(new Medicalrecord("children1", "children1", "02/02/2013"));
+		data.getMedicalrecords().add(new Medicalrecord("adult2", "adult2", "02/02/1983"));
+		data.getMedicalrecords().add(new Medicalrecord("children2", "children2", "02/02/2013"));
+		data.getMedicalrecords().add(new Medicalrecord("children3", "children3", "02/02/2013"));
+		data.getMedicalrecords().add(new Medicalrecord("children4", "children4", "02/02/2013"));
+		data.getMedicalrecords().add(new Medicalrecord("children5", "children5", "02/02/2013"));
+		data.getMedicalrecords().add(new Medicalrecord("children6", "children6", "02/02/2013"));
+
+		//WHEN
+		when(mockDataStorage.getPersons()).thenReturn(data.getPersons());
+		when(mockDataStorage.getMedicalrecords()).thenReturn(data.getMedicalrecords());
+
+		ChildListAndFamilyListDto childListAndFamilyListDto = personManager.getChildrenByAddress("address1");
+
+		//THEN
+		Assertions.assertEquals(4, childListAndFamilyListDto.getGetChildrenByAddressDto().size());
+		Assertions.assertEquals(1, childListAndFamilyListDto.getGetAdultsByAddressDto().size());
+
 	}
 }

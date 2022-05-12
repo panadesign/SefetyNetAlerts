@@ -47,7 +47,7 @@ public class Person {
 	public Person() {
 	}
 
-	public Person(String lastName, String firstName, String address, String city, Integer zip, String phone, String email) {
+	public Person(String firstName, String lastName, String address, String city, Integer zip, String phone, String email) {
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.address = address;
@@ -56,7 +56,7 @@ public class Person {
 		this.phone = phone;
 		this.email = email;
 	}
-	public Person(String lastName, String firstName, String address, String phone) {
+	public Person(String firstName, String lastName, String address, String phone) {
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.address = address;

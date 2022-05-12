@@ -19,7 +19,7 @@ import static org.junit.Assert.assertTrue;
 @SpringBootTest()
 @RunWith(SpringRunner.class)
 @TestMethodOrder(OrderAnnotation.class)
-class MedicalrecordsManagerImplIT {
+class MedicalrecordsIT {
 
 	@Autowired
 	private DataStorage dataStorage;

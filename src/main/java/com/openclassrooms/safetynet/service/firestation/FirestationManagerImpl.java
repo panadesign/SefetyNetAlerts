@@ -2,6 +2,7 @@ package com.openclassrooms.safetynet.service.firestation;
 
 import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
 import com.openclassrooms.safetynet.dto.PersonsByStationDto;
+import com.openclassrooms.safetynet.exception.BadRequestException;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
@@ -47,7 +48,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		if(optionalFirestation.isPresent()) {
 			log.error("Error creating a new firestation");
-			throw new RuntimeException("Firestation serve already this address");
+			throw new BadRequestException("Firestation serve already this address");
 		}
 
 		dataStorage
@@ -76,7 +77,7 @@ public class FirestationManagerImpl implements FirestationManager {
 			log.info("Firestation has been updated");
 		} else {
 			log.error("Error updating a firestation");
-			throw new RuntimeException("Firestation who serve this address doesn't exist");
+			throw new BadRequestException("Firestation who serve this address doesn't exist");
 		}
 
 	}
@@ -99,7 +100,7 @@ public class FirestationManagerImpl implements FirestationManager {
 			log.info("Firestation has benn removed");
 		} else {
 			log.error("Error deleting a firestation");
-			throw new RuntimeException("Firestation who serve this address doesn't exist");
+			throw new BadRequestException("Firestation who serve this address doesn't exist");
 		}
 
 	}

@@ -1,10 +1,12 @@
 package com.openclassrooms.safetynet.service.firestation;
 
+import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
+import com.openclassrooms.safetynet.exception.BadRequestException;
 import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Firestation;
+import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,20 +14,18 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-class FirestationManagerImplUnitTest {
+class FirestationManagerTest {
 
 	@Mock
 	DataStorage mockDataStorage;
@@ -65,8 +65,7 @@ class FirestationManagerImplUnitTest {
 
 		Firestation firestationToAdd = new Firestation(1, "address");
 
-		Assertions.assertThrows(RuntimeException.class, () -> firestationManager.addFirestation(firestationToAdd));
-
+		Assertions.assertThrows(BadRequestException.class, () -> firestationManager.addFirestation(firestationToAdd));
 
 	}
 
@@ -113,7 +112,7 @@ class FirestationManagerImplUnitTest {
 		//THEN
 		Assertions.assertTrue(datas.getFirestations().isEmpty());
 		Assertions.assertNotNull(datas.getFirestations());
-		Assertions.assertThrows(RuntimeException.class, () -> firestationManager.updateFirestation(firestationToUpdate));
+		Assertions.assertThrows(BadRequestException.class, () -> firestationManager.updateFirestation(firestationToUpdate));
 	}
 
 	@Test
@@ -150,7 +149,7 @@ class FirestationManagerImplUnitTest {
 		when(mockDataStorage.getData()).thenReturn(datas);
 
 		//THEN
-		Assertions.assertThrows(RuntimeException.class, () -> firestationManager.deleteFirestation(firestationToDelete));
+		Assertions.assertThrows(BadRequestException.class, () -> firestationManager.deleteFirestation(firestationToDelete));
 	}
 
 	@Test
@@ -158,21 +157,48 @@ class FirestationManagerImplUnitTest {
 		//GIVEN
 		Data data = new Data();
 
-		List<Firestation> firestations = new ArrayList<>();
-		firestations.add(new Firestation(1, "address1"));
+		data.getFirestations().add(new Firestation(1, "address1"));
 
-		List<Person> persons = new ArrayList<>();
-		persons.add(new Person("pers1", "pers1", "address1", "123"));
-		persons.add(new Person("pers2", "pers2", "address1", "234"));
+		data.getPersons().add(new Person("pers1", "pers1", "address1", "123"));
+		data.getPersons().add(new Person("pers2", "pers2", "address1", "234"));
 
 		//WHEN
-		when(mockDataStorage.getFirestationsByNumber(1)).thenReturn(firestations);
-		when(mockDataStorage.getPersons()).thenReturn(persons);
+		when(mockDataStorage.getFirestationsByNumber(1)).thenReturn(data.getFirestations());
+		when(mockDataStorage.getPersons()).thenReturn(data.getPersons());
 
 		Set<String> phoneNumbers = firestationManager.getPhoneNumbersByFirestationNumber(1);
 
 		//THEN
 		Assertions.assertTrue(phoneNumbers.contains("123"));
+	}
+
+	@Test
+	void getPersonsByAddress() {
+		//GIVEN
+		Data data = new Data();
+
+		data.getPersons().add(new Person("firstName1", "lastName1", "address1", "123"));
+		data.getPersons().add(new Person("firstName2", "lastName2", "address2", "123"));
+		data.getPersons().add(new Person("firstName3", "lastName3", "address2", "123"));
+
+		data.getFirestations().add(new Firestation(1, "address2"));
+
+		data.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/1987"));
+		data.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/1987"));
+		data.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/1987"));
+
+
+		//WHEN
+		when(mockDataStorage.getPersonsByAddress("address2")).thenReturn(data.getPersons());
+		when(mockDataStorage.getFirestationsByAddress("address2")).thenReturn(data.getFirestations());
+		when(mockDataStorage.getMedicalrecords()).thenReturn(data.getMedicalrecords());
+		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(data.getMedicalrecords().stream().findFirst());
+
+
+		List<PersonsByAddressDto> personsByAddressDto = firestationManager.getPersonsByAddress("address2");
+
+		Assertions.assertEquals(2, personsByAddressDto.size());
+
 
 	}
 }
