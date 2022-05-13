@@ -9,6 +9,7 @@ import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
 import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManagerImpl;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,15 +25,12 @@ import java.util.stream.Collectors;
 @Log4j2
 public class FirestationManagerImpl implements FirestationManager {
 
-	@Autowired
 	private DataStorage dataStorage;
-
-	@Autowired
 	private MedicalrecordsManager medicalrecordsManager;
 
-	@Autowired
-	public FirestationManagerImpl(DataStorage dataStorage) {
+	public FirestationManagerImpl(DataStorage dataStorage, MedicalrecordsManager medicalrecordsManager) {
 		this.dataStorage = dataStorage;
+		this.medicalrecordsManager = medicalrecordsManager;
 	}
 
 	public void addFirestation(Firestation firestation) {
