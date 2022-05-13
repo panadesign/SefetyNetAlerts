@@ -1,12 +1,14 @@
 package com.openclassrooms.safetynet.service.firestation;
 
 import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
+import com.openclassrooms.safetynet.dto.PersonsByStationDto;
 import com.openclassrooms.safetynet.exception.BadRequestException;
 import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,8 +23,7 @@ import java.util.Set;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
 class FirestationManagerTest {
@@ -189,8 +190,10 @@ class FirestationManagerTest {
 
 
 		//WHEN
-		when(mockDataStorage.getPersonsByAddress("address2")).thenReturn(data.getPersons());
-		when(mockDataStorage.getFirestationsByAddress("address2")).thenReturn(data.getFirestations());
+		doReturn("address2").when(mockDataStorage).getPersonsByAddress("address2");
+		doReturn("address2").when(mockDataStorage).getFirestationsByAddress("address2");
+//		when(mockDataStorage.getPersonsByAddress("address2")).thenReturn(data.getPersons());
+//		when(mockDataStorage.getFirestationsByAddress("address2")).thenReturn(data.getFirestations());
 		when(mockDataStorage.getMedicalrecords()).thenReturn(data.getMedicalrecords());
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(data.getMedicalrecords().stream().findFirst());
 
@@ -198,6 +201,35 @@ class FirestationManagerTest {
 		List<PersonsByAddressDto> personsByAddressDto = firestationManager.getPersonsByAddress("address2");
 
 		Assertions.assertEquals(2, personsByAddressDto.size());
+
+
+	}
+
+	@Test
+	void getPersonsByStation() {
+		Data data = new Data();
+		data.getPersons().add(new Person("firstName1", "lastName1", "address1", "123"));
+		data.getPersons().add(new Person("firstName2", "lastName2", "address2", "123"));
+		data.getPersons().add(new Person("firstName3", "lastName3", "address2", "123"));
+		data.getPersons().add(new Person("firstName4", "lastName4", "address2", "123"));
+		data.getPersons().add(new Person("firstName5", "lastName5", "address2", "123"));
+
+		data.getFirestations().add(new Firestation(1, "address2"));
+
+		when(mockDataStorage.getFirestationsByNumber(1)).thenReturn(data.getFirestations());
+		when(mockDataStorage.getPersons()).thenReturn(data.getPersons());
+
+		List<PersonsByStationDto> personsByStation = firestationManager.getPersonsByStation(1);
+
+		Assertions.assertEquals(4, personsByStation.size());
+
+	}
+
+	@Test
+	void getNumbersOfChildrenAndAdultsByStation() {
+
+
+
 
 
 	}

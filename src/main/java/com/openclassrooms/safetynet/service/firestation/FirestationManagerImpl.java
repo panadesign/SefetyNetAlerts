@@ -179,7 +179,7 @@ public class FirestationManagerImpl implements FirestationManager {
 						.filter(person -> firestationAddressByStationNumber.contains(person.getAddress()))
 						.map(person -> {
 
-								return new PersonsByStationDto(person);
+							return new PersonsByStationDto(person);
 
 						})
 						.collect(Collectors.toList());
