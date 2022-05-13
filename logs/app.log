@@ -5854,3 +5854,221 @@
 [INFO ] 2022-05-13 09:16:03.199 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4e29ac60
 [DEBUG] 2022-05-13 09:22:35.415 [main] FirestationManagerImpl - Get persons by firestation number: 1
 [DEBUG] 2022-05-13 09:24:20.583 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 09:52:37.818 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 10:03:35.157 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 10:11:37.450 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 10:11:58.000 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 10:12:10.781 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 10:12:32.908 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 10:35:36.266 [main] FirestationManagerImpl - Get persons by addressaddress2
+[INFO ] 2022-05-13 10:37:01.493 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 17034 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-13 10:37:01.518 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-13 10:37:01.526 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-13 10:37:04.919 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 4.28 seconds (JVM running for 7.331)
+[INFO ] 2022-05-13 10:37:05.222 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 17034 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-13 10:37:05.223 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-13 10:37:05.223 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-13 10:37:06.213 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 1.052 seconds (JVM running for 8.625)
+[DEBUG] 2022-05-13 10:37:06.524 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-13 10:37:06.530 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-13 10:37:06.536 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-13 10:37:06.544 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-13 10:37:06.544 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-13 10:37:06.553 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-13 10:37:06.566 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-13 10:37:06.567 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-13 10:37:06.568 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-13 10:37:06.571 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-13 10:37:06.577 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-13 10:37:06.586 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-13 10:37:06.586 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-13 10:37:06.594 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-13 10:37:06.595 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-13 10:37:06.600 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-13 10:37:06.601 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-13 10:37:06.608 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-13 10:37:06.610 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:06.611 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:06.612 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:06.613 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:06.614 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:06.615 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:06.615 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:06.616 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:06.617 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:06.617 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:06.618 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:06.630 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:06.631 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:06.633 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:06.634 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:06.635 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:06.636 [main] PersonManagerImpl - List of child by address and adult by address
+[DEBUG] 2022-05-13 10:37:06.684 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-13 10:37:06.685 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-13 10:37:06.692 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:37:06.705 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@7a8576a
+[INFO ] 2022-05-13 10:37:06.706 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-13 10:37:06.745 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@6fc7c2a3
+[INFO ] 2022-05-13 10:37:06.745 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-13 10:37:06.763 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 10:37:06.770 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@1002f8d9
+[ERROR] 2022-05-13 10:37:06.770 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-13 10:37:06.776 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@7d1e40f3
+[ERROR] 2022-05-13 10:37:06.776 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-13 10:37:06.785 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6774715d
+[INFO ] 2022-05-13 10:37:06.787 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-13 10:37:06.796 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@55715640
+[ERROR] 2022-05-13 10:37:06.796 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-13 10:37:06.857 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@59ecbff6
+[INFO ] 2022-05-13 10:37:06.871 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1a5fdcae
+[INFO ] 2022-05-13 10:37:06.889 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3481e4d
+[INFO ] 2022-05-13 10:37:06.899 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@176d0921
+[INFO ] 2022-05-13 10:37:06.909 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@2554a03c
+[INFO ] 2022-05-13 10:37:06.922 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@218a2462
+[INFO ] 2022-05-13 10:37:13.213 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 17210 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-13 10:37:13.225 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-13 10:37:13.226 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-13 10:37:16.888 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 4.566 seconds (JVM running for 7.842)
+[INFO ] 2022-05-13 10:37:17.265 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 17210 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-13 10:37:17.270 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-13 10:37:17.274 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-13 10:37:18.170 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 1.016 seconds (JVM running for 9.124)
+[DEBUG] 2022-05-13 10:37:18.445 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-13 10:37:18.450 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-13 10:37:18.455 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-13 10:37:18.462 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-13 10:37:18.462 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-13 10:37:18.469 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-13 10:37:18.482 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-13 10:37:18.483 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-13 10:37:18.484 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-13 10:37:18.484 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-13 10:37:18.489 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-13 10:37:18.499 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-13 10:37:18.500 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-13 10:37:18.511 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-13 10:37:18.524 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-13 10:37:18.529 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-13 10:37:18.530 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-13 10:37:18.536 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-13 10:37:18.539 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:18.540 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:18.541 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:18.541 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:18.541 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:18.543 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:18.544 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:18.545 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-13 10:37:18.547 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:18.548 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:18.549 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:18.550 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:18.551 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:18.553 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:18.553 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:18.553 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-13 10:37:18.553 [main] PersonManagerImpl - List of child by address and adult by address
+[DEBUG] 2022-05-13 10:37:18.570 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-13 10:37:18.571 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-13 10:37:18.579 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:37:18.596 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@7a8576a
+[INFO ] 2022-05-13 10:37:18.597 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-13 10:37:18.606 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@6fc7c2a3
+[INFO ] 2022-05-13 10:37:18.607 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-13 10:37:18.615 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 10:37:18.621 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@1002f8d9
+[ERROR] 2022-05-13 10:37:18.622 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-13 10:37:18.627 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@7d1e40f3
+[ERROR] 2022-05-13 10:37:18.628 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-13 10:37:18.632 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6774715d
+[INFO ] 2022-05-13 10:37:18.642 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-13 10:37:18.648 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@55715640
+[ERROR] 2022-05-13 10:37:18.648 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-13 10:37:18.662 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@59ecbff6
+[INFO ] 2022-05-13 10:37:18.667 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1a5fdcae
+[INFO ] 2022-05-13 10:37:18.678 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3481e4d
+[INFO ] 2022-05-13 10:37:18.690 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@176d0921
+[INFO ] 2022-05-13 10:37:18.698 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@2554a03c
+[INFO ] 2022-05-13 10:37:18.710 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@218a2462
+[DEBUG] 2022-05-13 10:42:55.965 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:44:13.590 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:45:13.805 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:45:49.589 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:45:49.592 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:46:05.680 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:46:05.683 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:49:34.296 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:50:22.245 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:53:27.273 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:53:42.150 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:55:39.834 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:55:55.357 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:57:06.217 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:57:22.561 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 10:58:29.637 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:04:00.032 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:08:55.272 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:10:17.846 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:10:30.254 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:13:28.022 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:13:28.031 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:13:33.893 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:24:03.164 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:24:10.948 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:24:10.953 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:24:45.026 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 11:33:14.299 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 13:36:36.500 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 13:36:36.508 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 13:36:36.509 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 13:37:30.067 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 13:37:53.494 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:14:05.307 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:14:16.739 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:14:16.739 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:15:51.893 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:16:21.061 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:17:01.322 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:17:22.554 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:17:38.055 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 14:17:54.526 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:22:18.026 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:30:47.360 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:37:30.359 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:47:04.036 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 14:52:06.208 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 15:03:32.206 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-13 15:03:32.220 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-13 15:03:32.263 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 15:03:32.279 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@705202d1
+[INFO ] 2022-05-13 15:03:32.279 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-13 15:03:32.293 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@2e6ba49a
+[INFO ] 2022-05-13 15:03:32.294 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-13 15:03:32.332 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 15:03:32.357 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@58f174d9
+[ERROR] 2022-05-13 15:03:32.357 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-13 15:03:32.369 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 15:03:32.391 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@6e28bb87
+[ERROR] 2022-05-13 15:03:32.392 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-13 15:03:32.413 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@17d238b1
+[INFO ] 2022-05-13 15:03:32.413 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-13 15:03:32.433 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@49096b06
+[ERROR] 2022-05-13 15:03:32.433 [main] FirestationManagerImpl - Error updating a firestation
+[DEBUG] 2022-05-13 15:08:01.793 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-13 15:08:01.797 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-13 15:08:01.846 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 15:08:01.873 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@497570fb
+[INFO ] 2022-05-13 15:08:01.874 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-13 15:08:01.899 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@2e647e59
+[INFO ] 2022-05-13 15:08:01.900 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-13 15:08:01.942 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-13 15:08:01.974 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@456be73c
+[ERROR] 2022-05-13 15:08:01.975 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-13 15:08:01.998 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-13 15:08:02.030 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@70807224
+[ERROR] 2022-05-13 15:08:02.030 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-13 15:08:02.052 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@3e6f3bae
+[INFO ] 2022-05-13 15:08:02.053 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-13 15:08:02.088 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@d400943
+[ERROR] 2022-05-13 15:08:02.088 [main] FirestationManagerImpl - Error updating a firestation
