@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.service.firestation;
 
+import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
 import com.openclassrooms.safetynet.dto.PersonsByStationDto;
 import com.openclassrooms.safetynet.exception.BadRequestException;
@@ -8,12 +9,8 @@ import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
-import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
-import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManagerImpl;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -103,7 +100,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 	}
 
-	public Set<String> getPhoneNumbersByFirestationNumber(int station) {
+	public Set<String> getPhoneByFirestationNumber(int station) {
 
 		log.debug("Get phone by firestation number" + station);
 

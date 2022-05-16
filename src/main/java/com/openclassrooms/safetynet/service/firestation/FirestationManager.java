@@ -13,7 +13,7 @@ public interface FirestationManager {
 	void updateFirestation(Firestation firestation);
 	void deleteFirestation(Firestation firestation);
 	List<PersonsByStationDto> getPersonsByStation(int stationNumber);
-	Set<String> getPhoneNumbersByFirestationNumber(int station);
+	Set<String> getPhoneByFirestationNumber(int station);
 	List<PersonsByAddressDto> getPersonsByAddress(String address);
 	NumberOfAdultsAndChildrenDto getNumbersOfChildrenAndAdultsByStation(int station);
 }

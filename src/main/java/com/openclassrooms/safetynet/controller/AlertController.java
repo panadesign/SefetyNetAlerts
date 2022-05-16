@@ -32,7 +32,7 @@ public class AlertController {
 	
 	@GetMapping("/phoneAlert")
 	ResponseEntity<Set<String>> getPhoneNumbersByFirestationNumber(@RequestParam int firestation) {
-		return new ResponseEntity<>(firestationManager.getPhoneNumbersByFirestationNumber(firestation), HttpStatus.OK);
+		return new ResponseEntity<>(firestationManager.getPhoneByFirestationNumber(firestation), HttpStatus.OK);
 	}
 	
 	@GetMapping("/childAlert")

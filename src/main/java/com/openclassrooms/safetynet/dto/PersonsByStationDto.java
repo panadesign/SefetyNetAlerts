@@ -47,4 +47,15 @@ public class PersonsByStationDto {
 	public Id getId() {
 		return id;
 	}
+	
+	@Override
+	public boolean equals(Object obj){
+		
+		if(obj == null) return false;
+		if(obj instanceof PersonsByStationDto && this == obj) return true;
+		
+		PersonsByStationDto personsByStationDto = (PersonsByStationDto) obj;
+		
+		return firstName.equals(personsByStationDto.getFirstName()) && lastName.equals(personsByStationDto.getLastName());
+	}
 }

@@ -17,8 +17,6 @@ import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 @SpringBootTest()
-@RunWith(SpringRunner.class)
-@TestMethodOrder(OrderAnnotation.class)
 class MedicalrecordsIT {
 
 	@Autowired
@@ -88,5 +86,6 @@ class MedicalrecordsIT {
 		medicalrecord = new Medicalrecord("Test", "Test");
 		assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord(medicalrecord));
 	}
+	
 
 }

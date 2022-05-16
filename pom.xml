@@ -187,6 +187,7 @@
                         <exclude>com/openclassrooms/safetynet/dto/*</exclude>
                         <exclude>com/openclassrooms/safetynet/model/*</exclude>
                         <exclude>com/openclassrooms/safetynet/SafetyNetApplication.class</exclude>
+                        <exclude>com/openclassrooms/safetynet/service/dataStorage/*</exclude>
                     </excludes>
                 </configuration>
             </plugin>

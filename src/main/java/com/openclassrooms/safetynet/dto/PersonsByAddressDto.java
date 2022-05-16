@@ -73,4 +73,16 @@ public class PersonsByAddressDto {
 	public Integer getAge() {
 		return age;
 	}
+	
+	@Override
+	public boolean equals(Object obj){
+		
+		if(obj == null) return false;
+		if(obj instanceof PersonsByAddressDto && this == obj) return true;
+		
+		PersonsByAddressDto personsByAddressDto = (PersonsByAddressDto) obj;
+		
+		return firstName.equals(personsByAddressDto.getFirstName()) && lastName.equals(personsByAddressDto.getLastName());
+	}
+	
 }
