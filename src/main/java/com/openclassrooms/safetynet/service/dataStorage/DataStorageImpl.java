@@ -49,7 +49,7 @@ public class DataStorageImpl implements DataStorage {
 		List<String> getFirestationsByStationNumber =
 				getFirestationsByNumber(station)
 						.stream()
-						.map(firestation -> firestation.getAddress())
+						.map(Firestation::getAddress)
 						.collect(Collectors.toList());
 		
 		return 	getPersons()

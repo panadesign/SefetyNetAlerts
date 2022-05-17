@@ -8078,3 +8078,1396 @@
 [INFO ] 2022-05-16 21:53:11.114 [main] DataStorageImpl - File address = C:\Users\elbar\git\SafetyNetAlerts\target\test-classes\data.json
 [INFO ] 2022-05-16 21:53:13.337 [main] FirestationIT - Started FirestationIT in 4.058 seconds (JVM running for 5.992)
 [DEBUG] 2022-05-16 21:53:13.559 [main] FirestationManagerImpl - Get persons by firestation number: 3
+[INFO ] 2022-05-16 21:59:00.873 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 23604 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 21:59:00.878 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 21:59:00.880 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 21:59:04.102 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.853 seconds (JVM running for 6.211)
+[INFO ] 2022-05-16 21:59:04.417 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 23604 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 21:59:04.422 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 21:59:04.422 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 21:59:04.998 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.614 seconds (JVM running for 7.106)
+[INFO ] 2022-05-16 21:59:05.070 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 23604 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 21:59:05.070 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 21:59:05.070 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 21:59:05.810 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.763 seconds (JVM running for 7.919)
+[DEBUG] 2022-05-16 21:59:05.955 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-16 21:59:05.964 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-16 21:59:05.976 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-16 21:59:05.985 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@1c1e971c
+[INFO ] 2022-05-16 21:59:05.985 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-16 21:59:05.999 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@5cb9ef8a
+[INFO ] 2022-05-16 21:59:05.999 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-16 21:59:06.015 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-16 21:59:06.039 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@7a63c618
+[ERROR] 2022-05-16 21:59:06.039 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-16 21:59:06.048 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@351623d
+[ERROR] 2022-05-16 21:59:06.048 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-16 21:59:06.054 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@a538180
+[INFO ] 2022-05-16 21:59:06.056 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-16 21:59:06.065 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@2919976e
+[ERROR] 2022-05-16 21:59:06.065 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-16 21:59:06.084 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@30e787e2
+[INFO ] 2022-05-16 21:59:06.092 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4f5c55a8
+[INFO ] 2022-05-16 21:59:06.104 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@129204bf
+[INFO ] 2022-05-16 21:59:06.110 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7f62fa28
+[INFO ] 2022-05-16 21:59:06.116 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@618cfd1
+[INFO ] 2022-05-16 21:59:06.126 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5cb7eb6c
+[DEBUG] 2022-05-16 21:59:06.148 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-16 21:59:06.151 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-16 21:59:06.155 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-16 21:59:06.163 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-16 21:59:06.163 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-16 21:59:06.174 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-16 21:59:06.176 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 21:59:06.176 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-16 21:59:06.176 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 21:59:06.176 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-16 21:59:06.183 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-16 21:59:06.193 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-16 21:59:06.195 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-16 21:59:06.200 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-16 21:59:06.200 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-16 21:59:06.203 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 21:59:06.203 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-16 21:59:06.210 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-16 21:59:06.214 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:06.214 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:06.214 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:06.214 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:06.215 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:06.215 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:06.215 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:06.216 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-16 21:59:11.413 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 37572 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 21:59:11.416 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 21:59:11.419 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 21:59:14.169 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.283 seconds (JVM running for 5.773)
+[INFO ] 2022-05-16 21:59:14.454 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 37572 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 21:59:14.454 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 21:59:14.454 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 21:59:15.008 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.581 seconds (JVM running for 6.618)
+[INFO ] 2022-05-16 21:59:15.086 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 37572 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 21:59:15.086 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 21:59:15.086 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 21:59:15.773 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.713 seconds (JVM running for 7.379)
+[DEBUG] 2022-05-16 21:59:15.870 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-16 21:59:15.870 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-16 21:59:15.886 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-16 21:59:15.899 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@70d3e710
+[INFO ] 2022-05-16 21:59:15.899 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-16 21:59:15.906 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@4f72e38c
+[INFO ] 2022-05-16 21:59:15.910 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-16 21:59:15.918 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-16 21:59:15.933 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@4b1a7b39
+[ERROR] 2022-05-16 21:59:15.933 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-16 21:59:15.933 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@735a3e0d
+[ERROR] 2022-05-16 21:59:15.933 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-16 21:59:15.942 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@54610a47
+[INFO ] 2022-05-16 21:59:15.944 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-16 21:59:15.946 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6740b169
+[ERROR] 2022-05-16 21:59:15.946 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-16 21:59:15.962 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@2a153531
+[INFO ] 2022-05-16 21:59:15.965 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@78c7d992
+[INFO ] 2022-05-16 21:59:15.975 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5e1fc897
+[INFO ] 2022-05-16 21:59:15.978 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@129204bf
+[INFO ] 2022-05-16 21:59:15.984 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@15f4f652
+[INFO ] 2022-05-16 21:59:15.986 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@618cfd1
+[DEBUG] 2022-05-16 21:59:15.995 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-16 21:59:15.995 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-16 21:59:16.006 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-16 21:59:16.010 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-16 21:59:16.010 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-16 21:59:16.014 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-16 21:59:16.014 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 21:59:16.014 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-16 21:59:16.014 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 21:59:16.014 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-16 21:59:16.024 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-16 21:59:16.025 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-16 21:59:16.025 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-16 21:59:16.033 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-16 21:59:16.033 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-16 21:59:16.033 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 21:59:16.033 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-16 21:59:16.044 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-16 21:59:16.044 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:16.046 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:16.046 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:16.046 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:16.046 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:16.046 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:16.046 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:16.046 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 21:59:16.046 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:16.049 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:16.049 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:16.049 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:16.049 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:16.049 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:16.049 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:16.049 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 21:59:16.049 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-16 22:01:37.718 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 33840 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 22:01:37.726 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 22:01:37.726 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 22:01:41.730 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 4.974 seconds (JVM running for 7.736)
+[INFO ] 2022-05-16 22:01:42.108 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 33840 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 22:01:42.109 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 22:01:42.109 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 22:01:43.578 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 1.516 seconds (JVM running for 9.584)
+[INFO ] 2022-05-16 22:01:43.692 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 33840 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 22:01:43.693 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 22:01:43.693 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 22:01:44.564 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.895 seconds (JVM running for 10.57)
+[DEBUG] 2022-05-16 22:01:44.694 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-16 22:01:44.701 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-16 22:01:44.711 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-16 22:01:44.725 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@6b8f0b64
+[INFO ] 2022-05-16 22:01:44.726 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-16 22:01:44.736 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@5fcc792f
+[INFO ] 2022-05-16 22:01:44.737 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-16 22:01:44.753 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-16 22:01:44.769 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@6ae729fb
+[ERROR] 2022-05-16 22:01:44.770 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-16 22:01:44.775 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@7e32261f
+[ERROR] 2022-05-16 22:01:44.776 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-16 22:01:44.784 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@7d8fcde8
+[INFO ] 2022-05-16 22:01:44.786 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-16 22:01:44.794 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@78c7d992
+[ERROR] 2022-05-16 22:01:44.795 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-16 22:01:44.812 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7c7caff1
+[INFO ] 2022-05-16 22:01:44.822 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@6b50017c
+[INFO ] 2022-05-16 22:01:44.838 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3564caf8
+[INFO ] 2022-05-16 22:01:44.844 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3dabf112
+[INFO ] 2022-05-16 22:01:44.851 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@d0c35a8
+[INFO ] 2022-05-16 22:01:44.858 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@78a3a272
+[DEBUG] 2022-05-16 22:01:44.874 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-16 22:01:44.874 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-16 22:01:44.879 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-16 22:01:44.886 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-16 22:01:44.887 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-16 22:01:44.894 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-16 22:01:44.904 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 22:01:44.904 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-16 22:01:44.905 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 22:01:44.905 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-16 22:01:44.910 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-16 22:01:44.918 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-16 22:01:44.918 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-16 22:01:44.925 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-16 22:01:44.926 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-16 22:01:44.931 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 22:01:44.932 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-16 22:01:44.938 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-16 22:01:44.941 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:44.941 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:44.941 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:44.942 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:44.942 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:44.944 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:44.944 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:44.944 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:44.945 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:44.945 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:44.945 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:44.946 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:44.946 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:44.946 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:44.946 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:44.946 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:44.947 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-16 22:01:49.576 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 34864 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 22:01:49.585 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 22:01:49.587 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 22:01:52.764 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.74 seconds (JVM running for 5.925)
+[INFO ] 2022-05-16 22:01:53.094 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 34864 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 22:01:53.095 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 22:01:53.095 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 22:01:53.686 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.623 seconds (JVM running for 6.847)
+[INFO ] 2022-05-16 22:01:53.748 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 34864 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-16 22:01:53.748 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-16 22:01:53.748 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-16 22:01:54.861 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 1.136 seconds (JVM running for 8.022)
+[DEBUG] 2022-05-16 22:01:54.985 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-16 22:01:54.991 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-16 22:01:55.001 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-16 22:01:55.010 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@54a0ada1
+[INFO ] 2022-05-16 22:01:55.011 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-16 22:01:55.018 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@1fae279e
+[INFO ] 2022-05-16 22:01:55.019 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-16 22:01:55.031 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-16 22:01:55.044 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@22351330
+[ERROR] 2022-05-16 22:01:55.045 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-16 22:01:55.049 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@13258770
+[ERROR] 2022-05-16 22:01:55.049 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-16 22:01:55.053 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@46916d68
+[INFO ] 2022-05-16 22:01:55.054 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-16 22:01:55.060 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@4f5c55a8
+[ERROR] 2022-05-16 22:01:55.060 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-16 22:01:55.071 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3669d7ac
+[INFO ] 2022-05-16 22:01:55.078 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@652a16a8
+[INFO ] 2022-05-16 22:01:55.085 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3dabf112
+[INFO ] 2022-05-16 22:01:55.090 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7d9f0cf4
+[INFO ] 2022-05-16 22:01:55.094 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@78a3a272
+[INFO ] 2022-05-16 22:01:55.099 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@11932248
+[DEBUG] 2022-05-16 22:01:55.109 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-16 22:01:55.109 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-16 22:01:55.113 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-16 22:01:55.118 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-16 22:01:55.119 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-16 22:01:55.123 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-16 22:01:55.127 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 22:01:55.128 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-16 22:01:55.128 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 22:01:55.129 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-16 22:01:55.132 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-16 22:01:55.138 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-16 22:01:55.139 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-16 22:01:55.142 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-16 22:01:55.143 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-16 22:01:55.147 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-16 22:01:55.147 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-16 22:01:55.151 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-16 22:01:55.152 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:55.153 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:55.153 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:55.153 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:55.153 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:55.154 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:55.154 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:55.154 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-16 22:01:55.155 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:55.156 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:55.156 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:55.156 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:55.156 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:55.156 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:55.157 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:55.157 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-16 22:01:55.157 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 10:34:51.288 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39100 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:34:51.297 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:34:51.297 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:34:54.886 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 4.124 seconds (JVM running for 6.335)
+[INFO ] 2022-05-17 10:34:55.328 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39100 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:34:55.328 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:34:55.328 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:34:55.928 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.65 seconds (JVM running for 7.377)
+[INFO ] 2022-05-17 10:34:55.998 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39100 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:34:55.998 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:34:55.998 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:34:56.747 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.772 seconds (JVM running for 8.194)
+[DEBUG] 2022-05-17 10:34:56.897 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 10:34:56.900 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 10:34:56.908 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 10:34:57.007 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@7d24bd80
+[INFO ] 2022-05-17 10:34:57.008 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 10:34:57.016 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@34672fb
+[INFO ] 2022-05-17 10:34:57.016 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 10:34:57.045 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 10:34:57.066 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@78c7d992
+[ERROR] 2022-05-17 10:34:57.066 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 10:34:57.066 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@5e1fc897
+[ERROR] 2022-05-17 10:34:57.066 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 10:34:57.076 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@5f19da2c
+[INFO ] 2022-05-17 10:34:57.077 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 10:34:57.078 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6ec3c680
+[ERROR] 2022-05-17 10:34:57.078 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 10:34:57.098 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5e6d2502
+[INFO ] 2022-05-17 10:34:57.098 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@6e3f38c1
+[INFO ] 2022-05-17 10:34:57.117 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7d5ef93e
+[INFO ] 2022-05-17 10:34:57.118 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1569f8a6
+[INFO ] 2022-05-17 10:34:57.127 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@72a80415
+[INFO ] 2022-05-17 10:34:57.127 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3b33b54e
+[DEBUG] 2022-05-17 10:34:57.139 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 10:34:57.139 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:34:57.147 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 10:34:57.147 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 10:34:57.147 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:34:57.158 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 10:34:57.166 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:34:57.166 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:34:57.167 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:34:57.167 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 10:34:57.167 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 10:34:57.178 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 10:34:57.178 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 10:34:57.178 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 10:34:57.184 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 10:34:57.187 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:34:57.187 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:34:57.187 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 10:34:57.187 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:34:57.196 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 10:35:02.256 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39140 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:35:02.258 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:35:02.258 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:35:05.423 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.737 seconds (JVM running for 5.927)
+[INFO ] 2022-05-17 10:35:05.707 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39140 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:35:05.707 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:35:05.707 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:35:06.338 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.657 seconds (JVM running for 6.845)
+[INFO ] 2022-05-17 10:35:06.406 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39140 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:35:06.406 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:35:06.406 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:35:07.003 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.621 seconds (JVM running for 7.507)
+[DEBUG] 2022-05-17 10:35:07.188 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 10:35:07.209 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 10:35:07.216 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 10:35:07.221 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@7d24bd80
+[INFO ] 2022-05-17 10:35:07.221 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 10:35:07.228 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@34672fb
+[INFO ] 2022-05-17 10:35:07.228 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 10:35:07.246 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 10:35:07.272 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@78c7d992
+[ERROR] 2022-05-17 10:35:07.272 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 10:35:07.278 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@5e1fc897
+[ERROR] 2022-05-17 10:35:07.278 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 10:35:07.278 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@5f19da2c
+[INFO ] 2022-05-17 10:35:07.286 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 10:35:07.294 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6ec3c680
+[ERROR] 2022-05-17 10:35:07.295 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 10:35:07.307 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5e6d2502
+[INFO ] 2022-05-17 10:35:07.320 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@6e3f38c1
+[INFO ] 2022-05-17 10:35:07.331 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7d5ef93e
+[INFO ] 2022-05-17 10:35:07.338 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1569f8a6
+[INFO ] 2022-05-17 10:35:07.351 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@72a80415
+[INFO ] 2022-05-17 10:35:07.357 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3b33b54e
+[DEBUG] 2022-05-17 10:35:07.376 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 10:35:07.377 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:35:07.378 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 10:35:07.387 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 10:35:07.387 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:35:07.392 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 10:35:07.399 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:35:07.399 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:35:07.399 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:35:07.399 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 10:35:07.406 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 10:35:07.418 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 10:35:07.418 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 10:35:07.418 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 10:35:07.418 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 10:35:07.431 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:35:07.431 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:35:07.436 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:35:07.437 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:35:07.441 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:35:07.441 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:35:07.441 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:35:07.441 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:35:07.441 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:35:07.441 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:35:07.441 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:35:07.441 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 10:49:34.750 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 40908 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:49:34.750 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:49:34.750 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:49:38.033 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.908 seconds (JVM running for 6.26)
+[INFO ] 2022-05-17 10:49:38.354 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 40908 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:49:38.359 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:49:38.360 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:49:38.981 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.681 seconds (JVM running for 7.21)
+[INFO ] 2022-05-17 10:49:39.041 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 40908 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:49:39.041 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:49:39.041 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:49:40.044 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 1.023 seconds (JVM running for 8.275)
+[DEBUG] 2022-05-17 10:49:40.171 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 10:49:40.180 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 10:49:40.180 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 10:49:40.190 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@4c00c8ce
+[INFO ] 2022-05-17 10:49:40.190 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 10:49:40.202 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@41a56594
+[INFO ] 2022-05-17 10:49:40.202 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 10:49:40.210 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 10:49:40.221 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@46110b82
+[ERROR] 2022-05-17 10:49:40.229 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 10:49:40.233 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@64a2966a
+[ERROR] 2022-05-17 10:49:40.233 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 10:49:40.241 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@460818c1
+[INFO ] 2022-05-17 10:49:40.241 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 10:49:40.241 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@3713ebe9
+[ERROR] 2022-05-17 10:49:40.241 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 10:49:40.259 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7adc8212
+[INFO ] 2022-05-17 10:49:40.265 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@276af32d
+[INFO ] 2022-05-17 10:49:40.270 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3ec72844
+[INFO ] 2022-05-17 10:49:40.280 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@726615d7
+[INFO ] 2022-05-17 10:49:40.281 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@83ec0b0
+[INFO ] 2022-05-17 10:49:40.290 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@140e2d82
+[DEBUG] 2022-05-17 10:49:40.300 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 10:49:40.302 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:49:40.302 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 10:49:40.310 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 10:49:40.310 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:49:40.310 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 10:49:40.319 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:49:40.319 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:49:40.320 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:49:40.320 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 10:49:40.321 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 10:49:40.330 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 10:49:40.330 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 10:49:40.333 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 10:49:40.333 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 10:49:40.339 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:40.340 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:40.349 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:40.350 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:40.350 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:40.351 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:40.351 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 10:49:45.110 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39128 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:49:45.116 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:49:45.119 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:49:48.144 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.573 seconds (JVM running for 5.713)
+[INFO ] 2022-05-17 10:49:48.704 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39128 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:49:48.704 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:49:48.704 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:49:49.810 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 1.18 seconds (JVM running for 7.378)
+[INFO ] 2022-05-17 10:49:49.889 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39128 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:49:49.890 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:49:49.890 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:49:50.781 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.922 seconds (JVM running for 8.352)
+[DEBUG] 2022-05-17 10:49:50.925 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 10:49:50.933 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 10:49:50.940 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 10:49:50.951 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@6a28f67a
+[INFO ] 2022-05-17 10:49:50.951 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 10:49:50.963 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@3387d45e
+[INFO ] 2022-05-17 10:49:50.963 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 10:49:50.980 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 10:49:50.995 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@35f011cf
+[ERROR] 2022-05-17 10:49:50.995 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 10:49:51.004 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@73c337e9
+[ERROR] 2022-05-17 10:49:51.004 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 10:49:51.010 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@7f62fa28
+[INFO ] 2022-05-17 10:49:51.011 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 10:49:51.011 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@5cb7eb6c
+[ERROR] 2022-05-17 10:49:51.011 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 10:49:51.031 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@26be5ee
+[INFO ] 2022-05-17 10:49:51.040 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7d9f0cf4
+[INFO ] 2022-05-17 10:49:51.051 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@11932248
+[INFO ] 2022-05-17 10:49:51.064 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@70bc684b
+[INFO ] 2022-05-17 10:49:51.074 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@28de7e2e
+[INFO ] 2022-05-17 10:49:51.081 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4ea4e0f3
+[DEBUG] 2022-05-17 10:49:51.101 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 10:49:51.101 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:49:51.110 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 10:49:51.114 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 10:49:51.114 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:49:51.121 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 10:49:51.130 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:49:51.130 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:49:51.130 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:49:51.130 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 10:49:51.139 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 10:49:51.150 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 10:49:51.153 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 10:49:51.159 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 10:49:51.160 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 10:49:51.161 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:49:51.161 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:49:51.170 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:51.174 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:51.179 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:51.179 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:51.179 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:49:51.179 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 10:51:05.702 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 18312 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:51:05.710 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:51:05.720 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:51:08.555 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.409 seconds (JVM running for 5.47)
+[INFO ] 2022-05-17 10:51:08.824 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 18312 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:51:08.824 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:51:08.824 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:51:09.440 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.646 seconds (JVM running for 6.36)
+[INFO ] 2022-05-17 10:51:09.501 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 18312 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:51:09.501 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:51:09.501 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:51:10.530 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 1.046 seconds (JVM running for 7.446)
+[INFO ] 2022-05-17 10:51:10.604 [main] DataStorageImplTest - Starting DataStorageImplTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 18312 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:51:10.604 [main] DataStorageImplTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:51:10.604 [main] DataStorageImplTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:51:11.291 [main] DataStorageImpl - File address = C:\Users\elbar\git\SafetyNetAlerts\target\test-classes\data.json
+[INFO ] 2022-05-17 10:51:12.626 [main] DataStorageImplTest - Started DataStorageImplTest in 2.045 seconds (JVM running for 9.544)
+[DEBUG] 2022-05-17 10:51:12.690 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 10:51:12.701 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 10:51:12.710 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 10:51:12.719 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@4f9e42c4
+[INFO ] 2022-05-17 10:51:12.720 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 10:51:12.730 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@7d3818ab
+[INFO ] 2022-05-17 10:51:12.730 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 10:51:12.741 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 10:51:12.752 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@bf29f54
+[ERROR] 2022-05-17 10:51:12.752 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 10:51:12.761 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@5b1b1b10
+[ERROR] 2022-05-17 10:51:12.761 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 10:51:12.768 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6862f883
+[INFO ] 2022-05-17 10:51:12.770 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 10:51:12.770 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@14fd1bc
+[ERROR] 2022-05-17 10:51:12.794 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 10:51:12.810 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@33957e5b
+[INFO ] 2022-05-17 10:51:12.820 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@2f357394
+[INFO ] 2022-05-17 10:51:12.831 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3de49725
+[INFO ] 2022-05-17 10:51:12.831 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@6942d9bc
+[INFO ] 2022-05-17 10:51:12.840 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@703483c2
+[INFO ] 2022-05-17 10:51:12.840 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1a168086
+[DEBUG] 2022-05-17 10:51:12.859 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 10:51:12.859 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:51:12.860 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 10:51:12.860 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 10:51:12.860 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:51:12.871 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 10:51:12.871 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:51:12.871 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:51:12.871 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:51:12.871 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 10:51:12.880 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 10:51:12.880 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 10:51:12.880 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 10:51:12.891 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 10:51:12.891 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 10:51:12.891 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:51:12.891 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:12.900 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 10:51:16.373 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 25904 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:51:16.373 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:51:16.373 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:51:19.240 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.344 seconds (JVM running for 5.311)
+[INFO ] 2022-05-17 10:51:19.540 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 25904 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:51:19.540 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:51:19.540 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:51:20.110 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.598 seconds (JVM running for 6.185)
+[INFO ] 2022-05-17 10:51:20.171 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 25904 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:51:20.171 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:51:20.171 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:51:20.801 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.648 seconds (JVM running for 6.873)
+[INFO ] 2022-05-17 10:51:20.880 [main] DataStorageImplTest - Starting DataStorageImplTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 25904 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:51:20.880 [main] DataStorageImplTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:51:20.880 [main] DataStorageImplTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:51:21.559 [main] DataStorageImpl - File address = C:\Users\elbar\git\SafetyNetAlerts\target\test-classes\data.json
+[INFO ] 2022-05-17 10:51:23.050 [main] DataStorageImplTest - Started DataStorageImplTest in 2.192 seconds (JVM running for 9.121)
+[DEBUG] 2022-05-17 10:51:23.171 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 10:51:23.180 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 10:51:23.194 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 10:51:23.224 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@61a72b91
+[INFO ] 2022-05-17 10:51:23.226 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 10:51:23.240 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@127b9bed
+[INFO ] 2022-05-17 10:51:23.241 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 10:51:23.254 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 10:51:23.273 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@6862f883
+[ERROR] 2022-05-17 10:51:23.279 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 10:51:23.281 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@14fd1bc
+[ERROR] 2022-05-17 10:51:23.281 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 10:51:23.294 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@4270a134
+[INFO ] 2022-05-17 10:51:23.294 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 10:51:23.321 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@74992312
+[ERROR] 2022-05-17 10:51:23.321 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 10:51:23.374 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@596792bc
+[INFO ] 2022-05-17 10:51:23.389 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5aa9fdc2
+[INFO ] 2022-05-17 10:51:23.400 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@317032b5
+[INFO ] 2022-05-17 10:51:23.409 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4b3ebc09
+[INFO ] 2022-05-17 10:51:23.416 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4426536a
+[INFO ] 2022-05-17 10:51:23.420 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@f0b01d4
+[DEBUG] 2022-05-17 10:51:23.439 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 10:51:23.440 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:51:23.463 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 10:51:23.467 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 10:51:23.470 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:51:23.471 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 10:51:23.480 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:51:23.480 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:51:23.484 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:51:23.484 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 10:51:23.484 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 10:51:23.499 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 10:51:23.499 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 10:51:23.506 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 10:51:23.506 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 10:51:23.511 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:51:23.511 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:51:23.520 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 10:51:23.524 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:23.527 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:23.527 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:23.527 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:23.527 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:23.527 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:23.527 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:23.527 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:51:23.529 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:23.530 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:23.530 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:23.531 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:23.531 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:23.531 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:23.531 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:23.531 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:51:23.531 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 10:52:27.262 [main] DataStorageImplTest - Starting DataStorageImplTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 19408 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:52:27.270 [main] DataStorageImplTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:52:27.270 [main] DataStorageImplTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:52:28.680 [main] DataStorageImpl - File address = C:\Users\elbar\git\SafetyNetAlerts\target\test-classes\data.json
+[INFO ] 2022-05-17 10:52:30.561 [main] DataStorageImplTest - Started DataStorageImplTest in 3.643 seconds (JVM running for 6.141)
+[INFO ] 2022-05-17 10:56:20.159 [main] DataStorageImplTest - Starting DataStorageImplTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 39308 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:56:20.159 [main] DataStorageImplTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:56:20.159 [main] DataStorageImplTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:56:21.603 [main] DataStorageImpl - File address = C:\Users\elbar\git\SafetyNetAlerts\target\test-classes\data.json
+[INFO ] 2022-05-17 10:56:23.548 [main] DataStorageImplTest - Started DataStorageImplTest in 3.735 seconds (JVM running for 6.289)
+[INFO ] 2022-05-17 10:56:46.869 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 36996 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:56:46.869 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:56:46.877 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:56:50.103 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.789 seconds (JVM running for 6.832)
+[INFO ] 2022-05-17 10:56:50.465 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 36996 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:56:50.465 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:56:50.465 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:56:51.138 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.713 seconds (JVM running for 7.865)
+[INFO ] 2022-05-17 10:56:51.217 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 36996 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:56:51.217 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:56:51.217 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:56:51.892 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.706 seconds (JVM running for 8.617)
+[INFO ] 2022-05-17 10:56:51.970 [main] DataStorageImplTest - Starting DataStorageImplTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 36996 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:56:51.970 [main] DataStorageImplTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:56:51.970 [main] DataStorageImplTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:56:52.802 [main] DataStorageImpl - File address = C:\Users\elbar\git\SafetyNetAlerts\target\test-classes\data.json
+[INFO ] 2022-05-17 10:56:54.217 [main] DataStorageImplTest - Started DataStorageImplTest in 2.263 seconds (JVM running for 10.933)
+[DEBUG] 2022-05-17 10:56:54.297 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 10:56:54.305 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 10:56:54.325 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 10:56:54.361 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@2a5129f3
+[INFO ] 2022-05-17 10:56:54.361 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 10:56:54.377 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@3ff264c
+[INFO ] 2022-05-17 10:56:54.377 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 10:56:54.409 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 10:56:54.417 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@6166d18b
+[ERROR] 2022-05-17 10:56:54.417 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 10:56:54.425 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@23d45f7d
+[ERROR] 2022-05-17 10:56:54.425 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 10:56:54.433 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@483381ea
+[INFO ] 2022-05-17 10:56:54.433 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 10:56:54.441 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6d66f9e3
+[ERROR] 2022-05-17 10:56:54.441 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 10:56:54.457 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1bbdd4a9
+[INFO ] 2022-05-17 10:56:54.465 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4b3ebc09
+[INFO ] 2022-05-17 10:56:54.473 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@f0b01d4
+[INFO ] 2022-05-17 10:56:54.481 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@175f1ff5
+[INFO ] 2022-05-17 10:56:54.489 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4d37a098
+[INFO ] 2022-05-17 10:56:54.489 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3de8af4d
+[DEBUG] 2022-05-17 10:56:54.507 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 10:56:54.513 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:56:54.513 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 10:56:54.521 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 10:56:54.521 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:56:54.529 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 10:56:54.537 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:56:54.537 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:56:54.537 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:56:54.537 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 10:56:54.537 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 10:56:54.553 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 10:56:54.553 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 10:56:54.553 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 10:56:54.553 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 10:56:54.561 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:56:54.561 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:56:54.569 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:56:54.577 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:56:54.577 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:56:54.577 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:56:54.577 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:56:54.577 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:56:54.577 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 10:56:59.048 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 32212 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:56:59.048 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:56:59.048 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:57:02.066 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.551 seconds (JVM running for 5.692)
+[INFO ] 2022-05-17 10:57:02.381 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 32212 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:57:02.381 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:57:02.389 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:57:03.044 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.691 seconds (JVM running for 6.668)
+[INFO ] 2022-05-17 10:57:03.142 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 32212 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:57:03.144 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:57:03.144 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:57:03.812 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.698 seconds (JVM running for 7.432)
+[INFO ] 2022-05-17 10:57:03.877 [main] DataStorageImplTest - Starting DataStorageImplTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 32212 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 10:57:03.885 [main] DataStorageImplTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 10:57:03.885 [main] DataStorageImplTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 10:57:04.563 [main] DataStorageImpl - File address = C:\Users\elbar\git\SafetyNetAlerts\target\test-classes\data.json
+[INFO ] 2022-05-17 10:57:06.085 [main] DataStorageImplTest - Started DataStorageImplTest in 2.225 seconds (JVM running for 9.709)
+[DEBUG] 2022-05-17 10:57:06.167 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 10:57:06.167 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 10:57:06.175 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 10:57:06.183 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@2a5129f3
+[INFO ] 2022-05-17 10:57:06.183 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 10:57:06.192 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@3ff264c
+[INFO ] 2022-05-17 10:57:06.192 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 10:57:06.200 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 10:57:06.218 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@6166d18b
+[ERROR] 2022-05-17 10:57:06.218 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 10:57:06.226 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@23d45f7d
+[ERROR] 2022-05-17 10:57:06.226 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 10:57:06.251 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@483381ea
+[INFO ] 2022-05-17 10:57:06.251 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 10:57:06.260 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6d66f9e3
+[ERROR] 2022-05-17 10:57:06.260 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 10:57:06.278 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1bbdd4a9
+[INFO ] 2022-05-17 10:57:06.294 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4b3ebc09
+[INFO ] 2022-05-17 10:57:06.302 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@f0b01d4
+[INFO ] 2022-05-17 10:57:06.311 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@175f1ff5
+[INFO ] 2022-05-17 10:57:06.320 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4d37a098
+[INFO ] 2022-05-17 10:57:06.329 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3de8af4d
+[DEBUG] 2022-05-17 10:57:06.345 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 10:57:06.345 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:57:06.345 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 10:57:06.354 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 10:57:06.354 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 10:57:06.360 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 10:57:06.361 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:57:06.361 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:57:06.361 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:57:06.361 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 10:57:06.369 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 10:57:06.378 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 10:57:06.378 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 10:57:06.378 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 10:57:06.378 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 10:57:06.386 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 10:57:06.386 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:57:06.394 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:57:06.402 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 10:57:06.402 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 11:34:03.741 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 43956 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 11:34:03.746 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 11:34:03.747 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 11:34:06.766 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.595 seconds (JVM running for 6.111)
+[INFO ] 2022-05-17 11:34:07.099 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 43956 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 11:34:07.100 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 11:34:07.100 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 11:34:07.726 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.659 seconds (JVM running for 7.071)
+[INFO ] 2022-05-17 11:34:07.798 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 43956 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 11:34:07.799 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 11:34:07.800 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 11:34:08.546 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.773 seconds (JVM running for 7.891)
+[DEBUG] 2022-05-17 11:34:08.644 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 11:34:08.650 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 11:34:08.661 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 11:34:08.676 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@65daaa95
+[INFO ] 2022-05-17 11:34:08.677 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 11:34:08.689 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@352bccf
+[INFO ] 2022-05-17 11:34:08.691 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 11:34:08.706 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 11:34:08.723 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@37e682da
+[ERROR] 2022-05-17 11:34:08.723 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 11:34:08.729 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@39ad1fdb
+[ERROR] 2022-05-17 11:34:08.730 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 11:34:08.735 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6dace32a
+[INFO ] 2022-05-17 11:34:08.736 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 11:34:08.741 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@42ffabb
+[ERROR] 2022-05-17 11:34:08.742 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 11:34:08.760 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1c7094eb
+[INFO ] 2022-05-17 11:34:08.768 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5513982
+[INFO ] 2022-05-17 11:34:08.781 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7414167a
+[INFO ] 2022-05-17 11:34:08.786 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7d8fcde8
+[INFO ] 2022-05-17 11:34:08.793 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@79b07ccd
+[INFO ] 2022-05-17 11:34:08.798 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@78c7d992
+[DEBUG] 2022-05-17 11:34:08.813 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 11:34:08.813 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 11:34:08.818 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 11:34:08.823 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 11:34:08.824 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 11:34:08.829 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 11:34:08.834 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 11:34:08.834 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 11:34:08.835 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 11:34:08.835 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 11:34:08.840 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 11:34:08.848 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 11:34:08.849 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 11:34:08.854 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 11:34:08.854 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 11:34:08.859 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 11:34:08.860 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 11:34:08.865 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 11:34:08.866 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:08.867 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:08.867 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:08.867 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:08.868 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:08.868 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:08.868 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:08.868 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:08.870 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:08.870 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:08.870 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:08.871 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:08.871 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:08.872 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:08.873 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:08.874 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:08.874 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 11:34:13.346 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39480 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 11:34:13.351 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 11:34:13.352 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 11:34:16.253 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.499 seconds (JVM running for 5.716)
+[INFO ] 2022-05-17 11:34:16.560 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39480 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 11:34:16.561 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 11:34:16.561 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 11:34:17.233 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.704 seconds (JVM running for 6.696)
+[INFO ] 2022-05-17 11:34:17.303 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39480 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 11:34:17.304 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 11:34:17.304 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 11:34:18.420 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 1.139 seconds (JVM running for 7.882)
+[DEBUG] 2022-05-17 11:34:18.510 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 11:34:18.516 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 11:34:18.526 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 11:34:18.534 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@1c1e971c
+[INFO ] 2022-05-17 11:34:18.535 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 11:34:18.543 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@5cb9ef8a
+[INFO ] 2022-05-17 11:34:18.544 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 11:34:18.559 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 11:34:18.574 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@7a63c618
+[ERROR] 2022-05-17 11:34:18.574 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 11:34:18.580 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@351623d
+[ERROR] 2022-05-17 11:34:18.580 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 11:34:18.586 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@a538180
+[INFO ] 2022-05-17 11:34:18.587 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 11:34:18.595 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@2919976e
+[ERROR] 2022-05-17 11:34:18.595 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 11:34:18.611 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@30e787e2
+[INFO ] 2022-05-17 11:34:18.618 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4f5c55a8
+[INFO ] 2022-05-17 11:34:18.628 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@129204bf
+[INFO ] 2022-05-17 11:34:18.634 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7f62fa28
+[INFO ] 2022-05-17 11:34:18.640 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@618cfd1
+[INFO ] 2022-05-17 11:34:18.645 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5cb7eb6c
+[DEBUG] 2022-05-17 11:34:18.661 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 11:34:18.662 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 11:34:18.668 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 11:34:18.673 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 11:34:18.674 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 11:34:18.679 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 11:34:18.685 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 11:34:18.686 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 11:34:18.687 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 11:34:18.687 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 11:34:18.692 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 11:34:18.699 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 11:34:18.700 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 11:34:18.705 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 11:34:18.706 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 11:34:18.710 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 11:34:18.711 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 11:34:18.716 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 11:34:18.718 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:18.719 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:18.719 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:18.719 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:18.720 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:18.720 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:18.720 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:18.721 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 11:34:18.722 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:18.722 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:18.723 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:18.723 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:18.723 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:18.724 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:18.724 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:18.725 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 11:34:18.725 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 14:07:32.067 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 45564 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:07:32.075 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:07:32.076 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:07:34.205 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.669 seconds (JVM running for 5.963)
+[INFO ] 2022-05-17 14:08:40.179 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 44040 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:08:40.187 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:08:40.189 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:08:41.906 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.166 seconds (JVM running for 4.918)
+[INFO ] 2022-05-17 14:09:17.106 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 46008 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:09:17.106 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:09:17.106 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:09:19.077 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.422 seconds (JVM running for 5.133)
+[DEBUG] 2022-05-17 14:09:19.276 [main] PersonController - Delete a person
+[INFO ] 2022-05-17 14:09:37.637 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 44664 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:09:37.646 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:09:37.646 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:09:39.445 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.259 seconds (JVM running for 5.078)
+[DEBUG] 2022-05-17 14:09:39.636 [main] PersonController - Delete a person
+[INFO ] 2022-05-17 14:09:50.077 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 43900 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:09:50.086 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:09:50.086 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:09:51.777 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.204 seconds (JVM running for 5.129)
+[DEBUG] 2022-05-17 14:09:51.947 [main] PersonController - Delete a person
+[INFO ] 2022-05-17 14:13:09.888 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39448 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:13:09.892 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:13:09.892 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:13:13.037 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.729 seconds (JVM running for 6.052)
+[INFO ] 2022-05-17 14:13:13.376 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39448 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:13:13.377 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:13:13.377 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:13:14.026 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.696 seconds (JVM running for 7.046)
+[INFO ] 2022-05-17 14:13:14.127 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 39448 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:13:14.127 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:13:14.127 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:13:14.696 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.596 seconds (JVM running for 7.714)
+[DEBUG] 2022-05-17 14:13:14.787 [main] PersonController - Delete a person
+[DEBUG] 2022-05-17 14:13:14.877 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 14:13:14.877 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 14:13:14.896 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 14:13:14.919 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@60c5c115
+[INFO ] 2022-05-17 14:13:14.919 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 14:13:14.926 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@6224872f
+[INFO ] 2022-05-17 14:13:14.926 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 14:13:14.946 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 14:13:14.987 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@4a729612
+[ERROR] 2022-05-17 14:13:14.995 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 14:13:15.000 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@6f798e5a
+[ERROR] 2022-05-17 14:13:15.000 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 14:13:15.007 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@6ca257de
+[INFO ] 2022-05-17 14:13:15.007 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 14:13:15.007 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@55feda3f
+[ERROR] 2022-05-17 14:13:15.007 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 14:13:15.027 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5d7a274e
+[INFO ] 2022-05-17 14:13:15.036 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@495fa126
+[INFO ] 2022-05-17 14:13:15.047 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@ef21eba
+[INFO ] 2022-05-17 14:13:15.056 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5ca4763f
+[INFO ] 2022-05-17 14:13:15.060 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@6aca85da
+[INFO ] 2022-05-17 14:13:15.067 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1d123972
+[DEBUG] 2022-05-17 14:13:15.087 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 14:13:15.087 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 14:13:15.087 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 14:13:15.098 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 14:13:15.098 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 14:13:15.098 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 14:13:15.107 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:13:15.107 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 14:13:15.107 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:13:15.107 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 14:13:15.116 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 14:13:15.119 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 14:13:15.119 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 14:13:15.127 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 14:13:15.127 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 14:13:15.131 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:13:15.131 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:15.136 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:15.145 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:15.145 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:15.145 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:15.145 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:15.146 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:15.146 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:15.147 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 14:13:19.916 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 27724 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:13:19.916 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:13:19.916 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:13:22.796 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.425 seconds (JVM running for 5.586)
+[INFO ] 2022-05-17 14:13:23.087 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 27724 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:13:23.087 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:13:23.087 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:13:23.706 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.652 seconds (JVM running for 6.493)
+[INFO ] 2022-05-17 14:13:23.792 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 27724 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:13:23.792 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:13:23.793 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:13:24.386 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.619 seconds (JVM running for 7.173)
+[DEBUG] 2022-05-17 14:13:24.475 [main] PersonController - Delete a person
+[DEBUG] 2022-05-17 14:13:24.557 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 14:13:24.566 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 14:13:24.579 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 14:13:24.586 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@1531fbc8
+[INFO ] 2022-05-17 14:13:24.586 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 14:13:24.595 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@4d0042eb
+[INFO ] 2022-05-17 14:13:24.596 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 14:13:24.611 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 14:13:24.627 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@55feda3f
+[ERROR] 2022-05-17 14:13:24.627 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 14:13:24.647 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@310ad792
+[ERROR] 2022-05-17 14:13:24.647 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 14:13:24.655 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@5e9650d3
+[INFO ] 2022-05-17 14:13:24.656 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 14:13:24.656 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@81da6a3
+[ERROR] 2022-05-17 14:13:24.656 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 14:13:24.667 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@a0d3cc7
+[INFO ] 2022-05-17 14:13:24.676 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7b3d759f
+[INFO ] 2022-05-17 14:13:24.687 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@69cf9acb
+[INFO ] 2022-05-17 14:13:24.696 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5f160f9c
+[INFO ] 2022-05-17 14:13:24.696 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@39d666e0
+[INFO ] 2022-05-17 14:13:24.696 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@56bc8c45
+[DEBUG] 2022-05-17 14:13:24.716 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 14:13:24.716 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 14:13:24.716 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 14:13:24.726 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 14:13:24.726 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 14:13:24.727 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 14:13:24.736 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:13:24.736 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 14:13:24.736 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:13:24.736 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 14:13:24.736 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 14:13:24.747 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 14:13:24.747 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 14:13:24.747 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 14:13:24.747 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:24.756 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:13:24.765 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:24.766 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:24.766 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:24.766 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:24.766 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:24.766 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:24.766 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:24.766 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:13:24.766 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 14:17:00.945 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 41772 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:17:00.950 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:17:00.952 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:17:02.745 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.26 seconds (JVM running for 5.255)
+[INFO ] 2022-05-17 14:19:40.326 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 40360 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:19:40.327 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:19:40.327 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:19:42.316 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.457 seconds (JVM running for 5.148)
+[INFO ] 2022-05-17 14:20:22.867 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 44764 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:20:22.867 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:20:22.867 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:20:24.736 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.32 seconds (JVM running for 5.126)
+[DEBUG] 2022-05-17 14:20:24.920 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:22:02.516 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 16128 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:22:02.520 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:22:02.520 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:22:04.336 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.301 seconds (JVM running for 5.189)
+[DEBUG] 2022-05-17 14:22:04.497 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:22:50.419 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 43464 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:22:50.419 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:22:50.419 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:22:52.065 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.104 seconds (JVM running for 4.83)
+[DEBUG] 2022-05-17 14:22:52.237 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:23:50.446 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 42932 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:23:50.447 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:23:50.447 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:23:52.247 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.26 seconds (JVM running for 5.128)
+[DEBUG] 2022-05-17 14:23:52.417 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:24:29.996 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 41376 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:24:29.996 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:24:29.996 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:24:31.997 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.476 seconds (JVM running for 5.112)
+[DEBUG] 2022-05-17 14:24:32.176 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:26:30.166 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 43832 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:26:30.175 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:26:30.175 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:26:31.767 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.026 seconds (JVM running for 5.165)
+[DEBUG] 2022-05-17 14:26:31.955 [main] PersonController - Delete a person
+[INFO ] 2022-05-17 14:28:55.500 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 45740 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:28:55.507 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:28:55.507 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:28:58.646 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.706 seconds (JVM running for 5.844)
+[INFO ] 2022-05-17 14:28:58.986 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 45740 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:28:58.986 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:28:58.986 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:28:59.597 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.648 seconds (JVM running for 6.794)
+[INFO ] 2022-05-17 14:28:59.700 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 45740 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:28:59.700 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:28:59.700 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:29:00.288 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 0.619 seconds (JVM running for 7.483)
+[DEBUG] 2022-05-17 14:29:00.370 [main] PersonController - Delete a person
+[DEBUG] 2022-05-17 14:29:00.376 [main] PersonController - Add a new person
+[DEBUG] 2022-05-17 14:29:00.467 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 14:29:00.467 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 14:29:00.486 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 14:29:00.497 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@3b5950f
+[INFO ] 2022-05-17 14:29:00.499 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 14:29:00.506 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@f11fad9
+[INFO ] 2022-05-17 14:29:00.506 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 14:29:00.517 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 14:29:00.530 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@5622e162
+[ERROR] 2022-05-17 14:29:00.531 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 14:29:00.536 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@62fef807
+[ERROR] 2022-05-17 14:29:00.537 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 14:29:00.537 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@7d5b1446
+[INFO ] 2022-05-17 14:29:00.537 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 14:29:00.546 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@40679991
+[ERROR] 2022-05-17 14:29:00.546 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 14:29:00.557 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5b3063b7
+[INFO ] 2022-05-17 14:29:00.566 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4c66b3d9
+[INFO ] 2022-05-17 14:29:00.576 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@3341ba8e
+[INFO ] 2022-05-17 14:29:00.579 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4295b0b8
+[INFO ] 2022-05-17 14:29:00.586 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@407bfc49
+[INFO ] 2022-05-17 14:29:00.586 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@607c7f58
+[DEBUG] 2022-05-17 14:29:00.605 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 14:29:00.605 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 14:29:00.609 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 14:29:00.611 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 14:29:00.611 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 14:29:00.616 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 14:29:00.616 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:29:00.616 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 14:29:00.616 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:29:00.616 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 14:29:00.627 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 14:29:00.627 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 14:29:00.627 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 14:29:00.636 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 14:29:00.636 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 14:29:00.636 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:29:00.636 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 14:29:00.636 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 14:29:00.645 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:00.645 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:00.645 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:00.646 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:00.646 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:00.646 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:00.646 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:00.646 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:00.647 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 14:29:05.366 [main] AlertControllerUnitTest - Starting AlertControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 42788 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:29:05.366 [main] AlertControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:29:05.366 [main] AlertControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:29:08.307 [main] AlertControllerUnitTest - Started AlertControllerUnitTest in 3.444 seconds (JVM running for 5.547)
+[INFO ] 2022-05-17 14:29:08.615 [main] CommunityEmailControllerUnitTest - Starting CommunityEmailControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 42788 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:29:08.616 [main] CommunityEmailControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:29:08.616 [main] CommunityEmailControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:29:09.490 [main] CommunityEmailControllerUnitTest - Started CommunityEmailControllerUnitTest in 0.922 seconds (JVM running for 6.728)
+[INFO ] 2022-05-17 14:29:09.596 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 17.0.2 on LAPTOP-I81KFK32 with PID 42788 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:29:09.600 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:29:09.600 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:29:10.647 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 1.078 seconds (JVM running for 7.892)
+[DEBUG] 2022-05-17 14:29:10.757 [main] PersonController - Delete a person
+[DEBUG] 2022-05-17 14:29:10.777 [main] PersonController - Add a new person
+[DEBUG] 2022-05-17 14:29:10.886 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-17 14:29:10.887 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-17 14:29:10.915 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[DEBUG] 2022-05-17 14:29:10.927 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@61f26cba
+[INFO ] 2022-05-17 14:29:10.927 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-17 14:29:10.936 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@62a1bc26
+[INFO ] 2022-05-17 14:29:10.936 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-17 14:29:10.956 [main] FirestationManagerImpl - Get persons by addressaddress2
+[DEBUG] 2022-05-17 14:29:11.006 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@72bec302
+[ERROR] 2022-05-17 14:29:11.006 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-17 14:29:11.028 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@81da6a3
+[ERROR] 2022-05-17 14:29:11.028 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-17 14:29:11.035 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@52c0c594
+[INFO ] 2022-05-17 14:29:11.036 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-17 14:29:11.037 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@5d7a274e
+[ERROR] 2022-05-17 14:29:11.037 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-17 14:29:11.060 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7a36c310
+[INFO ] 2022-05-17 14:29:11.066 [main] MedicalrecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@36c6d53b
+[INFO ] 2022-05-17 14:29:11.077 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@2542d320
+[INFO ] 2022-05-17 14:29:11.096 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@66161fee
+[INFO ] 2022-05-17 14:29:11.107 [main] MedicalrecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@25e7e6d
+[INFO ] 2022-05-17 14:29:11.117 [main] MedicalrecordsManagerImpl - Delete a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@53d257e7
+[DEBUG] 2022-05-17 14:29:11.139 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-17 14:29:11.139 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-17 14:29:11.147 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-17 14:29:11.156 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-17 14:29:11.156 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-17 14:29:11.165 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-17 14:29:11.171 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:29:11.171 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 14:29:11.180 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:29:11.180 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-17 14:29:11.187 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[DEBUG] 2022-05-17 14:29:11.216 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-17 14:29:11.216 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-17 14:29:11.227 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-17 14:29:11.227 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-17 14:29:11.240 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-17 14:29:11.245 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-17 14:29:11.256 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-17 14:29:11.256 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:11.260 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:11.260 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:11.260 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:11.260 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:11.266 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:11.267 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:11.267 [main] PersonManagerImpl - Child by address
+[INFO ] 2022-05-17 14:29:11.270 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:11.271 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:11.271 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:11.271 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:11.271 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:11.276 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:11.276 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:11.280 [main] PersonManagerImpl - Adult by address
+[INFO ] 2022-05-17 14:29:11.280 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-17 14:29:37.187 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 45536 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:29:37.187 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:29:37.187 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:29:39.499 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.759 seconds (JVM running for 5.059)
+[DEBUG] 2022-05-17 14:29:39.656 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:43:22.268 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 40936 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:43:22.268 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:43:22.268 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:43:24.368 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.604 seconds (JVM running for 4.814)
+[INFO ] 2022-05-17 14:44:38.621 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 44736 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:44:38.630 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:44:38.630 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:44:41.022 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.87 seconds (JVM running for 5.133)
+[INFO ] 2022-05-17 14:44:55.688 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 38324 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:44:55.691 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:44:55.691 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:44:57.848 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.728 seconds (JVM running for 4.877)
+[INFO ] 2022-05-17 14:45:40.438 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 44528 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:45:40.439 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:45:40.439 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:45:42.238 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.171 seconds (JVM running for 3.729)
+[INFO ] 2022-05-17 14:46:25.902 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 40864 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:46:25.907 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:46:25.908 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:46:28.358 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.926 seconds (JVM running for 5.032)
+[DEBUG] 2022-05-17 14:46:28.569 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:47:21.990 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 41572 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:47:21.993 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:47:21.993 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:47:24.418 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.871 seconds (JVM running for 5.277)
+[INFO ] 2022-05-17 14:47:59.912 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 41016 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:47:59.917 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:47:59.918 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:48:02.438 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 3.019 seconds (JVM running for 5.162)
+[DEBUG] 2022-05-17 14:48:02.669 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:48:15.643 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 44712 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:48:15.648 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:48:15.648 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:48:17.991 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.814 seconds (JVM running for 4.905)
+[DEBUG] 2022-05-17 14:48:18.152 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 14:48:29.857 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 45968 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:48:29.858 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:48:29.858 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:48:32.178 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 2.767 seconds (JVM running for 4.851)
+[INFO ] 2022-05-17 14:49:22.659 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 27116 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 14:49:22.659 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 14:49:22.659 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 14:49:25.170 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 3.082 seconds (JVM running for 5.211)
+[DEBUG] 2022-05-17 14:49:25.428 [main] PersonController - Add a new person
+[INFO ] 2022-05-17 15:17:20.207 [main] PersonControllerUnitTest - Starting PersonControllerUnitTest using Java 1.8.0_312 on LAPTOP-I81KFK32 with PID 43548 (started by elbar in C:\Users\elbar\git\SafetyNetAlerts)
+[DEBUG] 2022-05-17 15:17:20.207 [main] PersonControllerUnitTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-17 15:17:20.216 [main] PersonControllerUnitTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-17 15:17:23.139 [main] PersonControllerUnitTest - Started PersonControllerUnitTest in 3.511 seconds (JVM running for 5.985)
+[DEBUG] 2022-05-17 15:17:23.399 [main] PersonController - Add a new person
