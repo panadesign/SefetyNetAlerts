@@ -41,15 +41,10 @@ public class PersonController {
 	
 	
 	@PostMapping("/person")
-	public ResponseEntity<Person> addPerson(@RequestBody Person person) {
+	public ResponseEntity<Void> addPerson(@RequestBody Person person) {
 		log.debug("Add a new person");
-		Person personAdded = dataStorage.getPersons().get(0);
-		
-		URI location = ServletUriComponentsBuilder
-				.fromCurrentRequest()
-				.buildAndExpand(personAdded)
-				.toUri();
-		return ResponseEntity.created(location).build();
+		personManager.addPerson(person);
+		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/person")

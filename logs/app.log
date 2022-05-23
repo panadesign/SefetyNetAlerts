@@ -27955,3 +27955,67 @@
 [INFO ] 2022-05-20 11:16:01.429 [main] SafetyNetApplication - Started SafetyNetApplication in 3.618 seconds (JVM running for 4.856)
 [DEBUG] 2022-05-20 11:16:11.090 [http-nio-8080-exec-4] PersonController - Add a new person
 [INFO ] 2022-05-20 11:16:11.090 [http-nio-8080-exec-4] DataStorageImpl - Get all persons
+[INFO ] 2022-05-23 16:58:29.769 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 44369 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 16:58:29.772 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 16:58:29.772 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 16:58:32.165 [main] PersonControllerTest - Started PersonControllerTest in 2.78 seconds (JVM running for 4.706)
+[DEBUG] 2022-05-23 16:58:32.368 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 16:59:43.585 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 44468 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 16:59:43.588 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 16:59:43.589 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 16:59:45.936 [main] PersonControllerTest - Started PersonControllerTest in 2.815 seconds (JVM running for 4.708)
+[DEBUG] 2022-05-23 16:59:46.134 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 17:09:00.790 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 44701 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 17:09:00.795 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 17:09:00.796 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 17:09:03.294 [main] PersonControllerTest - Started PersonControllerTest in 2.897 seconds (JVM running for 4.813)
+[DEBUG] 2022-05-23 17:09:03.506 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 17:09:55.054 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 44801 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 17:09:55.057 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 17:09:55.058 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 17:09:57.415 [main] PersonControllerTest - Started PersonControllerTest in 2.764 seconds (JVM running for 4.703)
+[DEBUG] 2022-05-23 17:09:57.635 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 17:19:24.044 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 45026 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 17:19:24.049 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 17:19:24.053 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 17:19:26.817 [main] PersonControllerTest - Started PersonControllerTest in 3.437 seconds (JVM running for 6.58)
+[INFO ] 2022-05-23 17:23:05.607 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 45179 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 17:23:05.610 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 17:23:05.611 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 17:23:08.003 [main] PersonControllerTest - Started PersonControllerTest in 2.787 seconds (JVM running for 4.675)
+[DEBUG] 2022-05-23 17:23:08.216 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 17:23:54.508 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 45272 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 17:23:54.512 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 17:23:54.513 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 17:23:56.993 [main] PersonControllerTest - Started PersonControllerTest in 2.938 seconds (JVM running for 5.035)
+[DEBUG] 2022-05-23 17:23:57.215 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 17:27:45.106 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 45447 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 17:27:45.109 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 17:27:45.110 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 17:27:47.463 [main] PersonControllerTest - Started PersonControllerTest in 2.741 seconds (JVM running for 4.651)
+[DEBUG] 2022-05-23 17:27:47.685 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 17:37:14.559 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 45714 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 17:37:14.562 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 17:37:14.563 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 17:37:17.060 [main] PersonControllerTest - Started PersonControllerTest in 2.882 seconds (JVM running for 4.768)
+[DEBUG] 2022-05-23 17:37:17.250 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 18:00:00.212 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 46178 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 18:00:00.216 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 18:00:00.216 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 18:00:03.172 [main] PersonControllerTest - Started PersonControllerTest in 3.46 seconds (JVM running for 6.506)
+[DEBUG] 2022-05-23 18:00:03.466 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 18:00:23.523 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 46266 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 18:00:23.527 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 18:00:23.527 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 18:00:26.373 [main] PersonControllerTest - Started PersonControllerTest in 3.346 seconds (JVM running for 5.92)
+[DEBUG] 2022-05-23 18:00:35.404 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 18:01:45.245 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 46397 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 18:01:45.248 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 18:01:45.249 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 18:01:47.629 [main] PersonControllerTest - Started PersonControllerTest in 2.777 seconds (JVM running for 5.443)
+[DEBUG] 2022-05-23 18:01:47.816 [main] PersonController - Add a new person
+[INFO ] 2022-05-23 18:02:37.603 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 46496 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-23 18:02:37.606 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-23 18:02:37.607 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-23 18:02:40.029 [main] PersonControllerTest - Started PersonControllerTest in 2.846 seconds (JVM running for 4.869)
+[DEBUG] 2022-05-23 18:02:40.232 [main] PersonController - Add a new person
