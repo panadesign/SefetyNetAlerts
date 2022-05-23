@@ -8,7 +8,7 @@ import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManager;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 
@@ -23,9 +23,9 @@ import java.util.stream.Collectors;
 public class FirestationManagerImpl implements FirestationManager {
 
 	private final DataStorage dataStorage;
-	private final MedicalrecordsManager medicalrecordsManager;
+	private final MedicalRecordsManager medicalrecordsManager;
 
-	public FirestationManagerImpl(DataStorage dataStorage, MedicalrecordsManager medicalrecordsManager) {
+	public FirestationManagerImpl(DataStorage dataStorage, MedicalRecordsManager medicalrecordsManager) {
 		this.dataStorage = dataStorage;
 		this.medicalrecordsManager = medicalrecordsManager;
 	}
