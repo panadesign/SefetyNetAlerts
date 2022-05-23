@@ -1,12 +1,10 @@
 package com.openclassrooms.safetynet.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
-@EqualsAndHashCode
 public class Person {
 	
 	@Getter
@@ -21,27 +19,22 @@ public class Person {
 	
 	@Getter
 	@Setter
-	@EqualsAndHashCode.Exclude
 	private String address;
 	
 	@Getter
 	@Setter
-	@EqualsAndHashCode.Exclude
 	private String city;
 	
 	@Getter
 	@Setter
-	@EqualsAndHashCode.Exclude
 	private Integer zip;
 	
 	@Getter
 	@Setter
-	@EqualsAndHashCode.Exclude
 	private String phone;
 	
 	@Getter
 	@Setter
-	@EqualsAndHashCode.Exclude
 	private String email;
 
 	public Person() {
@@ -76,9 +69,6 @@ public class Person {
 	public Person(String phone) {
 		this.phone = phone;
 	}
-
-	public Person(Person person) {
-	}
 	
 	@JsonIgnore
 	public Id getId() {
@@ -95,5 +85,9 @@ public class Person {
 
 		return firstName.equals(person.getFirstName()) && lastName.equals(person.getLastName());
 	}
-
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
 }

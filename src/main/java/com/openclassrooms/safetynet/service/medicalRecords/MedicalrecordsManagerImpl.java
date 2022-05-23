@@ -20,9 +20,11 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 	public MedicalrecordsManagerImpl(DataStorage dataStorage) {
 		this.dataStorage = dataStorage;
 	}
-
+	
+	public MedicalrecordsManagerImpl() {
+	}
+	
 	public void addMedicalRecord(Medicalrecord medicalrecord) {
-
 		log.info("Add a medical record" + medicalrecord);
 
 		Optional<Medicalrecord> optionalMedicalrecord =
@@ -30,12 +32,14 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 						.getMedicalRecordById(medicalrecord.getId());
 
 		if(optionalMedicalrecord.isPresent()) {
+			log.error("Medical present cannot be created, existing already");
 			throw new RuntimeException("This medical record exist already");
 		}
 
 		dataStorage
 				.getMedicalrecords()
 				.add(medicalrecord);
+		log.info("Medicalrecord created");
 	}
 
 	public void updateMedicalRecord(Medicalrecord medicalRecord) {
@@ -51,8 +55,10 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 			dataStorage
 					.getMedicalrecords()
 					.set(indexOfMedicalRecord, medicalRecord);
+			log.info("Medicalrecord updated");
 
 		} else {
+			log.error("Cannot update, medicalrecord doesn't exist");
 			throw new RuntimeException("This medical record doesn't exist");
 		}
 	}
@@ -70,13 +76,16 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 			dataStorage
 					.getMedicalrecords()
 					.remove(indexOfMedicalRecord);
+			log.info("Medicalrecord deleted");
 
 		} else {
+			log.error("Cannot delete, medicalrecord doesn't exist");
 			throw new RuntimeException("This medical record doesn't exist");
 		}
 	}
 
 	public Optional<Medicalrecord> getMedicalRecordByPersonId(Id id) {
+		log.debug("get medicalrecord using person id");
 		return dataStorage
 				.getMedicalrecords()
 				.stream()

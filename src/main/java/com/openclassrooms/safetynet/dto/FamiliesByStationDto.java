@@ -54,5 +54,9 @@ public class FamiliesByStationDto {
 	public List<String> getAllergies() {
 		return allergies;
 	}
-
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
 }

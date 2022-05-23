@@ -7,15 +7,22 @@ import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
+import com.openclassrooms.safetynet.service.firestation.FirestationManagerImpl;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.exceptions.misusing.FriendlyReminderException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,16 +32,22 @@ import static org.junit.Assert.*;
 class FirestationIT {
 	
 	@Autowired
-	DataStorage dataStorage;
+	private DataStorage dataStorage;
 	
 	@Autowired
-	PersonManager personManager;
+	private FirestationManager firestationManager;
+	
 	@Autowired
-	FirestationManager firestationManager;
+	private MedicalrecordsManager medicalrecordsManager;
+	
+	@BeforeEach
+	void setUp() throws IOException {
+		dataStorage = new DataStorageImpl();
+		firestationManager = new FirestationManagerImpl(dataStorage, medicalrecordsManager);
+	}
 	
 	@Test
-	void shouldRetunrANewFirestation() {
-		
+	void shouldReturnANewFirestation() {
 		//GIVEN
 		Firestation newFirestation = new Firestation(9, "32 Rue Dupont");
 		
@@ -42,7 +55,7 @@ class FirestationIT {
 		firestationManager.addFirestation(newFirestation);
 		
 		//THEN
-		assertTrue(dataStorage
+		Assertions.assertTrue(dataStorage
 				.getFirestations()
 				.contains(newFirestation));
 		
@@ -60,7 +73,7 @@ class FirestationIT {
 		
 		firestationManager.updateFirestation(firestationToUpdate);
 		
-		assertTrue(dataStorage
+		Assertions.assertTrue(dataStorage
 				.getFirestations()
 				.stream()
 				.filter(f -> f.getStation() == 2)
@@ -69,7 +82,7 @@ class FirestationIT {
 	}
 	
 	@Test
-	void shouldReturnRuntileExceptionWhenTryingToUpdateNonExistentFirestation() {
+	void shouldReturnRuntimeExceptionWhenTryingToUpdateNonExistentFirestation() {
 		Firestation firestationToUpdate = new Firestation(2, "Address not existing");
 		assertThrows(RuntimeException.class, () -> firestationManager.updateFirestation(firestationToUpdate));
 	}
@@ -80,7 +93,7 @@ class FirestationIT {
 		
 		firestationManager.deleteFirestation(firestationToDelete);
 		
-		assertTrue(dataStorage
+		Assertions.assertTrue(dataStorage
 				.getFirestations()
 				.stream()
 				.filter(f -> f.getStation() == 4)
@@ -89,7 +102,7 @@ class FirestationIT {
 	}
 	
 	@Test
-	void shouldReturnRuntileExceptionWhenTryingToDeleteNonExistentFirestation() {
+	void shouldReturnRuntimeExceptionWhenTryingToDeleteNonExistentFirestation() {
 		Firestation firestationToDelete = new Firestation(1, "test");
 		assertThrows(RuntimeException.class, () -> firestationManager.deleteFirestation(firestationToDelete));
 	}
@@ -98,7 +111,7 @@ class FirestationIT {
 	void shouldReturnPhoneExpectedWhenFirestationNumberIs1() {
 		String phoneExpected = "841-874-7784";
 		
-		assertTrue(firestationManager.getPhoneByFirestationNumber(1)
+		Assertions.assertTrue(firestationManager.getPhoneByFirestationNumber(1)
 				.contains(phoneExpected));
 		
 	}
@@ -106,7 +119,6 @@ class FirestationIT {
 	@Test
 	void shouldReturn11PersonsUsingStation3() {
 		int station = 3;
-		PersonsByStationDto personExpected = new PersonsByStationDto(new Person("John", "Boyd"));
 		List<PersonsByStationDto> persons = firestationManager.getPersonsByStation(station);
 		Assertions.assertEquals(11, persons.size());
 		
@@ -140,7 +152,7 @@ class FirestationIT {
 				.collect(Collectors.toList());
 		
 		Assertions.assertEquals(1, personsByAddressDtos.size());
-		Assertions.assertEquals(personExpected, personsByAddressDtos.get(0));
+		Assertions.assertTrue(personsByAddressDtos.contains(personExpected));
 	}
 	
 	@Test

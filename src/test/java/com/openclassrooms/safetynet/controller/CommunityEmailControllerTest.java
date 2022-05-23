@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(controllers = CommunityEmailController.class)
-class CommunityEmailControllerUnitTest {
+class CommunityEmailControllerTest {
 
 	@Autowired
 	private MockMvc mockMvc;

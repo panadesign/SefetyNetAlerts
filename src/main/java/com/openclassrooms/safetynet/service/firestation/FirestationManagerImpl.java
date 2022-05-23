@@ -3,7 +3,7 @@ package com.openclassrooms.safetynet.service.firestation;
 import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
 import com.openclassrooms.safetynet.dto.PersonsByStationDto;
-import com.openclassrooms.safetynet.exception.BadRequestException;
+import com.openclassrooms.safetynet.exception.BadRequestExceptions;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
@@ -22,14 +22,14 @@ import java.util.stream.Collectors;
 @Log4j2
 public class FirestationManagerImpl implements FirestationManager {
 
-	private DataStorage dataStorage;
-	private MedicalrecordsManager medicalrecordsManager;
+	private final DataStorage dataStorage;
+	private final MedicalrecordsManager medicalrecordsManager;
 
 	public FirestationManagerImpl(DataStorage dataStorage, MedicalrecordsManager medicalrecordsManager) {
 		this.dataStorage = dataStorage;
 		this.medicalrecordsManager = medicalrecordsManager;
 	}
-
+	
 	public void addFirestation(Firestation firestation) {
 
 		log.debug("Add a firestation: " + firestation);
@@ -43,7 +43,7 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		if(optionalFirestation.isPresent()) {
 			log.error("Error creating a new firestation");
-			throw new BadRequestException("Firestation serve already this address");
+			throw new BadRequestExceptions("Firestation serve already this address");
 		}
 
 		dataStorage
@@ -72,7 +72,7 @@ public class FirestationManagerImpl implements FirestationManager {
 			log.info("Firestation has been updated");
 		} else {
 			log.error("Error updating a firestation");
-			throw new BadRequestException("Firestation who serve this address doesn't exist");
+			throw new BadRequestExceptions("Firestation who serve this address doesn't exist");
 		}
 
 	}
@@ -95,7 +95,7 @@ public class FirestationManagerImpl implements FirestationManager {
 			log.info("Firestation has benn removed");
 		} else {
 			log.error("Error deleting a firestation");
-			throw new BadRequestException("Firestation who serve this address doesn't exist");
+			throw new BadRequestExceptions("Firestation who serve this address doesn't exist");
 		}
 
 	}
@@ -151,6 +151,7 @@ public class FirestationManagerImpl implements FirestationManager {
 							.collect(Collectors.toList());
 
 			personsByAddressDto.addAll(aggregate);
+			log.info("All persons by address has been recovered");
 		}
 
 		return personsByAddressDto;
@@ -160,13 +161,16 @@ public class FirestationManagerImpl implements FirestationManager {
 
 		log.debug("Get persons by firestation number: " + stationNumber);
 
+		log.info("Get firestation address by station number");
 		List<String> firestationAddressByStationNumber =
 				dataStorage
 						.getFirestationsByNumber(stationNumber)
 						.stream()
 						.map(Firestation::getAddress)
 						.collect(Collectors.toList());
+		
 
+		log.info("Get all persons by address");
 		List<PersonsByStationDto> personsByStationDto =
 				dataStorage
 						.getPersons()
@@ -183,7 +187,7 @@ public class FirestationManagerImpl implements FirestationManager {
 	}
 
 	public NumberOfAdultsAndChildrenDto getNumbersOfChildrenAndAdultsByStation(int station) {
-
+		log.debug("Get numbers of adults and children by station");
 		int adultsNumber = 0;
 		int childrenNumber = 0;
 
@@ -198,7 +202,7 @@ public class FirestationManagerImpl implements FirestationManager {
 				} else childrenNumber++;
 			}
 		}
-
+		log.info("Return number of children and adults");
 		return new NumberOfAdultsAndChildrenDto(childrenNumber, adultsNumber);
 	}
 }

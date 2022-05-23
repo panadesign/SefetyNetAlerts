@@ -2,7 +2,10 @@ package com.openclassrooms.safetynet.service.integration;
 
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
+import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManagerImpl;
+import com.openclassrooms.safetynet.service.person.PersonManagerImpl;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +30,13 @@ class MedicalrecordsIT {
 	private MedicalrecordsManager medicalrecordsManager;
 
 	private Medicalrecord medicalrecord;
-
+	
+	@BeforeEach
+	void setUp() throws IOException {
+		dataStorage = new DataStorageImpl();
+		medicalrecordsManager = new MedicalrecordsManagerImpl(dataStorage);
+	}
+	
 	@Test
 	void addMedicalrecord() {
 

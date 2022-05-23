@@ -38,4 +38,9 @@ public class Firestation {
 
 		return station == (firestation.getStation()) && address.equals(firestation.getAddress());
 	}
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
 }

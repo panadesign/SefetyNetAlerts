@@ -75,11 +75,11 @@ public class Medicalrecord {
 	public LocalDate getBirthdate() {
 		return birthdate;
 	}
+	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
 	public void setBirthdate(String birthdate){
 		this.birthdate = parseStringToLocalDate(birthdate);
 	}
-	
 	
 	private LocalDate parseStringToLocalDate(String birthdate) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");

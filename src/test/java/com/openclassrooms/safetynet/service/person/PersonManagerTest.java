@@ -2,7 +2,7 @@ package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.dto.ChildListAndFamilyListDto;
 import com.openclassrooms.safetynet.dto.PersonByFirstNameAndLastNameDto;
-import com.openclassrooms.safetynet.exception.BadRequestException;
+import com.openclassrooms.safetynet.exception.BadRequestExceptions;
 import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
@@ -70,7 +70,7 @@ class PersonManagerTest {
 
 		//THEN
 		Person personToAdd = new Person("firstName", "lastName");
-		Assertions.assertThrows(BadRequestException.class, () -> personManager.addPerson(personToAdd));
+		Assertions.assertThrows(BadRequestExceptions.class, () -> personManager.addPerson(personToAdd));
 	}
 
 	@Test
@@ -117,7 +117,7 @@ class PersonManagerTest {
 
 		//THEN
 		Assertions.assertNotNull(datas.getPersons());
-		Assertions.assertThrows(BadRequestException.class, () -> personManager.updatePerson(personToUpdate));
+		Assertions.assertThrows(BadRequestExceptions.class, () -> personManager.updatePerson(personToUpdate));
 
 	}
 
@@ -157,7 +157,7 @@ class PersonManagerTest {
 
 		//THEN
 		Assertions.assertNotNull(datas.getPersons());
-		Assertions.assertThrows(BadRequestException.class, () -> personManager.deletePerson(personToDelete));
+		Assertions.assertThrows(BadRequestExceptions.class, () -> personManager.deletePerson(personToDelete));
 	}
 
 	@Test

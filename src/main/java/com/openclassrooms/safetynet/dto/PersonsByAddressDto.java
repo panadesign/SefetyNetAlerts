@@ -85,4 +85,8 @@ public class PersonsByAddressDto {
 		return firstName.equals(personsByAddressDto.getFirstName()) && lastName.equals(personsByAddressDto.getLastName());
 	}
 	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
 }

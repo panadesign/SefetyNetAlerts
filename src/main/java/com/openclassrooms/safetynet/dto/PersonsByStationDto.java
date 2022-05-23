@@ -58,4 +58,9 @@ public class PersonsByStationDto {
 		
 		return firstName.equals(personsByStationDto.getFirstName()) && lastName.equals(personsByStationDto.getLastName());
 	}
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
 }

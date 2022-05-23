@@ -1,12 +1,11 @@
 package com.openclassrooms.safetynet.service.person;
 
 import com.openclassrooms.safetynet.dto.*;
-import com.openclassrooms.safetynet.exception.BadRequestException;
+import com.openclassrooms.safetynet.exception.BadRequestExceptions;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -26,17 +25,19 @@ public class PersonManagerImpl implements PersonManager {
 		this.dataStorage = dataStorage;
 	}
 	
+	public PersonManagerImpl() {
+	}
+	
 	public void addPerson(Person person) {
 		
 		log.debug("Add a person: " + person.getLastName() + " " + person.getFirstName());
 		
 		Optional<Person> optionalPerson =
-				dataStorage
-						.getPersonById(person.getId());
+				dataStorage.getPersonById(person.getId());
 		
 		if (optionalPerson.isPresent()) {
 			log.error("Impossible to create this person, this person exist already");
-			throw new BadRequestException("This person exist already");
+			throw new BadRequestExceptions("This person exist already");
 		}
 		
 		dataStorage
@@ -54,7 +55,6 @@ public class PersonManagerImpl implements PersonManager {
 						.getPersonById(person.getId());
 		
 		if (optionalPerson.isPresent()) {
-			
 			int indexOfPerson = dataStorage.getPersons().indexOf(optionalPerson.get());
 			
 			dataStorage
@@ -64,14 +64,13 @@ public class PersonManagerImpl implements PersonManager {
 			
 		} else {
 			log.error("Impossible to update this person, this person doesn't exist");
-			throw new BadRequestException("This person doesn't exist");
+			throw new BadRequestExceptions("This person doesn't exist");
 			
 		}
 		
 	}
 	
 	public void deletePerson(Person person) {
-		
 		log.debug("Delete a person: " + person.getLastName() + " " + person.getFirstName());
 		
 		Optional<Person> optionalPerson =
@@ -88,7 +87,7 @@ public class PersonManagerImpl implements PersonManager {
 			
 		} else {
 			log.error("Impossible to delete this person, this person doesn't exist");
-			throw new BadRequestException("This person doesn't exist");
+			throw new BadRequestExceptions("This person doesn't exist");
 		}
 	}
 	
@@ -102,20 +101,17 @@ public class PersonManagerImpl implements PersonManager {
 				.collect(Collectors.toSet());
 	}
 	
-	
 	public List<PersonByFirstNameAndLastNameDto> getPersonsByFirstNameAndLastName(String firstName, String lastName) {
 		log.debug("Get all persons by address: " + firstName + " " + lastName);
 		
 		return dataStorage.getPersons()
 				.stream()
 				.filter(p -> lastName.equals(p.getLastName()))
-				.map(person -> {
-					return dataStorage.getMedicalrecords()
-							.stream()
-							.filter(medicalrecord -> medicalrecord.getId().equals(person.getId()))
-							.map(medicalrecord -> new PersonByFirstNameAndLastNameDto(person, medicalrecord))
-							.findFirst().orElse(null);
-				})
+				.map(person -> dataStorage.getMedicalrecords()
+						.stream()
+						.filter(medicalrecord -> medicalrecord.getId().equals(person.getId()))
+						.map(medicalrecord -> new PersonByFirstNameAndLastNameDto(person, medicalrecord))
+						.findFirst().orElse(null))
 				.collect(Collectors.toList());
 		
 	}
@@ -137,6 +133,7 @@ public class PersonManagerImpl implements PersonManager {
 							.map(Firestation::getAddress)
 							.collect(Collectors.toList());
 			allAddressesByStationNumber.addAll(getAllAddressesByStationNumber);
+			log.info("get all addresses by station number");
 		}
 		
 		for (String address : allAddressesByStationNumber) {
@@ -150,12 +147,13 @@ public class PersonManagerImpl implements PersonManager {
 												.stream()
 												.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
 												.findFirst()
-												.orElseThrow(() -> new BadRequestException(""));
+												.orElseThrow(() -> new BadRequestExceptions(""));
 										return new FamiliesByStationDto(person, m);
 									}
 							)
 							.collect(Collectors.toList());
 			allPersons.put(address, getAllPersonsWithThisAddress);
+			log.info("Get all persons by address");
 		}
 		
 		return allPersons;
@@ -183,7 +181,7 @@ public class PersonManagerImpl implements PersonManager {
 							.collect(Collectors.toList());
 			
 			getChild.addAll(getChildrenByAddress);
-			log.info("Child by address");
+			log.info("Get child by address");
 		}
 		
 		for (Medicalrecord medicalrecord : medicalrecords) {
@@ -199,7 +197,7 @@ public class PersonManagerImpl implements PersonManager {
 								.collect(Collectors.toList());
 				
 				getAdults.addAll(getAdultByAddress);
-				log.info("Adult by address");
+				log.info("Get adults by address");
 			}
 		}
 		

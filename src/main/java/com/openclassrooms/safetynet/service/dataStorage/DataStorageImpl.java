@@ -28,10 +28,12 @@ public class DataStorageImpl implements DataStorage {
 	}
 
 	public List<Person> getPersons() {
+		log.info("Get all persons");
 		return data.getPersons();
 	}
 
 	public Optional<Person> getPersonById(Id id) {
+		log.info("Get all persons by Id");
 		return getPersons()
 				.stream()
 				.filter(person -> person.getId().equals(id))
@@ -39,6 +41,7 @@ public class DataStorageImpl implements DataStorage {
 	}
 
 	public List<Person> getPersonsByAddress(String address) {
+		log.info("Get all persons by address");
 		return getPersons()
 				.stream()
 				.filter(person -> person.getAddress().equals(address))
@@ -46,6 +49,7 @@ public class DataStorageImpl implements DataStorage {
 	}
 	
 	public List<Person> getPersonsByStation(Integer station) {
+		log.info("Get all persons by station");
 		List<String> getFirestationsByStationNumber =
 				getFirestationsByNumber(station)
 						.stream()
@@ -59,10 +63,14 @@ public class DataStorageImpl implements DataStorage {
 	}
 	
 	public List<Firestation> getFirestations() {
+		
+		log.info("Get all firestations");
 		return data.getFirestations();
 	}
 	
 	public List<Firestation> getFirestationsByNumber(Integer station) {
+		log.info("Get all firestations by number");
+		
 		return getFirestations()
 				.stream()
 				.filter(firestation -> firestation.getStation() == station)
@@ -70,6 +78,8 @@ public class DataStorageImpl implements DataStorage {
 	}
 	
 	public List<Firestation> getFirestationsByAddress(String address) {
+		log.info("Get all firestationsby address");
+		
 		return getFirestations()
 				.stream()
 				.filter(firestation -> firestation.getAddress().equals(address))
@@ -77,10 +87,12 @@ public class DataStorageImpl implements DataStorage {
 	}
 	
 	public List<Medicalrecord> getMedicalrecords() {
+		log.info("Get all medicalrecords");
 		return data.getMedicalrecords();
 	}
 	
 	public Optional<Medicalrecord> getMedicalRecordById(Id id) {
+		log.info("Get all medicalrecords by Id");
 		return getMedicalrecords()
 				.stream()
 				.filter(medicalrecord -> medicalrecord.getId().equals(id))
