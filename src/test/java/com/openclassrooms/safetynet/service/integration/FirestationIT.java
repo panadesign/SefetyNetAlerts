@@ -10,15 +10,10 @@ import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.firestation.FirestationManagerImpl;
-import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
-import com.openclassrooms.safetynet.service.person.PersonManager;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.jupiter.api.AfterEach;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.exceptions.misusing.FriendlyReminderException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -38,7 +33,7 @@ class FirestationIT {
 	private FirestationManager firestationManager;
 	
 	@Autowired
-	private MedicalrecordsManager medicalrecordsManager;
+	private MedicalRecordsManager medicalrecordsManager;
 	
 	@BeforeEach
 	void setUp() throws IOException {
@@ -157,22 +152,12 @@ class FirestationIT {
 	
 	@Test
 	void shouldReturn3ChildrenForStation3() {
-		int numberOfChildren = 3;
+		int numberOfChildrenExpected = 3;
+		int numberOfAdultsExpected = 8;
+		int numberOfPersonsExpected = 11;
 		NumberOfAdultsAndChildrenDto numberOfAdultsAndChildrenDto = firestationManager.getNumbersOfChildrenAndAdultsByStation(3);
-		Assertions.assertEquals(numberOfChildren, numberOfAdultsAndChildrenDto.getNumberChildren());
-	}
-	
-	@Test
-	void shouldReturn8AdultsForStation3() {
-		int numberOfAdults = 8;
-		NumberOfAdultsAndChildrenDto numberOfAdultsAndChildrenDto = firestationManager.getNumbersOfChildrenAndAdultsByStation(3);
-		Assertions.assertEquals(numberOfAdults, numberOfAdultsAndChildrenDto.getNumberAdults());
-	}
-	
-	@Test
-	void shouldReturn11PersonsForStation3() {
-		int numberOfPersons = 11;
-		NumberOfAdultsAndChildrenDto numberOfAdultsAndChildrenDto = firestationManager.getNumbersOfChildrenAndAdultsByStation(3);
-		Assertions.assertEquals(numberOfPersons, numberOfAdultsAndChildrenDto.getNumberAdults()+numberOfAdultsAndChildrenDto.getNumberChildren());
+		Assertions.assertEquals(numberOfChildrenExpected, numberOfAdultsAndChildrenDto.getNumberChildren());
+		Assertions.assertEquals(numberOfAdultsExpected, numberOfAdultsAndChildrenDto.getNumberAdults());
+		Assertions.assertEquals(numberOfPersonsExpected, numberOfAdultsAndChildrenDto.getNumberAdults()+numberOfAdultsAndChildrenDto.getNumberChildren());
 	}
 }

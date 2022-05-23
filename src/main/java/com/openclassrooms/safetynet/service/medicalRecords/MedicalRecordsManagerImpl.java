@@ -11,17 +11,17 @@ import java.util.Optional;
 
 @Component
 @Log4j2
-public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
+public class MedicalRecordsManagerImpl implements MedicalRecordsManager {
 
 	@Autowired
 	private DataStorage dataStorage;
 
 	@Autowired
-	public MedicalrecordsManagerImpl(DataStorage dataStorage) {
+	public MedicalRecordsManagerImpl(DataStorage dataStorage) {
 		this.dataStorage = dataStorage;
 	}
 	
-	public MedicalrecordsManagerImpl() {
+	public MedicalRecordsManagerImpl() {
 	}
 	
 	public void addMedicalRecord(Medicalrecord medicalrecord) {
@@ -63,12 +63,12 @@ public class MedicalrecordsManagerImpl implements MedicalrecordsManager {
 		}
 	}
 
-	public void deleteMedicalRecord(Medicalrecord medicalRecord) {
-		log.info("Delete a medical record" + medicalRecord);
+	public void deleteMedicalRecord(String firstName, String lastName) {
+		log.info("Delete a medical record " + firstName + " " + lastName);
 
 		Optional<Medicalrecord> optionalMedicalRecord =
 				dataStorage
-						.getMedicalRecordById(medicalRecord.getId());
+						.getMedicalRecordById(new Id(firstName, lastName));
 
 		if(optionalMedicalRecord.isPresent()) {
 			int indexOfMedicalRecord = dataStorage.getMedicalrecords().indexOf(optionalMedicalRecord.get());

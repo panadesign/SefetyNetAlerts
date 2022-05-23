@@ -2,11 +2,10 @@ package com.openclassrooms.safetynet.service.medicalRecords;
 
 import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
-import org.springframework.expression.spel.ast.OpAnd;
 
 import java.util.Optional;
 
-public interface MedicalrecordsManager {
+public interface MedicalRecordsManager {
 	/**
 	 * Used to add a new medicalRecord(firstName and lastName must been non-existent)
 	 * @param medicalRecord is defined by a firstName and a lastName
@@ -21,14 +20,15 @@ public interface MedicalrecordsManager {
 	
 	/**
 	 * Method used to delete a medicalRecord(to find the medicalRecord to update, this method use firstName + lastName)
-	 * @param medicalRecord is defined by a firstName and a lastName
+	 * @param firstName is the firstName
+	 * @param lastName is the lastName
 	 */
-	void deleteMedicalRecord(Medicalrecord medicalRecord);
+	void deleteMedicalRecord(String firstName, String lastName);
 	
 	/**
-	 * Method used to get medicalrecord by person using his id
+	 * Method used to get medical record by person using his id
 	 * @param id is defined by firstName + lastName
-	 * @return a medicalrecord using id
+	 * @return a medical record using id
 	 */
 	Optional<Medicalrecord> getMedicalRecordByPersonId(Id id);
 }

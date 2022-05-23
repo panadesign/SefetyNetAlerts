@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.service.firestation;
 
+import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
 import com.openclassrooms.safetynet.dto.PersonsByStationDto;
 import com.openclassrooms.safetynet.exception.BadRequestExceptions;
@@ -8,7 +9,7 @@ import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
-import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManagerImpl;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManagerImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,15 +17,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.eq;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
 class FirestationManagerTest {
@@ -33,7 +32,7 @@ class FirestationManagerTest {
 	DataStorage mockDataStorage;
 	
 	@Mock
-	MedicalrecordsManagerImpl mockMedicalrecordsManager;
+	MedicalRecordsManagerImpl mockMedicalrecordsManager;
 
 	@InjectMocks
 	FirestationManagerImpl firestationManager;
@@ -228,28 +227,33 @@ class FirestationManagerTest {
 	
 	@Test
 	void getNumbersOfChildrenAndAdultsByStation() {
-		/*List<PersonsByStationDto> family = new ArrayList<>();
+		//GIVEN
+		String address = "address2";
 		
-		family.add(new PersonsByStationDto(new Person("Jona", "Charpentier", "address")));
-		family.add(new PersonsByStationDto(new Person("Leonie", "Charpentier", "addressTest", "123")));
-		family.add(new PersonsByStationDto(new Person("Jeremy", "Charpentier", "addressTest", "123")));
+		Data datas = new Data();
+		datas.getPersons().add(new Person("firstName1", "lastName1", address, "123"));
+		datas.getPersons().add(new Person("firstName2", "lastName2", address, "123"));
+		datas.getPersons().add(new Person("firstName3", "lastName3", address, "123"));
 		
-		List<Medicalrecord> medicalrecordsFamily = new ArrayList<>();
-		medicalrecordsFamily.add(new Medicalrecord("Jona", "Charpentier", "06/25/2018"));
-		medicalrecordsFamily.add(new Medicalrecord("Leonie", "Charpentier", "09/07/2021"));
-		medicalrecordsFamily.add(new Medicalrecord("Jeremy", "Charpentier", "01/05/1984"));
+		datas.getFirestations().add(new Firestation(1, "address2"));
 		
-		Firestation firestation = new Firestation(3, "addressTest");
+		datas.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/1987"));
+		datas.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/1997"));
+		datas.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/2017"));
 		
-		when(mockMedicalrecordsManager.getMedicalRecordByPersonId(family.get(0).getId())).thenReturn(Optional.of(new Medicalrecord("Jona", "Charpentier")));
-		when(mockMedicalrecordsManager.getMedicalRecordByPersonId(family.get(1).getId())).thenReturn(Optional.of(new Medicalrecord("Leonie", "Charpentier")));
-		when(mockMedicalrecordsManager.getMedicalRecordByPersonId(family.get(2).getId())).thenReturn(Optional.of(new Medicalrecord("Jeremy", "Charpentier")));
+		//WHEN
+		when(mockDataStorage.getFirestationsByNumber(1)).thenReturn(datas.getFirestations());
+		when(mockDataStorage.getPersons()).thenReturn(datas.getPersons());
 		
-		int numberOfChildren = firestationManager.getNumbersOfChildrenAndAdultsByStation(firestation.getStation()).getNumberChildren();
-		int numberOfAdults = firestationManager.getNumbersOfChildrenAndAdultsByStation(firestation.getStation()).getNumberAdults();
+		when(mockMedicalrecordsManager.getMedicalRecordByPersonId(datas.getMedicalrecords().get(0).getId())).thenReturn(Optional.of(datas.getMedicalrecords().get(0)));
+		when(mockMedicalrecordsManager.getMedicalRecordByPersonId(datas.getMedicalrecords().get(1).getId())).thenReturn(Optional.of(datas.getMedicalrecords().get(1)));
+		when(mockMedicalrecordsManager.getMedicalRecordByPersonId(datas.getMedicalrecords().get(2).getId())).thenReturn(Optional.of(datas.getMedicalrecords().get(2)));
 		
-		Assertions.assertEquals(2, numberOfChildren);
-		Assertions.assertEquals(1, numberOfAdults);
-		*/
+		NumberOfAdultsAndChildrenDto response = firestationManager.getNumbersOfChildrenAndAdultsByStation(1);
+		
+		//THEN
+		Assertions.assertEquals(2, response.getNumberAdults());
+		Assertions.assertEquals(1, response.getNumberChildren());
+		
 	}
 }

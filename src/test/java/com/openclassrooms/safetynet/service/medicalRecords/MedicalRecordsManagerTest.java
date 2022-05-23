@@ -18,16 +18,16 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-class MedicalrecordsManagerTest {
+class MedicalRecordsManagerTest {
 
-	MedicalrecordsManager medicalrecordsManager;
+	MedicalRecordsManager medicalrecordsManager;
 
 	@Mock
 	DataStorage mockDataStorage;
 
 	@BeforeEach
 	public void Init() {
-		medicalrecordsManager = new MedicalrecordsManagerImpl(mockDataStorage);
+		medicalrecordsManager = new MedicalRecordsManagerImpl(mockDataStorage);
 	}
 
 	@Test
@@ -144,7 +144,7 @@ class MedicalrecordsManagerTest {
 
 		//THEN
 		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest", "lastNameTest");
-		medicalrecordsManager.deleteMedicalRecord(medicalrecordToDelete);
+		medicalrecordsManager.deleteMedicalRecord("firstNametest", "lastNameTest");
 
 		Assertions.assertNotNull(datas.getMedicalrecords());
 		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
@@ -164,7 +164,7 @@ class MedicalrecordsManagerTest {
 		//THEN
 		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest1", "lastNameTest1");
 
-		Assertions.assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord(medicalrecordToDelete));
+		Assertions.assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord("firstNametest1", "lastNameTest1"));
 
 	}
 

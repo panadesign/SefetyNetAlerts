@@ -3,15 +3,11 @@ package com.openclassrooms.safetynet.service.integration;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
-import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManager;
-import com.openclassrooms.safetynet.service.medicalRecords.MedicalrecordsManagerImpl;
-import com.openclassrooms.safetynet.service.person.PersonManagerImpl;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManager;
+import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManagerImpl;
 import org.junit.jupiter.api.*;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,14 +23,14 @@ class MedicalrecordsIT {
 	private DataStorage dataStorage;
 
 	@Autowired
-	private MedicalrecordsManager medicalrecordsManager;
+	private MedicalRecordsManager medicalrecordsManager;
 
 	private Medicalrecord medicalrecord;
 	
 	@BeforeEach
 	void setUp() throws IOException {
 		dataStorage = new DataStorageImpl();
-		medicalrecordsManager = new MedicalrecordsManagerImpl(dataStorage);
+		medicalrecordsManager = new MedicalRecordsManagerImpl(dataStorage);
 	}
 	
 	@Test
@@ -83,7 +79,7 @@ class MedicalrecordsIT {
 	void deleteMedicalrecord() {
 		medicalrecord = new Medicalrecord("Jacob", "Boyd", "01/05/1984");
 
-		medicalrecordsManager.deleteMedicalRecord(medicalrecord);
+		medicalrecordsManager.deleteMedicalRecord("Jacob", "Boyd");
 
 		assertTrue(dataStorage
 				.getMedicalrecords()
@@ -94,7 +90,7 @@ class MedicalrecordsIT {
 	@Test
 	void deleteMedicalrecordException() {
 		medicalrecord = new Medicalrecord("Test", "Test");
-		assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord(medicalrecord));
+		assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord("Test", "Test"));
 	}
 	
 
