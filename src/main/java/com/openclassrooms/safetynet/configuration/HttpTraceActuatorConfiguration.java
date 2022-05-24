@@ -1,4 +1,4 @@
-package com.openclassrooms.safetynet.actuator;
+package com.openclassrooms.safetynet.configuration;
 
 import org.springframework.boot.actuate.trace.http.HttpTraceRepository;
 import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
