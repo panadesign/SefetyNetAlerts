@@ -2,8 +2,8 @@ package com.openclassrooms.safetynet.model;
 
 public class Id {
 	
-	private String firstName;
-	private String lastName;
+	private final String firstName;
+	private final String lastName;
 	
 	public Id(String firstName, String lastName) {
 		this.firstName = firstName;

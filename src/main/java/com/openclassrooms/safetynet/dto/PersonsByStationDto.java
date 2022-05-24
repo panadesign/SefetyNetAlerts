@@ -7,11 +7,11 @@ import com.openclassrooms.safetynet.model.Person;
 
 public class PersonsByStationDto {
 
-	private String firstName;
-	private String lastName;
-	private String address;
-	private String phone;
-	private Id id;
+	private final String firstName;
+	private final String lastName;
+	private final String address;
+	private final String phone;
+	private final Id id;
 
 	public PersonsByStationDto(Person person) {
 

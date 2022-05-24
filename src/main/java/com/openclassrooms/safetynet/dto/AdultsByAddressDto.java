@@ -7,14 +7,14 @@ import com.openclassrooms.safetynet.model.Person;
 
 public class AdultsByAddressDto {
 	
-	private String firstName;
-	private String lastName;
-	private String address;
-	private String city;
-	private Integer zip;
-	private String phone;
-	private String email;
-	private Integer age;
+	private final String firstName;
+	private final String lastName;
+	private final String address;
+	private final String city;
+	private final Integer zip;
+	private final String phone;
+	private final String email;
+	private final Integer age;
 	
 	public AdultsByAddressDto(Person person, Medicalrecord medicalrecord) {
 		this.firstName = person.getFirstName();

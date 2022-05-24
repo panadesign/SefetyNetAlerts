@@ -8,9 +8,9 @@ import java.util.List;
 
 public class PersonByFirstNameAndLastNameDto {
 	
-	private String firstName;
-	private String lastName;
-	private String email;
+	private final String firstName;
+	private final String lastName;
+	private final String email;
 	private Integer age;
 	private List<String> medications;
 	private List<String> allergies;

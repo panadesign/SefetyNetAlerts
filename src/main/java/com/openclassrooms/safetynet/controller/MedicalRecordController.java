@@ -19,20 +19,20 @@ public class MedicalRecordController {
 	public ResponseEntity<Void> addMedicalRecord(@RequestBody Medicalrecord medicalRecord) {
 		log.debug("Add a medical record");
 		medicalRecordsManager.addMedicalRecord(medicalRecord);
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/medicalRecord")
 	public ResponseEntity<Void> updateMedicalRecord(@RequestBody Medicalrecord medicalRecord) {
 		log.debug("Update a medical record");
 		medicalRecordsManager.updateMedicalRecord(medicalRecord);
-		return new ResponseEntity<Void>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/medicalRecord")
 	public ResponseEntity<Void> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName) {
 		log.debug("Delete a medical record");
 		medicalRecordsManager.deleteMedicalRecord(firstName, lastName);
-		return new ResponseEntity<Void>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 }

@@ -30672,3 +30672,1232 @@
 [INFO ] 2022-05-23 21:24:37.880 [main] PersonManagerImpl - Get adults by address
 [INFO ] 2022-05-23 21:24:37.880 [main] PersonManagerImpl - Get adults by address
 [INFO ] 2022-05-23 21:24:37.880 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-24 09:52:45.919 [main] FirestationControllerTest - Starting FirestationControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 9083 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 09:52:45.923 [main] FirestationControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 09:52:45.924 [main] FirestationControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 09:52:48.446 [main] FirestationControllerTest - Started FirestationControllerTest in 2.971 seconds (JVM running for 5.503)
+[INFO ] 2022-05-24 09:52:48.793 [main] AlertControllerTest - Starting AlertControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 9083 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 09:52:48.795 [main] AlertControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 09:52:48.796 [main] AlertControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 09:52:49.708 [main] AlertControllerTest - Started AlertControllerTest in 0.981 seconds (JVM running for 6.766)
+[INFO ] 2022-05-24 09:52:49.871 [main] PersonIT - Starting PersonIT using Java 1.8.0_312 on jeremy-System-Product-Name with PID 9083 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 09:52:49.871 [main] PersonIT - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 09:52:49.872 [main] PersonIT - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 09:52:50.606 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[INFO ] 2022-05-24 09:52:52.081 [main] PersonIT - Started PersonIT in 2.247 seconds (JVM running for 9.138)
+[INFO ] 2022-05-24 09:52:52.093 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.102 [main] PersonManagerImpl - Add a person: Test test
+[INFO ] 2022-05-24 09:52:52.103 [main] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 09:52:52.103 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.103 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.103 [main] PersonManagerImpl - person has been added
+[INFO ] 2022-05-24 09:52:52.104 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.111 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.120 [main] PersonManagerImpl - Add a person: Boyd John
+[INFO ] 2022-05-24 09:52:52.121 [main] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 09:52:52.121 [main] DataStorageImpl - Get all persons
+[ERROR] 2022-05-24 09:52:52.121 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[INFO ] 2022-05-24 09:52:52.125 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[INFO ] 2022-05-24 09:52:52.132 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.137 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.144 [main] PersonManagerImpl - Get children by address: 1509 Culver St
+[INFO ] 2022-05-24 09:52:52.144 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.144 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.151 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.151 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.151 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.151 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.152 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.152 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.152 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.152 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.153 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.153 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.153 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.153 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.153 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.153 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.153 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.153 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.153 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.154 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.154 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.154 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.154 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.154 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.154 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.154 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.154 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.154 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.154 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.155 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.155 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.155 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.155 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.155 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.155 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.155 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.155 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.155 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.156 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.156 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.156 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.156 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.156 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.156 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.156 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.156 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.156 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.156 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.158 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.158 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.158 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.158 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.158 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.158 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.158 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.159 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.159 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.159 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.159 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.159 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.159 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.159 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.159 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.159 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.160 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.160 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.160 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.160 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.160 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.160 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.160 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.160 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.160 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.161 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.161 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.161 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.161 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.161 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.161 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.161 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.161 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.161 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.161 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.162 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.162 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.162 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.162 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.162 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.162 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.162 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.162 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.162 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.163 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.163 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-24 09:52:52.167 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.174 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[INFO ] 2022-05-24 09:52:52.174 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.175 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.176 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.176 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.176 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.176 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.176 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.180 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.187 [main] PersonManagerImpl - Update a person: Boyd Jacob
+[INFO ] 2022-05-24 09:52:52.187 [main] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 09:52:52.187 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.187 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.187 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.187 [main] PersonManagerImpl - person has been updated
+[INFO ] 2022-05-24 09:52:52.187 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.192 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.199 [main] PersonManagerImpl - Delete a person: Boyd Jeremy
+[INFO ] 2022-05-24 09:52:52.199 [main] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 09:52:52.199 [main] DataStorageImpl - Get all persons
+[ERROR] 2022-05-24 09:52:52.199 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[INFO ] 2022-05-24 09:52:52.204 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.210 [main] PersonManagerImpl - Get all mails in: 
+[INFO ] 2022-05-24 09:52:52.210 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.215 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.221 [main] PersonManagerImpl - Add a person: 1 1
+[INFO ] 2022-05-24 09:52:52.221 [main] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 09:52:52.221 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.222 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.222 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-24 09:52:52.222 [main] PersonManagerImpl - Delete a person: 1 1
+[INFO ] 2022-05-24 09:52:52.222 [main] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 09:52:52.222 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.222 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.222 [main] PersonManagerImpl - person has been removed
+[INFO ] 2022-05-24 09:52:52.222 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.227 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.233 [main] PersonManagerImpl - Get children by address: 1509 Culver St
+[INFO ] 2022-05-24 09:52:52.233 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.233 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.233 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.233 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.234 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.234 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.234 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.234 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.234 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.234 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.234 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.234 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.234 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.235 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.235 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.235 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.235 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.235 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.235 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.235 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.235 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.235 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.236 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.236 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.236 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.236 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.236 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.236 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.236 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.236 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.236 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.236 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.237 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.237 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.237 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.237 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.237 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.237 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.237 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.237 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.237 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.237 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.238 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.238 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.238 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.238 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.238 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.238 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.238 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.238 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.238 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.238 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.239 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.239 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.239 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.239 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.239 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.239 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.239 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.239 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.240 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.240 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.240 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.240 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.240 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.240 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.240 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.240 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.240 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.240 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.241 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.241 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.241 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.241 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.241 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.241 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.241 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.241 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.241 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.242 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.242 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.242 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.242 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.242 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.242 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.242 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.242 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.242 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.242 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.243 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.243 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.243 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.243 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.243 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-24 09:52:52.247 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.253 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[INFO ] 2022-05-24 09:52:52.254 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.254 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:52.254 [main] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 09:52:52.255 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:52.255 [main] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 09:52:52.255 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.256 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.256 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.256 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.256 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.257 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.257 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.257 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.257 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.257 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.257 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.257 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.258 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.258 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.258 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.258 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.263 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.268 [main] PersonManagerImpl - Get all mails in: Culver
+[INFO ] 2022-05-24 09:52:52.269 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.273 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.291 [main] PersonManagerImpl - Update a person: Boyd Jeremy
+[INFO ] 2022-05-24 09:52:52.291 [main] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 09:52:52.291 [main] DataStorageImpl - Get all persons
+[ERROR] 2022-05-24 09:52:52.291 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[INFO ] 2022-05-24 09:52:52.296 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:52.311 [main] PersonManagerImpl - Get children by address: 1509 Culver St
+[INFO ] 2022-05-24 09:52:52.311 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:52.311 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.312 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.312 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.312 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.312 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.312 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.312 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.312 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.312 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.313 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.313 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.313 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.315 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.315 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.315 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.315 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.315 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.316 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.316 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.316 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.316 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.316 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.317 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.317 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.317 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.317 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.317 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.318 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.318 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.318 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.318 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.318 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.318 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.318 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.319 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.319 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.319 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.319 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.319 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.319 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.319 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.319 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.319 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.319 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.319 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.319 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.320 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.320 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.320 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.320 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.320 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.320 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.320 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.320 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.320 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.320 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.321 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.321 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.321 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.321 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.321 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.321 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.321 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.321 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.321 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.321 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.321 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.321 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.321 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.322 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.322 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.322 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.322 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.322 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.322 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.322 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.322 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.322 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.322 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.322 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.323 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.323 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.323 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.323 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.323 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.323 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.323 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.323 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.323 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.323 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.323 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:52.323 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.323 [main] PersonManagerImpl - List of child by address and adult by address
+[DEBUG] 2022-05-24 09:52:52.398 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-24 09:52:52.400 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-24 09:52:52.410 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-24 09:52:52.418 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-24 09:52:52.419 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-24 09:52:52.425 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-24 09:52:52.434 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 09:52:52.435 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-24 09:52:52.438 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 09:52:52.438 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-24 09:52:52.455 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[INFO ] 2022-05-24 09:52:52.456 [main] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 09:52:52.456 [main] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 09:52:52.458 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.459 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.460 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.461 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:52.461 [main] PersonManagerImpl - Get all persons by address
+[DEBUG] 2022-05-24 09:52:52.466 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-24 09:52:52.467 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-24 09:52:52.476 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-24 09:52:52.477 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-24 09:52:52.488 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 09:52:52.488 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-24 09:52:52.495 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-24 09:52:52.495 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.497 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.497 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.497 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.498 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.498 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.498 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.498 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 09:52:52.499 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.500 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.500 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.500 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.500 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.501 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.503 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.503 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 09:52:52.503 [main] PersonManagerImpl - List of child by address and adult by address
+[INFO ] 2022-05-24 09:52:52.525 [main] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@11574592
+[INFO ] 2022-05-24 09:52:52.525 [main] MedicalRecordsManagerImpl - Medicalrecord created
+[INFO ] 2022-05-24 09:52:52.532 [main] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@2e929182
+[ERROR] 2022-05-24 09:52:52.532 [main] MedicalRecordsManagerImpl - Medical present cannot be created, existing already
+[DEBUG] 2022-05-24 09:52:52.538 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[DEBUG] 2022-05-24 09:52:52.542 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:52.550 [main] MedicalRecordsManagerImpl - Delete a medical record firstNametest1 lastNameTest1
+[ERROR] 2022-05-24 09:52:52.551 [main] MedicalRecordsManagerImpl - Cannot delete, medicalrecord doesn't exist
+[INFO ] 2022-05-24 09:52:52.564 [main] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@39374689
+[INFO ] 2022-05-24 09:52:52.564 [main] MedicalRecordsManagerImpl - Medicalrecord updated
+[INFO ] 2022-05-24 09:52:52.577 [main] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@a95cb11
+[ERROR] 2022-05-24 09:52:52.577 [main] MedicalRecordsManagerImpl - Cannot update, medicalrecord doesn't exist
+[INFO ] 2022-05-24 09:52:52.585 [main] MedicalRecordsManagerImpl - Delete a medical record firstNametest lastNameTest
+[INFO ] 2022-05-24 09:52:52.592 [main] MedicalRecordsManagerImpl - Medicalrecord deleted
+[INFO ] 2022-05-24 09:52:52.647 [main] MedicalRecordControllerTest - Starting MedicalRecordControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 9083 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 09:52:52.647 [main] MedicalRecordControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 09:52:52.648 [main] MedicalRecordControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 09:52:53.240 [main] MedicalRecordControllerTest - Started MedicalRecordControllerTest in 0.626 seconds (JVM running for 10.297)
+[DEBUG] 2022-05-24 09:52:53.253 [main] MedicalRecordController - Update a medical record
+[DEBUG] 2022-05-24 09:52:53.263 [main] MedicalRecordController - Add a medical record
+[DEBUG] 2022-05-24 09:52:53.271 [main] MedicalRecordController - Delete a medical record
+[INFO ] 2022-05-24 09:52:53.316 [main] CommunityEmailControllerTest - Starting CommunityEmailControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 9083 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 09:52:53.317 [main] CommunityEmailControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 09:52:53.317 [main] CommunityEmailControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 09:52:53.925 [main] CommunityEmailControllerTest - Started CommunityEmailControllerTest in 0.635 seconds (JVM running for 10.982)
+[INFO ] 2022-05-24 09:52:53.964 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 9083 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 09:52:53.965 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 09:52:53.965 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 09:52:54.504 [main] PersonControllerTest - Started PersonControllerTest in 0.559 seconds (JVM running for 11.561)
+[DEBUG] 2022-05-24 09:52:54.512 [main] PersonController - Update a person
+[DEBUG] 2022-05-24 09:52:54.521 [main] PersonController - Get persons by firstname and lastname
+[DEBUG] 2022-05-24 09:52:54.533 [main] PersonController - Delete a person
+[DEBUG] 2022-05-24 09:52:54.540 [main] PersonController - Add a new person
+[INFO ] 2022-05-24 09:52:54.574 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[INFO ] 2022-05-24 09:52:54.588 [main] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@78f5cbc5
+[INFO ] 2022-05-24 09:52:54.588 [main] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 09:52:54.588 [main] DataStorageImpl - Get all medicalrecords
+[ERROR] 2022-05-24 09:52:54.589 [main] MedicalRecordsManagerImpl - Cannot update, medicalrecord doesn't exist
+[INFO ] 2022-05-24 09:52:54.593 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[INFO ] 2022-05-24 09:52:54.597 [main] MedicalRecordsManagerImpl - Delete a medical record Jacob Boyd
+[INFO ] 2022-05-24 09:52:54.598 [main] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 09:52:54.598 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.598 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.598 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.598 [main] MedicalRecordsManagerImpl - Medicalrecord deleted
+[INFO ] 2022-05-24 09:52:54.598 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.602 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[INFO ] 2022-05-24 09:52:54.607 [main] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1d622556
+[INFO ] 2022-05-24 09:52:54.607 [main] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 09:52:54.607 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.607 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.607 [main] MedicalRecordsManagerImpl - Medicalrecord created
+[INFO ] 2022-05-24 09:52:54.607 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.612 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[INFO ] 2022-05-24 09:52:54.616 [main] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4b9f7edc
+[INFO ] 2022-05-24 09:52:54.616 [main] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 09:52:54.616 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.616 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.616 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.616 [main] MedicalRecordsManagerImpl - Medicalrecord updated
+[INFO ] 2022-05-24 09:52:54.616 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.621 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[INFO ] 2022-05-24 09:52:54.625 [main] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@22c29aa8
+[INFO ] 2022-05-24 09:52:54.625 [main] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 09:52:54.625 [main] DataStorageImpl - Get all medicalrecords
+[ERROR] 2022-05-24 09:52:54.625 [main] MedicalRecordsManagerImpl - Medical present cannot be created, existing already
+[INFO ] 2022-05-24 09:52:54.636 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[INFO ] 2022-05-24 09:52:54.641 [main] MedicalRecordsManagerImpl - Delete a medical record Test Test
+[INFO ] 2022-05-24 09:52:54.641 [main] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 09:52:54.641 [main] DataStorageImpl - Get all medicalrecords
+[ERROR] 2022-05-24 09:52:54.641 [main] MedicalRecordsManagerImpl - Cannot delete, medicalrecord doesn't exist
+[INFO ] 2022-05-24 09:52:54.665 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.679 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-24 09:52:54.680 [main] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 09:52:54.680 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.680 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[INFO ] 2022-05-24 09:52:54.680 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:54.685 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.700 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@10d4b573
+[INFO ] 2022-05-24 09:52:54.700 [main] DataStorageImpl - Get all firestations
+[ERROR] 2022-05-24 09:52:54.700 [main] FirestationManagerImpl - Error creating a new firestation
+[INFO ] 2022-05-24 09:52:54.704 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.711 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@1e258d3b
+[INFO ] 2022-05-24 09:52:54.719 [main] DataStorageImpl - Get all firestations
+[ERROR] 2022-05-24 09:52:54.720 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-24 09:52:54.730 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.734 [main] FirestationManagerImpl - Get persons by firestation number: 3
+[INFO ] 2022-05-24 09:52:54.734 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 09:52:54.734 [main] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 09:52:54.734 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.734 [main] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:54.734 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:54.740 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.744 [main] FirestationManagerImpl - Get persons by address1509 Culver St
+[INFO ] 2022-05-24 09:52:54.744 [main] DataStorageImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:54.744 [main] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 09:52:54.745 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.745 [main] DataStorageImpl - Get all firestationsby address
+[INFO ] 2022-05-24 09:52:54.745 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.746 [main] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 09:52:54.746 [main] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 09:52:54.746 [main] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 09:52:54.746 [main] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 09:52:54.746 [main] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 09:52:54.751 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.754 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@42a05533
+[INFO ] 2022-05-24 09:52:54.755 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.755 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.755 [main] FirestationManagerImpl - Firestation has benn created
+[INFO ] 2022-05-24 09:52:54.755 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.760 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.764 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@17053b5
+[INFO ] 2022-05-24 09:52:54.764 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.764 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.764 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.764 [main] FirestationManagerImpl - Firestation has been updated
+[INFO ] 2022-05-24 09:52:54.764 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.769 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.773 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@18cbc3c2
+[INFO ] 2022-05-24 09:52:54.773 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.774 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.774 [main] FirestationManagerImpl - Firestation has benn removed
+[INFO ] 2022-05-24 09:52:54.774 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.779 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.783 [main] FirestationManagerImpl - Get numbers of adults and children by station
+[DEBUG] 2022-05-24 09:52:54.783 [main] FirestationManagerImpl - Get persons by firestation number: 3
+[INFO ] 2022-05-24 09:52:54.783 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 09:52:54.783 [main] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 09:52:54.783 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.783 [main] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:54.783 [main] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 09:52:54.783 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.783 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.783 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.783 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.783 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.783 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.783 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.783 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.783 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.784 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.784 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.784 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.784 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.784 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.784 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.784 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.784 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.784 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.784 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.784 [main] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 09:52:54.784 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 09:52:54.784 [main] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 09:52:54.784 [main] FirestationManagerImpl - Return number of children and adults
+[INFO ] 2022-05-24 09:52:54.789 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.794 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@75e4fe3c
+[INFO ] 2022-05-24 09:52:54.794 [main] DataStorageImpl - Get all firestations
+[ERROR] 2022-05-24 09:52:54.794 [main] FirestationManagerImpl - Error deleting a firestation
+[INFO ] 2022-05-24 09:52:54.799 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/test-classes/data.json
+[DEBUG] 2022-05-24 09:52:54.802 [main] FirestationManagerImpl - Get persons by firestation number: 3
+[INFO ] 2022-05-24 09:52:54.802 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 09:52:54.802 [main] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 09:52:54.802 [main] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 09:52:54.802 [main] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:54.802 [main] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 09:52:54.874 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-24 09:52:54.875 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-24 09:52:54.883 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 09:52:54.883 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 09:52:54.883 [main] FirestationManagerImpl - Get all persons by address
+[DEBUG] 2022-05-24 09:52:54.897 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@76dc36e5
+[INFO ] 2022-05-24 09:52:54.897 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-24 09:52:54.904 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@1fb71788
+[INFO ] 2022-05-24 09:52:54.904 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-24 09:52:54.917 [main] FirestationManagerImpl - Get persons by addressaddress2
+[INFO ] 2022-05-24 09:52:54.918 [main] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 09:52:54.918 [main] FirestationManagerImpl - All persons by address has been recovered
+[DEBUG] 2022-05-24 09:52:54.924 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@4f676900
+[ERROR] 2022-05-24 09:52:54.924 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-24 09:52:54.936 [main] FirestationManagerImpl - Get numbers of adults and children by station
+[DEBUG] 2022-05-24 09:52:54.936 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 09:52:54.936 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 09:52:54.936 [main] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 09:52:54.937 [main] FirestationManagerImpl - Return number of children and adults
+[DEBUG] 2022-05-24 09:52:54.942 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@c4551c6
+[ERROR] 2022-05-24 09:52:54.942 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-24 09:52:54.945 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@56c6d515
+[INFO ] 2022-05-24 09:52:54.946 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-24 09:52:54.950 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@5c41b8d8
+[ERROR] 2022-05-24 09:52:54.950 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-24 10:06:45.002 [main] SafetyNetApplication - Starting SafetyNetApplication using Java 1.8.0_312 on jeremy-System-Product-Name with PID 9628 (/home/jeremy/git/SafetyNetAlerts/target/classes started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:06:45.024 [main] SafetyNetApplication - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:06:45.026 [main] SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:06:46.674 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/classes/data.json
+[INFO ] 2022-05-24 10:06:47.855 [main] SafetyNetApplication - Started SafetyNetApplication in 3.325 seconds (JVM running for 4.211)
+[DEBUG] 2022-05-24 10:30:32.025 [http-nio-8080-exec-5] PersonManagerImpl - Get all mails in: paris
+[INFO ] 2022-05-24 10:30:32.026 [http-nio-8080-exec-5] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:30:39.842 [http-nio-8080-exec-3] PersonManagerImpl - Get all mails in: Culver
+[INFO ] 2022-05-24 10:30:39.842 [http-nio-8080-exec-3] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:30:57.199 [http-nio-8080-exec-7] PersonManagerImpl - Get children by address: 1509 Culver St
+[INFO ] 2022-05-24 10:30:57.199 [http-nio-8080-exec-7] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:30:57.199 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.208 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.208 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.208 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.208 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.208 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.209 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.209 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.209 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.209 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.209 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.210 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.210 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.210 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.210 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.210 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.210 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.210 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.210 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.211 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.211 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.211 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.211 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.211 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.211 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.211 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.212 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.212 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.212 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.212 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.212 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.212 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.212 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.212 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.213 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.213 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.213 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.213 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.213 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.213 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.213 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.213 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.214 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.214 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.214 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.214 [http-nio-8080-exec-7] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:30:57.214 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.215 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.216 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.216 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.216 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.216 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.216 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.216 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.216 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.217 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.217 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.217 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.217 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.217 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.217 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.217 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.217 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.218 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.218 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.218 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.218 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.218 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.218 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.218 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.218 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.219 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.219 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.219 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.219 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.219 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.219 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.219 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.219 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.220 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.221 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.221 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:30:57.221 [http-nio-8080-exec-7] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:30:57.221 [http-nio-8080-exec-7] PersonManagerImpl - List of child by address and adult by address
+[DEBUG] 2022-05-24 10:31:17.691 [http-nio-8080-exec-8] PersonManagerImpl - Get children by address: 1509 Culver 
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.692 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.693 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.694 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.695 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.696 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:17.696 [http-nio-8080-exec-8] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:31:17.696 [http-nio-8080-exec-8] PersonManagerImpl - List of child by address and adult by address
+[DEBUG] 2022-05-24 10:31:30.238 [http-nio-8080-exec-9] FirestationManagerImpl - Get persons by address1509 Culver St
+[INFO ] 2022-05-24 10:31:30.238 [http-nio-8080-exec-9] DataStorageImpl - Get all persons by address
+[INFO ] 2022-05-24 10:31:30.238 [http-nio-8080-exec-9] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:30.239 [http-nio-8080-exec-9] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:31:30.239 [http-nio-8080-exec-9] DataStorageImpl - Get all firestationsby address
+[INFO ] 2022-05-24 10:31:30.239 [http-nio-8080-exec-9] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:31:30.240 [http-nio-8080-exec-9] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 10:31:30.240 [http-nio-8080-exec-9] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 10:31:30.240 [http-nio-8080-exec-9] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 10:31:30.240 [http-nio-8080-exec-9] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 10:31:30.240 [http-nio-8080-exec-9] FirestationManagerImpl - All persons by address has been recovered
+[DEBUG] 2022-05-24 10:31:45.609 [http-nio-8080-exec-1] PersonManagerImpl - Get all persons by address: [1]
+[INFO ] 2022-05-24 10:31:45.609 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:31:45.609 [http-nio-8080-exec-1] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:31:45.610 [http-nio-8080-exec-1] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 10:31:45.610 [http-nio-8080-exec-1] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:45.612 [http-nio-8080-exec-1] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:31:45.612 [http-nio-8080-exec-1] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:45.613 [http-nio-8080-exec-1] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:31:45.613 [http-nio-8080-exec-1] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:45.613 [http-nio-8080-exec-1] PersonManagerImpl - Get all persons by address
+[DEBUG] 2022-05-24 10:31:52.761 [http-nio-8080-exec-10] PersonManagerImpl - Get all persons by address: [1, 4]
+[INFO ] 2022-05-24 10:31:52.761 [http-nio-8080-exec-10] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:31:52.761 [http-nio-8080-exec-10] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:31:52.761 [http-nio-8080-exec-10] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 10:31:52.761 [http-nio-8080-exec-10] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:31:52.761 [http-nio-8080-exec-10] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 10:31:52.761 [http-nio-8080-exec-10] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:52.762 [http-nio-8080-exec-10] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:31:52.762 [http-nio-8080-exec-10] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:52.762 [http-nio-8080-exec-10] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:31:52.762 [http-nio-8080-exec-10] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:52.762 [http-nio-8080-exec-10] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:31:52.762 [http-nio-8080-exec-10] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:52.762 [http-nio-8080-exec-10] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:31:52.763 [http-nio-8080-exec-10] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:31:52.763 [http-nio-8080-exec-10] PersonManagerImpl - Get all persons by address
+[DEBUG] 2022-05-24 10:32:02.549 [http-nio-8080-exec-4] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-24 10:32:02.550 [http-nio-8080-exec-4] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:32:02.550 [http-nio-8080-exec-4] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:32:02.550 [http-nio-8080-exec-4] FirestationManagerImpl - Phone number by firestation number has been recovered
+[INFO ] 2022-05-24 10:32:02.550 [http-nio-8080-exec-4] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:32:05.724 [http-nio-8080-exec-2] FirestationManagerImpl - Get phone by firestation number4
+[INFO ] 2022-05-24 10:32:05.725 [http-nio-8080-exec-2] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:32:05.725 [http-nio-8080-exec-2] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:32:05.725 [http-nio-8080-exec-2] FirestationManagerImpl - Phone number by firestation number has been recovered
+[INFO ] 2022-05-24 10:32:05.725 [http-nio-8080-exec-2] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:32:08.704 [http-nio-8080-exec-6] FirestationManagerImpl - Get phone by firestation number3
+[INFO ] 2022-05-24 10:32:08.704 [http-nio-8080-exec-6] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:32:08.704 [http-nio-8080-exec-6] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:32:08.704 [http-nio-8080-exec-6] FirestationManagerImpl - Phone number by firestation number has been recovered
+[INFO ] 2022-05-24 10:32:08.704 [http-nio-8080-exec-6] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:32:28.336 [http-nio-8080-exec-5] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 10:32:28.336 [http-nio-8080-exec-5] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:32:28.336 [http-nio-8080-exec-5] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:32:28.336 [http-nio-8080-exec-5] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:32:28.337 [http-nio-8080-exec-5] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:32:28.337 [http-nio-8080-exec-5] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:32:28.337 [http-nio-8080-exec-5] FirestationManagerImpl - Get numbers of adults and children by station
+[DEBUG] 2022-05-24 10:32:28.337 [http-nio-8080-exec-5] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 10:32:28.338 [http-nio-8080-exec-5] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:32:28.338 [http-nio-8080-exec-5] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:32:28.338 [http-nio-8080-exec-5] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:32:28.338 [http-nio-8080-exec-5] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:32:28.338 [http-nio-8080-exec-5] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:32:28.338 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:32:28.338 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:32:28.338 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:32:28.339 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:32:28.339 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:32:28.339 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:32:28.339 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:32:28.339 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:32:28.339 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:32:28.340 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:32:28.340 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:32:28.340 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:32:28.340 [http-nio-8080-exec-5] FirestationManagerImpl - Return number of children and adults
+[INFO ] 2022-05-24 10:37:58.942 [main] SafetyNetApplication - Starting SafetyNetApplication using Java 1.8.0_312 on jeremy-System-Product-Name with PID 12963 (/home/jeremy/git/SafetyNetAlerts/target/classes started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:37:58.950 [main] SafetyNetApplication - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:37:58.951 [main] SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:38:00.476 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/classes/data.json
+[INFO ] 2022-05-24 10:38:01.456 [main] SafetyNetApplication - Started SafetyNetApplication in 2.87 seconds (JVM running for 3.763)
+[DEBUG] 2022-05-24 10:38:23.147 [http-nio-8080-exec-5] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 10:38:23.148 [http-nio-8080-exec-5] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:38:23.148 [http-nio-8080-exec-5] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:38:23.148 [http-nio-8080-exec-5] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:38:23.149 [http-nio-8080-exec-5] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:38:23.150 [http-nio-8080-exec-5] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:38:23.151 [http-nio-8080-exec-5] FirestationManagerImpl - Get numbers of adults and children by station
+[DEBUG] 2022-05-24 10:38:23.151 [http-nio-8080-exec-5] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 10:38:23.151 [http-nio-8080-exec-5] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:38:23.151 [http-nio-8080-exec-5] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:38:23.151 [http-nio-8080-exec-5] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:38:23.152 [http-nio-8080-exec-5] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:38:23.152 [http-nio-8080-exec-5] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:38:23.152 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:23.152 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:23.161 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:23.161 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:23.161 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:23.161 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:23.161 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:23.161 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:23.161 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:23.162 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:23.162 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:23.162 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:38:23.162 [http-nio-8080-exec-5] FirestationManagerImpl - Return number of children and adults
+[DEBUG] 2022-05-24 10:38:34.977 [http-nio-8080-exec-6] FirestationManagerImpl - Get persons by firestation number: 3
+[INFO ] 2022-05-24 10:38:34.977 [http-nio-8080-exec-6] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:38:34.977 [http-nio-8080-exec-6] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:38:34.978 [http-nio-8080-exec-6] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:38:34.978 [http-nio-8080-exec-6] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:38:34.978 [http-nio-8080-exec-6] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:38:34.978 [http-nio-8080-exec-6] FirestationManagerImpl - Get numbers of adults and children by station
+[DEBUG] 2022-05-24 10:38:34.978 [http-nio-8080-exec-6] FirestationManagerImpl - Get persons by firestation number: 3
+[INFO ] 2022-05-24 10:38:34.979 [http-nio-8080-exec-6] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:38:34.979 [http-nio-8080-exec-6] DataStorageImpl - Get all firestations by number
+[INFO ] 2022-05-24 10:38:34.979 [http-nio-8080-exec-6] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:38:34.979 [http-nio-8080-exec-6] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:38:34.979 [http-nio-8080-exec-6] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:38:34.979 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.979 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.980 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.980 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.980 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.980 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.980 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.980 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.980 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.980 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.981 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.981 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.981 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.981 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.983 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.983 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.984 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.984 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.984 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.984 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:38:34.984 [http-nio-8080-exec-6] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:38:34.984 [http-nio-8080-exec-6] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:38:34.984 [http-nio-8080-exec-6] FirestationManagerImpl - Return number of children and adults
+[DEBUG] 2022-05-24 10:38:52.173 [http-nio-8080-exec-7] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@147c4665
+[INFO ] 2022-05-24 10:38:52.173 [http-nio-8080-exec-7] DataStorageImpl - Get all firestations
+[ERROR] 2022-05-24 10:38:52.174 [http-nio-8080-exec-7] FirestationManagerImpl - Error updating a firestation
+[DEBUG] 2022-05-24 10:39:05.253 [http-nio-8080-exec-8] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@2680cbf6
+[INFO ] 2022-05-24 10:39:05.253 [http-nio-8080-exec-8] DataStorageImpl - Get all firestations
+[ERROR] 2022-05-24 10:39:05.254 [http-nio-8080-exec-8] FirestationManagerImpl - Error updating a firestation
+[DEBUG] 2022-05-24 10:39:52.012 [http-nio-8080-exec-9] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@5604cd20
+[INFO ] 2022-05-24 10:39:52.013 [http-nio-8080-exec-9] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:39:52.013 [http-nio-8080-exec-9] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:39:52.013 [http-nio-8080-exec-9] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:39:52.014 [http-nio-8080-exec-9] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-24 10:40:02.115 [http-nio-8080-exec-10] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@56f661ac
+[INFO ] 2022-05-24 10:40:02.115 [http-nio-8080-exec-10] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:40:02.115 [http-nio-8080-exec-10] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:40:02.115 [http-nio-8080-exec-10] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-24 10:40:16.919 [http-nio-8080-exec-1] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@76e3f067
+[INFO ] 2022-05-24 10:40:16.920 [http-nio-8080-exec-1] DataStorageImpl - Get all firestations
+[ERROR] 2022-05-24 10:40:16.920 [http-nio-8080-exec-1] FirestationManagerImpl - Error updating a firestation
+[DEBUG] 2022-05-24 10:40:26.268 [http-nio-8080-exec-2] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@272f2c59
+[INFO ] 2022-05-24 10:40:26.269 [http-nio-8080-exec-2] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:40:26.269 [http-nio-8080-exec-2] DataStorageImpl - Get all firestations
+[INFO ] 2022-05-24 10:40:26.270 [http-nio-8080-exec-2] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-24 10:40:47.067 [http-nio-8080-exec-3] MedicalRecordController - Add a medical record
+[INFO ] 2022-05-24 10:40:47.067 [http-nio-8080-exec-3] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@574eb11f
+[INFO ] 2022-05-24 10:40:47.068 [http-nio-8080-exec-3] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 10:40:47.068 [http-nio-8080-exec-3] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:40:47.069 [http-nio-8080-exec-3] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:40:47.069 [http-nio-8080-exec-3] MedicalRecordsManagerImpl - Medicalrecord created
+[DEBUG] 2022-05-24 10:41:08.074 [http-nio-8080-exec-4] MedicalRecordController - Update a medical record
+[INFO ] 2022-05-24 10:41:08.074 [http-nio-8080-exec-4] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4de63bb3
+[INFO ] 2022-05-24 10:41:08.074 [http-nio-8080-exec-4] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 10:41:08.074 [http-nio-8080-exec-4] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:41:08.075 [http-nio-8080-exec-4] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:41:08.075 [http-nio-8080-exec-4] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:41:08.075 [http-nio-8080-exec-4] MedicalRecordsManagerImpl - Medicalrecord updated
+[DEBUG] 2022-05-24 10:41:22.497 [http-nio-8080-exec-5] MedicalRecordController - Delete a medical record
+[INFO ] 2022-05-24 10:41:22.497 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - Delete a medical record John Boyd
+[INFO ] 2022-05-24 10:41:22.497 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords by Id
+[INFO ] 2022-05-24 10:41:22.497 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:41:22.497 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:41:22.497 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:41:22.497 [http-nio-8080-exec-5] MedicalRecordsManagerImpl - Medicalrecord deleted
+[INFO ] 2022-05-24 10:41:35.435 [http-nio-8080-exec-6] DataStorageImpl - Get all persons
+[DEBUG] 2022-05-24 10:42:03.193 [http-nio-8080-exec-7] PersonController - Update a person
+[DEBUG] 2022-05-24 10:42:03.193 [http-nio-8080-exec-7] PersonManagerImpl - Update a person: Boyd John
+[INFO ] 2022-05-24 10:42:03.193 [http-nio-8080-exec-7] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 10:42:03.193 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:03.194 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:03.194 [http-nio-8080-exec-7] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:03.194 [http-nio-8080-exec-7] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-24 10:42:10.233 [http-nio-8080-exec-8] PersonController - Add a new person
+[DEBUG] 2022-05-24 10:42:10.233 [http-nio-8080-exec-8] PersonManagerImpl - Add a person: string string
+[INFO ] 2022-05-24 10:42:10.233 [http-nio-8080-exec-8] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 10:42:10.233 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:10.234 [http-nio-8080-exec-8] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:10.234 [http-nio-8080-exec-8] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-24 10:42:22.885 [http-nio-8080-exec-9] PersonController - Delete a person
+[DEBUG] 2022-05-24 10:42:22.885 [http-nio-8080-exec-9] PersonManagerImpl - Delete a person: Boyd John
+[INFO ] 2022-05-24 10:42:22.886 [http-nio-8080-exec-9] DataStorageImpl - Get all persons by Id
+[INFO ] 2022-05-24 10:42:22.886 [http-nio-8080-exec-9] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:22.886 [http-nio-8080-exec-9] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:22.886 [http-nio-8080-exec-9] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-24 10:42:32.393 [http-nio-8080-exec-10] PersonController - Get persons by firstname and lastname
+[DEBUG] 2022-05-24 10:42:32.393 [http-nio-8080-exec-10] PersonManagerImpl - Get all persons by address: John Boyd
+[INFO ] 2022-05-24 10:42:32.393 [http-nio-8080-exec-10] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:32.394 [http-nio-8080-exec-10] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:42:32.395 [http-nio-8080-exec-10] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:42:32.395 [http-nio-8080-exec-10] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:42:32.395 [http-nio-8080-exec-10] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:42:32.395 [http-nio-8080-exec-10] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:42:49.999 [http-nio-8080-exec-5] PersonController - Get persons by firstname and lastname
+[DEBUG] 2022-05-24 10:42:49.999 [http-nio-8080-exec-5] PersonManagerImpl - Get all persons by address: John Boyd
+[INFO ] 2022-05-24 10:42:50.000 [http-nio-8080-exec-5] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:42:50.000 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:42:50.000 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:42:50.000 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:42:50.000 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:42:50.000 [http-nio-8080-exec-5] DataStorageImpl - Get all medicalrecords
+[DEBUG] 2022-05-24 10:44:13.475 [http-nio-8080-exec-1] PersonController - Get persons by firstname and lastname
+[DEBUG] 2022-05-24 10:44:13.475 [http-nio-8080-exec-1] PersonManagerImpl - Get all persons by address: Jacob Boyd
+[INFO ] 2022-05-24 10:44:13.475 [http-nio-8080-exec-1] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:44:13.475 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:13.475 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:13.475 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:13.476 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:13.476 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:28.840 [main] SafetyNetApplication - Starting SafetyNetApplication using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13347 (/home/jeremy/git/SafetyNetAlerts/target/classes started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:44:28.849 [main] SafetyNetApplication - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:44:28.850 [main] SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:44:30.315 [main] DataStorageImpl - File address = /home/jeremy/git/SafetyNetAlerts/target/classes/data.json
+[INFO ] 2022-05-24 10:44:31.310 [main] SafetyNetApplication - Started SafetyNetApplication in 2.866 seconds (JVM running for 3.773)
+[DEBUG] 2022-05-24 10:44:36.270 [http-nio-8080-exec-1] PersonController - Get persons by firstname and lastname
+[DEBUG] 2022-05-24 10:44:36.275 [http-nio-8080-exec-1] PersonManagerImpl - Get all persons by address: Jacob Boyd
+[INFO ] 2022-05-24 10:44:36.275 [http-nio-8080-exec-1] DataStorageImpl - Get all persons
+[INFO ] 2022-05-24 10:44:36.276 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:36.296 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:36.296 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:36.296 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:36.296 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:44:36.296 [http-nio-8080-exec-1] DataStorageImpl - Get all medicalrecords
+[INFO ] 2022-05-24 10:45:32.312 [main] MedicalRecordControllerTest - Starting MedicalRecordControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13571 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:32.323 [main] MedicalRecordControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:32.333 [main] MedicalRecordControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:35.696 [main] MedicalRecordControllerTest - Started MedicalRecordControllerTest in 4.196 seconds (JVM running for 7.045)
+[DEBUG] 2022-05-24 10:45:35.986 [main] MedicalRecordController - Update a medical record
+[DEBUG] 2022-05-24 10:45:36.039 [main] MedicalRecordController - Add a medical record
+[DEBUG] 2022-05-24 10:45:36.055 [main] MedicalRecordController - Delete a medical record
+[INFO ] 2022-05-24 10:45:36.144 [main] FirestationControllerTest - Starting FirestationControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13571 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:36.145 [main] FirestationControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:36.145 [main] FirestationControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:37.111 [main] FirestationControllerTest - Started FirestationControllerTest in 1.03 seconds (JVM running for 8.46)
+[INFO ] 2022-05-24 10:45:37.322 [main] AlertControllerTest - Starting AlertControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13571 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:37.323 [main] AlertControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:37.323 [main] AlertControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:38.038 [main] AlertControllerTest - Started AlertControllerTest in 0.797 seconds (JVM running for 9.387)
+[INFO ] 2022-05-24 10:45:38.192 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13571 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:38.193 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:38.194 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:38.904 [main] PersonControllerTest - Started PersonControllerTest in 0.773 seconds (JVM running for 10.253)
+[DEBUG] 2022-05-24 10:45:38.918 [main] PersonController - Update a person
+[DEBUG] 2022-05-24 10:45:38.934 [main] PersonController - Get persons by firstname and lastname
+[DEBUG] 2022-05-24 10:45:38.951 [main] PersonController - Delete a person
+[DEBUG] 2022-05-24 10:45:38.963 [main] PersonController - Add a new person
+[INFO ] 2022-05-24 10:45:39.025 [main] CommunityEmailControllerTest - Starting CommunityEmailControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13571 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:39.025 [main] CommunityEmailControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:39.026 [main] CommunityEmailControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:39.650 [main] CommunityEmailControllerTest - Started CommunityEmailControllerTest in 0.653 seconds (JVM running for 10.999)
+[DEBUG] 2022-05-24 10:45:39.734 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-24 10:45:39.735 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-24 10:45:39.742 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-24 10:45:39.755 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-24 10:45:39.755 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-24 10:45:39.762 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-24 10:45:39.786 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 10:45:39.788 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-24 10:45:39.790 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 10:45:39.790 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-24 10:45:39.807 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[INFO ] 2022-05-24 10:45:39.809 [main] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 10:45:39.809 [main] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 10:45:39.812 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:39.813 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:39.814 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:39.815 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:39.815 [main] PersonManagerImpl - Get all persons by address
+[DEBUG] 2022-05-24 10:45:39.822 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-24 10:45:39.823 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-24 10:45:39.830 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-24 10:45:39.830 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-24 10:45:39.834 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 10:45:39.834 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-24 10:45:39.842 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-24 10:45:39.848 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:39.850 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:39.850 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:39.850 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:39.851 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:39.851 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:39.851 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:39.851 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:39.853 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:39.868 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:39.869 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:39.871 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:39.874 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:39.876 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:39.876 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:39.877 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:39.877 [main] PersonManagerImpl - List of child by address and adult by address
+[DEBUG] 2022-05-24 10:45:40.014 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-24 10:45:40.014 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-24 10:45:40.031 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 10:45:40.031 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:45:40.038 [main] FirestationManagerImpl - Get all persons by address
+[DEBUG] 2022-05-24 10:45:40.046 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@7571f195
+[INFO ] 2022-05-24 10:45:40.054 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-24 10:45:40.065 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@52b47892
+[INFO ] 2022-05-24 10:45:40.066 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-24 10:45:40.078 [main] FirestationManagerImpl - Get persons by addressaddress2
+[INFO ] 2022-05-24 10:45:40.079 [main] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 10:45:40.080 [main] FirestationManagerImpl - All persons by address has been recovered
+[DEBUG] 2022-05-24 10:45:40.092 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@62cc064a
+[ERROR] 2022-05-24 10:45:40.092 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-24 10:45:40.107 [main] FirestationManagerImpl - Get numbers of adults and children by station
+[DEBUG] 2022-05-24 10:45:40.107 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 10:45:40.107 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:45:40.108 [main] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:40.112 [main] FirestationManagerImpl - Return number of children and adults
+[DEBUG] 2022-05-24 10:45:40.125 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@55107f4b
+[ERROR] 2022-05-24 10:45:40.126 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-24 10:45:40.140 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@4d7c00fe
+[INFO ] 2022-05-24 10:45:40.142 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-24 10:45:40.151 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@5db4c6c1
+[ERROR] 2022-05-24 10:45:40.152 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-24 10:45:40.198 [main] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@619c32f9
+[INFO ] 2022-05-24 10:45:40.198 [main] MedicalRecordsManagerImpl - Medicalrecord created
+[INFO ] 2022-05-24 10:45:40.205 [main] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@7bbc180e
+[ERROR] 2022-05-24 10:45:40.208 [main] MedicalRecordsManagerImpl - Medical present cannot be created, existing already
+[DEBUG] 2022-05-24 10:45:40.214 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[DEBUG] 2022-05-24 10:45:40.217 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:45:40.222 [main] MedicalRecordsManagerImpl - Delete a medical record firstNametest1 lastNameTest1
+[ERROR] 2022-05-24 10:45:40.223 [main] MedicalRecordsManagerImpl - Cannot delete, medicalrecord doesn't exist
+[INFO ] 2022-05-24 10:45:40.233 [main] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@1182bd1c
+[INFO ] 2022-05-24 10:45:40.235 [main] MedicalRecordsManagerImpl - Medicalrecord updated
+[INFO ] 2022-05-24 10:45:40.248 [main] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4e14a84
+[ERROR] 2022-05-24 10:45:40.249 [main] MedicalRecordsManagerImpl - Cannot update, medicalrecord doesn't exist
+[INFO ] 2022-05-24 10:45:40.263 [main] MedicalRecordsManagerImpl - Delete a medical record firstNametest lastNameTest
+[INFO ] 2022-05-24 10:45:40.263 [main] MedicalRecordsManagerImpl - Medicalrecord deleted
+[INFO ] 2022-05-24 10:45:45.616 [main] MedicalRecordControllerTest - Starting MedicalRecordControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13799 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:45.621 [main] MedicalRecordControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:45.622 [main] MedicalRecordControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:48.744 [main] MedicalRecordControllerTest - Started MedicalRecordControllerTest in 3.752 seconds (JVM running for 6.614)
+[DEBUG] 2022-05-24 10:45:49.023 [main] MedicalRecordController - Update a medical record
+[DEBUG] 2022-05-24 10:45:49.079 [main] MedicalRecordController - Add a medical record
+[DEBUG] 2022-05-24 10:45:49.095 [main] MedicalRecordController - Delete a medical record
+[INFO ] 2022-05-24 10:45:49.200 [main] FirestationControllerTest - Starting FirestationControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13799 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:49.202 [main] FirestationControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:49.202 [main] FirestationControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:50.178 [main] FirestationControllerTest - Started FirestationControllerTest in 1.052 seconds (JVM running for 8.048)
+[INFO ] 2022-05-24 10:45:50.329 [main] AlertControllerTest - Starting AlertControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13799 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:50.330 [main] AlertControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:50.332 [main] AlertControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:51.053 [main] AlertControllerTest - Started AlertControllerTest in 0.794 seconds (JVM running for 8.923)
+[INFO ] 2022-05-24 10:45:51.182 [main] PersonControllerTest - Starting PersonControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13799 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:51.183 [main] PersonControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:51.183 [main] PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:51.875 [main] PersonControllerTest - Started PersonControllerTest in 0.73 seconds (JVM running for 9.744)
+[DEBUG] 2022-05-24 10:45:51.888 [main] PersonController - Update a person
+[DEBUG] 2022-05-24 10:45:51.903 [main] PersonController - Get persons by firstname and lastname
+[DEBUG] 2022-05-24 10:45:51.931 [main] PersonController - Delete a person
+[DEBUG] 2022-05-24 10:45:51.946 [main] PersonController - Add a new person
+[INFO ] 2022-05-24 10:45:52.041 [main] CommunityEmailControllerTest - Starting CommunityEmailControllerTest using Java 1.8.0_312 on jeremy-System-Product-Name with PID 13799 (started by jeremy in /home/jeremy/git/SafetyNetAlerts)
+[DEBUG] 2022-05-24 10:45:52.042 [main] CommunityEmailControllerTest - Running with Spring Boot v2.6.6, Spring v5.3.18
+[INFO ] 2022-05-24 10:45:52.044 [main] CommunityEmailControllerTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-05-24 10:45:52.653 [main] CommunityEmailControllerTest - Started CommunityEmailControllerTest in 0.648 seconds (JVM running for 10.522)
+[DEBUG] 2022-05-24 10:45:52.723 [main] PersonManagerImpl - Update a person: bloub blab
+[ERROR] 2022-05-24 10:45:52.724 [main] PersonManagerImpl - Impossible to update this person, this person doesn't exist
+[DEBUG] 2022-05-24 10:45:52.729 [main] PersonManagerImpl - Get all mails in: Culver
+[DEBUG] 2022-05-24 10:45:52.737 [main] PersonManagerImpl - Delete a person: test2 test1
+[ERROR] 2022-05-24 10:45:52.738 [main] PersonManagerImpl - Impossible to delete this person, this person doesn't exist
+[DEBUG] 2022-05-24 10:45:52.743 [main] PersonManagerImpl - Get all persons by address: John Boyd
+[DEBUG] 2022-05-24 10:45:52.756 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 10:45:52.756 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-24 10:45:52.758 [main] PersonManagerImpl - Delete a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 10:45:52.759 [main] PersonManagerImpl - person has been removed
+[DEBUG] 2022-05-24 10:45:52.766 [main] PersonManagerImpl - Get all persons by address: [1, 3]
+[INFO ] 2022-05-24 10:45:52.768 [main] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 10:45:52.768 [main] PersonManagerImpl - get all addresses by station number
+[INFO ] 2022-05-24 10:45:52.771 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:52.772 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:52.773 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:52.773 [main] PersonManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:52.774 [main] PersonManagerImpl - Get all persons by address
+[DEBUG] 2022-05-24 10:45:52.780 [main] PersonManagerImpl - Update a person: firstNameTest lastNameTest
+[INFO ] 2022-05-24 10:45:52.781 [main] PersonManagerImpl - person has been updated
+[DEBUG] 2022-05-24 10:45:52.789 [main] PersonManagerImpl - Add a person: lastName firstName
+[ERROR] 2022-05-24 10:45:52.790 [main] PersonManagerImpl - Impossible to create this person, this person exist already
+[DEBUG] 2022-05-24 10:45:52.794 [main] PersonManagerImpl - Add a person: lastNameTest firstNameTest
+[INFO ] 2022-05-24 10:45:52.795 [main] PersonManagerImpl - person has been added
+[DEBUG] 2022-05-24 10:45:52.800 [main] PersonManagerImpl - Get children by address: address1
+[INFO ] 2022-05-24 10:45:52.802 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:52.802 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:52.803 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:52.803 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:52.804 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:52.804 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:52.805 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:52.805 [main] PersonManagerImpl - Get child by address
+[INFO ] 2022-05-24 10:45:52.807 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:52.808 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:52.808 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:52.809 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:52.810 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:52.810 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:52.811 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:52.811 [main] PersonManagerImpl - Get adults by address
+[INFO ] 2022-05-24 10:45:52.811 [main] PersonManagerImpl - List of child by address and adult by address
+[DEBUG] 2022-05-24 10:45:52.887 [main] FirestationManagerImpl - Get phone by firestation number1
+[INFO ] 2022-05-24 10:45:52.889 [main] FirestationManagerImpl - Phone number by firestation number has been recovered
+[DEBUG] 2022-05-24 10:45:52.895 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 10:45:52.896 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:45:52.897 [main] FirestationManagerImpl - Get all persons by address
+[DEBUG] 2022-05-24 10:45:52.908 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@4704680c
+[INFO ] 2022-05-24 10:45:52.910 [main] FirestationManagerImpl - Firestation has benn created
+[DEBUG] 2022-05-24 10:45:52.918 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@21557e98
+[INFO ] 2022-05-24 10:45:52.920 [main] FirestationManagerImpl - Firestation has benn removed
+[DEBUG] 2022-05-24 10:45:52.929 [main] FirestationManagerImpl - Get persons by addressaddress2
+[INFO ] 2022-05-24 10:45:52.931 [main] FirestationManagerImpl - All persons by address has been recovered
+[INFO ] 2022-05-24 10:45:52.932 [main] FirestationManagerImpl - All persons by address has been recovered
+[DEBUG] 2022-05-24 10:45:52.942 [main] FirestationManagerImpl - Add a firestation: com.openclassrooms.safetynet.model.Firestation@7f438d3e
+[ERROR] 2022-05-24 10:45:52.943 [main] FirestationManagerImpl - Error creating a new firestation
+[DEBUG] 2022-05-24 10:45:52.954 [main] FirestationManagerImpl - Get numbers of adults and children by station
+[DEBUG] 2022-05-24 10:45:52.954 [main] FirestationManagerImpl - Get persons by firestation number: 1
+[INFO ] 2022-05-24 10:45:52.955 [main] FirestationManagerImpl - Get firestation address by station number
+[INFO ] 2022-05-24 10:45:52.956 [main] FirestationManagerImpl - Get all persons by address
+[INFO ] 2022-05-24 10:45:52.957 [main] FirestationManagerImpl - Return number of children and adults
+[DEBUG] 2022-05-24 10:45:52.970 [main] FirestationManagerImpl - Delete a firestation: com.openclassrooms.safetynet.model.Firestation@69e30525
+[ERROR] 2022-05-24 10:45:52.971 [main] FirestationManagerImpl - Error deleting a firestation
+[DEBUG] 2022-05-24 10:45:52.980 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@3e7431f5
+[INFO ] 2022-05-24 10:45:52.982 [main] FirestationManagerImpl - Firestation has been updated
+[DEBUG] 2022-05-24 10:45:52.991 [main] FirestationManagerImpl - Update a firestation: com.openclassrooms.safetynet.model.Firestation@50194e56
+[ERROR] 2022-05-24 10:45:52.993 [main] FirestationManagerImpl - Error updating a firestation
+[INFO ] 2022-05-24 10:45:53.037 [main] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@45d952a1
+[INFO ] 2022-05-24 10:45:53.038 [main] MedicalRecordsManagerImpl - Medicalrecord created
+[INFO ] 2022-05-24 10:45:53.045 [main] MedicalRecordsManagerImpl - Add a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@8f6d59
+[ERROR] 2022-05-24 10:45:53.046 [main] MedicalRecordsManagerImpl - Medical present cannot be created, existing already
+[DEBUG] 2022-05-24 10:45:53.052 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[DEBUG] 2022-05-24 10:45:53.054 [main] MedicalRecordsManagerImpl - get medicalrecord using person id
+[INFO ] 2022-05-24 10:45:53.060 [main] MedicalRecordsManagerImpl - Delete a medical record firstNametest1 lastNameTest1
+[ERROR] 2022-05-24 10:45:53.060 [main] MedicalRecordsManagerImpl - Cannot delete, medicalrecord doesn't exist
+[INFO ] 2022-05-24 10:45:53.066 [main] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@4f69405c
+[INFO ] 2022-05-24 10:45:53.068 [main] MedicalRecordsManagerImpl - Medicalrecord updated
+[INFO ] 2022-05-24 10:45:53.074 [main] MedicalRecordsManagerImpl - Update a medical recordcom.openclassrooms.safetynet.model.Medicalrecord@5e1f1883
+[ERROR] 2022-05-24 10:45:53.075 [main] MedicalRecordsManagerImpl - Cannot update, medicalrecord doesn't exist
+[INFO ] 2022-05-24 10:45:53.084 [main] MedicalRecordsManagerImpl - Delete a medical record firstNametest lastNameTest
+[INFO ] 2022-05-24 10:45:53.085 [main] MedicalRecordsManagerImpl - Medicalrecord deleted

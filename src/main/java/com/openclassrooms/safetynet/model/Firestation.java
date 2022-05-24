@@ -1,10 +1,8 @@
 package com.openclassrooms.safetynet.model;
 
-import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
-import org.springframework.stereotype.Component;
 
 
 public class Firestation {

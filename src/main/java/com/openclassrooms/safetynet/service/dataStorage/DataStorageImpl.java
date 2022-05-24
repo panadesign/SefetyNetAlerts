@@ -48,20 +48,6 @@ public class DataStorageImpl implements DataStorage {
 				.collect(Collectors.toList());
 	}
 	
-	public List<Person> getPersonsByStation(Integer station) {
-		log.info("Get all persons by station");
-		List<String> getFirestationsByStationNumber =
-				getFirestationsByNumber(station)
-						.stream()
-						.map(Firestation::getAddress)
-						.collect(Collectors.toList());
-		
-		return 	getPersons()
-				.stream()
-				.filter(person -> getFirestationsByStationNumber.contains(person.getAddress()))
-				.collect(Collectors.toList());
-	}
-	
 	public List<Firestation> getFirestations() {
 		
 		log.info("Get all firestations");

@@ -17,9 +17,7 @@ import java.util.Set;
 
 @RestController
 public class AlertController {
-	
-	@Autowired
-	private DataStorageImpl dataStorage;
+
 	@Autowired
 	private FirestationManager firestationManager;
 	@Autowired

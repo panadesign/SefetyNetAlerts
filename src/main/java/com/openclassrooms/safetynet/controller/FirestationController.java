@@ -26,22 +26,21 @@ public class FirestationController {
 	private PersonManager personManager;
 	
 	@PostMapping("/firestation")
-	
 	public ResponseEntity<Void> addFirestation(@RequestBody Firestation firestation) {
 		firestationManager.addFirestation(firestation);
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/firestation")
 	public ResponseEntity<Void> updateFirestation(@RequestBody Firestation firestation) {
 		firestationManager.updateFirestation(firestation);
-		return new ResponseEntity<Void>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/firestation")
 	public ResponseEntity<Void> deleteFirestation(@RequestBody Firestation firestation) {
 		firestationManager.deleteFirestation(firestation);
-		return new ResponseEntity<Void>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	@GetMapping("/firestation")

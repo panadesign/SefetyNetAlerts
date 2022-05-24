@@ -7,12 +7,12 @@ import com.openclassrooms.safetynet.model.Person;
 import java.util.List;
 
 public class FamiliesByStationDto {
-	private String lastName;
-	private String firstName;
-	private String phone;
-	private Integer age;
-	private List<String> medications;
-	private List<String> allergies;
+	private final String lastName;
+	private final String firstName;
+	private final String phone;
+	private final Integer age;
+	private final List<String> medications;
+	private final List<String> allergies;
 
 
 	public FamiliesByStationDto(Person person, Medicalrecord medicalRecord) {

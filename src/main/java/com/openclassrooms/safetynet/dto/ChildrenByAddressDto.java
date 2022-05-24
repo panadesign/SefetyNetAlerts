@@ -6,10 +6,10 @@ import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 
 public class ChildrenByAddressDto {
-	private String firstName;
-	private String lastName;
-	private String phone;
-	private Integer age;
+	private final String firstName;
+	private final String lastName;
+	private final String phone;
+	private final Integer age;
 
 	public ChildrenByAddressDto(Person person, Medicalrecord medicalRecord) {
 		this.firstName = person.getFirstName();

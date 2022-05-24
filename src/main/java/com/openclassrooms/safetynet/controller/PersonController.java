@@ -1,28 +1,20 @@
 package com.openclassrooms.safetynet.controller;
 
 import com.openclassrooms.safetynet.dto.PersonByFirstNameAndLastNameDto;
-import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import lombok.extern.log4j.Log4j2;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @Log4j2
 public class PersonController {
-
-	private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
 
 	@Autowired
 	private PersonManager personManager;
@@ -44,21 +36,21 @@ public class PersonController {
 	public ResponseEntity<Void> addPerson(@RequestBody Person person) {
 		log.debug("Add a new person");
 		personManager.addPerson(person);
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/person")
 	public ResponseEntity<Void> updatePerson(@RequestBody Person person) {
 		log.debug("Update a person");
 		personManager.updatePerson(person);
-		return new ResponseEntity<Void>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/person")
 	public ResponseEntity<Void> deletePerson(@RequestBody Person person) {
 		log.debug("Delete a person");
 		personManager.deletePerson(person);
-		return new ResponseEntity<Void>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 	@GetMapping("/personInfo")
