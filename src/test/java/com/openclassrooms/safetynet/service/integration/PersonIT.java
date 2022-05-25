@@ -8,8 +8,6 @@ import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import com.openclassrooms.safetynet.service.person.PersonManagerImpl;
-import org.junit.After;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +20,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
 @SpringBootTest()
@@ -87,13 +84,13 @@ class PersonIT {
 	}
 	
 	@Test
-	void shouldDeleteWhenPersonIsAlreadyExisting() throws IOException {
-		personManager.addPerson(new Person("1", "1"));
-		personManager.deletePerson(new Person("1", "1"));
+	void shouldDeleteWhenPersonIsAlreadyExisting() {
+		personManager.addPerson(new Person("firstName", "lastName"));
+		personManager.deletePerson(new Person("firstName", "lastName"));
 		
 		Assertions.assertTrue(dataStorage.getPersons()
 				.stream()
-				.noneMatch(p -> p.getFirstName().equals("1") && person.getLastName().equals("1")));
+				.noneMatch(p -> p.getFirstName().equals("firstName") && person.getLastName().equals("lastName")));
 	}
 	
 	@Test
@@ -143,7 +140,7 @@ class PersonIT {
 	}
 	
 	@Test
-	void shouldReturnAPersonUsingFirstNameAndLastname() throws IOException {
+	void shouldReturnAPersonUsingFirstNameAndLastname() {
 		//GIVEN
 		PersonByFirstNameAndLastNameDto personExpected = new PersonByFirstNameAndLastNameDto(new Person("John", "Boyd"));
 		

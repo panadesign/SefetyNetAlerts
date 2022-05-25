@@ -1,6 +1,7 @@
 package com.openclassrooms.safetynet.service.integration;
 
 import com.openclassrooms.safetynet.model.Medicalrecord;
+import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManager;
@@ -12,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
@@ -26,13 +28,13 @@ class MedicalrecordsIT {
 	private MedicalRecordsManager medicalrecordsManager;
 
 	private Medicalrecord medicalrecord;
-	
+
 	@BeforeEach
 	void setUp() throws IOException {
 		dataStorage = new DataStorageImpl();
 		medicalrecordsManager = new MedicalRecordsManagerImpl(dataStorage);
 	}
-	
+
 	@Test
 	void addMedicalrecord() {
 
@@ -45,7 +47,7 @@ class MedicalrecordsIT {
 		medicalrecordsManager.addMedicalRecord(medicalrecord);
 
 		//THEN
-		assertTrue(dataStorage
+		Assertions.assertTrue(dataStorage
 				.getMedicalrecords()
 				.contains(medicalrecord));
 
@@ -63,7 +65,7 @@ class MedicalrecordsIT {
 
 		medicalrecordsManager.updateMedicalRecord(medicalrecord);
 
-		assertTrue(dataStorage
+		Assertions.assertTrue(dataStorage
 				.getMedicalrecords()
 				.stream()
 				.anyMatch(p -> p.getFirstName().equals("John") && p.getLastName().equals("Boyd")));
@@ -81,7 +83,7 @@ class MedicalrecordsIT {
 
 		medicalrecordsManager.deleteMedicalRecord("Jacob", "Boyd");
 
-		assertTrue(dataStorage
+		Assertions.assertTrue(dataStorage
 				.getMedicalrecords()
 				.stream()
 				.noneMatch(p -> p.getFirstName().equals("Jacob") && p.getLastName().equals("Boyd")));
@@ -92,6 +94,14 @@ class MedicalrecordsIT {
 		medicalrecord = new Medicalrecord("Test", "Test");
 		assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord("Test", "Test"));
 	}
-	
+
+	@Test
+	void shouldReturnMedicalRecordJohnBoyd() {
+		Person person = new Person("John", "Boyd");
+		Optional<Medicalrecord> result = medicalrecordsManager.getMedicalRecordByPersonId(person.getId());
+
+		Assertions.assertEquals(result.get().getFirstName(), person.getFirstName());
+	}
+
 
 }
