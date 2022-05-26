@@ -1,14 +1,10 @@
 package com.openclassrooms.safetynet.controller;
 
-
 import com.openclassrooms.safetynet.dto.PersonsByStationAndAdultsNumberAndChildrenNumberDto;
 import com.openclassrooms.safetynet.dto.PersonsByStationDto;
 import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import com.openclassrooms.safetynet.model.Firestation;
-import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
-import com.openclassrooms.safetynet.service.person.PersonManager;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,12 +14,11 @@ import java.util.List;
 @RestController
 public class FirestationController {
 	
-	@Autowired
-	private DataStorageImpl dataStorage;
-	@Autowired
-	private FirestationManager firestationManager;
-	@Autowired
-	private PersonManager personManager;
+	private final FirestationManager firestationManager;
+	
+	FirestationController(FirestationManager firestationManager) {
+		this.firestationManager = firestationManager;
+	}
 	
 	@PostMapping("/firestation")
 	public ResponseEntity<Void> addFirestation(@RequestBody Firestation firestation) {

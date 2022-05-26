@@ -79,7 +79,7 @@ public class Person {
 	public boolean equals(Object obj){
 
 		if(obj == null) return false;
-		if(obj instanceof Person && this == obj) return true;
+		if(this == obj) return true;
 
 		Person person = (Person) obj;
 

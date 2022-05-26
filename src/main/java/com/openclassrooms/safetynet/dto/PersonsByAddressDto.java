@@ -12,10 +12,10 @@ public class PersonsByAddressDto {
 	
 	private final String firstName;
 	private final String lastName;
-	private String address;
-	private Integer age;
-	private List<String> medications;
-	private List<String> allergies;
+	private final String address;
+	private final Integer age;
+	private final List<String> medications;
+	private final List<String> allergies;
 	private final int station;
 
 	public PersonsByAddressDto(Person person, Firestation fireStation, Medicalrecord medicalRecord) {
@@ -67,7 +67,7 @@ public class PersonsByAddressDto {
 	public boolean equals(Object obj){
 		
 		if(obj == null) return false;
-		if(obj instanceof PersonsByAddressDto && this == obj) return true;
+		if(this == obj) return true;
 		
 		PersonsByAddressDto personsByAddressDto = (PersonsByAddressDto) obj;
 		

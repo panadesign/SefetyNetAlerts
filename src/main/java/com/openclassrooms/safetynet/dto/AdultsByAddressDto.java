@@ -24,7 +24,7 @@ public class AdultsByAddressDto {
 		this.zip = person.getZip();
 		this.phone = person.getPhone();
 		this.email = person.getEmail();
-		this.age=medicalrecord.getAge();
+		this.age = medicalrecord.getAge();
 	}
 	
 	@JsonGetter("firstName")

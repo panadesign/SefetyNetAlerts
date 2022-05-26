@@ -12,10 +12,7 @@ import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManager
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Component
@@ -139,10 +136,10 @@ public class FirestationManagerImpl implements FirestationManager {
 							.stream()
 							.map(fireStation -> {
 								try {
-									return new PersonsByAddressDto(person, fireStation, medicalrecords
+									return new PersonsByAddressDto(person, fireStation, Objects.requireNonNull(medicalrecords
 											.stream()
 											.filter(medicalRecord -> medicalRecord.getId().equals(person.getId()))
-											.findFirst().orElse(null));
+											.findFirst().orElse(null)));
 								} catch(Exception e) {
 									e.printStackTrace();
 								}
@@ -171,19 +168,13 @@ public class FirestationManagerImpl implements FirestationManager {
 		
 
 		log.info("Get all persons by address");
-		List<PersonsByStationDto> personsByStationDto =
-				dataStorage
-						.getPersons()
-						.stream()
-						.filter(person -> firestationAddressByStationNumber.contains(person.getAddress()))
-						.map(person -> {
-
-							return new PersonsByStationDto(person);
-
-						})
-						.collect(Collectors.toList());
-
-		return personsByStationDto;
+		
+		return dataStorage
+				.getPersons()
+				.stream()
+				.filter(person -> firestationAddressByStationNumber.contains(person.getAddress()))
+				.map(PersonsByStationDto::new)
+				.collect(Collectors.toList());
 	}
 
 	public NumberOfAdultsAndChildrenDto getNumbersOfChildrenAndAdultsByStation(int station) {

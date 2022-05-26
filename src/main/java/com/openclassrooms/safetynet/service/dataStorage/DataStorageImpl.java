@@ -64,7 +64,7 @@ public class DataStorageImpl implements DataStorage {
 	}
 	
 	public List<Firestation> getFirestationsByAddress(String address) {
-		log.info("Get all firestationsby address");
+		log.info("Get all firestations by address");
 		
 		return getFirestations()
 				.stream()

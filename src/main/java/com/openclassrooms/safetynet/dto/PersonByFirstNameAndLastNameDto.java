@@ -65,7 +65,7 @@ public class PersonByFirstNameAndLastNameDto {
 	public boolean equals(Object obj){
 
 		if(obj == null) return false;
-		if(obj instanceof PersonByFirstNameAndLastNameDto && this == obj) return true;
+		if(this == obj) return true;
 
 		PersonByFirstNameAndLastNameDto personByFirstNameAndLastNameDto = (PersonByFirstNameAndLastNameDto)obj;
 

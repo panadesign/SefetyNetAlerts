@@ -1,10 +1,10 @@
 package com.openclassrooms.safetynet.controller;
 
-import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.dto.*;
+
 import com.openclassrooms.safetynet.service.firestation.FirestationManager;
 import com.openclassrooms.safetynet.service.person.PersonManager;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,10 +18,13 @@ import java.util.Set;
 @RestController
 public class AlertController {
 
-	@Autowired
-	private FirestationManager firestationManager;
-	@Autowired
-	private PersonManager personManager;
+	private final FirestationManager firestationManager;
+	private final PersonManager personManager;
+	
+	AlertController(FirestationManager firestationManager, PersonManager personManager) {
+		this.firestationManager = firestationManager;
+		this.personManager = personManager;
+	}
 	
 	@GetMapping("/fire")
 	ResponseEntity<List<PersonsByAddressDto>> getPersonsByAddress(@RequestParam String address) {

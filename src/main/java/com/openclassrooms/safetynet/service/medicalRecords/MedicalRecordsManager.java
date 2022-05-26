@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface MedicalRecordsManager {
 	/**
-	 * Used to add a new medicalRecord(firstName and lastName must been non-existent)
+	 * Used to add a new medicalRecord(firstName and lastName must be non-existent)
 	 * @param medicalRecord is defined by a firstName and a lastName
 	 */
 	void addMedicalRecord(Medicalrecord medicalRecord);

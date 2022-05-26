@@ -52,7 +52,7 @@ public class PersonsByStationDto {
 	public boolean equals(Object obj){
 		
 		if(obj == null) return false;
-		if(obj instanceof PersonsByStationDto && this == obj) return true;
+		if(this == obj) return true;
 		
 		PersonsByStationDto personsByStationDto = (PersonsByStationDto) obj;
 		

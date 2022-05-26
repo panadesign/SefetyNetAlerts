@@ -71,11 +71,10 @@ public class MedicalRecordsManagerImpl implements MedicalRecordsManager {
 						.getMedicalRecordById(new Id(firstName, lastName));
 
 		if(optionalMedicalRecord.isPresent()) {
-			int indexOfMedicalRecord = dataStorage.getMedicalrecords().indexOf(optionalMedicalRecord.get());
-
+			
 			dataStorage
 					.getMedicalrecords()
-					.remove(indexOfMedicalRecord);
+					.remove(optionalMedicalRecord.get());
 			log.info("Medicalrecord deleted");
 
 		} else {

@@ -46,7 +46,7 @@ public interface FirestationManager {
 	 * Used to return persons by address
 	 * @param address is the address served by the fire station
 	 * @return a list of persons served at this address
-	 * return firstName, lastName, age, list of medications, list of allergies and fire staion number
+	 * return firstName, lastName, age, list of medications, list of allergies and fire station number
 	 */
 	List<PersonsByAddressDto> getPersonsByAddress(String address);
 	

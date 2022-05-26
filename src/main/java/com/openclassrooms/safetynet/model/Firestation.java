@@ -30,7 +30,7 @@ public class Firestation {
 	public boolean equals(Object obj){
 
 		if(obj == null) return false;
-		if(obj instanceof Firestation && this == obj) return true;
+		if(this == obj) return true;
 
 		Firestation firestation = (Firestation) obj;
 

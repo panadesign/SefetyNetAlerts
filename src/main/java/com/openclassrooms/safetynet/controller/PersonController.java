@@ -5,7 +5,6 @@ import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.person.PersonManager;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,14 +15,12 @@ import java.util.List;
 @Log4j2
 public class PersonController {
 
-	@Autowired
-	private PersonManager personManager;
+	private final PersonManager personManager;
+	private final DataStorage dataStorage;
 	
-	@Autowired
-	private DataStorage dataStorage;
-	
-	public PersonController(DataStorage dataStorage) {
+	public PersonController(DataStorage dataStorage, PersonManager personManager) {
 		this.dataStorage = dataStorage;
+		this.personManager = personManager;
 	}
 	
 	@GetMapping("/person")
@@ -58,5 +55,4 @@ public class PersonController {
 		log.debug("Get persons by firstname and lastname");
 		return new ResponseEntity<>(personManager.getPersonsByFirstNameAndLastName(firstName, lastName), HttpStatus.OK);
 	}
-	
 }
