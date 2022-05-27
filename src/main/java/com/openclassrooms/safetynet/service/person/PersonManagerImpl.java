@@ -13,17 +13,28 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * The type Person manager.
+ */
 @Component
 @Log4j2
 public class PersonManagerImpl implements PersonManager {
 
 	private DataStorage dataStorage;
 
+	/**
+	 * Instantiates a new Person manager.
+	 *
+	 * @param dataStorage the data storage
+	 */
 	@Autowired
 	public PersonManagerImpl(DataStorage dataStorage) {
 		this.dataStorage = dataStorage;
 	}
 
+	/**
+	 * Instantiates a new Person manager.
+	 */
 	public PersonManagerImpl() {
 	}
 

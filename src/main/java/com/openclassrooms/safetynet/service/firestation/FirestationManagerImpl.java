@@ -15,6 +15,9 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * The type Firestation manager.
+ */
 @Component
 @Log4j2
 public class FirestationManagerImpl implements FirestationManager {
@@ -22,6 +25,12 @@ public class FirestationManagerImpl implements FirestationManager {
 	private final DataStorage dataStorage;
 	private final MedicalRecordsManager medicalrecordsManager;
 
+	/**
+	 * Instantiates a new Firestation manager.
+	 *
+	 * @param dataStorage           the data storage
+	 * @param medicalrecordsManager the medicalrecords manager
+	 */
 	public FirestationManagerImpl(DataStorage dataStorage, MedicalRecordsManager medicalrecordsManager) {
 		this.dataStorage = dataStorage;
 		this.medicalrecordsManager = medicalrecordsManager;

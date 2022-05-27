@@ -12,11 +12,19 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * The type Data storage.
+ */
 @Component
 @Log4j2
 public class DataStorageImpl implements DataStorage {
 	private final Data data;
-	
+
+	/**
+	 * Instantiates a new Data storage.
+	 *
+	 * @throws IOException the io exception
+	 */
 	public DataStorageImpl() throws IOException {
 		ObjectMapper objectMapper = new ObjectMapper();
 		File file = new ClassPathResource("data.json").getFile();

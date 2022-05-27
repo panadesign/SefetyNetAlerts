@@ -1,10 +1,19 @@
 package com.openclassrooms.safetynet.model;
 
+/**
+ * The type Id.
+ */
 public class Id {
 	
 	private final String firstName;
 	private final String lastName;
-	
+
+	/**
+	 * Instantiates a new Id.
+	 *
+	 * @param firstName the first name
+	 * @param lastName  the last name
+	 */
 	public Id(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;

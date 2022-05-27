@@ -5,6 +5,9 @@ import lombok.NonNull;
 import lombok.Setter;
 
 
+/**
+ * The type Firestation.
+ */
 public class Firestation {
 
 	@Getter
@@ -17,9 +20,18 @@ public class Firestation {
 	@NonNull
 	private String address;
 
+	/**
+	 * Instantiates a new Firestation.
+	 */
 	public Firestation() {
 	}
 
+	/**
+	 * Instantiates a new Firestation.
+	 *
+	 * @param station the station
+	 * @param address the address
+	 */
 	public Firestation(int station, String address) {
 
 		this.station = station;

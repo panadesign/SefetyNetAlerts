@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Person;
 
+/**
+ * The type Persons by station dto.
+ */
 public class PersonsByStationDto {
 
 	private final String firstName;
@@ -13,6 +16,11 @@ public class PersonsByStationDto {
 	private final String phone;
 	private final Id id;
 
+	/**
+	 * Instantiates a new Persons by station dto.
+	 *
+	 * @param person the person
+	 */
 	public PersonsByStationDto(Person person) {
 
 		this.firstName= person.getFirstName();
@@ -21,27 +29,52 @@ public class PersonsByStationDto {
 		this.phone = person.getPhone();
 		this.id = person.getId();
 	}
-	
+
+	/**
+	 * Gets first name.
+	 *
+	 * @return the first name
+	 */
 	@JsonGetter("firstName")
 	public String getFirstName() {
 		return firstName;
 	}
-	
+
+	/**
+	 * Gets last name.
+	 *
+	 * @return the last name
+	 */
 	@JsonGetter("lastName")
 	public String getLastName() {
 		return lastName;
 	}
-	
+
+	/**
+	 * Gets address.
+	 *
+	 * @return the address
+	 */
 	@JsonGetter("address")
 	public String getAddress() {
 		return address;
 	}
-	
+
+	/**
+	 * Gets phone.
+	 *
+	 * @return the phone
+	 */
 	@JsonGetter("phone")
 	public String getPhone() {
 		return phone;
 	}
 
+	/**
+	 * Gets id.
+	 *
+	 * @return the id
+	 */
 	@JsonIgnore
 	@JsonGetter("id")
 	public Id getId() {

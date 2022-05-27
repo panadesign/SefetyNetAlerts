@@ -10,17 +10,28 @@ import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
+/**
+ * The type Medical records manager.
+ */
 @Component
 @Log4j2
 public class MedicalRecordsManagerImpl implements MedicalRecordsManager {
 
 	private DataStorage dataStorage;
 
+	/**
+	 * Instantiates a new Medical records manager.
+	 *
+	 * @param dataStorage the data storage
+	 */
 	@Autowired
 	public MedicalRecordsManagerImpl(DataStorage dataStorage) {
 		this.dataStorage = dataStorage;
 	}
-	
+
+	/**
+	 * Instantiates a new Medical records manager.
+	 */
 	public MedicalRecordsManagerImpl() {
 	}
 	
