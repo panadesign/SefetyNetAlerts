@@ -1,0 +1,10 @@
+com.openclassrooms.safetynet
+com.openclassrooms.safetynet.configuration
+com.openclassrooms.safetynet.controller
+com.openclassrooms.safetynet.dto
+com.openclassrooms.safetynet.exception
+com.openclassrooms.safetynet.model
+com.openclassrooms.safetynet.service.dataStorage
+com.openclassrooms.safetynet.service.firestation
+com.openclassrooms.safetynet.service.medicalRecords
+com.openclassrooms.safetynet.service.person
