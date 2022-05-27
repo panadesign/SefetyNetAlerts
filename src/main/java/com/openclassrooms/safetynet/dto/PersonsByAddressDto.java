@@ -108,19 +108,32 @@ public class PersonsByAddressDto {
 	public Integer getAge() {
 		return age;
 	}
-	
+
 	@Override
-	public boolean equals(Object obj){
-		
-		if(obj == null) return false;
-		if (this.getClass() != obj.getClass()) return false;
-		PersonsByAddressDto personsByAddressDto = (PersonsByAddressDto) obj;
-		
-		return firstName.equals(personsByAddressDto.getFirstName()) && lastName.equals(personsByAddressDto.getLastName());
+	public boolean equals(Object o) {
+		if(this == o) return true;
+		if(o == null || getClass() != o.getClass()) return false;
+
+		PersonsByAddressDto that = (PersonsByAddressDto) o;
+
+		if(station != that.station) return false;
+		if(!firstName.equals(that.firstName)) return false;
+		if(!lastName.equals(that.lastName)) return false;
+		if(!address.equals(that.address)) return false;
+		if(!age.equals(that.age)) return false;
+		if(!medications.equals(that.medications)) return false;
+		return allergies.equals(that.allergies);
 	}
 
 	@Override
 	public int hashCode() {
-		return super.hashCode();
+		int result = firstName.hashCode();
+		result = 31 * result + lastName.hashCode();
+		result = 31 * result + address.hashCode();
+		result = 31 * result + age.hashCode();
+		result = 31 * result + medications.hashCode();
+		result = 31 * result + allergies.hashCode();
+		result = 31 * result + station;
+		return result;
 	}
 }

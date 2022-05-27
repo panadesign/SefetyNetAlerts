@@ -76,7 +76,7 @@ public class FirestationController {
 		List<PersonsByStationDto> personsByStation = firestationManager.getPersonsByStation(stationNumber);
 		NumberOfAdultsAndChildrenDto numberOfAdultsAndChildrenDto = firestationManager.getNumbersOfChildrenAndAdultsByStation(stationNumber);
 
-		PersonsByStationAndAdultsNumberAndChildrenNumberDto result = new PersonsByStationAndAdultsNumberAndChildrenNumberDto(personsByStation, numberOfAdultsAndChildrenDto.getNumberAdults(), numberOfAdultsAndChildrenDto.getNumberChildren());
+		PersonsByStationAndAdultsNumberAndChildrenNumberDto result = new PersonsByStationAndAdultsNumberAndChildrenNumberDto(stationNumber, personsByStation, numberOfAdultsAndChildrenDto.getNumberAdults(), numberOfAdultsAndChildrenDto.getNumberChildren());
 
 		return new ResponseEntity<>(result, HttpStatus.OK);
 		
