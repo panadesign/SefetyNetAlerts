@@ -1,5 +1,8 @@
 package com.openclassrooms.safetynet.dto;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonSetter;
+
 import java.util.List;
 
 public class PersonsByStationAndAdultsNumberAndChildrenNumberDto {
@@ -13,26 +16,27 @@ public class PersonsByStationAndAdultsNumberAndChildrenNumberDto {
 		this.numberOfChildren = numberOfChildren;
 	}
 
+	@JsonGetter
 	public List<PersonsByStationDto> getPersonsByStation() {
 		return personsByStation;
 	}
-
+	@JsonSetter
 	public void setPersonsByStation(List<PersonsByStationDto> personsByStation) {
 		this.personsByStation = personsByStation;
 	}
-
+	@JsonGetter
 	public int getNumberOfAdult() {
 		return numberOfAdult;
 	}
-
+	@JsonSetter
 	public void setNumberOfAdult(int numberOfAdult) {
 		this.numberOfAdult = numberOfAdult;
 	}
-
+	@JsonGetter
 	public int getNumberOfChildren() {
 		return numberOfChildren;
 	}
-
+	@JsonSetter
 	public void setNumberOfChildren(int numberOfChildren) {
 		this.numberOfChildren = numberOfChildren;
 	}

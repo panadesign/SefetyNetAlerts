@@ -65,8 +65,7 @@ public class PersonByFirstNameAndLastNameDto {
 	public boolean equals(Object obj){
 
 		if(obj == null) return false;
-		if(this == obj) return true;
-
+		if (this.getClass() != obj.getClass()) return false;
 		PersonByFirstNameAndLastNameDto personByFirstNameAndLastNameDto = (PersonByFirstNameAndLastNameDto)obj;
 
 		return firstName.equals(personByFirstNameAndLastNameDto.getFirstName()) && lastName.equals(personByFirstNameAndLastNameDto.getLastName());

@@ -52,13 +52,13 @@ public class PersonsByStationDto {
 	public boolean equals(Object obj){
 		
 		if(obj == null) return false;
-		if(this == obj) return true;
+		if (this.getClass() != obj.getClass()) return false;
 		
 		PersonsByStationDto personsByStationDto = (PersonsByStationDto) obj;
 		
 		return firstName.equals(personsByStationDto.getFirstName()) && lastName.equals(personsByStationDto.getLastName());
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return super.hashCode();

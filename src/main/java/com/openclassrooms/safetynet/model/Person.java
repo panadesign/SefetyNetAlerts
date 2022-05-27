@@ -65,11 +65,7 @@ public class Person {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-	
-	public Person(String phone) {
-		this.phone = phone;
-	}
-	
+
 	@JsonIgnore
 	public Id getId() {
 		return  new Id(firstName, lastName);
@@ -79,13 +75,13 @@ public class Person {
 	public boolean equals(Object obj){
 
 		if(obj == null) return false;
-		if(this == obj) return true;
+		if (this.getClass() != obj.getClass()) return false;
 
 		Person person = (Person) obj;
 
 		return firstName.equals(person.getFirstName()) && lastName.equals(person.getLastName());
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return super.hashCode();

@@ -30,10 +30,10 @@ public class Firestation {
 	public boolean equals(Object obj){
 
 		if(obj == null) return false;
-		if(this == obj) return true;
+		if (this.getClass() != obj.getClass())
+			return false;
 
 		Firestation firestation = (Firestation) obj;
-
 		return station == (firestation.getStation()) && address.equals(firestation.getAddress());
 	}
 	

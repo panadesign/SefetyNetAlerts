@@ -3,6 +3,7 @@ package com.openclassrooms.safetynet.service.integration;
 import com.openclassrooms.safetynet.dto.ChildListAndFamilyListDto;
 import com.openclassrooms.safetynet.dto.FamiliesByStationDto;
 import com.openclassrooms.safetynet.dto.PersonByFirstNameAndLastNameDto;
+import com.openclassrooms.safetynet.exception.BadRequestExceptions;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
@@ -54,12 +55,12 @@ class PersonIT {
 	}
 	
 	@Test
-	void shouldReturnRuntimeExceptionWhenAddAPersonAlreadyExisting() {
+	void shouldReturnBadRequestExceptionsWhenAddAPersonAlreadyExisting() {
 		//GIVEN
 		person = new Person("John", "Boyd", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
 		
 		//THEN
-		assertThrows(RuntimeException.class, () -> personManager.addPerson(person));
+		assertThrows(BadRequestExceptions.class, () -> personManager.addPerson(person));
 		
 	}
 	
@@ -76,10 +77,10 @@ class PersonIT {
 	}
 	
 	@Test
-	void shouldReturnARuntimeExceptionWhenUpdateANotExistentPerson() {
+	void shouldReturnBadRequestExceptionsWhenUpdateANotExistentPerson() {
 		
 		person = new Person("Jeremy", "Boyd", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
-		Assertions.assertThrows(RuntimeException.class, () -> personManager.updatePerson(person));
+		Assertions.assertThrows(BadRequestExceptions.class, () -> personManager.updatePerson(person));
 		
 	}
 	
@@ -94,10 +95,10 @@ class PersonIT {
 	}
 	
 	@Test
-	void shouldReturnRuntimeExceptionWhenDeletingANotExistentPerson() {
+	void shouldReturnBadRequestExceptionsWhenDeletingANotExistentPerson() {
 		
 		person = new Person("Jeremy", "Boyd", "33 rue Pommier", "Paris", 75013, "0134434543", "jeremy@mail.com");
-		assertThrows(RuntimeException.class, () -> personManager.deletePerson(person));
+		assertThrows(BadRequestExceptions.class, () -> personManager.deletePerson(person));
 		
 	}
 	

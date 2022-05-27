@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.service.medicalRecords;
 
+import com.openclassrooms.safetynet.exception.BadRequestExceptions;
 import com.openclassrooms.safetynet.model.Data;
 import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
@@ -14,7 +15,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
@@ -76,7 +76,7 @@ class MedicalRecordsManagerTest {
 		Assertions.assertEquals(1, datas.getMedicalrecords().size());
 
 		Medicalrecord medicalrecordToAdd = new Medicalrecord("firstNameTest", "lastNameTest");
-		Assertions.assertThrows(RuntimeException.class, () -> medicalrecordsManager.addMedicalRecord(medicalrecordToAdd));
+		Assertions.assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.addMedicalRecord(medicalrecordToAdd));
 
 	}
 
@@ -112,6 +112,7 @@ class MedicalRecordsManagerTest {
 
 	@Test
 	void updateMedicalrecordPersonNotExisting() {
+		//GIVEN
 		Data datas = new Data();
 		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
 		Assertions.assertNotNull(datas.getMedicalrecords());
@@ -122,8 +123,8 @@ class MedicalRecordsManagerTest {
 		//WHEN
 		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 
-
-		Assertions.assertThrows(RuntimeException.class, () -> medicalrecordsManager.updateMedicalRecord(medicalrecordUpdate));
+		//THEN
+		Assertions.assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.updateMedicalRecord(medicalrecordUpdate));
 	}
 
 	@Test
@@ -164,7 +165,7 @@ class MedicalRecordsManagerTest {
 		//THEN
 		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest1", "lastNameTest1");
 
-		Assertions.assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord("firstNametest1", "lastNameTest1"));
+		Assertions.assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.deleteMedicalRecord("firstNametest1", "lastNameTest1"));
 
 	}
 

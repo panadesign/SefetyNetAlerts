@@ -3,6 +3,7 @@ package com.openclassrooms.safetynet.service.integration;
 import com.openclassrooms.safetynet.dto.NumberOfAdultsAndChildrenDto;
 import com.openclassrooms.safetynet.dto.PersonsByAddressDto;
 import com.openclassrooms.safetynet.dto.PersonsByStationDto;
+import com.openclassrooms.safetynet.exception.BadRequestExceptions;
 import com.openclassrooms.safetynet.model.Firestation;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
@@ -58,9 +59,9 @@ class FirestationIT {
 	}
 	
 	@Test
-	void shouldReturnRuntimeExceptionWhenTryingToAddAnExistingFirestation() {
+	void shouldReturnBadRequestExceptionsWhenTryingToAddAnExistingFirestation() {
 		Firestation newFirestation = new Firestation(4, "489 Manchester St");
-		assertThrows(RuntimeException.class, () -> firestationManager.addFirestation(newFirestation));
+		assertThrows(BadRequestExceptions.class, () -> firestationManager.addFirestation(newFirestation));
 	}
 	
 	@Test
@@ -79,9 +80,9 @@ class FirestationIT {
 	}
 	
 	@Test
-	void shouldReturnRuntimeExceptionWhenTryingToUpdateNonExistentFirestation() {
+	void shouldReturnBadRequestExceptionsWhenTryingToUpdateNonExistentFirestation() {
 		Firestation firestationToUpdate = new Firestation(2, "Address not existing");
-		assertThrows(RuntimeException.class, () -> firestationManager.updateFirestation(firestationToUpdate));
+		assertThrows(BadRequestExceptions.class, () -> firestationManager.updateFirestation(firestationToUpdate));
 	}
 	
 	@Test
@@ -100,9 +101,9 @@ class FirestationIT {
 	}
 	
 	@Test
-	void shouldReturnRuntimeExceptionWhenTryingToDeleteNonExistentFirestation() {
+	void shouldReturnBadRequestExceptionsWhenTryingToDeleteNonExistentFirestation() {
 		Firestation firestationToDelete = new Firestation(1, "test");
-		assertThrows(RuntimeException.class, () -> firestationManager.deleteFirestation(firestationToDelete));
+		assertThrows(BadRequestExceptions.class, () -> firestationManager.deleteFirestation(firestationToDelete));
 	}
 	
 	@Test

@@ -43,7 +43,7 @@ class PersonManagerTest {
 		Data data = new Data();
 		Assertions.assertTrue(data.getPersons().isEmpty());
 		Assertions.assertNotNull(data.getPersons());
-		Person personToAdd = new Person("firstNameTest", "lastNameTest");
+		Person personToAdd = new Person("firstNameTest", "lastNameTest", "address", "city", 3, "1234", "mail");
 
 		//WHEN
 		when(mockDataStorage.getData()).thenReturn(data);
@@ -109,7 +109,7 @@ class PersonManagerTest {
 		Assertions.assertNotNull(datas.getPersons());
 		Assertions.assertTrue(datas.getPersons().isEmpty());
 
-		Person personToUpdate = new Person("blab", "bloub", "testEmail");
+		Person personToUpdate = new Person("firstName1", "lastName1", "address", "city", 3, "1234", "mail");
 
 		//WHEN
 		when(mockDataStorage.getPersons()).thenReturn(datas.getPersons());

@@ -67,13 +67,12 @@ public class PersonsByAddressDto {
 	public boolean equals(Object obj){
 		
 		if(obj == null) return false;
-		if(this == obj) return true;
-		
+		if (this.getClass() != obj.getClass()) return false;
 		PersonsByAddressDto personsByAddressDto = (PersonsByAddressDto) obj;
 		
 		return firstName.equals(personsByAddressDto.getFirstName()) && lastName.equals(personsByAddressDto.getLastName());
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return super.hashCode();

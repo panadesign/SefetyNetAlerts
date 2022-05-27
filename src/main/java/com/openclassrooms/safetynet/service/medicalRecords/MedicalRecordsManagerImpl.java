@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynet.service.medicalRecords;
 
+import com.openclassrooms.safetynet.exception.BadRequestExceptions;
 import com.openclassrooms.safetynet.model.Id;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
@@ -13,7 +14,6 @@ import java.util.Optional;
 @Log4j2
 public class MedicalRecordsManagerImpl implements MedicalRecordsManager {
 
-	@Autowired
 	private DataStorage dataStorage;
 
 	@Autowired
@@ -33,7 +33,7 @@ public class MedicalRecordsManagerImpl implements MedicalRecordsManager {
 
 		if(optionalMedicalrecord.isPresent()) {
 			log.error("Medical present cannot be created, existing already");
-			throw new RuntimeException("This medical record exist already");
+			throw new BadRequestExceptions("This medical record exist already");
 		}
 
 		dataStorage
@@ -59,7 +59,7 @@ public class MedicalRecordsManagerImpl implements MedicalRecordsManager {
 
 		} else {
 			log.error("Cannot update, medicalrecord doesn't exist");
-			throw new RuntimeException("This medical record doesn't exist");
+			throw new BadRequestExceptions("This medical record doesn't exist");
 		}
 	}
 
@@ -79,7 +79,7 @@ public class MedicalRecordsManagerImpl implements MedicalRecordsManager {
 
 		} else {
 			log.error("Cannot delete, medicalrecord doesn't exist");
-			throw new RuntimeException("This medical record doesn't exist");
+			throw new BadRequestExceptions("This medical record doesn't exist");
 		}
 	}
 

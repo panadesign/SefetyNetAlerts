@@ -1,12 +1,15 @@
 package com.openclassrooms.safetynet.service.integration;
 
+import com.openclassrooms.safetynet.exception.BadRequestExceptions;
 import com.openclassrooms.safetynet.model.Medicalrecord;
 import com.openclassrooms.safetynet.model.Person;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorage;
 import com.openclassrooms.safetynet.service.dataStorage.DataStorageImpl;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManager;
 import com.openclassrooms.safetynet.service.medicalRecords.MedicalRecordsManagerImpl;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -16,7 +19,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
 
 @SpringBootTest()
 class MedicalrecordsIT {
@@ -56,7 +58,7 @@ class MedicalrecordsIT {
 	@Test
 	void addMedicalrecordException() {
 		medicalrecord = new Medicalrecord("Tenley", "Boyd");
-		assertThrows(RuntimeException.class, () -> medicalrecordsManager.addMedicalRecord(medicalrecord));
+		assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.addMedicalRecord(medicalrecord));
 	}
 
 	@Test
@@ -74,7 +76,7 @@ class MedicalrecordsIT {
 	@Test
 	void updateMedicalrecordException() {
 		medicalrecord = new Medicalrecord("Test", "Test", "01/05/1984");
-		assertThrows(RuntimeException.class, () -> medicalrecordsManager.updateMedicalRecord(medicalrecord));
+		assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.updateMedicalRecord(medicalrecord));
 	}
 
 	@Test
@@ -92,7 +94,7 @@ class MedicalrecordsIT {
 	@Test
 	void deleteMedicalrecordException() {
 		medicalrecord = new Medicalrecord("Test", "Test");
-		assertThrows(RuntimeException.class, () -> medicalrecordsManager.deleteMedicalRecord("Test", "Test"));
+		assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.deleteMedicalRecord("Test", "Test"));
 	}
 
 	@Test
