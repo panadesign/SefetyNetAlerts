@@ -57,13 +57,13 @@ class MedicalrecordsIT {
 
 	@Test
 	void addMedicalrecordException() {
-		medicalrecord = new Medicalrecord("Tenley", "Boyd");
+		medicalrecord = new Medicalrecord("Tenley", "Boyd", "01/05/1984", new ArrayList<>(), new ArrayList<>());
 		assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.addMedicalRecord(medicalrecord));
 	}
 
 	@Test
 	void updateMedicalrecord() {
-		medicalrecord = new Medicalrecord("John", "Boyd", "01/05/1984");
+		medicalrecord = new Medicalrecord("John", "Boyd", "01/05/1984", new ArrayList<>(), new ArrayList<>());
 
 		medicalrecordsManager.updateMedicalRecord(medicalrecord);
 
@@ -75,13 +75,13 @@ class MedicalrecordsIT {
 
 	@Test
 	void updateMedicalrecordException() {
-		medicalrecord = new Medicalrecord("Test", "Test", "01/05/1984");
+		medicalrecord = new Medicalrecord("Test", "Test", "01/05/1984", new ArrayList<>(), new ArrayList<>());
 		assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.updateMedicalRecord(medicalrecord));
 	}
 
 	@Test
 	void deleteMedicalrecord() {
-		medicalrecord = new Medicalrecord("Jacob", "Boyd", "01/05/1984");
+		medicalrecord = new Medicalrecord("Jacob", "Boyd", "01/05/1984", new ArrayList<>(), new ArrayList<>());
 
 		medicalrecordsManager.deleteMedicalRecord("Jacob", "Boyd");
 
@@ -93,13 +93,13 @@ class MedicalrecordsIT {
 
 	@Test
 	void deleteMedicalrecordException() {
-		medicalrecord = new Medicalrecord("Test", "Test");
+		medicalrecord = new Medicalrecord("Test", "Test", "02/02/1986", new ArrayList<>(), new ArrayList<>());
 		assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.deleteMedicalRecord("Test", "Test"));
 	}
 
 	@Test
 	void shouldReturnMedicalRecordJohnBoyd() {
-		Person person = new Person("John", "Boyd");
+		Person person = new Person("John", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com");
 		Optional<Medicalrecord> result = medicalrecordsManager.getMedicalRecordByPersonId(person.getId());
 
 		Assertions.assertEquals(result.get().getFirstName(), person.getFirstName());

@@ -69,21 +69,16 @@ class PersonControllerTest {
 		mockMvc.perform(delete("/person")
 						.contentType(MediaType.APPLICATION_JSON)
 						.content(objectMapper.writeValueAsString(
-								new Person("John", "Boyd"))))
+								new Person("John", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-6512", "jaboyd@email.com"))))
 				.andExpect(status().isOk());
 	}
 	
 	@Test
 	void getPersonsByFirstNameAndLastName() throws Exception {
-		List<PersonByFirstNameAndLastNameDto> personList = new ArrayList<>();
-		personList.add(new PersonByFirstNameAndLastNameDto(new Person("firstName", "lastName", "address", "city", 75, "123", "mail")));
-		
-		when(personManagerImpl.getPersonsByFirstNameAndLastName("firstName", "lastName")).thenReturn(personList);
-		
 		mockMvc.perform(get("/personInfo?firstName=firstName&lastName=lastName")
 						.contentType(MediaType.APPLICATION_JSON)
 						.content(objectMapper.writeValueAsString(
-								new Person("firstName", "lastName"))))
+								new Person("Jacob", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-6513", "drk@email.com"))))
 				.andExpect(status().isOk());
 		
 	}

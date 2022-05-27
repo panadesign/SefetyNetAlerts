@@ -11,6 +11,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.ArrayList;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -33,7 +35,7 @@ class MedicalRecordControllerTest {
 	
 	@Test
 	void addMedicalrecord() throws Exception {
-		Medicalrecord medicalrecord = new Medicalrecord("firstName", "lastName", "02/02/1982");
+		Medicalrecord medicalrecord = new Medicalrecord("firstName", "lastName", "02/02/1982", new ArrayList<>(), new ArrayList<>());
 		mockMvc.perform(post("/medicalRecord?firstName=firstName&lastName=lastname")
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(objectMapper.writeValueAsString(medicalrecord)))
@@ -42,7 +44,7 @@ class MedicalRecordControllerTest {
 	
 	@Test
 	void updateMedicalRecord() throws Exception {
-		Medicalrecord medicalrecord = new Medicalrecord("John", "Boyd", "02/02/1982");
+		Medicalrecord medicalrecord = new Medicalrecord("John", "Boyd", "02/02/1982", new ArrayList<>(), new ArrayList<>());
 		mockMvc.perform(put("/medicalRecord")
 						.contentType(MediaType.APPLICATION_JSON)
 						.content(objectMapper.writeValueAsString(medicalrecord)))

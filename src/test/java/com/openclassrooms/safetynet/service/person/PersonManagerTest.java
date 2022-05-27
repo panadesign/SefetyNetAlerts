@@ -62,14 +62,14 @@ class PersonManagerTest {
 		Data datas = new Data();
 		Assertions.assertNotNull(datas.getPersons());
 		Assertions.assertTrue(datas.getPersons().isEmpty());
-		Person existingPerson = new Person("firstName", "lastName");
+		Person existingPerson = new Person("John", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com");
 
 		//WHEN
 		when(mockDataStorage.getPersons()).thenReturn(new ArrayList<>());
 		when(mockDataStorage.getPersonById(any())).thenReturn(Optional.of(existingPerson));
 
 		//THEN
-		Person personToAdd = new Person("firstName", "lastName");
+		Person personToAdd = new Person("John", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com");
 		Assertions.assertThrows(BadRequestExceptions.class, () -> personManager.addPerson(personToAdd));
 	}
 
@@ -80,10 +80,10 @@ class PersonManagerTest {
 		Assertions.assertNotNull(datas.getPersons());
 		Assertions.assertTrue(datas.getPersons().isEmpty());
 
-		Person existingPerson = new Person("firstNameTest", "lastNameTest");
+		Person existingPerson = new Person("John", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com");
 		datas.getPersons().add(existingPerson);
 
-		Person personUpdatedDatas = new Person(existingPerson.getLastName(), existingPerson.getFirstName());
+		Person personUpdatedDatas = new Person(existingPerson.getLastName(), existingPerson.getFirstName(), "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com");
 		personUpdatedDatas.setEmail("testEmail");
 
 		//WHEN
@@ -129,7 +129,7 @@ class PersonManagerTest {
 		Assertions.assertTrue(datas.getPersons().isEmpty());
 		List<Person> existingPersons = new ArrayList<>();
 
-		Person existingPerson = new Person("firstNameTest", "lastNameTest");
+		Person existingPerson = new Person("firstNameTest", "lastNameTest", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com");
 		personManager.addPerson(existingPerson);
 
 		//WHEN
@@ -153,7 +153,7 @@ class PersonManagerTest {
 
 		//WHEN
 		when(mockDataStorage.getPersons()).thenReturn(datas.getPersons());
-		Person personToDelete = new Person("test1", "test2");
+		Person personToDelete = new Person("test1", "test2", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com");
 
 		//THEN
 		Assertions.assertNotNull(datas.getPersons());
@@ -180,13 +180,13 @@ class PersonManagerTest {
 		//GIVEN
 		Data data = new Data();
 
-		data.getPersons().add(new Person("John", "Boyd", "testMail"));
-		data.getPersons().add(new Person("Jacob", "Boyd", "testMail"));
-		data.getPersons().add(new Person("test", "test", "mail"));
+		data.getPersons().add(new Person("John", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("Jacob", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("test", "test", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
 
-		data.getMedicalrecords().add(new Medicalrecord("John", "Boyd", "02/02/2000"));
-		data.getMedicalrecords().add(new Medicalrecord("Jacob", "Boyd", "02/02/1983"));
-		data.getMedicalrecords().add(new Medicalrecord("test", "test", "02/02/2000"));
+		data.getMedicalrecords().add(new Medicalrecord("John", "Boyd", "02/02/2000", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("Jacob", "Boyd", "02/02/1983", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("test", "test", "02/02/2000", new ArrayList<>(), new ArrayList<>()));
 
 		//WHEN
 		when(mockDataStorage.getData()).thenReturn(data);
@@ -206,19 +206,19 @@ class PersonManagerTest {
 	void getPersonsByAddressStationForFloodAlert() {
 		Data data = new Data();
 
-		data.getPersons().add(new Person("firstName1", "lastName1", "address1", "1234"));
-		data.getPersons().add(new Person("firstName2", "lastName2", "address2", "1234"));
-		data.getPersons().add(new Person("firstName3", "lastName3", "address3", "1234"));
-		data.getPersons().add(new Person("firstName4", "lastName4", "address4", "1234"));
-		data.getPersons().add(new Person("firstName5", "lastName5", "address5", "1234"));
-		data.getPersons().add(new Person("firstName6", "lastName6", "address6", "1234"));
+		data.getPersons().add(new Person("firstName1", "lastName1", "address1","Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("firstName2", "lastName2", "address2", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("firstName3", "lastName3", "address3", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("firstName4", "lastName4", "address4", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("firstName5", "lastName5", "address5", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("firstName6", "lastName6", "address6", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
 
-		data.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/2000"));
-		data.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/2000"));
-		data.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/2000"));
-		data.getMedicalrecords().add(new Medicalrecord("firstName4", "lastName4", "02/02/2000"));
-		data.getMedicalrecords().add(new Medicalrecord("firstName5", "lastName5", "02/02/2000"));
-		data.getMedicalrecords().add(new Medicalrecord("firstName6", "lastName6", "02/02/2000"));
+		data.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/2000", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/2000", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/2000", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("firstName4", "lastName4", "02/02/2000", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("firstName5", "lastName5", "02/02/2000", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("firstName6", "lastName6", "02/02/2000", new ArrayList<>(), new ArrayList<>()));
 
 		data.getFirestations().add(new Firestation(1, "address1"));
 		data.getFirestations().add(new Firestation(1, "address2"));
@@ -246,24 +246,24 @@ class PersonManagerTest {
 		//GIVEN
 		Data data = new Data();
 
-		data.getPersons().add(new Person("adult1", "adult1", "address1", "123"));
-		data.getPersons().add(new Person("children1", "children1", "address1", "123"));
-		data.getPersons().add(new Person("children4", "children4", "address1", "123"));
-		data.getPersons().add(new Person("children5", "children5", "address1", "123"));
-		data.getPersons().add(new Person("children6", "children6", "address1", "123"));
+		data.getPersons().add(new Person("adult1", "adult1", "address1", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("children1", "children1", "address1", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("children4", "children4", "address1", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("children5", "children5", "address1", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("children6", "children6", "address1", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
 
-		data.getPersons().add(new Person("adult2", "adult2", "address2", "123"));
-		data.getPersons().add(new Person("children2", "children2", "address2", "123"));
-		data.getPersons().add(new Person("children3", "childre3", "address2", "123"));
+		data.getPersons().add(new Person("adult2", "adult2", "address2", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("children2", "children2", "address2", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		data.getPersons().add(new Person("children3", "childre3", "address2", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
 
-		data.getMedicalrecords().add(new Medicalrecord("adult1", "adult1", "02/02/1983"));
-		data.getMedicalrecords().add(new Medicalrecord("children1", "children1", "02/02/2013"));
-		data.getMedicalrecords().add(new Medicalrecord("adult2", "adult2", "02/02/1983"));
-		data.getMedicalrecords().add(new Medicalrecord("children2", "children2", "02/02/2013"));
-		data.getMedicalrecords().add(new Medicalrecord("children3", "children3", "02/02/2013"));
-		data.getMedicalrecords().add(new Medicalrecord("children4", "children4", "02/02/2013"));
-		data.getMedicalrecords().add(new Medicalrecord("children5", "children5", "02/02/2013"));
-		data.getMedicalrecords().add(new Medicalrecord("children6", "children6", "02/02/2013"));
+		data.getMedicalrecords().add(new Medicalrecord("adult1", "adult1", "02/02/1983", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("children1", "children1", "02/02/2013", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("adult2", "adult2", "02/02/1983", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("children2", "children2", "02/02/2013", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("children3", "children3", "02/02/2013", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("children4", "children4", "02/02/2013", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("children5", "children5", "02/02/2013", new ArrayList<>(), new ArrayList<>()));
+		data.getMedicalrecords().add(new Medicalrecord("children6", "children6", "02/02/2013", new ArrayList<>(), new ArrayList<>()));
 
 		//WHEN
 		when(mockDataStorage.getPersons()).thenReturn(data.getPersons());

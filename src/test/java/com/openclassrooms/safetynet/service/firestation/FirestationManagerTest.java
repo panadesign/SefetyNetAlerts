@@ -17,6 +17,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -156,10 +158,10 @@ class FirestationManagerTest {
 		//GIVEN
 		Data datas = new Data();
 
-		datas.getFirestations().add(new Firestation(1, "address1"));
+		datas.getFirestations().add(new Firestation(1, "1509 Culver St"));
 
-		datas.getPersons().add(new Person("pers1", "pers1", "address1", "123"));
-		datas.getPersons().add(new Person("pers2", "pers2", "address1", "234"));
+		datas.getPersons().add(new Person("John", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-0000", "jaboyd@email.com"));
+		datas.getPersons().add(new Person("Bob", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-1234", "jaboyd@email.com"));
 
 		//WHEN
 		when(mockDataStorage.getFirestationsByNumber(1)).thenReturn(datas.getFirestations());
@@ -168,7 +170,7 @@ class FirestationManagerTest {
 		Set<String> phoneNumbers = firestationManager.getPhoneByFirestationNumber(1);
 
 		//THEN
-		Assertions.assertTrue(phoneNumbers.contains("123"));
+		Assertions.assertTrue(phoneNumbers.contains("841-874-0000"));
 	}
 
 	@Test
@@ -176,15 +178,15 @@ class FirestationManagerTest {
 		//GIVEN
 		Data datas = new Data();
 
-		datas.getPersons().add(new Person("firstName1", "lastName1", "address1", "123"));
-		datas.getPersons().add(new Person("firstName2", "lastName2", "address2", "123"));
-		datas.getPersons().add(new Person("firstName3", "lastName3", "address2", "123"));
+		datas.getPersons().add(new Person("firstName1", "lastName1", "address1", "Culver", 2, "1234", "mail"));
+		datas.getPersons().add(new Person("firstName2", "lastName2", "address2", "Culver", 2, "1234", "mail"));
+		datas.getPersons().add(new Person("firstName3", "lastName3", "address2", "Culver", 2, "1234", "mail"));
 
 		datas.getFirestations().add(new Firestation(1, "address2"));
 
-		datas.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/1987"));
-		datas.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/1987"));
-		datas.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/1987"));
+		datas.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/1986", new ArrayList<>(), new ArrayList<>()));
+		datas.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/1986", new ArrayList<>(), new ArrayList<>()));
+		datas.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/1986", new ArrayList<>(), new ArrayList<>()));
 
 
 		//WHEN
@@ -205,11 +207,11 @@ class FirestationManagerTest {
 	void getPersonsByStation() {
 		//GIVEN
 		Data datas = new Data();
-		datas.getPersons().add(new Person("firstName1", "lastName1", "address1", "123"));
-		datas.getPersons().add(new Person("firstName2", "lastName2", "address2", "123"));
-		datas.getPersons().add(new Person("firstName3", "lastName3", "address2", "123"));
-		datas.getPersons().add(new Person("firstName4", "lastName4", "address2", "123"));
-		datas.getPersons().add(new Person("firstName5", "lastName5", "address2", "123"));
+		datas.getPersons().add(new Person("firstName1", "lastName1", "address1", "Culver", 2, "1234", "mail"));
+		datas.getPersons().add(new Person("firstName2", "lastName2", "address2", "Culver", 2, "1234", "mail"));
+		datas.getPersons().add(new Person("firstName3", "lastName3", "address2", "Culver", 2, "1234", "mail"));
+		datas.getPersons().add(new Person("firstName4", "lastName4", "address2", "Culver", 2, "1234", "mail"));
+		datas.getPersons().add(new Person("firstName5", "lastName5", "address2", "Culver", 2, "1234", "mail"));
 
 		datas.getFirestations().add(new Firestation(1, "address2"));
 
@@ -231,15 +233,15 @@ class FirestationManagerTest {
 		String address = "address2";
 		
 		Data datas = new Data();
-		datas.getPersons().add(new Person("firstName1", "lastName1", address, "123"));
-		datas.getPersons().add(new Person("firstName2", "lastName2", address, "123"));
-		datas.getPersons().add(new Person("firstName3", "lastName3", address, "123"));
+		datas.getPersons().add(new Person("firstName1", "lastName1", address, "Culver", 2, "1234", "mail"));
+		datas.getPersons().add(new Person("firstName2", "lastName2", address, "Culver", 2, "1234", "mail"));
+		datas.getPersons().add(new Person("firstName3", "lastName3", address, "Culver", 2, "1234", "mail"));
 		
 		datas.getFirestations().add(new Firestation(1, "address2"));
 		
-		datas.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/1987"));
-		datas.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/1997"));
-		datas.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/2017"));
+		datas.getMedicalrecords().add(new Medicalrecord("firstName1", "lastName1", "02/02/1987", new ArrayList<>(), new ArrayList<>()));
+		datas.getMedicalrecords().add(new Medicalrecord("firstName2", "lastName2", "02/02/1997", new ArrayList<>(), new ArrayList<>()));
+		datas.getMedicalrecords().add(new Medicalrecord("firstName3", "lastName3", "02/02/2017", new ArrayList<>(), new ArrayList<>()));
 		
 		//WHEN
 		when(mockDataStorage.getFirestationsByNumber(1)).thenReturn(datas.getFirestations());
@@ -256,4 +258,5 @@ class FirestationManagerTest {
 		Assertions.assertEquals(1, response.getNumberChildren());
 		
 	}
+
 }

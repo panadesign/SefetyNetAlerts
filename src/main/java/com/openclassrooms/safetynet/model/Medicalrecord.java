@@ -2,6 +2,8 @@ package com.openclassrooms.safetynet.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import java.time.LocalDate;
@@ -14,6 +16,8 @@ import java.util.List;
 /**
  * The type Medicalrecord.
  */
+@Data
+@NoArgsConstructor
 public class Medicalrecord {
 
 	/**
@@ -52,35 +56,6 @@ public class Medicalrecord {
 	}
 
 	/**
-	 * Instantiates a new Medicalrecord.
-	 */
-	public Medicalrecord(){}
-
-	/**
-	 * Instantiates a new Medicalrecord.
-	 *
-	 * @param firstName the first name
-	 * @param lastName  the last name
-	 */
-	public Medicalrecord(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-
-	/**
-	 * Instantiates a new Medicalrecord.
-	 *
-	 * @param firstName the first name
-	 * @param lastName  the last name
-	 * @param birthdate the birthdate
-	 */
-	public Medicalrecord(String firstName, String lastName, String birthdate) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthdate = parseStringToLocalDate(birthdate);
-	}
-
-	/**
 	 * Gets birthdate.
 	 *
 	 * @return the birthdate
@@ -101,6 +76,9 @@ public class Medicalrecord {
 	}
 	
 	private LocalDate parseStringToLocalDate(String birthdate) {
+		if(birthdate == null) {
+			throw new IllegalArgumentException("Birthdate cannot be null");
+		}
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 		return LocalDate.parse(birthdate, formatter);
 	}
@@ -116,42 +94,6 @@ public class Medicalrecord {
 	}
 
 	/**
-	 * Gets first name.
-	 *
-	 * @return the first name
-	 */
-	public String getFirstName() {
-		return firstName;
-	}
-
-	/**
-	 * Sets first name.
-	 *
-	 * @param firstName the first name
-	 */
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	/**
-	 * Gets last name.
-	 *
-	 * @return the last name
-	 */
-	public String getLastName() {
-		return lastName;
-	}
-
-	/**
-	 * Sets last name.
-	 *
-	 * @param lastName the last name
-	 */
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	/**
 	 * Sets birthdate.
 	 *
 	 * @param birthdate the birthdate
@@ -160,39 +102,4 @@ public class Medicalrecord {
 		this.birthdate = birthdate;
 	}
 
-	/**
-	 * Gets medications.
-	 *
-	 * @return the medications
-	 */
-	public List<String> getMedications() {
-		return medications;
-	}
-
-	/**
-	 * Sets medications.
-	 *
-	 * @param medications the medications
-	 */
-	public void setMedications(List<String> medications) {
-		this.medications = medications;
-	}
-
-	/**
-	 * Gets allergies.
-	 *
-	 * @return the allergies
-	 */
-	public List<String> getAllergies() {
-		return allergies;
-	}
-
-	/**
-	 * Sets allergies.
-	 *
-	 * @param allergies the allergies
-	 */
-	public void setAllergies(List<String> allergies) {
-		this.allergies = allergies;
-	}
 }

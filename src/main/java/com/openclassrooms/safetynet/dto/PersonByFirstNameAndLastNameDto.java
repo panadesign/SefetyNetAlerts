@@ -10,7 +10,7 @@ import java.util.List;
  * The type Person by first name and last name dto.
  */
 public class PersonByFirstNameAndLastNameDto {
-	
+
 	private final String firstName;
 	private final String lastName;
 	private final String email;
@@ -25,7 +25,7 @@ public class PersonByFirstNameAndLastNameDto {
 	 * @param medicalRecord the medical record
 	 */
 	public PersonByFirstNameAndLastNameDto(Person person, Medicalrecord medicalRecord) {
-		
+
 		this.firstName= person.getFirstName();
 		this.lastName=person.getLastName();
 		this.email= person.getEmail();
@@ -106,17 +106,28 @@ public class PersonByFirstNameAndLastNameDto {
 	}
 
 	@Override
-	public boolean equals(Object obj){
+	public boolean equals(Object o) {
+		if(this == o) return true;
+		if(o == null || getClass() != o.getClass()) return false;
 
-		if(obj == null) return false;
-		if (this.getClass() != obj.getClass()) return false;
-		PersonByFirstNameAndLastNameDto personByFirstNameAndLastNameDto = (PersonByFirstNameAndLastNameDto)obj;
+		PersonByFirstNameAndLastNameDto that = (PersonByFirstNameAndLastNameDto) o;
 
-		return firstName.equals(personByFirstNameAndLastNameDto.getFirstName()) && lastName.equals(personByFirstNameAndLastNameDto.getLastName());
+		if(!firstName.equals(that.firstName)) return false;
+		if(!lastName.equals(that.lastName)) return false;
+		if(!email.equals(that.email)) return false;
+		if(!age.equals(that.age)) return false;
+		if(!medications.equals(that.medications)) return false;
+		return allergies.equals(that.allergies);
 	}
-	
+
 	@Override
 	public int hashCode() {
-		return super.hashCode();
+		int result = firstName.hashCode();
+		result = 31 * result + lastName.hashCode();
+		result = 31 * result + email.hashCode();
+		result = 31 * result + age.hashCode();
+		result = 31 * result + medications.hashCode();
+		result = 31 * result + allergies.hashCode();
+		return result;
 	}
 }

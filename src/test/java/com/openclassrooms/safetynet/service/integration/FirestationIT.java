@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -132,7 +133,7 @@ class FirestationIT {
 	void shouldVerifyObjectContainsJohnBoydWhitStation3() {
 		//GIVEN
 		int station = 3;
-		PersonsByStationDto personExpected = new PersonsByStationDto(new Person("John", "Boyd"));
+		PersonsByStationDto personExpected = new PersonsByStationDto(new Person("John", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-6512", "jaboyd@email.com"));
 		//WHEN
 		List<PersonsByStationDto> persons = firestationManager.getPersonsByStation(station);
 		
@@ -147,17 +148,16 @@ class FirestationIT {
 	
 	
 	@Test
-	void shouldGetJohnBoydWithAddress() throws Exception {
+	void shouldGetRogerBoydWithAddress() throws Exception {
 		//GIVEN
-		String address = "1509 Culver St";
-		PersonsByAddressDto personExpected = new PersonsByAddressDto(new Person("John", "Boyd"), new Firestation(3, "1509 Culver St"), new Medicalrecord("John", "Boyd", "03/06/1984"));
+		PersonsByAddressDto personExpected = new PersonsByAddressDto(new Person("Roger", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-6512", "jaboyd@email.com"), new Firestation(3, "1509 Culver St"), new Medicalrecord("Roger", "Boyd", "09/06/2017", new ArrayList<>(), new ArrayList<>()));
 
 		//WHEN
-		List<PersonsByAddressDto> persons = firestationManager.getPersonsByAddress(address);
+		List<PersonsByAddressDto> persons = firestationManager.getPersonsByAddress(personExpected.getAddress());
 		
 		List<PersonsByAddressDto> personsByAddressDtos = persons
 				.stream()
-				.filter(p -> p.getFirstName().equals("John") && p.getLastName().equals("Boyd"))
+				.filter(p -> p.getFirstName().equals("Roger") && p.getLastName().equals("Boyd"))
 				.collect(Collectors.toList());
 		//THEN
 		Assertions.assertEquals(1, personsByAddressDtos.size());

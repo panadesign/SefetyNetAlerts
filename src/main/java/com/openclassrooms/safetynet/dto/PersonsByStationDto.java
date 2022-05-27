@@ -80,20 +80,28 @@ public class PersonsByStationDto {
 	public Id getId() {
 		return id;
 	}
-	
+
 	@Override
-	public boolean equals(Object obj){
-		
-		if(obj == null) return false;
-		if (this.getClass() != obj.getClass()) return false;
-		
-		PersonsByStationDto personsByStationDto = (PersonsByStationDto) obj;
-		
-		return firstName.equals(personsByStationDto.getFirstName()) && lastName.equals(personsByStationDto.getLastName());
+	public boolean equals(Object o) {
+		if(this == o) return true;
+		if(o == null || getClass() != o.getClass()) return false;
+
+		PersonsByStationDto that = (PersonsByStationDto) o;
+
+		if(!firstName.equals(that.firstName)) return false;
+		if(!lastName.equals(that.lastName)) return false;
+		if(!address.equals(that.address)) return false;
+		if(!phone.equals(that.phone)) return false;
+		return id.equals(that.id);
 	}
 
 	@Override
 	public int hashCode() {
-		return super.hashCode();
+		int result = firstName.hashCode();
+		result = 31 * result + lastName.hashCode();
+		result = 31 * result + address.hashCode();
+		result = 31 * result + phone.hashCode();
+		result = 31 * result + id.hashCode();
+		return result;
 	}
 }

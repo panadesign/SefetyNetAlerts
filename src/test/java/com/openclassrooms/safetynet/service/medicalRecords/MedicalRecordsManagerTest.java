@@ -12,6 +12,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -36,7 +37,7 @@ class MedicalRecordsManagerTest {
 		Data datas = new Data();
 		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
 		Assertions.assertNotNull(datas.getMedicalrecords());
-		Medicalrecord medicalrecordToAdd = new Medicalrecord("firstNameTest", "lastNameTest");
+		Medicalrecord medicalrecordToAdd = new Medicalrecord("firstNameTest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 
 
 		//WHEN
@@ -63,7 +64,7 @@ class MedicalRecordsManagerTest {
 		Assertions.assertNotNull(datas.getMedicalrecords());
 		Assertions.assertEquals(0, datas.getMedicalrecords().size());
 
-		Medicalrecord medicalrecordExisting = new Medicalrecord("firstNameTest", "lastNameTest");
+		Medicalrecord medicalrecordExisting = new Medicalrecord("firstNameTest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		datas.getMedicalrecords().add(medicalrecordExisting);
 
 		//WHEN
@@ -75,7 +76,7 @@ class MedicalRecordsManagerTest {
 		Assertions.assertNotNull(datas.getMedicalrecords());
 		Assertions.assertEquals(1, datas.getMedicalrecords().size());
 
-		Medicalrecord medicalrecordToAdd = new Medicalrecord("firstNameTest", "lastNameTest");
+		Medicalrecord medicalrecordToAdd = new Medicalrecord("firstNameTest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		Assertions.assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.addMedicalRecord(medicalrecordToAdd));
 
 	}
@@ -87,10 +88,10 @@ class MedicalRecordsManagerTest {
 		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
 		Assertions.assertNotNull(datas.getMedicalrecords());
 
-		Medicalrecord existingMedicalrecord = new Medicalrecord("firstNametest", "lastNameTest");
+		Medicalrecord existingMedicalrecord = new Medicalrecord("firstNametest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		datas.getMedicalrecords().add(existingMedicalrecord);
 
-		Medicalrecord medicalrecordUpdate = new Medicalrecord("firstNametest", "lastNameTest");
+		Medicalrecord medicalrecordUpdate = new Medicalrecord("firstNametest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		medicalrecordUpdate.setBirthdate("03/03/1983");
 
 		//WHEN
@@ -117,7 +118,7 @@ class MedicalRecordsManagerTest {
 		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
 		Assertions.assertNotNull(datas.getMedicalrecords());
 
-		Medicalrecord medicalrecordUpdate = new Medicalrecord("firstNametest", "lastNameTest");
+		Medicalrecord medicalrecordUpdate = new Medicalrecord("firstNametest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		medicalrecordUpdate.setBirthdate("03/03/1983");
 
 		//WHEN
@@ -134,7 +135,7 @@ class MedicalRecordsManagerTest {
 		Assertions.assertNotNull(datas.getMedicalrecords());
 		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
 
-		Medicalrecord existingMedicalRecord = new Medicalrecord("firstNametest", "lastNameTest");
+		Medicalrecord existingMedicalRecord = new Medicalrecord("firstNametest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		datas.getMedicalrecords().add(existingMedicalRecord);
 		Assertions.assertEquals(1, datas.getMedicalrecords().size());
 
@@ -144,7 +145,7 @@ class MedicalRecordsManagerTest {
 
 
 		//THEN
-		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest", "lastNameTest");
+		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		medicalrecordsManager.deleteMedicalRecord("firstNametest", "lastNameTest");
 
 		Assertions.assertNotNull(datas.getMedicalrecords());
@@ -163,7 +164,7 @@ class MedicalRecordsManagerTest {
 		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 
 		//THEN
-		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest1", "lastNameTest1");
+		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest1", "lastNameTest1", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 
 		Assertions.assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.deleteMedicalRecord("firstNametest1", "lastNameTest1"));
 
@@ -176,7 +177,7 @@ class MedicalRecordsManagerTest {
 		Assertions.assertNotNull(datas.getMedicalrecords());
 		Assertions.assertTrue(datas.getMedicalrecords().isEmpty());
 
-		Medicalrecord medicalrecordExisting = new Medicalrecord("firstNameTest", "lastNameTest");
+		Medicalrecord medicalrecordExisting = new Medicalrecord("firstNameTest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		datas.getMedicalrecords().add(medicalrecordExisting);
 
 		//WHEN
@@ -184,7 +185,7 @@ class MedicalRecordsManagerTest {
 		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 
 		medicalrecordsManager.getMedicalRecordByPersonId(medicalrecordExisting.getId());
-		Optional medicalRecordID = medicalrecordsManager.getMedicalRecordByPersonId(new Id("firstNameTest", "lastNameTest"));
+		Optional<Medicalrecord> medicalRecordID = medicalrecordsManager.getMedicalRecordByPersonId(new Id("firstNameTest", "lastNameTest"));
 
 		//THEN
 		Assertions.assertNotNull(datas.getMedicalrecords());
