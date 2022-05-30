@@ -17,7 +17,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +24,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
 class FirestationManagerTest {
@@ -190,8 +189,8 @@ class FirestationManagerTest {
 
 
 		//WHEN
-		when(mockDataStorage.getFirestationsByAddress(eq("address2"))).thenReturn(datas.getFirestations().stream().filter(f -> f.getAddress().equals("address2")).collect(Collectors.toList()));
-		when(mockDataStorage.getPersonsByAddress(eq("address2"))).thenReturn(datas.getPersons().stream().filter(f -> f.getAddress().equals("address2")).collect(Collectors.toList()));
+		when(mockDataStorage.getFirestationsByAddress(("address2"))).thenReturn(datas.getFirestations().stream().filter(f -> f.getAddress().equals("address2")).collect(Collectors.toList()));
+		when(mockDataStorage.getPersonsByAddress(("address2"))).thenReturn(datas.getPersons().stream().filter(f -> f.getAddress().equals("address2")).collect(Collectors.toList()));
 		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 		when(mockDataStorage.getMedicalRecordById(any())).thenReturn(datas.getMedicalrecords().stream().findFirst());
 

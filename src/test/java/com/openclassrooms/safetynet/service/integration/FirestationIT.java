@@ -148,7 +148,7 @@ class FirestationIT {
 	
 	
 	@Test
-	void shouldGetRogerBoydWithAddress() throws Exception {
+	void shouldGetRogerBoydWithAddress() {
 		//GIVEN
 		PersonsByAddressDto personExpected = new PersonsByAddressDto(new Person("Roger", "Boyd", "1509 Culver St", "Culver", 97451, "841-874-6512", "jaboyd@email.com"), new Firestation(3, "1509 Culver St"), new Medicalrecord("Roger", "Boyd", "09/06/2017", new ArrayList<>(), new ArrayList<>()));
 

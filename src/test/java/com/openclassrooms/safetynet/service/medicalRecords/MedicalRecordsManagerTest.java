@@ -145,7 +145,6 @@ class MedicalRecordsManagerTest {
 
 
 		//THEN
-		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest", "lastNameTest", "02/02/1933", new ArrayList<>(), new ArrayList<>());
 		medicalrecordsManager.deleteMedicalRecord("firstNametest", "lastNameTest");
 
 		Assertions.assertNotNull(datas.getMedicalrecords());
@@ -164,8 +163,6 @@ class MedicalRecordsManagerTest {
 		when(mockDataStorage.getMedicalrecords()).thenReturn(datas.getMedicalrecords());
 
 		//THEN
-		Medicalrecord medicalrecordToDelete = new Medicalrecord("firstNametest1", "lastNameTest1", "02/02/1933", new ArrayList<>(), new ArrayList<>());
-
 		Assertions.assertThrows(BadRequestExceptions.class, () -> medicalrecordsManager.deleteMedicalRecord("firstNametest1", "lastNameTest1"));
 
 	}
